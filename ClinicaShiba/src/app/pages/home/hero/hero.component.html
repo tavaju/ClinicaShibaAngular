@@ -1,0 +1,59 @@
+<section id="hero" class="hero">
+  <figure class="hero-image">
+    <img
+      src="https://images.unsplash.com/photo-1597662942561-776cff97660d?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="Hero Image"
+      class="hero-img" />
+  </figure>
+
+  <div class="hero-content scroll-reveal" appScrollReveal>
+    <article class="hero-text">
+      <h1>La Clínica Veterinaria<br />de Mayor Impacto en<br />Colombia</h1>
+      <p>
+        La felicidad y la salud de tu mascota son nuestra prioridad.<br />
+        Tu compañero de vida recibirá el mejor cuidado en manos<br />
+        de profesionales expertos y apasionados por la<br />
+        salud animal.
+      </p>
+
+      <div class="hero-buttons scroll-reveal" appScrollReveal>
+        <a href="#cta" class="btn primary">Contáctanos</a>
+        <a routerLink="/login" class="btn secondary">Ingresa al portal</a>
+      </div>
+    </article>
+
+    <section class="floating-card scroll-reveal" appScrollReveal>
+      <article class="service-item scroll-reveal" appScrollReveal>
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=150"
+            alt="Service 1"
+            class="service-img" />
+          <figcaption class="service-text">
+            <h3>Consulta la lista completa de nuestros pacientes</h3>
+            <a routerLink="/mascota/all" class="hero-read-more">Ver más</a>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="service-item scroll-reveal" appScrollReveal>
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=150"
+            alt="Service 2"
+            class="service-img" />
+          <figcaption class="service-text">
+            <h3>Encuentra la información de tu mascota aquí</h3>
+            <form action="/mascota/find" method="get">
+              <input
+                type="text"
+                name="id"
+                placeholder="ID de la mascota"
+                required />
+              <button type="submit" class="hero-read-more">Ver más</button>
+            </form>
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+  </div>
+</section>

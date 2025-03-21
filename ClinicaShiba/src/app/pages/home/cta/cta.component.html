@@ -1,0 +1,41 @@
+<section id="cta" class="cta scroll-reveal" appScrollReveal>
+  <div class="cta-content scroll-reveal" appScrollReveal>
+    <div class="cta-text scroll-reveal" appScrollReveal>
+      <h2>
+        Recibe información útil y de calidad sobre el cuidado de tu mascota.
+      </h2>
+      <div class="cta-subtitle">
+        <span class="sparkle-emoji">✨</span>
+        <h3>¡Escríbenos Ahora!</h3>
+        <span class="sparkle-emoji">✨</span>
+      </div>
+    </div>
+
+    <form
+      class="contact-form scroll-reveal"
+      appScrollReveal
+      (submit)="handleSubmit($event)"
+    >
+      <div class="form-group">
+        <input type="text" placeholder="Nombre completo" required id="nombre" />
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          required
+          id="email"
+        />
+      </div>
+      <div class="form-group">
+        <input type="tel" placeholder="Teléfono" id="telefono" />
+      </div>
+      <textarea
+        placeholder="Tu mensaje"
+        required
+        rows="4"
+        id="mensaje"
+      ></textarea>
+      <button type="submit" class="btn white">Enviar mensaje</button>
+      <div id="formStatus" class="form-status">{{ formStatus }}</div>
+    </form>
+  </div>
+</section>

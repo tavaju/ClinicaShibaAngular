@@ -1,0 +1,134 @@
+.cta {
+  position: relative;
+  padding: 5rem 0;
+  background-image: url("https://images.unsplash.com/photo-1516734212186-65266f46771f?w=2000");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(109, 40, 217, 0.9) 0%,
+    rgba(124, 58, 237, 0.9) 100%
+  );
+}
+
+.cta-content {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.cta-text {
+  flex: 1;
+}
+
+.cta h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  max-width: 32rem;
+  margin-bottom: 2rem;
+}
+
+.cta-subtitle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-subtitle h3 {
+  color: #fc7a43;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "shiba-font", sans-serif;
+}
+
+.sparkle-emoji {
+  color: #fbbf24;
+  font-size: 1.5rem;
+  animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.contact-form {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  margin-bottom: 1rem;
+}
+
+.btn.white {
+  width: 100%;
+  background: white;
+  color: #6d28d9;
+  transition: all 0.3s ease;
+}
+
+.btn.white:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  display: block;
+  background: rgba(34, 197, 94, 0.2);
+  color: #fff;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}

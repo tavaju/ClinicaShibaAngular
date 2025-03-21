@@ -1,0 +1,83 @@
+.specialties {
+  padding: 4rem 0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.specialties h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.specialty-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.specialty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.specialty-card.violet {
+  background: #f5f3ff;
+  grid-column: span 1;
+}
+
+.specialty-card.orange {
+  background: #fff7ed;
+  display: flex;
+  gap: 2rem;
+  grid-column: span 2;
+}
+
+.specialty-card.rose {
+  background: #fff1f2;
+  display: flex;
+  gap: 2rem;
+  grid-column: span 2;
+}
+
+.specialty-card.blue {
+  background: #eff6ff;
+  grid-column: span 1;
+}
+
+.specialty-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.specialty-card p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.specialty-card img {
+  width: 16rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.read-more {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-weight: 500;
+}

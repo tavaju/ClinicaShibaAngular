@@ -1,0 +1,135 @@
+.testimonials {
+  background: #f5f3ff;
+  padding: 5rem 0;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.testimonial-carousel {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.carousel-arrow.prev {
+  left: 0;
+}
+
+.carousel-arrow.next {
+  right: 0;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 0 3rem;
+  display: flex;
+  gap: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image-container {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  flex-shrink: 0;
+}
+
+.image-background {
+  position: absolute;
+  inset: 0;
+  background: #8b5cf6;
+  border-radius: 0.75rem;
+  transform: rotate(6deg);
+}
+
+.testimonial-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.star {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fc7a43;
+  fill: #fc7a43;
+}
+
+.testimonial-text {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-weight: 700;
+  font-size: large;
+  color: #fc7a43;
+  margin-bottom: 0.3rem;
+}
+
+.testimonial-pet {
+  color: #986efa;
+  font-size: small;
+  font-weight: 600;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #d1d5db;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot.active {
+  background: #fc7a43;
+}
