@@ -1,0 +1,6 @@
+export class Icons {
+    constructor(_icons) {
+        this._icons = _icons;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaWNvbi5wcm92aWRlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvcHJvdmlkZXJzL2ljb24ucHJvdmlkZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxPQUFPLEtBQUs7SUFDaEIsWUFBb0IsTUFBYztRQUFkLFdBQU0sR0FBTixNQUFNLENBQVE7SUFBSSxDQUFDO0NBQ3hDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNsYXNzIEljb25zIHtcclxuICBjb25zdHJ1Y3Rvcihwcml2YXRlIF9pY29uczogb2JqZWN0KSB7IH1cclxufVxyXG4iXX0=

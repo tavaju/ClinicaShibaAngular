@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-earmark-font.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-earmark-font/}.
+ */
+export const fileEarmarkFont = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-font" viewBox="0 0 16 16">
+  <path d="M10.943 6H5.057L5 8h.5c.18-1.096.356-1.192 1.694-1.235l.293-.01v5.09c0 .47-.1.582-.898.655v.5H9.41v-.5c-.803-.073-.903-.184-.903-.654V6.755l.298.01c1.338.043 1.514.14 1.694 1.235h.5l-.057-2z"/>
+  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXJtYXJrLWZvbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2ZpbGUtZWFybWFyay1mb250LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sZUFBZSxHQUFHOzs7T0FHeEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBmaWxlLWVhcm1hcmstZm9udC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9maWxlLWVhcm1hcmstZm9udC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGZpbGVFYXJtYXJrRm9udCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1maWxlLWVhcm1hcmstZm9udFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xMC45NDMgNkg1LjA1N0w1IDhoLjVjLjE4LTEuMDk2LjM1Ni0xLjE5MiAxLjY5NC0xLjIzNWwuMjkzLS4wMXY1LjA5YzAgLjQ3LS4xLjU4Mi0uODk4LjY1NXYuNUg5LjQxdi0uNWMtLjgwMy0uMDczLS45MDMtLjE4NC0uOTAzLS42NTRWNi43NTVsLjI5OC4wMWMxLjMzOC4wNDMgMS41MTQuMTQgMS42OTQgMS4yMzVoLjVsLS4wNTctMnpcIi8+XG4gIDxwYXRoIGQ9XCJNMTQgNC41VjE0YTIgMiAwIDAgMS0yIDJINGEyIDIgMCAwIDEtMi0yVjJhMiAyIDAgMCAxIDItMmg1LjVMMTQgNC41em0tMyAwQTEuNSAxLjUgMCAwIDEgOS41IDNWMUg0YTEgMSAwIDAgMC0xIDF2MTJhMSAxIDAgMCAwIDEgMWg4YTEgMSAwIDAgMCAxLTFWNC41aC0yelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

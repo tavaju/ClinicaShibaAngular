@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * universal-access-circle.
+ *
+ * {@link https://icons.getbootstrap.com/icons/universal-access-circle/}.
+ */
+export const universalAccessCircle = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-universal-access-circle" viewBox="0 0 16 16">
+  <path d="M8 4.143A1.071 1.071 0 1 0 8 2a1.071 1.071 0 0 0 0 2.143Zm-4.668 1.47 3.24.316v2.5l-.323 4.585A.383.383 0 0 0 7 13.14l.826-4.017c.045-.18.301-.18.346 0L9 13.139a.383.383 0 0 0 .752-.125L9.43 8.43v-2.5l3.239-.316a.38.38 0 0 0-.047-.756H3.379a.38.38 0 0 0-.047.756Z"/>
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidW5pdmVyc2FsLWFjY2Vzcy1jaXJjbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3VuaXZlcnNhbC1hY2Nlc3MtY2lyY2xlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0scUJBQXFCLEdBQUc7OztPQUc5QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHVuaXZlcnNhbC1hY2Nlc3MtY2lyY2xlLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3VuaXZlcnNhbC1hY2Nlc3MtY2lyY2xlL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgdW5pdmVyc2FsQWNjZXNzQ2lyY2xlID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLXVuaXZlcnNhbC1hY2Nlc3MtY2lyY2xlXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTggNC4xNDNBMS4wNzEgMS4wNzEgMCAxIDAgOCAyYTEuMDcxIDEuMDcxIDAgMCAwIDAgMi4xNDNabS00LjY2OCAxLjQ3IDMuMjQuMzE2djIuNWwtLjMyMyA0LjU4NUEuMzgzLjM4MyAwIDAgMCA3IDEzLjE0bC44MjYtNC4wMTdjLjA0NS0uMTguMzAxLS4xOC4zNDYgMEw5IDEzLjEzOWEuMzgzLjM4MyAwIDAgMCAuNzUyLS4xMjVMOS40MyA4LjQzdi0yLjVsMy4yMzktLjMxNmEuMzguMzggMCAwIDAtLjA0Ny0uNzU2SDMuMzc5YS4zOC4zOCAwIDAgMC0uMDQ3Ljc1NlpcIi8+XG4gIDxwYXRoIGQ9XCJNOCAwYTggOCAwIDEgMCAwIDE2QTggOCAwIDAgMCA4IDBaTTEgOGE3IDcgMCAxIDEgMTQgMEE3IDcgMCAwIDEgMSA4WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

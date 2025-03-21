@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * stickies-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/stickies-fill/}.
+ */
+export const stickiesFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stickies-fill" viewBox="0 0 16 16">
+  <path d="M0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1H1.5A1.5 1.5 0 0 0 0 1.5z"/>
+  <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2h-11zm6 8.5a1 1 0 0 1 1-1h4.396a.25.25 0 0 1 .177.427l-5.146 5.146a.25.25 0 0 1-.427-.177V10.5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RpY2tpZXMtZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvc3RpY2tpZXMtZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7O09BR3JCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogc3RpY2tpZXMtZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9zdGlja2llcy1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3Qgc3RpY2tpZXNGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLXN0aWNraWVzLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMCAxLjVWMTNhMSAxIDAgMCAwIDEgMVYxLjVhLjUuNSAwIDAgMSAuNS0uNUgxNGExIDEgMCAwIDAtMS0xSDEuNUExLjUgMS41IDAgMCAwIDAgMS41elwiLz5cbiAgPHBhdGggZD1cIk0zLjUgMkExLjUgMS41IDAgMCAwIDIgMy41djExQTEuNSAxLjUgMCAwIDAgMy41IDE2aDYuMDg2YTEuNSAxLjUgMCAwIDAgMS4wNi0uNDRsNC45MTUtNC45MTRBMS41IDEuNSAwIDAgMCAxNiA5LjU4NlYzLjVBMS41IDEuNSAwIDAgMCAxNC41IDJoLTExem02IDguNWExIDEgMCAwIDEgMS0xaDQuMzk2YS4yNS4yNSAwIDAgMSAuMTc3LjQyN2wtNS4xNDYgNS4xNDZhLjI1LjI1IDAgMCAxLS40MjctLjE3N1YxMC41elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

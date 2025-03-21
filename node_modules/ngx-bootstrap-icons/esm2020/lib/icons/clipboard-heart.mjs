@@ -1,0 +1,12 @@
+/* eslint-disable max-len */
+/**
+ * clipboard-heart.
+ *
+ * {@link https://icons.getbootstrap.com/icons/clipboard-heart/}.
+ */
+export const clipboardHeart = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-heart" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Z"/>
+  <path d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Z"/>
+  <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xpcGJvYXJkLWhlYXJ0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9jbGlwYm9hcmQtaGVhcnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxjQUFjLEdBQUc7Ozs7T0FJdkIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBjbGlwYm9hcmQtaGVhcnQuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvY2xpcGJvYXJkLWhlYXJ0L30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY2xpcGJvYXJkSGVhcnQgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2xpcGJvYXJkLWhlYXJ0XCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBmaWxsLXJ1bGU9XCJldmVub2RkXCIgZD1cIk01IDEuNUExLjUgMS41IDAgMCAxIDYuNSAwaDNBMS41IDEuNSAwIDAgMSAxMSAxLjV2MUExLjUgMS41IDAgMCAxIDkuNSA0aC0zQTEuNSAxLjUgMCAwIDEgNSAyLjV2LTFabTUgMGEuNS41IDAgMCAwLS41LS41aC0zYS41LjUgMCAwIDAtLjUuNXYxYS41LjUgMCAwIDAgLjUuNWgzYS41LjUgMCAwIDAgLjUtLjV2LTFaXCIvPlxuICA8cGF0aCBkPVwiTTMgMS41aDF2MUgzYTEgMSAwIDAgMC0xIDFWMTRhMSAxIDAgMCAwIDEgMWgxMGExIDEgMCAwIDAgMS0xVjMuNWExIDEgMCAwIDAtMS0xaC0xdi0xaDFhMiAyIDAgMCAxIDIgMlYxNGEyIDIgMCAwIDEtMiAySDNhMiAyIDAgMCAxLTItMlYzLjVhMiAyIDAgMCAxIDItMlpcIi8+XG4gIDxwYXRoIGQ9XCJNOCA2Ljk4MkM5LjY2NCA1LjMwOSAxMy44MjUgOC4yMzYgOCAxMiAyLjE3NSA4LjIzNiA2LjMzNiA1LjMxIDggNi45ODJaXCIvPlxuPC9zdmc+YDtcclxuIl19

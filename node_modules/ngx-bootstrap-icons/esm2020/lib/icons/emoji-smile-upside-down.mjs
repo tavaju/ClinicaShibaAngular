@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * emoji-smile-upside-down.
+ *
+ * {@link https://icons.getbootstrap.com/icons/emoji-smile-upside-down/}.
+ */
+export const emojiSmileUpsideDown = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-upside-down" viewBox="0 0 16 16">
+  <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"/>
+  <path d="M4.285 6.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5zm4 0c0-.828-.448-1.5-1-1.5s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW1vamktc21pbGUtdXBzaWRlLWRvd24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2Vtb2ppLXNtaWxlLXVwc2lkZS1kb3duLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sb0JBQW9CLEdBQUc7OztPQUc3QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGVtb2ppLXNtaWxlLXVwc2lkZS1kb3duLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2Vtb2ppLXNtaWxlLXVwc2lkZS1kb3duL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZW1vamlTbWlsZVVwc2lkZURvd24gPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZW1vamktc21pbGUtdXBzaWRlLWRvd25cIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNOCAxYTcgNyAwIDEgMCAwIDE0QTcgNyAwIDAgMCA4IDF6bTAtMWE4IDggMCAxIDEgMCAxNkE4IDggMCAwIDEgOCAwelwiLz5cbiAgPHBhdGggZD1cIk00LjI4NSA2LjQzM2EuNS41IDAgMCAwIC42ODMtLjE4M0EzLjQ5OCAzLjQ5OCAwIDAgMSA4IDQuNWMxLjI5NSAwIDIuNDI2LjcwMyAzLjAzMiAxLjc1YS41LjUgMCAwIDAgLjg2Ni0uNUE0LjQ5OCA0LjQ5OCAwIDAgMCA4IDMuNWE0LjUgNC41IDAgMCAwLTMuODk4IDIuMjUuNS41IDAgMCAwIC4xODMuNjgzek03IDkuNUM3IDguNjcyIDYuNTUyIDggNiA4cy0xIC42NzItMSAxLjUuNDQ4IDEuNSAxIDEuNSAxLS42NzIgMS0xLjV6bTQgMGMwLS44MjgtLjQ0OC0xLjUtMS0xLjVzLTEgLjY3Mi0xIDEuNS40NDggMS41IDEgMS41IDEtLjY3MiAxLTEuNXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

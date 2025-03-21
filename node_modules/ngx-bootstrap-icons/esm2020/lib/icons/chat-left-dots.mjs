@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * chat-left-dots.
+ *
+ * {@link https://icons.getbootstrap.com/icons/chat-left-dots/}.
+ */
+export const chatLeftDots = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+  <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hhdC1sZWZ0LWRvdHMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2NoYXQtbGVmdC1kb3RzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sWUFBWSxHQUFHOzs7T0FHckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBjaGF0LWxlZnQtZG90cy5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9jaGF0LWxlZnQtZG90cy99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGNoYXRMZWZ0RG90cyA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1jaGF0LWxlZnQtZG90c1wiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xNCAxYTEgMSAwIDAgMSAxIDF2OGExIDEgMCAwIDEtMSAxSDQuNDE0QTIgMiAwIDAgMCAzIDExLjU4NmwtMiAyVjJhMSAxIDAgMCAxIDEtMWgxMnpNMiAwYTIgMiAwIDAgMC0yIDJ2MTIuNzkzYS41LjUgMCAwIDAgLjg1NC4zNTNsMi44NTMtMi44NTNBMSAxIDAgMCAxIDQuNDE0IDEySDE0YTIgMiAwIDAgMCAyLTJWMmEyIDIgMCAwIDAtMi0ySDJ6XCIvPlxuICA8cGF0aCBkPVwiTTUgNmExIDEgMCAxIDEtMiAwIDEgMSAwIDAgMSAyIDB6bTQgMGExIDEgMCAxIDEtMiAwIDEgMSAwIDAgMSAyIDB6bTQgMGExIDEgMCAxIDEtMiAwIDEgMSAwIDAgMSAyIDB6XCIvPlxuPC9zdmc+YDtcclxuIl19

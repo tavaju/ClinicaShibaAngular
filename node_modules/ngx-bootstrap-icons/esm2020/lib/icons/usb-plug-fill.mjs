@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * usb-plug-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/usb-plug-fill/}.
+ */
+export const usbPlugFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-usb-plug-fill" viewBox="0 0 16 16">
+  <path d="M6 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4H6v-4ZM7 1v1h1V1H7Zm2 0v1h1V1H9ZM5.5 5a.5.5 0 0 0-.5.5v4.894a2 2 0 0 0 .336 1.11l.83 1.245c.544.816.834 1.774.834 2.754 0 .275.222.497.497.497h2.006a.497.497 0 0 0 .497-.497c0-.98.29-1.938.834-2.754l.83-1.245a2 2 0 0 0 .336-1.11V5.5a.5.5 0 0 0-.5-.5h-6Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNiLXBsdWctZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvdXNiLXBsdWctZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFdBQVcsR0FBRzs7T0FFcEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiB1c2ItcGx1Zy1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3VzYi1wbHVnLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCB1c2JQbHVnRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS11c2ItcGx1Zy1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTYgLjVhLjUuNSAwIDAgMSAuNS0uNWg0YS41LjUgMCAwIDEgLjUuNXY0SDZ2LTRaTTcgMXYxaDFWMUg3Wm0yIDB2MWgxVjFIOVpNNS41IDVhLjUuNSAwIDAgMC0uNS41djQuODk0YTIgMiAwIDAgMCAuMzM2IDEuMTFsLjgzIDEuMjQ1Yy41NDQuODE2LjgzNCAxLjc3NC44MzQgMi43NTQgMCAuMjc1LjIyMi40OTcuNDk3LjQ5N2gyLjAwNmEuNDk3LjQ5NyAwIDAgMCAuNDk3LS40OTdjMC0uOTguMjktMS45MzguODM0LTIuNzU0bC44My0xLjI0NWEyIDIgMCAwIDAgLjMzNi0xLjExVjUuNWEuNS41IDAgMCAwLS41LS41aC02WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

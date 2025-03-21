@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * file-music-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-music-fill/}.
+ */
+export const fileMusicFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-music-fill" viewBox="0 0 16 16">
+  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-.5 4.11v1.8l-2.5.5v5.09c0 .495-.301.883-.662 1.123C7.974 12.866 7.499 13 7 13c-.5 0-.974-.134-1.338-.377-.36-.24-.662-.628-.662-1.123s.301-.883.662-1.123C6.026 10.134 6.501 10 7 10c.356 0 .7.068 1 .196V4.41a1 1 0 0 1 .804-.98l1.5-.3a1 1 0 0 1 1.196.98z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1tdXNpYy1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9maWxlLW11c2ljLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7O09BRXRCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogZmlsZS1tdXNpYy1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZpbGUtbXVzaWMtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGZpbGVNdXNpY0ZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZS1tdXNpYy1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTEyIDBINGEyIDIgMCAwIDAtMiAydjEyYTIgMiAwIDAgMCAyIDJoOGEyIDIgMCAwIDAgMi0yVjJhMiAyIDAgMCAwLTItMnptLS41IDQuMTF2MS44bC0yLjUuNXY1LjA5YzAgLjQ5NS0uMzAxLjg4My0uNjYyIDEuMTIzQzcuOTc0IDEyLjg2NiA3LjQ5OSAxMyA3IDEzYy0uNSAwLS45NzQtLjEzNC0xLjMzOC0uMzc3LS4zNi0uMjQtLjY2Mi0uNjI4LS42NjItMS4xMjNzLjMwMS0uODgzLjY2Mi0xLjEyM0M2LjAyNiAxMC4xMzQgNi41MDEgMTAgNyAxMGMuMzU2IDAgLjcuMDY4IDEgLjE5NlY0LjQxYTEgMSAwIDAgMSAuODA0LS45OGwxLjUtLjNhMSAxIDAgMCAxIDEuMTk2Ljk4elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

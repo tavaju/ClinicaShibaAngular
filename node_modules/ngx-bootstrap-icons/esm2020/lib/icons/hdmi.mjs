@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * hdmi.
+ *
+ * {@link https://icons.getbootstrap.com/icons/hdmi/}.
+ */
+export const hdmi = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hdmi" viewBox="0 0 16 16">
+  <path d="M2.5 7a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11Z"/>
+  <path d="M1 5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h.293l.707.707a1 1 0 0 0 .707.293h10.586a1 1 0 0 0 .707-.293l.707-.707H15a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H1Zm0 1h14v3h-.293a1 1 0 0 0-.707.293l-.707.707H2.707L2 9.293A1 1 0 0 0 1.293 9H1V6Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaGRtaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvaGRtaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLElBQUksR0FBRzs7O09BR2IsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBoZG1pLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2hkbWkvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBoZG1pID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWhkbWlcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMi41IDdhLjUuNSAwIDAgMCAwIDFoMTFhLjUuNSAwIDAgMCAwLTFoLTExWlwiLz5cbiAgPHBhdGggZD1cIk0xIDVhMSAxIDAgMCAwLTEgMXYzYTEgMSAwIDAgMCAxIDFoLjI5M2wuNzA3LjcwN2ExIDEgMCAwIDAgLjcwNy4yOTNoMTAuNTg2YTEgMSAwIDAgMCAuNzA3LS4yOTNsLjcwNy0uNzA3SDE1YTEgMSAwIDAgMCAxLTFWNmExIDEgMCAwIDAtMS0xSDFabTAgMWgxNHYzaC0uMjkzYTEgMSAwIDAgMC0uNzA3LjI5M2wtLjcwNy43MDdIMi43MDdMMiA5LjI5M0ExIDEgMCAwIDAgMS4yOTMgOUgxVjZaXCIvPlxuPC9zdmc+YDtcclxuIl19

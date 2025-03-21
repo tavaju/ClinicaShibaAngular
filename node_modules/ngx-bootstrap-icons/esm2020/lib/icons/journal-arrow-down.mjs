@@ -1,0 +1,12 @@
+/* eslint-disable max-len */
+/**
+ * journal-arrow-down.
+ *
+ * {@link https://icons.getbootstrap.com/icons/journal-arrow-down/}.
+ */
+export const journalArrowDown = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-arrow-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5z"/>
+  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiam91cm5hbC1hcnJvdy1kb3duLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9qb3VybmFsLWFycm93LWRvd24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxnQkFBZ0IsR0FBRzs7OztPQUl6QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGpvdXJuYWwtYXJyb3ctZG93bi5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9qb3VybmFsLWFycm93LWRvd24vfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBqb3VybmFsQXJyb3dEb3duID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWpvdXJuYWwtYXJyb3ctZG93blwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNOCA1YS41LjUgMCAwIDEgLjUuNXYzLjc5M2wxLjE0Ni0xLjE0N2EuNS41IDAgMCAxIC43MDguNzA4bC0yIDJhLjUuNSAwIDAgMS0uNzA4IDBsLTItMmEuNS41IDAgMSAxIC43MDgtLjcwOEw3LjUgOS4yOTNWNS41QS41LjUgMCAwIDEgOCA1elwiLz5cbiAgPHBhdGggZD1cIk0zIDBoMTBhMiAyIDAgMCAxIDIgMnYxMmEyIDIgMCAwIDEtMiAySDNhMiAyIDAgMCAxLTItMnYtMWgxdjFhMSAxIDAgMCAwIDEgMWgxMGExIDEgMCAwIDAgMS0xVjJhMSAxIDAgMCAwLTEtMUgzYTEgMSAwIDAgMC0xIDF2MUgxVjJhMiAyIDAgMCAxIDItMnpcIi8+XG4gIDxwYXRoIGQ9XCJNMSA1di0uNWEuNS41IDAgMCAxIDEgMFY1aC41YS41LjUgMCAwIDEgMCAxaC0yYS41LjUgMCAwIDEgMC0xSDF6bTAgM3YtLjVhLjUuNSAwIDAgMSAxIDBWOGguNWEuNS41IDAgMCAxIDAgMWgtMmEuNS41IDAgMCAxIDAtMUgxem0wIDN2LS41YS41LjUgMCAwIDEgMSAwdi41aC41YS41LjUgMCAwIDEgMCAxaC0yYS41LjUgMCAwIDEgMC0xSDF6XCIvPlxuPC9zdmc+YDtcclxuIl19

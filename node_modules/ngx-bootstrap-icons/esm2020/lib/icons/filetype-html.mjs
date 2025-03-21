@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * filetype-html.
+ *
+ * {@link https://icons.getbootstrap.com/icons/filetype-html/}.
+ */
+export const filetypeHtml = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-html" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5Zm-9.736 7.35v3.999h-.791v-1.714H1.79v1.714H1V11.85h.791v1.626h1.682V11.85h.79Zm2.251.662v3.337h-.794v-3.337H4.588v-.662h3.064v.662H6.515Zm2.176 3.337v-2.66h.038l.952 2.159h.516l.946-2.16h.038v2.661h.715V11.85h-.8l-1.14 2.596H9.93L8.79 11.85h-.805v3.999h.706Zm4.71-.674h1.696v.674H12.61V11.85h.79v3.325Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZXR5cGUtaHRtbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZmlsZXR5cGUtaHRtbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7T0FFckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBmaWxldHlwZS1odG1sLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZpbGV0eXBlLWh0bWwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBmaWxldHlwZUh0bWwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZXR5cGUtaHRtbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNMTQgNC41VjExaC0xVjQuNWgtMkExLjUgMS41IDAgMCAxIDkuNSAzVjFINGExIDEgMCAwIDAtMSAxdjlIMlYyYTIgMiAwIDAgMSAyLTJoNS41TDE0IDQuNVptLTkuNzM2IDcuMzV2My45OTloLS43OTF2LTEuNzE0SDEuNzl2MS43MTRIMVYxMS44NWguNzkxdjEuNjI2aDEuNjgyVjExLjg1aC43OVptMi4yNTEuNjYydjMuMzM3aC0uNzk0di0zLjMzN0g0LjU4OHYtLjY2MmgzLjA2NHYuNjYySDYuNTE1Wm0yLjE3NiAzLjMzN3YtMi42NmguMDM4bC45NTIgMi4xNTloLjUxNmwuOTQ2LTIuMTZoLjAzOHYyLjY2MWguNzE1VjExLjg1aC0uOGwtMS4xNCAyLjU5Nkg5LjkzTDguNzkgMTEuODVoLS44MDV2My45OTloLjcwNlptNC43MS0uNjc0aDEuNjk2di42NzRIMTIuNjFWMTEuODVoLjc5djMuMzI1WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

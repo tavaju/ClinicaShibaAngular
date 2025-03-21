@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * skip-backward-btn.
+ *
+ * {@link https://icons.getbootstrap.com/icons/skip-backward-btn/}.
+ */
+export const skipBackwardBtn = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-backward-btn" viewBox="0 0 16 16">
+  <path d="M11.21 5.093A.5.5 0 0 1 12 5.5v5a.5.5 0 0 1-.79.407L8.5 8.972V10.5a.5.5 0 0 1-.79.407L5 8.972V10.5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 1 0v1.528l2.71-1.935a.5.5 0 0 1 .79.407v1.528l2.71-1.935z"/>
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2tpcC1iYWNrd2FyZC1idG4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3NraXAtYmFja3dhcmQtYnRuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sZUFBZSxHQUFHOzs7T0FHeEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBza2lwLWJhY2t3YXJkLWJ0bi5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9za2lwLWJhY2t3YXJkLWJ0bi99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHNraXBCYWNrd2FyZEJ0biA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1za2lwLWJhY2t3YXJkLWJ0blwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xMS4yMSA1LjA5M0EuNS41IDAgMCAxIDEyIDUuNXY1YS41LjUgMCAwIDEtLjc5LjQwN0w4LjUgOC45NzJWMTAuNWEuNS41IDAgMCAxLS43OS40MDdMNSA4Ljk3MlYxMC41YS41LjUgMCAwIDEtMSAwdi01YS41LjUgMCAwIDEgMSAwdjEuNTI4bDIuNzEtMS45MzVhLjUuNSAwIDAgMSAuNzkuNDA3djEuNTI4bDIuNzEtMS45MzV6XCIvPlxuICA8cGF0aCBkPVwiTTAgNGEyIDIgMCAwIDEgMi0yaDEyYTIgMiAwIDAgMSAyIDJ2OGEyIDIgMCAwIDEtMiAySDJhMiAyIDAgMCAxLTItMlY0em0xNSAwYTEgMSAwIDAgMC0xLTFIMmExIDEgMCAwIDAtMSAxdjhhMSAxIDAgMCAwIDEgMWgxMmExIDEgMCAwIDAgMS0xVjR6XCIvPlxuPC9zdmc+YDtcclxuIl19

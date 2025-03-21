@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * brightness-alt-low-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/brightness-alt-low-fill/}.
+ */
+export const brightnessAltLowFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-alt-low-fill" viewBox="0 0 16 16">
+  <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm5 6a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM2 11a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm10.243-3.536a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm-8.486-.707a.5.5 0 1 0 .707.707.5.5 0 0 0-.707-.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnJpZ2h0bmVzcy1hbHQtbG93LWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2JyaWdodG5lc3MtYWx0LWxvdy1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sb0JBQW9CLEdBQUc7O09BRTdCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogYnJpZ2h0bmVzcy1hbHQtbG93LWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvYnJpZ2h0bmVzcy1hbHQtbG93LWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBicmlnaHRuZXNzQWx0TG93RmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1icmlnaHRuZXNzLWFsdC1sb3ctZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk04LjUgNS41YS41LjUgMCAxIDEtMSAwIC41LjUgMCAwIDEgMSAwem01IDZhLjUuNSAwIDEgMSAwLTEgLjUuNSAwIDAgMSAwIDF6TTIgMTFhLjUuNSAwIDEgMCAxIDAgLjUuNSAwIDAgMC0xIDB6bTEwLjI0My0zLjUzNmEuNS41IDAgMSAxLS43MDctLjcwNy41LjUgMCAwIDEgLjcwNy43MDd6bS04LjQ4Ni0uNzA3YS41LjUgMCAxIDAgLjcwNy43MDcuNS41IDAgMCAwLS43MDctLjcwN3pNOCA3YTQgNCAwIDAgMC00IDQgLjUuNSAwIDAgMCAuNS41aDdhLjUuNSAwIDAgMCAuNS0uNSA0IDQgMCAwIDAtNC00elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

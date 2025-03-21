@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-earmark-zip-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-earmark-zip-fill/}.
+ */
+export const fileEarmarkZipFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-zip-fill" viewBox="0 0 16 16">
+  <path d="M5.5 9.438V8.5h1v.938a1 1 0 0 0 .03.243l.4 1.598-.93.62-.93-.62.4-1.598a1 1 0 0 0 .03-.243z"/>
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-4-.5V2h-1V1H6v1h1v1H6v1h1v1H6v1h1v1H5.5V6h-1V5h1V4h-1V3h1zm0 4.5h1a1 1 0 0 1 1 1v.938l.4 1.599a1 1 0 0 1-.416 1.074l-.93.62a1 1 0 0 1-1.109 0l-.93-.62a1 1 0 0 1-.415-1.074l.4-1.599V8.5a1 1 0 0 1 1-1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXJtYXJrLXppcC1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9maWxlLWVhcm1hcmstemlwLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxrQkFBa0IsR0FBRzs7O09BRzNCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogZmlsZS1lYXJtYXJrLXppcC1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZpbGUtZWFybWFyay16aXAtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGZpbGVFYXJtYXJrWmlwRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1maWxlLWVhcm1hcmstemlwLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNS41IDkuNDM4VjguNWgxdi45MzhhMSAxIDAgMCAwIC4wMy4yNDNsLjQgMS41OTgtLjkzLjYyLS45My0uNjIuNC0xLjU5OGExIDEgMCAwIDAgLjAzLS4yNDN6XCIvPlxuICA8cGF0aCBkPVwiTTkuMjkzIDBINGEyIDIgMCAwIDAtMiAydjEyYTIgMiAwIDAgMCAyIDJoOGEyIDIgMCAwIDAgMi0yVjQuNzA3QTEgMSAwIDAgMCAxMy43MDcgNEwxMCAuMjkzQTEgMSAwIDAgMCA5LjI5MyAwek05LjUgMy41di0ybDMgM2gtMmExIDEgMCAwIDEtMS0xem0tNC0uNVYyaC0xVjFINnYxaDF2MUg2djFoMXYxSDZ2MWgxdjFINS41VjZoLTFWNWgxVjRoLTFWM2gxem0wIDQuNWgxYTEgMSAwIDAgMSAxIDF2LjkzOGwuNCAxLjU5OWExIDEgMCAwIDEtLjQxNiAxLjA3NGwtLjkzLjYyYTEgMSAwIDAgMS0xLjEwOSAwbC0uOTMtLjYyYTEgMSAwIDAgMS0uNDE1LTEuMDc0bC40LTEuNTk5VjguNWExIDEgMCAwIDEgMS0xelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

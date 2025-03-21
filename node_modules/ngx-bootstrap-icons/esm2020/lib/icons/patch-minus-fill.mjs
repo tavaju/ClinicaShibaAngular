@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * patch-minus-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/patch-minus-fill/}.
+ */
+export const patchMinusFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-minus-fill" viewBox="0 0 16 16">
+  <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM6 7.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGF0Y2gtbWludXMtZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvcGF0Y2gtbWludXMtZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGNBQWMsR0FBRzs7T0FFdkIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBwYXRjaC1taW51cy1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3BhdGNoLW1pbnVzLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBwYXRjaE1pbnVzRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1wYXRjaC1taW51cy1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTEwLjA2Ny44N2EyLjg5IDIuODkgMCAwIDAtNC4xMzQgMGwtLjYyMi42MzgtLjg5LS4wMTFhMi44OSAyLjg5IDAgMCAwLTIuOTI0IDIuOTI0bC4wMS44OS0uNjM2LjYyMmEyLjg5IDIuODkgMCAwIDAgMCA0LjEzNGwuNjM3LjYyMi0uMDExLjg5YTIuODkgMi44OSAwIDAgMCAyLjkyNCAyLjkyNGwuODktLjAxLjYyMi42MzZhMi44OSAyLjg5IDAgMCAwIDQuMTM0IDBsLjYyMi0uNjM3Ljg5LjAxMWEyLjg5IDIuODkgMCAwIDAgMi45MjQtMi45MjRsLS4wMS0uODkuNjM2LS42MjJhMi44OSAyLjg5IDAgMCAwIDAtNC4xMzRsLS42MzctLjYyMi4wMTEtLjg5YTIuODkgMi44OSAwIDAgMC0yLjkyNC0yLjkyNGwtLjg5LjAxLS42MjItLjYzNnpNNiA3LjVoNGEuNS41IDAgMCAxIDAgMUg2YS41LjUgMCAwIDEgMC0xelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

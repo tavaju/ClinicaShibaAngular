@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-earmark-excel.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-earmark-excel/}.
+ */
+export const fileEarmarkExcel = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
+  <path d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
+  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXJtYXJrLWV4Y2VsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9maWxlLWVhcm1hcmstZXhjZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxnQkFBZ0IsR0FBRzs7O09BR3pCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogZmlsZS1lYXJtYXJrLWV4Y2VsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZpbGUtZWFybWFyay1leGNlbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGZpbGVFYXJtYXJrRXhjZWwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZS1lYXJtYXJrLWV4Y2VsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTUuODg0IDYuNjhhLjUuNSAwIDEgMC0uNzY4LjY0TDcuMzQ5IDEwbC0yLjIzMyAyLjY4YS41LjUgMCAwIDAgLjc2OC42NEw4IDEwLjc4MWwyLjExNiAyLjU0YS41LjUgMCAwIDAgLjc2OC0uNjQxTDguNjUxIDEwbDIuMjMzLTIuNjhhLjUuNSAwIDAgMC0uNzY4LS42NEw4IDkuMjE5bC0yLjExNi0yLjU0elwiLz5cbiAgPHBhdGggZD1cIk0xNCAxNFY0LjVMOS41IDBINGEyIDIgMCAwIDAtMiAydjEyYTIgMiAwIDAgMCAyIDJoOGEyIDIgMCAwIDAgMi0yek05LjUgM0ExLjUgMS41IDAgMCAwIDExIDQuNWgyVjE0YTEgMSAwIDAgMS0xIDFINGExIDEgMCAwIDEtMS0xVjJhMSAxIDAgMCAxIDEtMWg1LjV2MnpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

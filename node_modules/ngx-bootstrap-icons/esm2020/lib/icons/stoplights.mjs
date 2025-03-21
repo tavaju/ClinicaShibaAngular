@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * stoplights.
+ *
+ * {@link https://icons.getbootstrap.com/icons/stoplights/}.
+ */
+export const stoplights = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stoplights" viewBox="0 0 16 16">
+  <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm1.5 2.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+  <path d="M4 2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2h2c-.167.5-.8 1.6-2 2v2h2c-.167.5-.8 1.6-2 2v2h2c-.167.5-.8 1.6-2 2v1a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1c-1.2-.4-1.833-1.5-2-2h2V8c-1.2-.4-1.833-1.5-2-2h2V4c-1.2-.4-1.833-1.5-2-2h2zm2-1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RvcGxpZ2h0cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvc3RvcGxpZ2h0cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFVBQVUsR0FBRzs7O09BR25CLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogc3RvcGxpZ2h0cy5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9zdG9wbGlnaHRzL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3Qgc3RvcGxpZ2h0cyA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1zdG9wbGlnaHRzXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTggNWExLjUgMS41IDAgMSAwIDAtMyAxLjUgMS41IDAgMCAwIDAgM3ptMCA0YTEuNSAxLjUgMCAxIDAgMC0zIDEuNSAxLjUgMCAwIDAgMCAzem0xLjUgMi41YTEuNSAxLjUgMCAxIDEtMyAwIDEuNSAxLjUgMCAwIDEgMyAwelwiLz5cbiAgPHBhdGggZD1cIk00IDJhMiAyIDAgMCAxIDItMmg0YTIgMiAwIDAgMSAyIDJoMmMtLjE2Ny41LS44IDEuNi0yIDJ2MmgyYy0uMTY3LjUtLjggMS42LTIgMnYyaDJjLS4xNjcuNS0uOCAxLjYtMiAydjFhMiAyIDAgMCAxLTIgMkg2YTIgMiAwIDAgMS0yLTJ2LTFjLTEuMi0uNC0xLjgzMy0xLjUtMi0yaDJWOGMtMS4yLS40LTEuODMzLTEuNS0yLTJoMlY0Yy0xLjItLjQtMS44MzMtMS41LTItMmgyem0yLTFhMSAxIDAgMCAwLTEgMXYxMWExIDEgMCAwIDAgMSAxaDRhMSAxIDAgMCAwIDEtMVYyYTEgMSAwIDAgMC0xLTFINnpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

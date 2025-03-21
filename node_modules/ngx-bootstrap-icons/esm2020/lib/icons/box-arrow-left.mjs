@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * box-arrow-left.
+ *
+ * {@link https://icons.getbootstrap.com/icons/box-arrow-left/}.
+ */
+export const boxArrowLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm94LWFycm93LWxlZnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2JveC1hcnJvdy1sZWZ0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sWUFBWSxHQUFHOzs7T0FHckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBib3gtYXJyb3ctbGVmdC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9ib3gtYXJyb3ctbGVmdC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGJveEFycm93TGVmdCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1ib3gtYXJyb3ctbGVmdFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNNiAxMi41YS41LjUgMCAwIDAgLjUuNWg4YS41LjUgMCAwIDAgLjUtLjV2LTlhLjUuNSAwIDAgMC0uNS0uNWgtOGEuNS41IDAgMCAwLS41LjV2MmEuNS41IDAgMCAxLTEgMHYtMkExLjUgMS41IDAgMCAxIDYuNSAyaDhBMS41IDEuNSAwIDAgMSAxNiAzLjV2OWExLjUgMS41IDAgMCAxLTEuNSAxLjVoLThBMS41IDEuNSAwIDAgMSA1IDEyLjV2LTJhLjUuNSAwIDAgMSAxIDB2MnpcIi8+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTS4xNDYgOC4zNTRhLjUuNSAwIDAgMSAwLS43MDhsMy0zYS41LjUgMCAxIDEgLjcwOC43MDhMMS43MDcgNy41SDEwLjVhLjUuNSAwIDAgMSAwIDFIMS43MDdsMi4xNDcgMi4xNDZhLjUuNSAwIDAgMS0uNzA4LjcwOGwtMy0zelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

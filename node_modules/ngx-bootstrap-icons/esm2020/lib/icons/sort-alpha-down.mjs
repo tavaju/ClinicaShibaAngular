@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * sort-alpha-down.
+ *
+ * {@link https://icons.getbootstrap.com/icons/sort-alpha-down/}.
+ */
+export const sortAlphaDown = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-alpha-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.082 5.629 9.664 7H8.598l1.789-5.332h1.234L13.402 7h-1.12l-.419-1.371h-1.781zm1.57-.785L11 2.687h-.047l-.652 2.157h1.351z"/>
+  <path d="M12.96 14H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645V14zM4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293V2.5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic29ydC1hbHBoYS1kb3duLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9zb3J0LWFscGhhLWRvd24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7OztPQUd0QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHNvcnQtYWxwaGEtZG93bi5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9zb3J0LWFscGhhLWRvd24vfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBzb3J0QWxwaGFEb3duID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLXNvcnQtYWxwaGEtZG93blwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNMTAuMDgyIDUuNjI5IDkuNjY0IDdIOC41OThsMS43ODktNS4zMzJoMS4yMzRMMTMuNDAyIDdoLTEuMTJsLS40MTktMS4zNzFoLTEuNzgxem0xLjU3LS43ODVMMTEgMi42ODdoLS4wNDdsLS42NTIgMi4xNTdoMS4zNTF6XCIvPlxuICA8cGF0aCBkPVwiTTEyLjk2IDE0SDkuMDI4di0uNjkxbDIuNTc5LTMuNzJ2LS4wNTRIOS4wOTh2LS44NjdoMy43ODV2LjY5MWwtMi41NjcgMy43MnYuMDU0aDIuNjQ1VjE0ek00LjUgMi41YS41LjUgMCAwIDAtMSAwdjkuNzkzbC0xLjE0Ni0xLjE0N2EuNS41IDAgMCAwLS43MDguNzA4bDIgMS45OTkuMDA3LjAwN2EuNDk3LjQ5NyAwIDAgMCAuNy0uMDA2bDItMmEuNS41IDAgMCAwLS43MDctLjcwOEw0LjUgMTIuMjkzVjIuNXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

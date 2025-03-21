@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * box-arrow-down.
+ *
+ * {@link https://icons.getbootstrap.com/icons/box-arrow-down/}.
+ */
+export const boxArrowDown = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"/>
+  <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm94LWFycm93LWRvd24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2JveC1hcnJvdy1kb3duLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sWUFBWSxHQUFHOzs7T0FHckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBib3gtYXJyb3ctZG93bi5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9ib3gtYXJyb3ctZG93bi99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGJveEFycm93RG93biA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1ib3gtYXJyb3ctZG93blwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNMy41IDEwYS41LjUgMCAwIDEtLjUtLjV2LThhLjUuNSAwIDAgMSAuNS0uNWg5YS41LjUgMCAwIDEgLjUuNXY4YS41LjUgMCAwIDEtLjUuNWgtMmEuNS41IDAgMCAwIDAgMWgyQTEuNSAxLjUgMCAwIDAgMTQgOS41di04QTEuNSAxLjUgMCAwIDAgMTIuNSAwaC05QTEuNSAxLjUgMCAwIDAgMiAxLjV2OEExLjUgMS41IDAgMCAwIDMuNSAxMWgyYS41LjUgMCAwIDAgMC0xaC0yelwiLz5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNNy42NDYgMTUuODU0YS41LjUgMCAwIDAgLjcwOCAwbDMtM2EuNS41IDAgMCAwLS43MDgtLjcwOEw4LjUgMTQuMjkzVjUuNWEuNS41IDAgMCAwLTEgMHY4Ljc5M2wtMi4xNDYtMi4xNDdhLjUuNSAwIDAgMC0uNzA4LjcwOGwzIDN6XCIvPlxuPC9zdmc+YDtcclxuIl19

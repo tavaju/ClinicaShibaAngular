@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * columns-gap.
+ *
+ * {@link https://icons.getbootstrap.com/icons/columns-gap/}.
+ */
+export const columnsGap = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29sdW1ucy1nYXAuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2NvbHVtbnMtZ2FwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sVUFBVSxHQUFHOztPQUVuQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGNvbHVtbnMtZ2FwLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2NvbHVtbnMtZ2FwL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY29sdW1uc0dhcCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1jb2x1bW5zLWdhcFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk02IDF2M0gxVjFoNXpNMSAwYTEgMSAwIDAgMC0xIDF2M2ExIDEgMCAwIDAgMSAxaDVhMSAxIDAgMCAwIDEtMVYxYTEgMSAwIDAgMC0xLTFIMXptMTQgMTJ2M2gtNXYtM2g1em0tNS0xYTEgMSAwIDAgMC0xIDF2M2ExIDEgMCAwIDAgMSAxaDVhMSAxIDAgMCAwIDEtMXYtM2ExIDEgMCAwIDAtMS0xaC01ek02IDh2N0gxVjhoNXpNMSA3YTEgMSAwIDAgMC0xIDF2N2ExIDEgMCAwIDAgMSAxaDVhMSAxIDAgMCAwIDEtMVY4YTEgMSAwIDAgMC0xLTFIMXptMTQtNnY3aC01VjFoNXptLTUtMWExIDEgMCAwIDAtMSAxdjdhMSAxIDAgMCAwIDEgMWg1YTEgMSAwIDAgMCAxLTFWMWExIDEgMCAwIDAtMS0xaC01elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * escape.
+ *
+ * {@link https://icons.getbootstrap.com/icons/escape/}.
+ */
+export const escape = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-escape" viewBox="0 0 16 16">
+  <path d="M8.538 1.02a.5.5 0 1 0-.076.998 6 6 0 1 1-6.445 6.444.5.5 0 0 0-.997.076A7 7 0 1 0 8.538 1.02Z"/>
+  <path d="M7.096 7.828a.5.5 0 0 0 .707-.707L2.707 2.025h2.768a.5.5 0 1 0 0-1H1.5a.5.5 0 0 0-.5.5V5.5a.5.5 0 0 0 1 0V2.732l5.096 5.096Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXNjYXBlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9lc2NhcGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxNQUFNLEdBQUc7OztPQUdmLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogZXNjYXBlLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2VzY2FwZS99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGVzY2FwZSA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1lc2NhcGVcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNOC41MzggMS4wMmEuNS41IDAgMSAwLS4wNzYuOTk4IDYgNiAwIDEgMS02LjQ0NSA2LjQ0NC41LjUgMCAwIDAtLjk5Ny4wNzZBNyA3IDAgMSAwIDguNTM4IDEuMDJaXCIvPlxuICA8cGF0aCBkPVwiTTcuMDk2IDcuODI4YS41LjUgMCAwIDAgLjcwNy0uNzA3TDIuNzA3IDIuMDI1aDIuNzY4YS41LjUgMCAxIDAgMC0xSDEuNWEuNS41IDAgMCAwLS41LjVWNS41YS41LjUgMCAwIDAgMSAwVjIuNzMybDUuMDk2IDUuMDk2WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

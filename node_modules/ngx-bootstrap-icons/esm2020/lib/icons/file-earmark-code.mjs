@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-earmark-code.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-earmark-code/}.
+ */
+export const fileEarmarkCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16">
+  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+  <path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXJtYXJrLWNvZGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2ZpbGUtZWFybWFyay1jb2RlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sZUFBZSxHQUFHOzs7T0FHeEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBmaWxlLWVhcm1hcmstY29kZS5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9maWxlLWVhcm1hcmstY29kZS99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGZpbGVFYXJtYXJrQ29kZSA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1maWxlLWVhcm1hcmstY29kZVwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xNCA0LjVWMTRhMiAyIDAgMCAxLTIgMkg0YTIgMiAwIDAgMS0yLTJWMmEyIDIgMCAwIDEgMi0yaDUuNUwxNCA0LjV6bS0zIDBBMS41IDEuNSAwIDAgMSA5LjUgM1YxSDRhMSAxIDAgMCAwLTEgMXYxMmExIDEgMCAwIDAgMSAxaDhhMSAxIDAgMCAwIDEtMVY0LjVoLTJ6XCIvPlxuICA8cGF0aCBkPVwiTTguNjQ2IDYuNjQ2YS41LjUgMCAwIDEgLjcwOCAwbDIgMmEuNS41IDAgMCAxIDAgLjcwOGwtMiAyYS41LjUgMCAwIDEtLjcwOC0uNzA4TDEwLjI5MyA5IDguNjQ2IDcuMzU0YS41LjUgMCAwIDEgMC0uNzA4em0tMS4yOTIgMGEuNS41IDAgMCAwLS43MDggMGwtMiAyYS41LjUgMCAwIDAgMCAuNzA4bDIgMmEuNS41IDAgMCAwIC43MDgtLjcwOEw1LjcwNyA5bDEuNjQ3LTEuNjQ2YS41LjUgMCAwIDAgMC0uNzA4elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

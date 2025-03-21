@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * emoji-frown-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/emoji-frown-fill/}.
+ */
+export const emojiFrownFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-frown-fill" viewBox="0 0 16 16">
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm-2.715 5.933a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW1vamktZnJvd24tZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZW1vamktZnJvd24tZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGNBQWMsR0FBRzs7T0FFdkIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBlbW9qaS1mcm93bi1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2Vtb2ppLWZyb3duLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBlbW9qaUZyb3duRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1lbW9qaS1mcm93bi1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTggMTZBOCA4IDAgMSAwIDggMGE4IDggMCAwIDAgMCAxNnpNNyA2LjVDNyA3LjMyOCA2LjU1MiA4IDYgOHMtMS0uNjcyLTEtMS41UzUuNDQ4IDUgNiA1czEgLjY3MiAxIDEuNXptLTIuNzE1IDUuOTMzYS41LjUgMCAwIDEtLjE4My0uNjgzQTQuNDk4IDQuNDk4IDAgMCAxIDggOS41YTQuNSA0LjUgMCAwIDEgMy44OTggMi4yNS41LjUgMCAwIDEtLjg2Ni41QTMuNDk4IDMuNDk4IDAgMCAwIDggMTAuNWEzLjQ5OCAzLjQ5OCAwIDAgMC0zLjAzMiAxLjc1LjUuNSAwIDAgMS0uNjgzLjE4M3pNMTAgOGMtLjU1MiAwLTEtLjY3Mi0xLTEuNVM5LjQ0OCA1IDEwIDVzMSAuNjcyIDEgMS41UzEwLjU1MiA4IDEwIDh6XCIvPlxuPC9zdmc+YDtcclxuIl19

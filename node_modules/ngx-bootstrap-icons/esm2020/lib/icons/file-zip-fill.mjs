@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-zip-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-zip-fill/}.
+ */
+export const fileZipFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-zip-fill" viewBox="0 0 16 16">
+  <path d="M8.5 9.438V8.5h-1v.938a1 1 0 0 1-.03.243l-.4 1.598.93.62.93-.62-.4-1.598a1 1 0 0 1-.03-.243z"/>
+  <path d="M4 0h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm2.5 8.5v.938l-.4 1.599a1 1 0 0 0 .416 1.074l.93.62a1 1 0 0 0 1.109 0l.93-.62a1 1 0 0 0 .415-1.074l-.4-1.599V8.5a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1zm1-5.5h-1v1h1v1h-1v1h1v1H9V6H8V5h1V4H8V3h1V2H8V1H6.5v1h1v1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS16aXAtZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZmlsZS16aXAtZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFdBQVcsR0FBRzs7O09BR3BCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogZmlsZS16aXAtZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9maWxlLXppcC1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZmlsZVppcEZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZS16aXAtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk04LjUgOS40MzhWOC41aC0xdi45MzhhMSAxIDAgMCAxLS4wMy4yNDNsLS40IDEuNTk4LjkzLjYyLjkzLS42Mi0uNC0xLjU5OGExIDEgMCAwIDEtLjAzLS4yNDN6XCIvPlxuICA8cGF0aCBkPVwiTTQgMGg4YTIgMiAwIDAgMSAyIDJ2MTJhMiAyIDAgMCAxLTIgMkg0YTIgMiAwIDAgMS0yLTJWMmEyIDIgMCAwIDEgMi0yem0yLjUgOC41di45MzhsLS40IDEuNTk5YTEgMSAwIDAgMCAuNDE2IDEuMDc0bC45My42MmExIDEgMCAwIDAgMS4xMDkgMGwuOTMtLjYyYTEgMSAwIDAgMCAuNDE1LTEuMDc0bC0uNC0xLjU5OVY4LjVhMSAxIDAgMCAwLTEtMWgtMWExIDEgMCAwIDAtMSAxem0xLTUuNWgtMXYxaDF2MWgtMXYxaDF2MUg5VjZIOFY1aDFWNEg4VjNoMVYySDhWMUg2LjV2MWgxdjF6XCIvPlxuPC9zdmc+YDtcclxuIl19

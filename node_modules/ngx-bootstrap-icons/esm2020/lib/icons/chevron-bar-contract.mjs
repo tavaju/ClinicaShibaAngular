@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * chevron-bar-contract.
+ *
+ * {@link https://icons.getbootstrap.com/icons/chevron-bar-contract/}.
+ */
+export const chevronBarContract = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-contract" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 14.854a.5.5 0 0 0 .708 0L8 11.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zm0-13.708a.5.5 0 0 1 .708 0L8 4.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hldnJvbi1iYXItY29udHJhY3QuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2NoZXZyb24tYmFyLWNvbnRyYWN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sa0JBQWtCLEdBQUc7O09BRTNCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogY2hldnJvbi1iYXItY29udHJhY3QuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvY2hldnJvbi1iYXItY29udHJhY3QvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBjaGV2cm9uQmFyQ29udHJhY3QgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2hldnJvbi1iYXItY29udHJhY3RcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTTMuNjQ2IDE0Ljg1NGEuNS41IDAgMCAwIC43MDggMEw4IDExLjIwN2wzLjY0NiAzLjY0N2EuNS41IDAgMCAwIC43MDgtLjcwOGwtNC00YS41LjUgMCAwIDAtLjcwOCAwbC00IDRhLjUuNSAwIDAgMCAwIC43MDh6bTAtMTMuNzA4YS41LjUgMCAwIDEgLjcwOCAwTDggNC43OTNsMy42NDYtMy42NDdhLjUuNSAwIDAgMSAuNzA4LjcwOGwtNCA0YS41LjUgMCAwIDEtLjcwOCAwbC00LTRhLjUuNSAwIDAgMSAwLS43MDh6TTEgOGEuNS41IDAgMCAxIC41LS41aDEzYS41LjUgMCAwIDEgMCAxaC0xM0EuNS41IDAgMCAxIDEgOHpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

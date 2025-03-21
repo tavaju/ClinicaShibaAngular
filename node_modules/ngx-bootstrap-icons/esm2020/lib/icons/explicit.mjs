@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * explicit.
+ *
+ * {@link https://icons.getbootstrap.com/icons/explicit/}.
+ */
+export const explicit = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-explicit" viewBox="0 0 16 16">
+  <path d="M6.826 10.88H10.5V12h-5V4.002h5v1.12H6.826V7.4h3.457v1.073H6.826v2.408Z"/>
+  <path d="M2.5 0A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0h-11ZM1 2.5A1.5 1.5 0 0 1 2.5 1h11A1.5 1.5 0 0 1 15 2.5v11a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-11Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXhwbGljaXQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2V4cGxpY2l0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFHOzs7T0FHakIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBleHBsaWNpdC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9leHBsaWNpdC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGV4cGxpY2l0ID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWV4cGxpY2l0XCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTYuODI2IDEwLjg4SDEwLjVWMTJoLTVWNC4wMDJoNXYxLjEySDYuODI2VjcuNGgzLjQ1N3YxLjA3M0g2LjgyNnYyLjQwOFpcIi8+XG4gIDxwYXRoIGQ9XCJNMi41IDBBMi41IDIuNSAwIDAgMCAwIDIuNXYxMUEyLjUgMi41IDAgMCAwIDIuNSAxNmgxMWEyLjUgMi41IDAgMCAwIDIuNS0yLjV2LTExQTIuNSAyLjUgMCAwIDAgMTMuNSAwaC0xMVpNMSAyLjVBMS41IDEuNSAwIDAgMSAyLjUgMWgxMUExLjUgMS41IDAgMCAxIDE1IDIuNXYxMWExLjUgMS41IDAgMCAxLTEuNSAxLjVoLTExQTEuNSAxLjUgMCAwIDEgMSAxMy41di0xMVpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

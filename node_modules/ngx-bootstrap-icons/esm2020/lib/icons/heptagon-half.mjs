@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * heptagon-half.
+ *
+ * {@link https://icons.getbootstrap.com/icons/heptagon-half/}.
+ */
+export const heptagonHalf = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heptagon-half" viewBox="0 0 16 16">
+  <path d="M7.779.052a.5.5 0 0 1 .442 0l6.015 2.97a.5.5 0 0 1 .267.34l1.485 6.676a.5.5 0 0 1-.093.415l-4.162 5.354a.5.5 0 0 1-.395.193H4.662a.5.5 0 0 1-.395-.193L.105 10.453a.5.5 0 0 1-.093-.415l1.485-6.676a.5.5 0 0 1 .267-.34L7.779.053zM8 15h3.093l3.868-4.975-1.383-6.212L8 1.058V15z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaGVwdGFnb24taGFsZi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvaGVwdGFnb24taGFsZi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7T0FFckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBoZXB0YWdvbi1oYWxmLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2hlcHRhZ29uLWhhbGYvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBoZXB0YWdvbkhhbGYgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktaGVwdGFnb24taGFsZlwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk03Ljc3OS4wNTJhLjUuNSAwIDAgMSAuNDQyIDBsNi4wMTUgMi45N2EuNS41IDAgMCAxIC4yNjcuMzRsMS40ODUgNi42NzZhLjUuNSAwIDAgMS0uMDkzLjQxNWwtNC4xNjIgNS4zNTRhLjUuNSAwIDAgMS0uMzk1LjE5M0g0LjY2MmEuNS41IDAgMCAxLS4zOTUtLjE5M0wuMTA1IDEwLjQ1M2EuNS41IDAgMCAxLS4wOTMtLjQxNWwxLjQ4NS02LjY3NmEuNS41IDAgMCAxIC4yNjctLjM0TDcuNzc5LjA1M3pNOCAxNWgzLjA5M2wzLjg2OC00Ljk3NS0xLjM4My02LjIxMkw4IDEuMDU4VjE1elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

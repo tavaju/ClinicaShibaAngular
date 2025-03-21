@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * backspace-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/backspace-fill/}.
+ */
+export const backspaceFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+  <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFja3NwYWNlLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2JhY2tzcGFjZS1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sYUFBYSxHQUFHOztPQUV0QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGJhY2tzcGFjZS1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2JhY2tzcGFjZS1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgYmFja3NwYWNlRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1iYWNrc3BhY2UtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xNS42ODMgM2EyIDIgMCAwIDAtMi0yaC03LjA4YTIgMiAwIDAgMC0xLjUxOS42OThMLjI0MSA3LjM1YTEgMSAwIDAgMCAwIDEuMzAybDQuODQzIDUuNjVBMiAyIDAgMCAwIDYuNjAzIDE1aDcuMDhhMiAyIDAgMCAwIDItMlYzek01LjgyOSA1Ljg1NGEuNS41IDAgMSAxIC43MDctLjcwOGwyLjE0NyAyLjE0NyAyLjE0Ni0yLjE0N2EuNS41IDAgMSAxIC43MDcuNzA4TDkuMzkgOGwyLjE0NiAyLjE0NmEuNS41IDAgMCAxLS43MDcuNzA4TDguNjgzIDguNzA3bC0yLjE0NyAyLjE0N2EuNS41IDAgMCAxLS43MDctLjcwOEw3Ljk3NiA4IDUuODI5IDUuODU0elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,12 @@
+/* eslint-disable max-len */
+/**
+ * clipboard2-minus.
+ *
+ * {@link https://icons.getbootstrap.com/icons/clipboard2-minus/}.
+ */
+export const clipboard2Minus = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-minus" viewBox="0 0 16 16">
+  <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+  <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+  <path d="M6 8a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xpcGJvYXJkMi1taW51cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvY2xpcGJvYXJkMi1taW51cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGVBQWUsR0FBRzs7OztPQUl4QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGNsaXBib2FyZDItbWludXMuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvY2xpcGJvYXJkMi1taW51cy99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGNsaXBib2FyZDJNaW51cyA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1jbGlwYm9hcmQyLW1pbnVzXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTkuNSAwYS41LjUgMCAwIDEgLjUuNS41LjUgMCAwIDAgLjUuNS41LjUgMCAwIDEgLjUuNVYyYS41LjUgMCAwIDEtLjUuNWgtNUEuNS41IDAgMCAxIDUgMnYtLjVhLjUuNSAwIDAgMSAuNS0uNS41LjUgMCAwIDAgLjUtLjUuNS41IDAgMCAxIC41LS41aDNaXCIvPlxuICA8cGF0aCBkPVwiTTMgMi41YS41LjUgMCAwIDEgLjUtLjVINGEuNS41IDAgMCAwIDAtMWgtLjVBMS41IDEuNSAwIDAgMCAyIDIuNXYxMkExLjUgMS41IDAgMCAwIDMuNSAxNmg5YTEuNSAxLjUgMCAwIDAgMS41LTEuNXYtMTJBMS41IDEuNSAwIDAgMCAxMi41IDFIMTJhLjUuNSAwIDAgMCAwIDFoLjVhLjUuNSAwIDAgMSAuNS41djEyYS41LjUgMCAwIDEtLjUuNWgtOWEuNS41IDAgMCAxLS41LS41di0xMlpcIi8+XG4gIDxwYXRoIGQ9XCJNNiA4YS41LjUgMCAwIDAgMCAxaDRhLjUuNSAwIDAgMCAwLTFINlpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

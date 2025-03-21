@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-easel-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-easel-fill/}.
+ */
+export const fileEaselFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-easel-fill" viewBox="0 0 16 16">
+  <path d="M5 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-2z"/>
+  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 5h2A1.5 1.5 0 0 1 12 6.5v2a1.5 1.5 0 0 1-1.5 1.5h-.473l.447 1.342a.5.5 0 0 1-.948.316L8.973 10H8.5v1a.5.5 0 0 1-1 0v-1h-.473l-.553 1.658a.5.5 0 1 1-.948-.316L5.973 10H5.5A1.5 1.5 0 0 1 4 8.5v-2A1.5 1.5 0 0 1 5.5 5h2a.5.5 0 0 1 1 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXNlbC1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9maWxlLWVhc2VsLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7OztPQUd0QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGZpbGUtZWFzZWwtZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9maWxlLWVhc2VsLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBmaWxlRWFzZWxGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWZpbGUtZWFzZWwtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk01IDYuNWEuNS41IDAgMCAxIC41LS41aDVhLjUuNSAwIDAgMSAuNS41djJhLjUuNSAwIDAgMS0uNS41aC01YS41LjUgMCAwIDEtLjUtLjV2LTJ6XCIvPlxuICA8cGF0aCBkPVwiTTEyIDBINGEyIDIgMCAwIDAtMiAydjEyYTIgMiAwIDAgMCAyIDJoOGEyIDIgMCAwIDAgMi0yVjJhMiAyIDAgMCAwLTItMnpNOC41IDVoMkExLjUgMS41IDAgMCAxIDEyIDYuNXYyYTEuNSAxLjUgMCAwIDEtMS41IDEuNWgtLjQ3M2wuNDQ3IDEuMzQyYS41LjUgMCAwIDEtLjk0OC4zMTZMOC45NzMgMTBIOC41djFhLjUuNSAwIDAgMS0xIDB2LTFoLS40NzNsLS41NTMgMS42NThhLjUuNSAwIDEgMS0uOTQ4LS4zMTZMNS45NzMgMTBINS41QTEuNSAxLjUgMCAwIDEgNCA4LjV2LTJBMS41IDEuNSAwIDAgMSA1LjUgNWgyYS41LjUgMCAwIDEgMSAwelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

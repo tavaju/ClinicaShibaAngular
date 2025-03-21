@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * filetype-tiff.
+ *
+ * {@link https://icons.getbootstrap.com/icons/filetype-tiff/}.
+ */
+export const filetypeTiff = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-tiff" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.928 12.512v3.337h-.794v-3.337H0v-.662h3.064v.662H1.928Zm2.131-.662v3.999h-.79V11.85h.79Zm1.373 3.999v-1.59h1.606v-.64H5.432v-1.116H7.19v-.653H4.641v3.999h.791Zm2.868-1.59v1.59h-.791V11.85h2.548v.653H8.3v1.117h1.605v.638H8.3Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZXR5cGUtdGlmZi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZmlsZXR5cGUtdGlmZi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7T0FFckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBmaWxldHlwZS10aWZmLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZpbGV0eXBlLXRpZmYvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBmaWxldHlwZVRpZmYgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZXR5cGUtdGlmZlwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNMTQgNC41VjE0YTIgMiAwIDAgMS0yIDJoLTF2LTFoMWExIDEgMCAwIDAgMS0xVjQuNWgtMkExLjUgMS41IDAgMCAxIDkuNSAzVjFINGExIDEgMCAwIDAtMSAxdjlIMlYyYTIgMiAwIDAgMSAyLTJoNS41TDE0IDQuNVpNMS45MjggMTIuNTEydjMuMzM3aC0uNzk0di0zLjMzN0gwdi0uNjYyaDMuMDY0di42NjJIMS45MjhabTIuMTMxLS42NjJ2My45OTloLS43OVYxMS44NWguNzlabTEuMzczIDMuOTk5di0xLjU5aDEuNjA2di0uNjRINS40MzJ2LTEuMTE2SDcuMTl2LS42NTNINC42NDF2My45OTloLjc5MVptMi44NjgtMS41OXYxLjU5aC0uNzkxVjExLjg1aDIuNTQ4di42NTNIOC4zdjEuMTE3aDEuNjA1di42MzhIOC4zWlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

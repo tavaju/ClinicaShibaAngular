@@ -1,0 +1,12 @@
+/* eslint-disable max-len */
+/**
+ * sort-alpha-up-alt.
+ *
+ * {@link https://icons.getbootstrap.com/icons/sort-alpha-up-alt/}.
+ */
+export const sortAlphaUpAlt = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-alpha-up-alt" viewBox="0 0 16 16">
+  <path d="M12.96 7H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645V7z"/>
+  <path fill-rule="evenodd" d="M10.082 12.629 9.664 14H8.598l1.789-5.332h1.234L13.402 14h-1.12l-.419-1.371h-1.781zm1.57-.785L11 9.688h-.047l-.652 2.156h1.351z"/>
+  <path d="M4.5 13.5a.5.5 0 0 1-1 0V3.707L2.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.498.498 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L4.5 3.707V13.5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic29ydC1hbHBoYS11cC1hbHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3NvcnQtYWxwaGEtdXAtYWx0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sY0FBYyxHQUFHOzs7O09BSXZCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogc29ydC1hbHBoYS11cC1hbHQuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvc29ydC1hbHBoYS11cC1hbHQvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBzb3J0QWxwaGFVcEFsdCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1zb3J0LWFscGhhLXVwLWFsdFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xMi45NiA3SDkuMDI4di0uNjkxbDIuNTc5LTMuNzJ2LS4wNTRIOS4wOTh2LS44NjdoMy43ODV2LjY5MWwtMi41NjcgMy43MnYuMDU0aDIuNjQ1Vjd6XCIvPlxuICA8cGF0aCBmaWxsLXJ1bGU9XCJldmVub2RkXCIgZD1cIk0xMC4wODIgMTIuNjI5IDkuNjY0IDE0SDguNTk4bDEuNzg5LTUuMzMyaDEuMjM0TDEzLjQwMiAxNGgtMS4xMmwtLjQxOS0xLjM3MWgtMS43ODF6bTEuNTctLjc4NUwxMSA5LjY4OGgtLjA0N2wtLjY1MiAyLjE1NmgxLjM1MXpcIi8+XG4gIDxwYXRoIGQ9XCJNNC41IDEzLjVhLjUuNSAwIDAgMS0xIDBWMy43MDdMMi4zNTQgNC44NTRhLjUuNSAwIDEgMS0uNzA4LS43MDhsMi0xLjk5OS4wMDctLjAwN2EuNDk4LjQ5OCAwIDAgMSAuNy4wMDZsMiAyYS41LjUgMCAxIDEtLjcwNy43MDhMNC41IDMuNzA3VjEzLjV6XCIvPlxuPC9zdmc+YDtcclxuIl19

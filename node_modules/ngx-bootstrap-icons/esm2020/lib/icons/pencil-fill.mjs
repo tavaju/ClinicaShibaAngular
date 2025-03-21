@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * pencil-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/pencil-fill/}.
+ */
+export const pencilFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+  <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGVuY2lsLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3BlbmNpbC1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sVUFBVSxHQUFHOztPQUVuQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHBlbmNpbC1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3BlbmNpbC1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgcGVuY2lsRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1wZW5jaWwtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xMi44NTQuMTQ2YS41LjUgMCAwIDAtLjcwNyAwTDEwLjUgMS43OTMgMTQuMjA3IDUuNWwxLjY0Ny0xLjY0NmEuNS41IDAgMCAwIDAtLjcwOGwtMy0zem0uNjQ2IDYuMDYxTDkuNzkzIDIuNSAzLjI5MyA5SDMuNWEuNS41IDAgMCAxIC41LjV2LjVoLjVhLjUuNSAwIDAgMSAuNS41di41aC41YS41LjUgMCAwIDEgLjUuNXYuNWguNWEuNS41IDAgMCAxIC41LjV2LjIwN2w2LjUtNi41em0tNy40NjggNy40NjhBLjUuNSAwIDAgMSA2IDEzLjVWMTNoLS41YS41LjUgMCAwIDEtLjUtLjVWMTJoLS41YS41LjUgMCAwIDEtLjUtLjVWMTFoLS41YS41LjUgMCAwIDEtLjUtLjVWMTBoLS41YS40OTkuNDk5IDAgMCAxLS4xNzUtLjAzMmwtLjE3OS4xNzhhLjUuNSAwIDAgMC0uMTEuMTY4bC0yIDVhLjUuNSAwIDAgMCAuNjUuNjVsNS0yYS41LjUgMCAwIDAgLjE2OC0uMTFsLjE3OC0uMTc4elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

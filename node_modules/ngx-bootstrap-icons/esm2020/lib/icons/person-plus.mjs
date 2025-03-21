@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * person-plus.
+ *
+ * {@link https://icons.getbootstrap.com/icons/person-plus/}.
+ */
+export const personPlus = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGVyc29uLXBsdXMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3BlcnNvbi1wbHVzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sVUFBVSxHQUFHOzs7T0FHbkIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBwZXJzb24tcGx1cy5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9wZXJzb24tcGx1cy99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHBlcnNvblBsdXMgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktcGVyc29uLXBsdXNcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNiA4YTMgMyAwIDEgMCAwLTYgMyAzIDAgMCAwIDAgNnptMi0zYTIgMiAwIDEgMS00IDAgMiAyIDAgMCAxIDQgMHptNCA4YzAgMS0xIDEtMSAxSDFzLTEgMC0xLTEgMS00IDYtNCA2IDMgNiA0em0tMS0uMDA0Yy0uMDAxLS4yNDYtLjE1NC0uOTg2LS44MzItMS42NjRDOS41MTYgMTAuNjggOC4yODkgMTAgNiAxMGMtMi4yOSAwLTMuNTE2LjY4LTQuMTY4IDEuMzMyLS42NzguNjc4LS44MyAxLjQxOC0uODMyIDEuNjY0aDEwelwiLz5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNMTMuNSA1YS41LjUgMCAwIDEgLjUuNVY3aDEuNWEuNS41IDAgMCAxIDAgMUgxNHYxLjVhLjUuNSAwIDAgMS0xIDBWOGgtMS41YS41LjUgMCAwIDEgMC0xSDEzVjUuNWEuNS41IDAgMCAxIC41LS41elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

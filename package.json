@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ngx-bootstrap": "^19.0.2",
+    "ngx-bootstrap-icons": "^1.9.3"
+  }
+}

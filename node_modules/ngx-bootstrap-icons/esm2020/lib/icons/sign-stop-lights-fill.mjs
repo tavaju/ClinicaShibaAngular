@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * sign-stop-lights-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/sign-stop-lights-fill/}.
+ */
+export const signStopLightsFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-stop-lights-fill" viewBox="0 0 16 16">
+  <path d="M8 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm0 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm1 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+  <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM6 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lnbi1zdG9wLWxpZ2h0cy1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9zaWduLXN0b3AtbGlnaHRzLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxrQkFBa0IsR0FBRzs7O09BRzNCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogc2lnbi1zdG9wLWxpZ2h0cy1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3NpZ24tc3RvcC1saWdodHMtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHNpZ25TdG9wTGlnaHRzRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1zaWduLXN0b3AtbGlnaHRzLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNOCA2YTEgMSAwIDEgMCAwLTIgMSAxIDAgMCAwIDAgMlptMCAzYTEgMSAwIDEgMCAwLTIgMSAxIDAgMCAwIDAgMlptMSAyYTEgMSAwIDEgMS0yIDAgMSAxIDAgMCAxIDIgMFpcIi8+XG4gIDxwYXRoIGQ9XCJNOS4wNS40MzVjLS41OC0uNTgtMS41Mi0uNTgtMi4xIDBMLjQzNiA2Ljk1Yy0uNTguNTgtLjU4IDEuNTE5IDAgMi4wOThsNi41MTYgNi41MTZjLjU4LjU4IDEuNTE5LjU4IDIuMDk4IDBsNi41MTYtNi41MTZjLjU4LS41OC41OC0xLjUxOSAwLTIuMDk4TDkuMDUuNDM1Wk02IDRhMSAxIDAgMCAxIDEtMWgyYTEgMSAwIDAgMSAxIDF2OGExIDEgMCAwIDEtMSAxSDdhMSAxIDAgMCAxLTEtMVY0WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

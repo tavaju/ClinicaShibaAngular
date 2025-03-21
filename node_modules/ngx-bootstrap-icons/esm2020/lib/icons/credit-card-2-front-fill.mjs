@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * credit-card-2-front-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/credit-card-2-front-fill/}.
+ */
+export const creditCard2FrontFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3JlZGl0LWNhcmQtMi1mcm9udC1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9jcmVkaXQtY2FyZC0yLWZyb250LWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxvQkFBb0IsR0FBRzs7T0FFN0IsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBjcmVkaXQtY2FyZC0yLWZyb250LWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvY3JlZGl0LWNhcmQtMi1mcm9udC1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY3JlZGl0Q2FyZDJGcm9udEZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY3JlZGl0LWNhcmQtMi1mcm9udC1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTAgNGEyIDIgMCAwIDEgMi0yaDEyYTIgMiAwIDAgMSAyIDJ2OGEyIDIgMCAwIDEtMiAySDJhMiAyIDAgMCAxLTItMlY0em0yLjUgMWEuNS41IDAgMCAwLS41LjV2MWEuNS41IDAgMCAwIC41LjVoMmEuNS41IDAgMCAwIC41LS41di0xYS41LjUgMCAwIDAtLjUtLjVoLTJ6bTAgM2EuNS41IDAgMCAwIDAgMWg1YS41LjUgMCAwIDAgMC0xaC01em0wIDJhLjUuNSAwIDAgMCAwIDFoMWEuNS41IDAgMCAwIDAtMWgtMXptMyAwYS41LjUgMCAwIDAgMCAxaDFhLjUuNSAwIDAgMCAwLTFoLTF6bTMgMGEuNS41IDAgMCAwIDAgMWgxYS41LjUgMCAwIDAgMC0xaC0xem0zIDBhLjUuNSAwIDAgMCAwIDFoMWEuNS41IDAgMCAwIDAtMWgtMXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * file-earmark-person-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-earmark-person-fill/}.
+ */
+export const fileEarmarkPersonFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXJtYXJrLXBlcnNvbi1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9maWxlLWVhcm1hcmstcGVyc29uLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxxQkFBcUIsR0FBRzs7T0FFOUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBmaWxlLWVhcm1hcmstcGVyc29uLWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvZmlsZS1lYXJtYXJrLXBlcnNvbi1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZmlsZUVhcm1hcmtQZXJzb25GaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWZpbGUtZWFybWFyay1wZXJzb24tZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk05LjI5MyAwSDRhMiAyIDAgMCAwLTIgMnYxMmEyIDIgMCAwIDAgMiAyaDhhMiAyIDAgMCAwIDItMlY0LjcwN0ExIDEgMCAwIDAgMTMuNzA3IDRMMTAgLjI5M0ExIDEgMCAwIDAgOS4yOTMgMHpNOS41IDMuNXYtMmwzIDNoLTJhMSAxIDAgMCAxLTEtMXpNMTEgOGEzIDMgMCAxIDEtNiAwIDMgMyAwIDAgMSA2IDB6bTIgNS43NTVWMTRhMSAxIDAgMCAxLTEgMUg0YTEgMSAwIDAgMS0xLTF2LS4yNDVTNCAxMiA4IDEyczUgMS43NTUgNSAxLjc1NXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

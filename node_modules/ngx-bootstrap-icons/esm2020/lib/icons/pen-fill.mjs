@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * pen-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/pen-fill/}.
+ */
+export const penFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+  <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGVuLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3Blbi1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sT0FBTyxHQUFHOztPQUVoQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHBlbi1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3Blbi1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgcGVuRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1wZW4tZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIm0xMy40OTguNzk1LjE0OS0uMTQ5YTEuMjA3IDEuMjA3IDAgMSAxIDEuNzA3IDEuNzA4bC0uMTQ5LjE0OGExLjUgMS41IDAgMCAxLS4wNTkgMi4wNTlMNC44NTQgMTQuODU0YS41LjUgMCAwIDEtLjIzMy4xMzFsLTQgMWEuNS41IDAgMCAxLS42MDYtLjYwNmwxLTRhLjUuNSAwIDAgMSAuMTMxLS4yMzJsOS42NDItOS42NDJhLjUuNSAwIDAgMC0uNjQyLjA1Nkw2Ljg1NCA0Ljg1NGEuNS41IDAgMSAxLS43MDgtLjcwOEw5LjQ0Ljg1NEExLjUgMS41IDAgMCAxIDExLjUuNzk2YTEuNSAxLjUgMCAwIDEgMS45OTgtLjAwMXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

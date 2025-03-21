@@ -1,0 +1,14 @@
+/* eslint-disable max-len */
+/**
+ * qr-code.
+ *
+ * {@link https://icons.getbootstrap.com/icons/qr-code/}.
+ */
+export const qrCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
+  <path d="M2 2h2v2H2V2Z"/>
+  <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z"/>
+  <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z"/>
+  <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z"/>
+  <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicXItY29kZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvcXItY29kZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLE1BQU0sR0FBRzs7Ozs7O09BTWYsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBxci1jb2RlLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3FyLWNvZGUvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBxckNvZGUgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktcXItY29kZVwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0yIDJoMnYySDJWMlpcIi8+XG4gIDxwYXRoIGQ9XCJNNiAwdjZIMFYwaDZaTTUgMUgxdjRoNFYxWk00IDEySDJ2Mmgydi0yWlwiLz5cbiAgPHBhdGggZD1cIk02IDEwdjZIMHYtNmg2Wm0tNSAxdjRoNHYtNEgxWm0xMS05aDJ2MmgtMlYyWlwiLz5cbiAgPHBhdGggZD1cIk0xMCAwdjZoNlYwaC02Wm01IDF2NGgtNFYxaDRaTTggMVYwaDF2Mkg4djJIN1YxaDFabTAgNVY0aDF2Mkg4Wk02IDhWN2gxVjZoMXYyaDFWN2g1djFoLTR2MUg3VjhINlptMCAwdjFIMlY4SDF2MUgwVjdoM3YxaDNabTEwIDFoLTFWN2gxdjJabS0xIDBoLTF2Mmgydi0xaC0xVjlabS00IDBoMnYxaC0xdjFoLTFWOVptMiAzdi0xaC0xdjFoLTF2MUg5djFoM3YtMmgxWm0wIDBoM3YxaC0ydjFoLTF2LTJabS00LTF2MWgxdi0ySDd2MWgyWlwiLz5cbiAgPHBhdGggZD1cIk03IDEyaDF2M2g0djFIN3YtNFptOSAydjJoLTN2LTFoMnYtMWgxWlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * p-circle.
+ *
+ * {@link https://icons.getbootstrap.com/icons/p-circle/}.
+ */
+export const pCircle = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5V4.002Zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97H8.27Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicC1jaXJjbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3AtY2lyY2xlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sT0FBTyxHQUFHOztPQUVoQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHAtY2lyY2xlLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3AtY2lyY2xlL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgcENpcmNsZSA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1wLWNpcmNsZVwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xIDhhNyA3IDAgMSAwIDE0IDBBNyA3IDAgMCAwIDEgOFptMTUgMEE4IDggMCAxIDEgMCA4YTggOCAwIDAgMSAxNiAwWk01LjUgNC4wMDJoMi45NjJDMTAuMDQ1IDQuMDAyIDExIDUuMTA0IDExIDYuNTg2YzAgMS40OTQtLjk2NyAyLjU3OC0yLjU1IDIuNTc4SDYuNzg0VjEySDUuNVY0LjAwMlptMi43NyA0LjA3MmMuODkzIDAgMS40MTktLjU0NSAxLjQxOS0xLjQ4OHMtLjUyNi0xLjQ4Mi0xLjQyLTEuNDgySDYuNzc4djIuOTdIOC4yN1pcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

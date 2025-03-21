@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * textarea-resize.
+ *
+ * {@link https://icons.getbootstrap.com/icons/textarea-resize/}.
+ */
+export const textareaResize = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-textarea-resize" viewBox="0 0 16 16">
+  <path d="M0 4.5A2.5 2.5 0 0 1 2.5 2h11A2.5 2.5 0 0 1 16 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 11.5v-7zM2.5 3A1.5 1.5 0 0 0 1 4.5v7A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 13.5 3h-11zm10.854 4.646a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708l3-3a.5.5 0 0 1 .708 0zm0 2.5a.5.5 0 0 1 0 .708l-.5.5a.5.5 0 0 1-.708-.708l.5-.5a.5.5 0 0 1 .708 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGV4dGFyZWEtcmVzaXplLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy90ZXh0YXJlYS1yZXNpemUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxjQUFjLEdBQUc7O09BRXZCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogdGV4dGFyZWEtcmVzaXplLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3RleHRhcmVhLXJlc2l6ZS99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHRleHRhcmVhUmVzaXplID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLXRleHRhcmVhLXJlc2l6ZVwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0wIDQuNUEyLjUgMi41IDAgMCAxIDIuNSAyaDExQTIuNSAyLjUgMCAwIDEgMTYgNC41djdhMi41IDIuNSAwIDAgMS0yLjUgMi41aC0xMUEyLjUgMi41IDAgMCAxIDAgMTEuNXYtN3pNMi41IDNBMS41IDEuNSAwIDAgMCAxIDQuNXY3QTEuNSAxLjUgMCAwIDAgMi41IDEzaDExYTEuNSAxLjUgMCAwIDAgMS41LTEuNXYtN0ExLjUgMS41IDAgMCAwIDEzLjUgM2gtMTF6bTEwLjg1NCA0LjY0NmEuNS41IDAgMCAxIDAgLjcwOGwtMyAzYS41LjUgMCAwIDEtLjcwOC0uNzA4bDMtM2EuNS41IDAgMCAxIC43MDggMHptMCAyLjVhLjUuNSAwIDAgMSAwIC43MDhsLS41LjVhLjUuNSAwIDAgMS0uNzA4LS43MDhsLjUtLjVhLjUuNSAwIDAgMSAuNzA4IDB6XCIvPlxuPC9zdmc+YDtcclxuIl19

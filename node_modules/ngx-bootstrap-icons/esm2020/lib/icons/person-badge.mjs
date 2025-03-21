@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * person-badge.
+ *
+ * {@link https://icons.getbootstrap.com/icons/person-badge/}.
+ */
+export const personBadge = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
+  <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGVyc29uLWJhZGdlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9wZXJzb24tYmFkZ2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxXQUFXLEdBQUc7OztPQUdwQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHBlcnNvbi1iYWRnZS5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9wZXJzb24tYmFkZ2UvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBwZXJzb25CYWRnZSA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1wZXJzb24tYmFkZ2VcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNi41IDJhLjUuNSAwIDAgMCAwIDFoM2EuNS41IDAgMCAwIDAtMWgtM3pNMTEgOGEzIDMgMCAxIDEtNiAwIDMgMyAwIDAgMSA2IDB6XCIvPlxuICA8cGF0aCBkPVwiTTQuNSAwQTIuNSAyLjUgMCAwIDAgMiAyLjVWMTRhMiAyIDAgMCAwIDIgMmg4YTIgMiAwIDAgMCAyLTJWMi41QTIuNSAyLjUgMCAwIDAgMTEuNSAwaC03ek0zIDIuNUExLjUgMS41IDAgMCAxIDQuNSAxaDdBMS41IDEuNSAwIDAgMSAxMyAyLjV2MTAuNzk1YTQuMiA0LjIgMCAwIDAtLjc3Ni0uNDkyQzExLjM5MiAxMi4zODcgMTAuMDYzIDEyIDggMTJzLTMuMzkyLjM4Ny00LjIyNC44MDNhNC4yIDQuMiAwIDAgMC0uNzc2LjQ5MlYyLjV6XCIvPlxuPC9zdmc+YDtcclxuIl19

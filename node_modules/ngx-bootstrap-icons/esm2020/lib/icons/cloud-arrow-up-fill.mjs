@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * cloud-arrow-up-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/cloud-arrow-up-fill/}.
+ */
+export const cloudArrowUpFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+  <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xvdWQtYXJyb3ctdXAtZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvY2xvdWQtYXJyb3ctdXAtZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGdCQUFnQixHQUFHOztPQUV6QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGNsb3VkLWFycm93LXVwLWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvY2xvdWQtYXJyb3ctdXAtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGNsb3VkQXJyb3dVcEZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2xvdWQtYXJyb3ctdXAtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk04IDJhNS41MyA1LjUzIDAgMCAwLTMuNTk0IDEuMzQyYy0uNzY2LjY2LTEuMzIxIDEuNTItMS40NjQgMi4zODNDMS4yNjYgNi4wOTUgMCA3LjU1NSAwIDkuMzE4IDAgMTEuMzY2IDEuNzA4IDEzIDMuNzgxIDEzaDguOTA2QzE0LjUwMiAxMyAxNiAxMS41NyAxNiA5Ljc3M2MwLTEuNjM2LTEuMjQyLTIuOTY5LTIuODM0LTMuMTk0QzEyLjkyMyAzLjk5OSAxMC42OSAyIDggMnptMi4zNTQgNS4xNDZhLjUuNSAwIDAgMS0uNzA4LjcwOEw4LjUgNi43MDdWMTAuNWEuNS41IDAgMCAxLTEgMFY2LjcwN0w2LjM1NCA3Ljg1NGEuNS41IDAgMSAxLS43MDgtLjcwOGwyLTJhLjUuNSAwIDAgMSAuNzA4IDBsMiAyelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

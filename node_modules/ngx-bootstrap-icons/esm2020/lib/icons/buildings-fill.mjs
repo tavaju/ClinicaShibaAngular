@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * buildings-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/buildings-fill/}.
+ */
+export const buildingsFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-buildings-fill" viewBox="0 0 16 16">
+  <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V.5ZM2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-1 2v1H2v-1h1Zm1 0h1v1H4v-1Zm9-10v1h-1V3h1ZM8 5h1v1H8V5Zm1 2v1H8V7h1ZM8 9h1v1H8V9Zm2 0h1v1h-1V9Zm-1 2v1H8v-1h1Zm1 0h1v1h-1v-1Zm3-2v1h-1V9h1Zm-1 2h1v1h-1v-1Zm-2-4h1v1h-1V7Zm3 0v1h-1V7h1Zm-2-2v1h-1V5h1Zm1 0h1v1h-1V5Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGRpbmdzLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2J1aWxkaW5ncy1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sYUFBYSxHQUFHOztPQUV0QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGJ1aWxkaW5ncy1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2J1aWxkaW5ncy1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgYnVpbGRpbmdzRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1idWlsZGluZ3MtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xNSAuNWEuNS41IDAgMCAwLS43MjQtLjQ0N2wtOCA0QS41LjUgMCAwIDAgNiA0LjV2My4xNEwuMzQyIDkuNTI2QS41LjUgMCAwIDAgMCAxMHY1LjVhLjUuNSAwIDAgMCAuNS41aDlhLjUuNSAwIDAgMCAuNS0uNVYxNGgxdjEuNWEuNS41IDAgMCAwIC41LjVoM2EuNS41IDAgMCAwIC41LS41Vi41Wk0yIDExaDF2MUgydi0xWm0yIDBoMXYxSDR2LTFabS0xIDJ2MUgydi0xaDFabTEgMGgxdjFINHYtMVptOS0xMHYxaC0xVjNoMVpNOCA1aDF2MUg4VjVabTEgMnYxSDhWN2gxWk04IDloMXYxSDhWOVptMiAwaDF2MWgtMVY5Wm0tMSAydjFIOHYtMWgxWm0xIDBoMXYxaC0xdi0xWm0zLTJ2MWgtMVY5aDFabS0xIDJoMXYxaC0xdi0xWm0tMi00aDF2MWgtMVY3Wm0zIDB2MWgtMVY3aDFabS0yLTJ2MWgtMVY1aDFabTEgMGgxdjFoLTFWNVpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

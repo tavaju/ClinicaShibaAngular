@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * badge-vr-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/badge-vr-fill/}.
+ */
+export const badgeVrFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-vr-fill" viewBox="0 0 16 16">
+  <path d="M9.673 5.933v1.938h1.033c.66 0 1.068-.316 1.068-.95 0-.64-.422-.988-1.05-.988h-1.05z"/>
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm5.937 7 1.99-5.999H6.61L5.277 9.708H5.22L3.875 5.001H2.5L4.508 11h1.429zM8.5 5.001V11h1.173V8.763h1.064L11.787 11h1.327L11.91 8.583C12.455 8.373 13 7.779 13 6.9c0-1.147-.773-1.9-2.105-1.9H8.5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFkZ2UtdnItZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvYmFkZ2UtdnItZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFdBQVcsR0FBRzs7O09BR3BCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogYmFkZ2UtdnItZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9iYWRnZS12ci1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgYmFkZ2VWckZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktYmFkZ2UtdnItZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk05LjY3MyA1LjkzM3YxLjkzOGgxLjAzM2MuNjYgMCAxLjA2OC0uMzE2IDEuMDY4LS45NSAwLS42NC0uNDIyLS45ODgtMS4wNS0uOTg4aC0xLjA1elwiLz5cbiAgPHBhdGggZD1cIk0wIDRhMiAyIDAgMCAxIDItMmgxMmEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMkgyYTIgMiAwIDAgMS0yLTJWNHptNS45MzcgNyAxLjk5LTUuOTk5SDYuNjFMNS4yNzcgOS43MDhINS4yMkwzLjg3NSA1LjAwMUgyLjVMNC41MDggMTFoMS40Mjl6TTguNSA1LjAwMVYxMWgxLjE3M1Y4Ljc2M2gxLjA2NEwxMS43ODcgMTFoMS4zMjdMMTEuOTEgOC41ODNDMTIuNDU1IDguMzczIDEzIDcuNzc5IDEzIDYuOWMwLTEuMTQ3LS43NzMtMS45LTIuMTA1LTEuOUg4LjV6XCIvPlxuPC9zdmc+YDtcclxuIl19

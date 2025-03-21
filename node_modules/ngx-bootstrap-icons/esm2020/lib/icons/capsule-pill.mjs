@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * capsule-pill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/capsule-pill/}.
+ */
+export const capsulePill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule-pill" viewBox="0 0 16 16">
+  <path d="M11.02 5.364a3 3 0 0 0-4.242-4.243L1.121 6.778a3 3 0 1 0 4.243 4.243l5.657-5.657Zm-6.413-.657 2.878-2.879a2 2 0 1 1 2.829 2.829L7.435 7.536 4.607 4.707ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm-.5 1.042a3 3 0 0 0 0 5.917V9.042Zm1 5.917a3 3 0 0 0 0-5.917v5.917Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2Fwc3VsZS1waWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9jYXBzdWxlLXBpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxXQUFXLEdBQUc7O09BRXBCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogY2Fwc3VsZS1waWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2NhcHN1bGUtcGlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGNhcHN1bGVQaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWNhcHN1bGUtcGlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xMS4wMiA1LjM2NGEzIDMgMCAwIDAtNC4yNDItNC4yNDNMMS4xMjEgNi43NzhhMyAzIDAgMSAwIDQuMjQzIDQuMjQzbDUuNjU3LTUuNjU3Wm0tNi40MTMtLjY1NyAyLjg3OC0yLjg3OWEyIDIgMCAxIDEgMi44MjkgMi44MjlMNy40MzUgNy41MzYgNC42MDcgNC43MDdaTTEyIDhhNCA0IDAgMSAxIDAgOCA0IDQgMCAwIDEgMC04Wm0tLjUgMS4wNDJhMyAzIDAgMCAwIDAgNS45MTdWOS4wNDJabTEgNS45MTdhMyAzIDAgMCAwIDAtNS45MTd2NS45MTdaXCIvPlxuPC9zdmc+YDtcclxuIl19

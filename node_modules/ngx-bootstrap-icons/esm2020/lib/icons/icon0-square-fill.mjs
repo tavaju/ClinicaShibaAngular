@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * icon0-square-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/icon0-square-fill/}.
+ */
+export const icon0SquareFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-0-square-fill" viewBox="0 0 16 16">
+  <path d="M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm5.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaWNvbjAtc3F1YXJlLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2ljb24wLXNxdWFyZS1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sZUFBZSxHQUFHOzs7T0FHeEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBpY29uMC1zcXVhcmUtZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9pY29uMC1zcXVhcmUtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGljb24wU3F1YXJlRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS0wLXNxdWFyZS1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTggNC45NTFjLTEuMDA4IDAtMS42MjkgMS4wOS0xLjYyOSAyLjg5NXYuMzFjMCAxLjgxLjYyNyAyLjg5NSAxLjYyOSAyLjg5NXMxLjYyMy0xLjA5IDEuNjIzLTIuODk1di0uMzFjMC0xLjgtLjYyMS0yLjg5NS0xLjYyMy0yLjg5NVpcIi8+XG4gIDxwYXRoIGQ9XCJNMiAwYTIgMiAwIDAgMC0yIDJ2MTJhMiAyIDAgMCAwIDIgMmgxMmEyIDIgMCAwIDAgMi0yVjJhMiAyIDAgMCAwLTItMkgyWm01Ljk4OCAxMi4xNThjLTEuODUxIDAtMi45NDEtMS41Ny0yLjk0MS0zLjk5VjcuODRjMC0yLjQwOCAxLjEwMS0zLjk5NiAyLjk2NS0zLjk5NiAxLjg1NyAwIDIuOTM1IDEuNTcgMi45MzUgMy45OTZ2LjMyOGMwIDIuNDA4LTEuMTAxIDMuOTktMi45NTkgMy45OVpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

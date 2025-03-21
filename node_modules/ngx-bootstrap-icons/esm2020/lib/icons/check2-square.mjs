@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * check2-square.
+ *
+ * {@link https://icons.getbootstrap.com/icons/check2-square/}.
+ */
+export const check2Square = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+  <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hlY2syLXNxdWFyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvY2hlY2syLXNxdWFyZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7O09BR3JCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogY2hlY2syLXNxdWFyZS5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9jaGVjazItc3F1YXJlL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY2hlY2syU3F1YXJlID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWNoZWNrMi1zcXVhcmVcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMyAxNC41QTEuNSAxLjUgMCAwIDEgMS41IDEzVjNBMS41IDEuNSAwIDAgMSAzIDEuNWg4YS41LjUgMCAwIDEgMCAxSDNhLjUuNSAwIDAgMC0uNS41djEwYS41LjUgMCAwIDAgLjUuNWgxMGEuNS41IDAgMCAwIC41LS41VjhhLjUuNSAwIDAgMSAxIDB2NWExLjUgMS41IDAgMCAxLTEuNSAxLjVIM3pcIi8+XG4gIDxwYXRoIGQ9XCJtOC4zNTQgMTAuMzU0IDctN2EuNS41IDAgMCAwLS43MDgtLjcwOEw4IDkuMjkzIDUuMzU0IDYuNjQ2YS41LjUgMCAxIDAtLjcwOC43MDhsMyAzYS41LjUgMCAwIDAgLjcwOCAwelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * facebook.
+ *
+ * {@link https://icons.getbootstrap.com/icons/facebook/}.
+ */
+export const facebook = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmFjZWJvb2suanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2ZhY2Vib29rLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFHOztPQUVqQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGZhY2Vib29rLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZhY2Vib29rL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZmFjZWJvb2sgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmFjZWJvb2tcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMTYgOC4wNDljMC00LjQ0Ni0zLjU4Mi04LjA1LTgtOC4wNUMzLjU4IDAtLjAwMiAzLjYwMy0uMDAyIDguMDVjMCA0LjAxNyAyLjkyNiA3LjM0NyA2Ljc1IDcuOTUxdi01LjYyNWgtMi4wM1Y4LjA1SDYuNzVWNi4yNzVjMC0yLjAxNyAxLjE5NS0zLjEzMSAzLjAyMi0zLjEzMS44NzYgMCAxLjc5MS4xNTcgMS43OTEuMTU3djEuOThoLTEuMDA5Yy0uOTkzIDAtMS4zMDMuNjIxLTEuMzAzIDEuMjU4djEuNTFoMi4yMThsLS4zNTQgMi4zMjZIOS4yNVYxNmMzLjgyNC0uNjA0IDYuNzUtMy45MzQgNi43NS03Ljk1MXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

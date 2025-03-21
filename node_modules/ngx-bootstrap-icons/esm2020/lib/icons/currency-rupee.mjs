@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * currency-rupee.
+ *
+ * {@link https://icons.getbootstrap.com/icons/currency-rupee/}.
+ */
+export const currencyRupee = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+  <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VycmVuY3ktcnVwZWUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2N1cnJlbmN5LXJ1cGVlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sYUFBYSxHQUFHOztPQUV0QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGN1cnJlbmN5LXJ1cGVlLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2N1cnJlbmN5LXJ1cGVlL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY3VycmVuY3lSdXBlZSA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1jdXJyZW5jeS1ydXBlZVwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk00IDMuMDZoMi43MjZjMS4yMiAwIDIuMTIuNTc1IDIuMzI1IDEuNzI0SDR2MS4wNTFoNS4wNTFDOC44NTUgNy4wMDEgOCA3LjU1OCA2Ljc4OCA3LjU1OEg0djEuMzE3TDguNDM3IDE0aDIuMTFMNi4wOTUgOC44ODRoLjg1NWMyLjMxNi0uMDE4IDMuNDY1LTEuNDc2IDMuNjg4LTMuMDQ5SDEyVjQuNzg0aC0xLjM0NWMtLjA4LS43NzgtLjM1Ny0xLjMzNS0uNzkzLTEuNzMySDEyVjJINHYxLjA2WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

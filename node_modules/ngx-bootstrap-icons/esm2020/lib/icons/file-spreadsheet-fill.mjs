@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * file-spreadsheet-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-spreadsheet-fill/}.
+ */
+export const fileSpreadsheetFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-spreadsheet-fill" viewBox="0 0 16 16">
+  <path d="M12 0H4a2 2 0 0 0-2 2v4h12V2a2 2 0 0 0-2-2zm2 7h-4v2h4V7zm0 3h-4v2h4v-2zm0 3h-4v3h2a2 2 0 0 0 2-2v-1zm-5 3v-3H6v3h3zm-4 0v-3H2v1a2 2 0 0 0 2 2h1zm-3-4h3v-2H2v2zm0-3h3V7H2v2zm4 0V7h3v2H6zm0 1h3v2H6v-2z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1zcHJlYWRzaGVldC1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9maWxlLXNwcmVhZHNoZWV0LWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxtQkFBbUIsR0FBRzs7T0FFNUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBmaWxlLXNwcmVhZHNoZWV0LWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvZmlsZS1zcHJlYWRzaGVldC1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZmlsZVNwcmVhZHNoZWV0RmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1maWxlLXNwcmVhZHNoZWV0LWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMTIgMEg0YTIgMiAwIDAgMC0yIDJ2NGgxMlYyYTIgMiAwIDAgMC0yLTJ6bTIgN2gtNHYyaDRWN3ptMCAzaC00djJoNHYtMnptMCAzaC00djNoMmEyIDIgMCAwIDAgMi0ydi0xem0tNSAzdi0zSDZ2M2gzem0tNCAwdi0zSDJ2MWEyIDIgMCAwIDAgMiAyaDF6bS0zLTRoM3YtMkgydjJ6bTAtM2gzVjdIMnYyem00IDBWN2gzdjJINnptMCAxaDN2Mkg2di0yelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

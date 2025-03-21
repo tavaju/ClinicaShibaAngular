@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * mailbox2.
+ *
+ * {@link https://icons.getbootstrap.com/icons/mailbox2/}.
+ */
+export const mailbox2 = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mailbox2" viewBox="0 0 16 16">
+  <path d="M9 8.5h2.793l.853.854A.5.5 0 0 0 13 9.5h1a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H9v1z"/>
+  <path d="M12 3H4a4 4 0 0 0-4 4v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a4 4 0 0 0-4-4zM8 7a3.99 3.99 0 0 0-1.354-3H12a3 3 0 0 1 3 3v6H8V7zm-3.415.157C4.42 7.087 4.218 7 4 7c-.218 0-.42.086-.585.157C3.164 7.264 3 7.334 3 7a1 1 0 0 1 2 0c0 .334-.164.264-.415.157z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbGJveDIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL21haWxib3gyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFHOzs7T0FHakIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBtYWlsYm94Mi5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9tYWlsYm94Mi99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IG1haWxib3gyID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLW1haWxib3gyXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTkgOC41aDIuNzkzbC44NTMuODU0QS41LjUgMCAwIDAgMTMgOS41aDFhLjUuNSAwIDAgMCAuNS0uNVY4YS41LjUgMCAwIDAtLjUtLjVIOXYxelwiLz5cbiAgPHBhdGggZD1cIk0xMiAzSDRhNCA0IDAgMCAwLTQgNHY2YTEgMSAwIDAgMCAxIDFoMTRhMSAxIDAgMCAwIDEtMVY3YTQgNCAwIDAgMC00LTR6TTggN2EzLjk5IDMuOTkgMCAwIDAtMS4zNTQtM0gxMmEzIDMgMCAwIDEgMyAzdjZIOFY3em0tMy40MTUuMTU3QzQuNDIgNy4wODcgNC4yMTggNyA0IDdjLS4yMTggMC0uNDIuMDg2LS41ODUuMTU3QzMuMTY0IDcuMjY0IDMgNy4zMzQgMyA3YTEgMSAwIDAgMSAyIDBjMCAuMzM0LS4xNjQuMjY0LS40MTUuMTU3elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

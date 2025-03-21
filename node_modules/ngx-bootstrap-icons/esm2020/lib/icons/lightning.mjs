@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * lightning.
+ *
+ * {@link https://icons.getbootstrap.com/icons/lightning/}.
+ */
+export const lightning = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning" viewBox="0 0 16 16">
+  <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1H6.374z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGlnaHRuaW5nLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9saWdodG5pbmcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxTQUFTLEdBQUc7O09BRWxCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogbGlnaHRuaW5nLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2xpZ2h0bmluZy99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGxpZ2h0bmluZyA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1saWdodG5pbmdcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNS41Mi4zNTlBLjUuNSAwIDAgMSA2IDBoNGEuNS41IDAgMCAxIC40NzQuNjU4TDguNjk0IDZIMTIuNWEuNS41IDAgMCAxIC4zOTUuODA3bC03IDlhLjUuNSAwIDAgMS0uODczLS40NTRMNi44MjMgOS41SDMuNWEuNS41IDAgMCAxLS40OC0uNjQxbDIuNS04LjV6TTYuMzc0IDEgNC4xNjggOC41SDcuNWEuNS41IDAgMCAxIC40NzguNjQ3TDYuNzggMTMuMDQgMTEuNDc4IDdIOGEuNS41IDAgMCAxLS40NzQtLjY1OEw5LjMwNiAxSDYuMzc0elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

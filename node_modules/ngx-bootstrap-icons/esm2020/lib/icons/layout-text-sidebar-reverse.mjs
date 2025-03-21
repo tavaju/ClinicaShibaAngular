@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * layout-text-sidebar-reverse.
+ *
+ * {@link https://icons.getbootstrap.com/icons/layout-text-sidebar-reverse/}.
+ */
+export const layoutTextSidebarReverse = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+  <path d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z"/>
+  <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2zM4 1v14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h2zm1 0h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5V1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGF5b3V0LXRleHQtc2lkZWJhci1yZXZlcnNlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9sYXlvdXQtdGV4dC1zaWRlYmFyLXJldmVyc2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSx3QkFBd0IsR0FBRzs7O09BR2pDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogbGF5b3V0LXRleHQtc2lkZWJhci1yZXZlcnNlLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2xheW91dC10ZXh0LXNpZGViYXItcmV2ZXJzZS99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGxheW91dFRleHRTaWRlYmFyUmV2ZXJzZSA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1sYXlvdXQtdGV4dC1zaWRlYmFyLXJldmVyc2VcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMTIuNSAzYS41LjUgMCAwIDEgMCAxaC01YS41LjUgMCAwIDEgMC0xaDV6bTAgM2EuNS41IDAgMCAxIDAgMWgtNWEuNS41IDAgMCAxIDAtMWg1em0uNSAzLjVhLjUuNSAwIDAgMC0uNS0uNWgtNWEuNS41IDAgMCAwIDAgMWg1YS41LjUgMCAwIDAgLjUtLjV6bS0uNSAyLjVhLjUuNSAwIDAgMSAwIDFoLTVhLjUuNSAwIDAgMSAwLTFoNXpcIi8+XG4gIDxwYXRoIGQ9XCJNMTYgMmEyIDIgMCAwIDAtMi0ySDJhMiAyIDAgMCAwLTIgMnYxMmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWMnpNNCAxdjE0SDJhMSAxIDAgMCAxLTEtMVYyYTEgMSAwIDAgMSAxLTFoMnptMSAwaDlhMSAxIDAgMCAxIDEgMXYxMmExIDEgMCAwIDEtMSAxSDVWMXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

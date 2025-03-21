@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * calendar-x-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/calendar-x-fill/}.
+ */
+export const calendarXFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-x-fill" viewBox="0 0 16 16">
+  <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM6.854 8.146 8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 1 1 .708-.708z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FsZW5kYXIteC1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9jYWxlbmRhci14LWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7O09BRXRCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogY2FsZW5kYXIteC1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2NhbGVuZGFyLXgtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGNhbGVuZGFyWEZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2FsZW5kYXIteC1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTQgLjVhLjUuNSAwIDAgMC0xIDBWMUgyYTIgMiAwIDAgMC0yIDJ2MWgxNlYzYTIgMiAwIDAgMC0yLTJoLTFWLjVhLjUuNSAwIDAgMC0xIDBWMUg0Vi41ek0xNiAxNFY1SDB2OWEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJ6TTYuODU0IDguMTQ2IDggOS4yOTNsMS4xNDYtMS4xNDdhLjUuNSAwIDEgMSAuNzA4LjcwOEw4LjcwNyAxMGwxLjE0NyAxLjE0NmEuNS41IDAgMCAxLS43MDguNzA4TDggMTAuNzA3bC0xLjE0NiAxLjE0N2EuNS41IDAgMCAxLS43MDgtLjcwOEw3LjI5MyAxMCA2LjE0NiA4Ljg1NGEuNS41IDAgMSAxIC43MDgtLjcwOHpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

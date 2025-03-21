@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * emoji-smile-upside-down-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/emoji-smile-upside-down-fill/}.
+ */
+export const emojiSmileUpsideDownFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-upside-down-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5zM4.285 6.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM10 8c-.552 0-1 .672-1 1.5s.448 1.5 1 1.5 1-.672 1-1.5S10.552 8 10 8z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW1vamktc21pbGUtdXBzaWRlLWRvd24tZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZW1vamktc21pbGUtdXBzaWRlLWRvd24tZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLHdCQUF3QixHQUFHOztPQUVqQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGVtb2ppLXNtaWxlLXVwc2lkZS1kb3duLWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvZW1vamktc21pbGUtdXBzaWRlLWRvd24tZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGVtb2ppU21pbGVVcHNpZGVEb3duRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1lbW9qaS1zbWlsZS11cHNpZGUtZG93bi1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTggMGE4IDggMCAxIDEgMCAxNkE4IDggMCAwIDEgOCAwek03IDkuNUM3IDguNjcyIDYuNTUyIDggNiA4cy0xIC42NzItMSAxLjUuNDQ4IDEuNSAxIDEuNSAxLS42NzIgMS0xLjV6TTQuMjg1IDYuNDMzYS41LjUgMCAwIDAgLjY4My0uMTgzQTMuNDk4IDMuNDk4IDAgMCAxIDggNC41YzEuMjk1IDAgMi40MjYuNzAzIDMuMDMyIDEuNzVhLjUuNSAwIDAgMCAuODY2LS41QTQuNDk4IDQuNDk4IDAgMCAwIDggMy41YTQuNSA0LjUgMCAwIDAtMy44OTggMi4yNS41LjUgMCAwIDAgLjE4My42ODN6TTEwIDhjLS41NTIgMC0xIC42NzItMSAxLjVzLjQ0OCAxLjUgMSAxLjUgMS0uNjcyIDEtMS41UzEwLjU1MiA4IDEwIDh6XCIvPlxuPC9zdmc+YDtcclxuIl19

@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * box-arrow-in-up-left.
+ *
+ * {@link https://icons.getbootstrap.com/icons/box-arrow-in-up-left/}.
+ */
+export const boxArrowInUpLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M9.636 13.5a.5.5 0 0 1-.5.5H2.5A1.5 1.5 0 0 1 1 12.5v-10A1.5 1.5 0 0 1 2.5 1h10A1.5 1.5 0 0 1 14 2.5v6.636a.5.5 0 0 1-1 0V2.5a.5.5 0 0 0-.5-.5h-10a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h6.636a.5.5 0 0 1 .5.5z"/>
+  <path fill-rule="evenodd" d="M5 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H6.707l8.147 8.146a.5.5 0 0 1-.708.708L6 6.707V10.5a.5.5 0 0 1-1 0v-5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm94LWFycm93LWluLXVwLWxlZnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2JveC1hcnJvdy1pbi11cC1sZWZ0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sZ0JBQWdCLEdBQUc7OztPQUd6QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGJveC1hcnJvdy1pbi11cC1sZWZ0LlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2JveC1hcnJvdy1pbi11cC1sZWZ0L30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgYm94QXJyb3dJblVwTGVmdCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1ib3gtYXJyb3ctaW4tdXAtbGVmdFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNOS42MzYgMTMuNWEuNS41IDAgMCAxLS41LjVIMi41QTEuNSAxLjUgMCAwIDEgMSAxMi41di0xMEExLjUgMS41IDAgMCAxIDIuNSAxaDEwQTEuNSAxLjUgMCAwIDEgMTQgMi41djYuNjM2YS41LjUgMCAwIDEtMSAwVjIuNWEuNS41IDAgMCAwLS41LS41aC0xMGEuNS41IDAgMCAwLS41LjV2MTBhLjUuNSAwIDAgMCAuNS41aDYuNjM2YS41LjUgMCAwIDEgLjUuNXpcIi8+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTTUgNS41YS41LjUgMCAwIDEgLjUtLjVoNWEuNS41IDAgMCAxIDAgMUg2LjcwN2w4LjE0NyA4LjE0NmEuNS41IDAgMCAxLS43MDguNzA4TDYgNi43MDdWMTAuNWEuNS41IDAgMCAxLTEgMHYtNXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

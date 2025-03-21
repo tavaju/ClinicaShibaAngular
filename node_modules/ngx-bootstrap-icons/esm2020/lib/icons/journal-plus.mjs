@@ -1,0 +1,12 @@
+/* eslint-disable max-len */
+/**
+ * journal-plus.
+ *
+ * {@link https://icons.getbootstrap.com/icons/journal-plus/}.
+ */
+export const journalPlus = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
+  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiam91cm5hbC1wbHVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9qb3VybmFsLXBsdXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxXQUFXLEdBQUc7Ozs7T0FJcEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBqb3VybmFsLXBsdXMuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvam91cm5hbC1wbHVzL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3Qgam91cm5hbFBsdXMgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktam91cm5hbC1wbHVzXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBmaWxsLXJ1bGU9XCJldmVub2RkXCIgZD1cIk04IDUuNWEuNS41IDAgMCAxIC41LjV2MS41SDEwYS41LjUgMCAwIDEgMCAxSDguNVYxMGEuNS41IDAgMCAxLTEgMFY4LjVINmEuNS41IDAgMCAxIDAtMWgxLjVWNmEuNS41IDAgMCAxIC41LS41elwiLz5cbiAgPHBhdGggZD1cIk0zIDBoMTBhMiAyIDAgMCAxIDIgMnYxMmEyIDIgMCAwIDEtMiAySDNhMiAyIDAgMCAxLTItMnYtMWgxdjFhMSAxIDAgMCAwIDEgMWgxMGExIDEgMCAwIDAgMS0xVjJhMSAxIDAgMCAwLTEtMUgzYTEgMSAwIDAgMC0xIDF2MUgxVjJhMiAyIDAgMCAxIDItMnpcIi8+XG4gIDxwYXRoIGQ9XCJNMSA1di0uNWEuNS41IDAgMCAxIDEgMFY1aC41YS41LjUgMCAwIDEgMCAxaC0yYS41LjUgMCAwIDEgMC0xSDF6bTAgM3YtLjVhLjUuNSAwIDAgMSAxIDBWOGguNWEuNS41IDAgMCAxIDAgMWgtMmEuNS41IDAgMCAxIDAtMUgxem0wIDN2LS41YS41LjUgMCAwIDEgMSAwdi41aC41YS41LjUgMCAwIDEgMCAxaC0yYS41LjUgMCAwIDEgMC0xSDF6XCIvPlxuPC9zdmc+YDtcclxuIl19

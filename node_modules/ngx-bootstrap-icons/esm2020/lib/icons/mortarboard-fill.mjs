@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * mortarboard-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/mortarboard-fill/}.
+ */
+export const mortarboardFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9ydGFyYm9hcmQtZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvbW9ydGFyYm9hcmQtZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGVBQWUsR0FBRzs7O09BR3hCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogbW9ydGFyYm9hcmQtZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9tb3J0YXJib2FyZC1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgbW9ydGFyYm9hcmRGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLW1vcnRhcmJvYXJkLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNOC4yMTEgMi4wNDdhLjUuNSAwIDAgMC0uNDIyIDBsLTcuNSAzLjVhLjUuNSAwIDAgMCAuMDI1LjkxN2w3LjUgM2EuNS41IDAgMCAwIC4zNzIgMEwxNCA3LjE0VjEzYTEgMSAwIDAgMC0xIDF2Mmgzdi0yYTEgMSAwIDAgMC0xLTFWNi43MzlsLjY4Ni0uMjc1YS41LjUgMCAwIDAgLjAyNS0uOTE3bC03LjUtMy41WlwiLz5cbiAgPHBhdGggZD1cIk00LjE3NiA5LjAzMmEuNS41IDAgMCAwLS42NTYuMzI3bC0uNSAxLjdhLjUuNSAwIDAgMCAuMjk0LjYwNWw0LjUgMS44YS41LjUgMCAwIDAgLjM3MiAwbDQuNS0xLjhhLjUuNSAwIDAgMCAuMjk0LS42MDVsLS41LTEuN2EuNS41IDAgMCAwLS42NTYtLjMyN0w4IDEwLjQ2NiA0LjE3NiA5LjAzMlpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

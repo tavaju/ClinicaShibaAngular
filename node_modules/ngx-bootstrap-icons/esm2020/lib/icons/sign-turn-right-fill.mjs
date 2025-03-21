@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * sign-turn-right-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/sign-turn-right-fill/}.
+ */
+export const signTurnRightFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-turn-right-fill" viewBox="0 0 16 16">
+  <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM9 8.466V7H7.5A1.5 1.5 0 0 0 6 8.5V11H5V8.5A2.5 2.5 0 0 1 7.5 6H9V4.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L9.41 8.658A.25.25 0 0 1 9 8.466Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lnbi10dXJuLXJpZ2h0LWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3NpZ24tdHVybi1yaWdodC1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0saUJBQWlCLEdBQUc7O09BRTFCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogc2lnbi10dXJuLXJpZ2h0LWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvc2lnbi10dXJuLXJpZ2h0LWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBzaWduVHVyblJpZ2h0RmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1zaWduLXR1cm4tcmlnaHQtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk05LjA1LjQzNWMtLjU4LS41OC0xLjUyLS41OC0yLjEgMEwuNDM2IDYuOTVjLS41OC41OC0uNTggMS41MTkgMCAyLjA5OGw2LjUxNiA2LjUxNmMuNTguNTggMS41MTkuNTggMi4wOTggMGw2LjUxNi02LjUxNmMuNTgtLjU4LjU4LTEuNTE5IDAtMi4wOThMOS4wNS40MzVaTTkgOC40NjZWN0g3LjVBMS41IDEuNSAwIDAgMCA2IDguNVYxMUg1VjguNUEyLjUgMi41IDAgMCAxIDcuNSA2SDlWNC41MzRhLjI1LjI1IDAgMCAxIC40MS0uMTkybDIuMzYgMS45NjZjLjEyLjEuMTIuMjg0IDAgLjM4NEw5LjQxIDguNjU4QS4yNS4yNSAwIDAgMSA5IDguNDY2WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

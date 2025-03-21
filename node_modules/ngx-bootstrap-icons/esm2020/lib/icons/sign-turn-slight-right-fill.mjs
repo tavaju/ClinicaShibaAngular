@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * sign-turn-slight-right-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/sign-turn-slight-right-fill/}.
+ */
+export const signTurnSlightRightFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-turn-slight-right-fill" viewBox="0 0 16 16">
+  <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435Zm1.385 6.547.8 1.386a.25.25 0 0 0 .451-.039l1.06-2.882a.25.25 0 0 0-.192-.333l-3.026-.523a.25.25 0 0 0-.26.371l.667 1.154-.621.373A2.5 2.5 0 0 0 6 8.632V11h1V8.632a1.5 1.5 0 0 1 .728-1.286l.607-.364Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lnbi10dXJuLXNsaWdodC1yaWdodC1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9zaWduLXR1cm4tc2xpZ2h0LXJpZ2h0LWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSx1QkFBdUIsR0FBRzs7T0FFaEMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBzaWduLXR1cm4tc2xpZ2h0LXJpZ2h0LWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvc2lnbi10dXJuLXNsaWdodC1yaWdodC1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3Qgc2lnblR1cm5TbGlnaHRSaWdodEZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktc2lnbi10dXJuLXNsaWdodC1yaWdodC1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTYuOTUuNDM1Yy41OC0uNTggMS41Mi0uNTggMi4xIDBsNi41MTUgNi41MTZjLjU4LjU4LjU4IDEuNTE5IDAgMi4wOThMOS4wNSAxNS41NjVjLS41OC41OC0xLjUxOS41OC0yLjA5OCAwTC40MzUgOS4wNWExLjQ4MiAxLjQ4MiAwIDAgMSAwLTIuMDk4TDYuOTUuNDM1Wm0xLjM4NSA2LjU0Ny44IDEuMzg2YS4yNS4yNSAwIDAgMCAuNDUxLS4wMzlsMS4wNi0yLjg4MmEuMjUuMjUgMCAwIDAtLjE5Mi0uMzMzbC0zLjAyNi0uNTIzYS4yNS4yNSAwIDAgMC0uMjYuMzcxbC42NjcgMS4xNTQtLjYyMS4zNzNBMi41IDIuNSAwIDAgMCA2IDguNjMyVjExaDFWOC42MzJhMS41IDEuNSAwIDAgMSAuNzI4LTEuMjg2bC42MDctLjM2NFpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

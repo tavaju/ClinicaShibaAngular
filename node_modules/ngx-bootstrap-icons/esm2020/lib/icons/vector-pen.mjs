@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * vector-pen.
+ *
+ * {@link https://icons.getbootstrap.com/icons/vector-pen/}.
+ */
+export const vectorPen = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vector-pen" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z"/>
+  <path fill-rule="evenodd" d="M2.832 13.228 8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmVjdG9yLXBlbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvdmVjdG9yLXBlbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFNBQVMsR0FBRzs7O09BR2xCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogdmVjdG9yLXBlbi5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy92ZWN0b3ItcGVuL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgdmVjdG9yUGVuID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLXZlY3Rvci1wZW5cIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTTEwLjY0Ni42NDZhLjUuNSAwIDAgMSAuNzA4IDBsNCA0YS41LjUgMCAwIDEgMCAuNzA4bC0xLjkwMiAxLjkwMi0uODI5IDMuMzEzYTEuNSAxLjUgMCAwIDEtMS4wMjQgMS4wNzNMMS4yNTQgMTQuNzQ2IDQuMzU4IDQuNEExLjUgMS41IDAgMCAxIDUuNDMgMy4zNzdsMy4zMTMtLjgyOEwxMC42NDYuNjQ2em0tMS44IDIuOTA4LTMuMTczLjc5M2EuNS41IDAgMCAwLS4zNTguMzQybC0yLjU3IDguNTY1IDguNTY3LTIuNTdhLjUuNSAwIDAgMCAuMzQtLjM1N2wuNzk0LTMuMTc0LTMuNi0zLjZ6XCIvPlxuICA8cGF0aCBmaWxsLXJ1bGU9XCJldmVub2RkXCIgZD1cIk0yLjgzMiAxMy4yMjggOCA5YTEgMSAwIDEgMC0xLTFsLTQuMjI4IDUuMTY4LS4wMjYuMDg2LjA4Ni0uMDI2elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * triangle-half.
+ *
+ * {@link https://icons.getbootstrap.com/icons/triangle-half/}.
+ */
+export const triangleHalf = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-triangle-half" viewBox="0 0 16 16">
+  <path d="M8.065 2.016A.13.13 0 0 0 8.002 2v11.983l6.856.017a.12.12 0 0 0 .066-.017.162.162 0 0 0 .054-.06.176.176 0 0 0-.002-.183L8.12 2.073a.146.146 0 0 0-.054-.057zm-1.043-.45a1.13 1.13 0 0 1 1.96 0l6.856 11.667c.458.778-.091 1.767-.98 1.767H1.146c-.889 0-1.437-.99-.98-1.767L7.022 1.566z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHJpYW5nbGUtaGFsZi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvdHJpYW5nbGUtaGFsZi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7T0FFckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiB0cmlhbmdsZS1oYWxmLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3RyaWFuZ2xlLWhhbGYvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCB0cmlhbmdsZUhhbGYgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktdHJpYW5nbGUtaGFsZlwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk04LjA2NSAyLjAxNkEuMTMuMTMgMCAwIDAgOC4wMDIgMnYxMS45ODNsNi44NTYuMDE3YS4xMi4xMiAwIDAgMCAuMDY2LS4wMTcuMTYyLjE2MiAwIDAgMCAuMDU0LS4wNi4xNzYuMTc2IDAgMCAwLS4wMDItLjE4M0w4LjEyIDIuMDczYS4xNDYuMTQ2IDAgMCAwLS4wNTQtLjA1N3ptLTEuMDQzLS40NWExLjEzIDEuMTMgMCAwIDEgMS45NiAwbDYuODU2IDExLjY2N2MuNDU4Ljc3OC0uMDkxIDEuNzY3LS45OCAxLjc2N0gxLjE0NmMtLjg4OSAwLTEuNDM3LS45OS0uOTgtMS43NjdMNy4wMjIgMS41NjZ6XCIvPlxuPC9zdmc+YDtcclxuIl19

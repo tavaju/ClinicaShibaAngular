@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * chat-square-dots.
+ *
+ * {@link https://icons.getbootstrap.com/icons/chat-square-dots/}.
+ */
+export const chatSquareDots = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-dots" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+  <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hhdC1zcXVhcmUtZG90cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvY2hhdC1zcXVhcmUtZG90cy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGNBQWMsR0FBRzs7O09BR3ZCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogY2hhdC1zcXVhcmUtZG90cy5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9jaGF0LXNxdWFyZS1kb3RzL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY2hhdFNxdWFyZURvdHMgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2hhdC1zcXVhcmUtZG90c1wiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xNCAxYTEgMSAwIDAgMSAxIDF2OGExIDEgMCAwIDEtMSAxaC0yLjVhMiAyIDAgMCAwLTEuNi44TDggMTQuMzMzIDYuMSAxMS44YTIgMiAwIDAgMC0xLjYtLjhIMmExIDEgMCAwIDEtMS0xVjJhMSAxIDAgMCAxIDEtMWgxMnpNMiAwYTIgMiAwIDAgMC0yIDJ2OGEyIDIgMCAwIDAgMiAyaDIuNWExIDEgMCAwIDEgLjguNGwxLjkgMi41MzNhMSAxIDAgMCAwIDEuNiAwbDEuOS0yLjUzM2ExIDEgMCAwIDEgLjgtLjRIMTRhMiAyIDAgMCAwIDItMlYyYTIgMiAwIDAgMC0yLTJIMnpcIi8+XG4gIDxwYXRoIGQ9XCJNNSA2YTEgMSAwIDEgMS0yIDAgMSAxIDAgMCAxIDIgMHptNCAwYTEgMSAwIDEgMS0yIDAgMSAxIDAgMCAxIDIgMHptNCAwYTEgMSAwIDEgMS0yIDAgMSAxIDAgMCAxIDIgMHpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

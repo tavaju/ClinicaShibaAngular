@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * cloud-rain-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/cloud-rain-fill/}.
+ */
+export const cloudRainFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-rain-fill" viewBox="0 0 16 16">
+  <path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm3 0a.5.5 0 0 1 .316.633l-1 3a.5.5 0 1 1-.948-.316l1-3a.5.5 0 0 1 .632-.317zm3 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm3 0a.5.5 0 0 1 .316.633l-1 3a.5.5 0 1 1-.948-.316l1-3a.5.5 0 0 1 .632-.317zm.247-6.998a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xvdWQtcmFpbi1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9jbG91ZC1yYWluLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7O09BRXRCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogY2xvdWQtcmFpbi1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2Nsb3VkLXJhaW4tZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGNsb3VkUmFpbkZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2xvdWQtcmFpbi1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTQuMTU4IDEyLjAyNWEuNS41IDAgMCAxIC4zMTYuNjMzbC0uNSAxLjVhLjUuNSAwIDEgMS0uOTQ4LS4zMTZsLjUtMS41YS41LjUgMCAwIDEgLjYzMi0uMzE3em0zIDBhLjUuNSAwIDAgMSAuMzE2LjYzM2wtMSAzYS41LjUgMCAxIDEtLjk0OC0uMzE2bDEtM2EuNS41IDAgMCAxIC42MzItLjMxN3ptMyAwYS41LjUgMCAwIDEgLjMxNi42MzNsLS41IDEuNWEuNS41IDAgMSAxLS45NDgtLjMxNmwuNS0xLjVhLjUuNSAwIDAgMSAuNjMyLS4zMTd6bTMgMGEuNS41IDAgMCAxIC4zMTYuNjMzbC0xIDNhLjUuNSAwIDEgMS0uOTQ4LS4zMTZsMS0zYS41LjUgMCAwIDEgLjYzMi0uMzE3em0uMjQ3LTYuOTk4YTUuMDAxIDUuMDAxIDAgMCAwLTkuNDk5LTEuMDA0QTMuNSAzLjUgMCAxIDAgMy41IDExSDEzYTMgMyAwIDAgMCAuNDA1LTUuOTczelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

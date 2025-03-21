@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * suit-spade-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/suit-spade-fill/}.
+ */
+export const suitSpadeFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-spade-fill" viewBox="0 0 16 16">
+  <path d="M7.184 11.246A3.5 3.5 0 0 1 1 9c0-1.602 1.14-2.633 2.66-4.008C4.986 3.792 6.602 2.33 8 0c1.398 2.33 3.014 3.792 4.34 4.992C13.86 6.367 15 7.398 15 9a3.5 3.5 0 0 1-6.184 2.246 19.92 19.92 0 0 0 1.582 2.907c.231.35-.02.847-.438.847H6.04c-.419 0-.67-.497-.438-.847a19.919 19.919 0 0 0 1.582-2.907z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3VpdC1zcGFkZS1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9zdWl0LXNwYWRlLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7O09BRXRCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogc3VpdC1zcGFkZS1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3N1aXQtc3BhZGUtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHN1aXRTcGFkZUZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktc3VpdC1zcGFkZS1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTcuMTg0IDExLjI0NkEzLjUgMy41IDAgMCAxIDEgOWMwLTEuNjAyIDEuMTQtMi42MzMgMi42Ni00LjAwOEM0Ljk4NiAzLjc5MiA2LjYwMiAyLjMzIDggMGMxLjM5OCAyLjMzIDMuMDE0IDMuNzkyIDQuMzQgNC45OTJDMTMuODYgNi4zNjcgMTUgNy4zOTggMTUgOWEzLjUgMy41IDAgMCAxLTYuMTg0IDIuMjQ2IDE5LjkyIDE5LjkyIDAgMCAwIDEuNTgyIDIuOTA3Yy4yMzEuMzUtLjAyLjg0Ny0uNDM4Ljg0N0g2LjA0Yy0uNDE5IDAtLjY3LS40OTctLjQzOC0uODQ3YTE5LjkxOSAxOS45MTkgMCAwIDAgMS41ODItMi45MDd6XCIvPlxuPC9zdmc+YDtcclxuIl19

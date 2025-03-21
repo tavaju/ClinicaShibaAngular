@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-slides-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-slides-fill/}.
+ */
+export const fileSlidesFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-slides-fill" viewBox="0 0 16 16">
+  <path d="M7 7.78V5.22c0-.096.106-.156.19-.106l2.13 1.279a.125.125 0 0 1 0 .214l-2.13 1.28A.125.125 0 0 1 7 7.778z"/>
+  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 .496.438l.5 4A.5.5 0 0 1 11.5 9h-3v2.016c.863.055 1.5.251 1.5.484 0 .276-.895.5-2 .5s-2-.224-2-.5c0-.233.637-.429 1.5-.484V9h-3a.5.5 0 0 1-.496-.562l.5-4A.5.5 0 0 1 5 4z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1zbGlkZXMtZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZmlsZS1zbGlkZXMtZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGNBQWMsR0FBRzs7O09BR3ZCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogZmlsZS1zbGlkZXMtZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9maWxlLXNsaWRlcy1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZmlsZVNsaWRlc0ZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZS1zbGlkZXMtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk03IDcuNzhWNS4yMmMwLS4wOTYuMTA2LS4xNTYuMTktLjEwNmwyLjEzIDEuMjc5YS4xMjUuMTI1IDAgMCAxIDAgLjIxNGwtMi4xMyAxLjI4QS4xMjUuMTI1IDAgMCAxIDcgNy43Nzh6XCIvPlxuICA8cGF0aCBkPVwiTTEyIDBINGEyIDIgMCAwIDAtMiAydjEyYTIgMiAwIDAgMCAyIDJoOGEyIDIgMCAwIDAgMi0yVjJhMiAyIDAgMCAwLTItMnpNNSA0aDZhLjUuNSAwIDAgMSAuNDk2LjQzOGwuNSA0QS41LjUgMCAwIDEgMTEuNSA5aC0zdjIuMDE2Yy44NjMuMDU1IDEuNS4yNTEgMS41LjQ4NCAwIC4yNzYtLjg5NS41LTIgLjVzLTItLjIyNC0yLS41YzAtLjIzMy42MzctLjQyOSAxLjUtLjQ4NFY5aC0zYS41LjUgMCAwIDEtLjQ5Ni0uNTYybC41LTRBLjUuNSAwIDAgMSA1IDR6XCIvPlxuPC9zdmc+YDtcclxuIl19

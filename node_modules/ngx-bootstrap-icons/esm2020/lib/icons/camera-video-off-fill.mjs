@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * camera-video-off-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/camera-video-off-fill/}.
+ */
+export const cameraVideoOffFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-off-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.961 12.365a1.99 1.99 0 0 0 .522-1.103l3.11 1.382A1 1 0 0 0 16 11.731V4.269a1 1 0 0 0-1.406-.913l-3.111 1.382A2 2 0 0 0 9.5 3H4.272l6.69 9.365zm-10.114-9A2.001 2.001 0 0 0 0 5v6a2 2 0 0 0 2 2h5.728L.847 3.366zm9.746 11.925-10-14 .814-.58 10 14-.814.58z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FtZXJhLXZpZGVvLW9mZi1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9jYW1lcmEtdmlkZW8tb2ZmLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxrQkFBa0IsR0FBRzs7T0FFM0IsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBjYW1lcmEtdmlkZW8tb2ZmLWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvY2FtZXJhLXZpZGVvLW9mZi1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY2FtZXJhVmlkZW9PZmZGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWNhbWVyYS12aWRlby1vZmYtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNMTAuOTYxIDEyLjM2NWExLjk5IDEuOTkgMCAwIDAgLjUyMi0xLjEwM2wzLjExIDEuMzgyQTEgMSAwIDAgMCAxNiAxMS43MzFWNC4yNjlhMSAxIDAgMCAwLTEuNDA2LS45MTNsLTMuMTExIDEuMzgyQTIgMiAwIDAgMCA5LjUgM0g0LjI3Mmw2LjY5IDkuMzY1em0tMTAuMTE0LTlBMi4wMDEgMi4wMDEgMCAwIDAgMCA1djZhMiAyIDAgMCAwIDIgMmg1LjcyOEwuODQ3IDMuMzY2em05Ljc0NiAxMS45MjUtMTAtMTQgLjgxNC0uNTggMTAgMTQtLjgxNC41OHpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

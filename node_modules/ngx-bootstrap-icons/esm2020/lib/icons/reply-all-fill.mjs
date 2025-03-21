@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * reply-all-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/reply-all-fill/}.
+ */
+export const replyAllFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-all-fill" viewBox="0 0 16 16">
+  <path d="M8.021 11.9 3.453 8.62a.719.719 0 0 1 0-1.238L8.021 4.1a.716.716 0 0 1 1.079.619V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+  <path d="M5.232 4.293a.5.5 0 0 1-.106.7L1.114 7.945a.5.5 0 0 1-.042.028.147.147 0 0 0 0 .252.503.503 0 0 1 .042.028l4.012 2.954a.5.5 0 1 1-.593.805L.539 9.073a1.147 1.147 0 0 1 0-1.946l3.994-2.94a.5.5 0 0 1 .699.106z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVwbHktYWxsLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3JlcGx5LWFsbC1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sWUFBWSxHQUFHOzs7T0FHckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiByZXBseS1hbGwtZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9yZXBseS1hbGwtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHJlcGx5QWxsRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1yZXBseS1hbGwtZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk04LjAyMSAxMS45IDMuNDUzIDguNjJhLjcxOS43MTkgMCAwIDEgMC0xLjIzOEw4LjAyMSA0LjFhLjcxNi43MTYgMCAwIDEgMS4wNzkuNjE5VjZjMS41IDAgNiAwIDcgOC0yLjUtNC41LTctNC03LTR2MS4yODFjMCAuNTYtLjYwNi44OTgtMS4wNzkuNjJ6XCIvPlxuICA8cGF0aCBkPVwiTTUuMjMyIDQuMjkzYS41LjUgMCAwIDEtLjEwNi43TDEuMTE0IDcuOTQ1YS41LjUgMCAwIDEtLjA0Mi4wMjguMTQ3LjE0NyAwIDAgMCAwIC4yNTIuNTAzLjUwMyAwIDAgMSAuMDQyLjAyOGw0LjAxMiAyLjk1NGEuNS41IDAgMSAxLS41OTMuODA1TC41MzkgOS4wNzNhMS4xNDcgMS4xNDcgMCAwIDEgMC0xLjk0NmwzLjk5NC0yLjk0YS41LjUgMCAwIDEgLjY5OS4xMDZ6XCIvPlxuPC9zdmc+YDtcclxuIl19

@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * border-outer.
+ *
+ * {@link https://icons.getbootstrap.com/icons/border-outer/}.
+ */
+export const borderOuter = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-border-outer" viewBox="0 0 16 16">
+  <path d="M7.5 1.906v.938h1v-.938h-1zm0 1.875v.938h1V3.78h-1zm0 1.875v.938h1v-.938h-1zM1.906 8.5h.938v-1h-.938v1zm1.875 0h.938v-1H3.78v1zm1.875 0h.938v-1h-.938v1zm2.813 0v-.031H8.5V7.53h-.031V7.5H7.53v.031H7.5v.938h.031V8.5h.938zm.937 0h.938v-1h-.938v1zm1.875 0h.938v-1h-.938v1zm1.875 0h.938v-1h-.938v1zM7.5 9.406v.938h1v-.938h-1zm0 1.875v.938h1v-.938h-1zm0 1.875v.938h1v-.938h-1z"/>
+  <path d="M0 0v16h16V0H0zm1 1h14v14H1V1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm9yZGVyLW91dGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9ib3JkZXItb3V0ZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxXQUFXLEdBQUc7OztPQUdwQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGJvcmRlci1vdXRlci5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9ib3JkZXItb3V0ZXIvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBib3JkZXJPdXRlciA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1ib3JkZXItb3V0ZXJcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNy41IDEuOTA2di45MzhoMXYtLjkzOGgtMXptMCAxLjg3NXYuOTM4aDFWMy43OGgtMXptMCAxLjg3NXYuOTM4aDF2LS45MzhoLTF6TTEuOTA2IDguNWguOTM4di0xaC0uOTM4djF6bTEuODc1IDBoLjkzOHYtMUgzLjc4djF6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHYxem0yLjgxMyAwdi0uMDMxSDguNVY3LjUzaC0uMDMxVjcuNUg3LjUzdi4wMzFINy41di45MzhoLjAzMVY4LjVoLjkzOHptLjkzNyAwaC45Mzh2LTFoLS45Mzh2MXptMS44NzUgMGguOTM4di0xaC0uOTM4djF6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHYxek03LjUgOS40MDZ2LjkzOGgxdi0uOTM4aC0xem0wIDEuODc1di45MzhoMXYtLjkzOGgtMXptMCAxLjg3NXYuOTM4aDF2LS45MzhoLTF6XCIvPlxuICA8cGF0aCBkPVwiTTAgMHYxNmgxNlYwSDB6bTEgMWgxNHYxNEgxVjF6XCIvPlxuPC9zdmc+YDtcclxuIl19

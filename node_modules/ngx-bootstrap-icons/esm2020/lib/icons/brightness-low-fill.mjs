@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * brightness-low-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/brightness-low-fill/}.
+ */
+export const brightnessLowFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-low-fill" viewBox="0 0 16 16">
+  <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707zM3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnJpZ2h0bmVzcy1sb3ctZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvYnJpZ2h0bmVzcy1sb3ctZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGlCQUFpQixHQUFHOztPQUUxQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGJyaWdodG5lc3MtbG93LWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvYnJpZ2h0bmVzcy1sb3ctZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGJyaWdodG5lc3NMb3dGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWJyaWdodG5lc3MtbG93LWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMTIgOGE0IDQgMCAxIDEtOCAwIDQgNCAwIDAgMSA4IDB6TTguNSAyLjVhLjUuNSAwIDEgMS0xIDAgLjUuNSAwIDAgMSAxIDB6bTAgMTFhLjUuNSAwIDEgMS0xIDAgLjUuNSAwIDAgMSAxIDB6bTUtNWEuNS41IDAgMSAxIDAtMSAuNS41IDAgMCAxIDAgMXptLTExIDBhLjUuNSAwIDEgMSAwLTEgLjUuNSAwIDAgMSAwIDF6bTkuNzQzLTQuMDM2YS41LjUgMCAxIDEtLjcwNy0uNzA3LjUuNSAwIDAgMSAuNzA3LjcwN3ptLTcuNzc5IDcuNzc5YS41LjUgMCAxIDEtLjcwNy0uNzA3LjUuNSAwIDAgMSAuNzA3LjcwN3ptNy4wNzIgMGEuNS41IDAgMSAxIC43MDctLjcwNy41LjUgMCAwIDEtLjcwNy43MDd6TTMuNzU3IDQuNDY0YS41LjUgMCAxIDEgLjcwNy0uNzA3LjUuNSAwIDAgMS0uNzA3LjcwN3pcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

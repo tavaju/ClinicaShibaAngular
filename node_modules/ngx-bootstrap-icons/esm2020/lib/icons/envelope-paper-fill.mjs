@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * envelope-paper-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/envelope-paper-fill/}.
+ */
+export const envelopePaperFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-paper-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75l-1.5.75ZM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765ZM16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4v.313Zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516L8 10.072Zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW52ZWxvcGUtcGFwZXItZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZW52ZWxvcGUtcGFwZXItZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGlCQUFpQixHQUFHOztPQUUxQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGVudmVsb3BlLXBhcGVyLWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvZW52ZWxvcGUtcGFwZXItZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGVudmVsb3BlUGFwZXJGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWVudmVsb3BlLXBhcGVyLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTTYuNSA5LjUgMyA3LjV2LTZBMS41IDEuNSAwIDAgMSA0LjUgMGg3QTEuNSAxLjUgMCAwIDEgMTMgMS41djZsLTMuNSAyTDggOC43NWwtMS41Ljc1Wk0xLjA1OSAzLjYzNSAyIDMuMTMzdjMuNzUzTDAgNS43MTNWNS40YTIgMiAwIDAgMSAxLjA1OS0xLjc2NVpNMTYgNS43MTNsLTIgMS4xNzNWMy4xMzNsLjk0MS41MDJBMiAyIDAgMCAxIDE2IDUuNHYuMzEzWm0wIDEuMTYtNS42OTMgMy4zMzdMMTYgMTMuMzcydi02LjVabS04IDMuMTk5IDcuOTQxIDQuNDEyQTIgMiAwIDAgMSAxNCAxNkgyYTIgMiAwIDAgMS0xLjk0MS0xLjUxNkw4IDEwLjA3MlptLTggMy4zIDUuNjkzLTMuMTYyTDAgNi44NzN2Ni41WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

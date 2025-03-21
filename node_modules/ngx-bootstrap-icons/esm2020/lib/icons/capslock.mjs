@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * capslock.
+ *
+ * {@link https://icons.getbootstrap.com/icons/capslock/}.
+ */
+export const capslock = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capslock" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM14.346 8.5 8 1.731 1.654 8.5H4.5a1 1 0 0 1 1 1v1h5v-1a1 1 0 0 1 1-1h2.846zm-9.846 5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1zm6 0h-5v1h5v-1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2Fwc2xvY2suanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2NhcHNsb2NrLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFHOztPQUVqQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGNhcHNsb2NrLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2NhcHNsb2NrL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgY2Fwc2xvY2sgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2Fwc2xvY2tcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTTcuMjcgMS4wNDdhMSAxIDAgMCAxIDEuNDYgMGw2LjM0NSA2Ljc3Yy42LjYzOC4xNDYgMS42ODMtLjczIDEuNjgzSDExLjV2MWExIDEgMCAwIDEtMSAxaC01YTEgMSAwIDAgMS0xLTF2LTFIMS42NTRDLjc4IDkuNS4zMjYgOC40NTUuOTI0IDcuODE2TDcuMjcgMS4wNDd6TTE0LjM0NiA4LjUgOCAxLjczMSAxLjY1NCA4LjVINC41YTEgMSAwIDAgMSAxIDF2MWg1di0xYTEgMSAwIDAgMSAxLTFoMi44NDZ6bS05Ljg0NiA1YTEgMSAwIDAgMSAxLTFoNWExIDEgMCAwIDEgMSAxdjFhMSAxIDAgMCAxLTEgMWgtNWExIDEgMCAwIDEtMS0xdi0xem02IDBoLTV2MWg1di0xelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * box-arrow-down-left.
+ *
+ * {@link https://icons.getbootstrap.com/icons/box-arrow-down-left/}.
+ */
+export const boxArrowDownLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.364 12.5a.5.5 0 0 0 .5.5H14.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 14.5 0h-10A1.5 1.5 0 0 0 3 1.5v6.636a.5.5 0 1 0 1 0V1.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H7.864a.5.5 0 0 0-.5.5z"/>
+  <path fill-rule="evenodd" d="M0 15.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1H1.707l8.147-8.146a.5.5 0 0 0-.708-.708L1 14.293V10.5a.5.5 0 0 0-1 0v5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm94LWFycm93LWRvd24tbGVmdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvYm94LWFycm93LWRvd24tbGVmdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGdCQUFnQixHQUFHOzs7T0FHekIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBib3gtYXJyb3ctZG93bi1sZWZ0LlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2JveC1hcnJvdy1kb3duLWxlZnQvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBib3hBcnJvd0Rvd25MZWZ0ID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWJveC1hcnJvdy1kb3duLWxlZnRcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTTcuMzY0IDEyLjVhLjUuNSAwIDAgMCAuNS41SDE0LjVhMS41IDEuNSAwIDAgMCAxLjUtMS41di0xMEExLjUgMS41IDAgMCAwIDE0LjUgMGgtMTBBMS41IDEuNSAwIDAgMCAzIDEuNXY2LjYzNmEuNS41IDAgMSAwIDEgMFYxLjVhLjUuNSAwIDAgMSAuNS0uNWgxMGEuNS41IDAgMCAxIC41LjV2MTBhLjUuNSAwIDAgMS0uNS41SDcuODY0YS41LjUgMCAwIDAtLjUuNXpcIi8+XG4gIDxwYXRoIGZpbGwtcnVsZT1cImV2ZW5vZGRcIiBkPVwiTTAgMTUuNWEuNS41IDAgMCAwIC41LjVoNWEuNS41IDAgMCAwIDAtMUgxLjcwN2w4LjE0Ny04LjE0NmEuNS41IDAgMCAwLS43MDgtLjcwOEwxIDE0LjI5M1YxMC41YS41LjUgMCAwIDAtMSAwdjV6XCIvPlxuPC9zdmc+YDtcclxuIl19

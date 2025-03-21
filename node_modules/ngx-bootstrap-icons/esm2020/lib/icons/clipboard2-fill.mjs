@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * clipboard2-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/clipboard2-fill/}.
+ */
+export const clipboard2Fill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-fill" viewBox="0 0 16 16">
+  <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+  <path d="M3.5 1h.585A1.498 1.498 0 0 0 4 1.5V2a1.5 1.5 0 0 0 1.5 1.5h5A1.5 1.5 0 0 0 12 2v-.5c0-.175-.03-.344-.085-.5h.585A1.5 1.5 0 0 1 14 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-12A1.5 1.5 0 0 1 3.5 1Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xpcGJvYXJkMi1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9jbGlwYm9hcmQyLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxjQUFjLEdBQUc7OztPQUd2QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGNsaXBib2FyZDItZmlsbC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9jbGlwYm9hcmQyLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBjbGlwYm9hcmQyRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1jbGlwYm9hcmQyLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNOS41IDBhLjUuNSAwIDAgMSAuNS41LjUuNSAwIDAgMCAuNS41LjUuNSAwIDAgMSAuNS41VjJhLjUuNSAwIDAgMS0uNS41aC01QS41LjUgMCAwIDEgNSAydi0uNWEuNS41IDAgMCAxIC41LS41LjUuNSAwIDAgMCAuNS0uNS41LjUgMCAwIDEgLjUtLjVoM1pcIi8+XG4gIDxwYXRoIGQ9XCJNMy41IDFoLjU4NUExLjQ5OCAxLjQ5OCAwIDAgMCA0IDEuNVYyYTEuNSAxLjUgMCAwIDAgMS41IDEuNWg1QTEuNSAxLjUgMCAwIDAgMTIgMnYtLjVjMC0uMTc1LS4wMy0uMzQ0LS4wODUtLjVoLjU4NUExLjUgMS41IDAgMCAxIDE0IDIuNXYxMmExLjUgMS41IDAgMCAxLTEuNSAxLjVoLTlBMS41IDEuNSAwIDAgMSAyIDE0LjV2LTEyQTEuNSAxLjUgMCAwIDEgMy41IDFaXCIvPlxuPC9zdmc+YDtcclxuIl19

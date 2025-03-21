@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * heart-half.
+ *
+ * {@link https://icons.getbootstrap.com/icons/heart-half/}.
+ */
+export const heartHalf = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-half" viewBox="0 0 16 16">
+  <path d="M8 2.748v11.047c3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaGVhcnQtaGFsZi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvaGVhcnQtaGFsZi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFNBQVMsR0FBRzs7T0FFbEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBoZWFydC1oYWxmLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2hlYXJ0LWhhbGYvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBoZWFydEhhbGYgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktaGVhcnQtaGFsZlwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk04IDIuNzQ4djExLjA0N2MzLjQ1Mi0yLjM2OCA1LjM2NS00LjU0MiA2LjI4Ni02LjM1Ny45NTUtMS44ODYuODM4LTMuMzYyLjMxNC00LjM4NUMxMy40ODYuODc4IDEwLjQuMjggOC43MTcgMi4wMUw4IDIuNzQ4ek04IDE1Qy03LjMzMyA0Ljg2OCAzLjI3OS0zLjA0IDcuODI0IDEuMTQzYy4wNi4wNTUuMTE5LjExMi4xNzYuMTcxYTMuMTIgMy4xMiAwIDAgMSAuMTc2LS4xN0MxMi43Mi0zLjA0MiAyMy4zMzMgNC44NjcgOCAxNXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

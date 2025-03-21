@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * hdd-rack-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/hdd-rack-fill/}.
+ */
+export const hddRackFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hdd-rack-fill" viewBox="0 0 16 16">
+  <path d="M2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1v2H2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1V7h1a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm-2 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM12 7v2H4V7h8z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaGRkLXJhY2stZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvaGRkLXJhY2stZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFdBQVcsR0FBRzs7T0FFcEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBoZGQtcmFjay1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2hkZC1yYWNrLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBoZGRSYWNrRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1oZGQtcmFjay1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTIgMmEyIDIgMCAwIDAtMiAydjFhMiAyIDAgMCAwIDIgMmgxdjJIMmEyIDIgMCAwIDAtMiAydjFhMiAyIDAgMCAwIDIgMmgxMmEyIDIgMCAwIDAgMi0ydi0xYTIgMiAwIDAgMC0yLTJoLTFWN2gxYTIgMiAwIDAgMCAyLTJWNGEyIDIgMCAwIDAtMi0ySDJ6bS41IDNhLjUuNSAwIDEgMSAwLTEgLjUuNSAwIDAgMSAwIDF6bTIgMGEuNS41IDAgMSAxIDAtMSAuNS41IDAgMCAxIDAgMXptLTIgN2EuNS41IDAgMSAxIDAtMSAuNS41IDAgMCAxIDAgMXptMiAwYS41LjUgMCAxIDEgMC0xIC41LjUgMCAwIDEgMCAxek0xMiA3djJINFY3aDh6XCIvPlxuPC9zdmc+YDtcclxuIl19

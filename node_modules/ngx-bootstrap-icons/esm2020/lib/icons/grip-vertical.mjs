@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * grip-vertical.
+ *
+ * {@link https://icons.getbootstrap.com/icons/grip-vertical/}.
+ */
+export const gripVertical = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grip-vertical" viewBox="0 0 16 16">
+  <path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ3JpcC12ZXJ0aWNhbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZ3JpcC12ZXJ0aWNhbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7T0FFckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBncmlwLXZlcnRpY2FsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2dyaXAtdmVydGljYWwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBncmlwVmVydGljYWwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZ3JpcC12ZXJ0aWNhbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk03IDJhMSAxIDAgMSAxLTIgMCAxIDEgMCAwIDEgMiAwem0zIDBhMSAxIDAgMSAxLTIgMCAxIDEgMCAwIDEgMiAwek03IDVhMSAxIDAgMSAxLTIgMCAxIDEgMCAwIDEgMiAwem0zIDBhMSAxIDAgMSAxLTIgMCAxIDEgMCAwIDEgMiAwek03IDhhMSAxIDAgMSAxLTIgMCAxIDEgMCAwIDEgMiAwem0zIDBhMSAxIDAgMSAxLTIgMCAxIDEgMCAwIDEgMiAwem0tMyAzYTEgMSAwIDEgMS0yIDAgMSAxIDAgMCAxIDIgMHptMyAwYTEgMSAwIDEgMS0yIDAgMSAxIDAgMCAxIDIgMHptLTMgM2ExIDEgMCAxIDEtMiAwIDEgMSAwIDAgMSAyIDB6bTMgMGExIDEgMCAxIDEtMiAwIDEgMSAwIDAgMSAyIDB6XCIvPlxuPC9zdmc+YDtcclxuIl19

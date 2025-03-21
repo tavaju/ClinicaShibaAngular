@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * journals.
+ *
+ * {@link https://icons.getbootstrap.com/icons/journals/}.
+ */
+export const journals = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journals" viewBox="0 0 16 16">
+  <path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"/>
+  <path d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiam91cm5hbHMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2pvdXJuYWxzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFHOzs7T0FHakIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBqb3VybmFscy5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9qb3VybmFscy99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGpvdXJuYWxzID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWpvdXJuYWxzXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTUgMGg4YTIgMiAwIDAgMSAyIDJ2MTBhMiAyIDAgMCAxLTIgMiAyIDIgMCAwIDEtMiAySDNhMiAyIDAgMCAxLTItMmgxYTEgMSAwIDAgMCAxIDFoOGExIDEgMCAwIDAgMS0xVjRhMSAxIDAgMCAwLTEtMUgzYTEgMSAwIDAgMC0xIDFIMWEyIDIgMCAwIDEgMi0yaDhhMiAyIDAgMCAxIDIgMnY5YTEgMSAwIDAgMCAxLTFWMmExIDEgMCAwIDAtMS0xSDVhMSAxIDAgMCAwLTEgMUgzYTIgMiAwIDAgMSAyLTJ6XCIvPlxuICA8cGF0aCBkPVwiTTEgNnYtLjVhLjUuNSAwIDAgMSAxIDBWNmguNWEuNS41IDAgMCAxIDAgMWgtMmEuNS41IDAgMCAxIDAtMUgxem0wIDN2LS41YS41LjUgMCAwIDEgMSAwVjloLjVhLjUuNSAwIDAgMSAwIDFoLTJhLjUuNSAwIDAgMSAwLTFIMXptMCAyLjV2LjVILjVhLjUuNSAwIDAgMCAwIDFoMmEuNS41IDAgMCAwIDAtMUgydi0uNWEuNS41IDAgMCAwLTEgMHpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

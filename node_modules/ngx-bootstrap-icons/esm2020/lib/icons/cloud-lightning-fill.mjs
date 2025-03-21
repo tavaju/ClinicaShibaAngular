@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * cloud-lightning-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/cloud-lightning-fill/}.
+ */
+export const cloudLightningFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-lightning-fill" viewBox="0 0 16 16">
+  <path d="M7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724l1-2zm6.352-7.249a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xvdWQtbGlnaHRuaW5nLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2Nsb3VkLWxpZ2h0bmluZy1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sa0JBQWtCLEdBQUc7O09BRTNCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogY2xvdWQtbGlnaHRuaW5nLWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvY2xvdWQtbGlnaHRuaW5nLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBjbG91ZExpZ2h0bmluZ0ZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktY2xvdWQtbGlnaHRuaW5nLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNy4wNTMgMTEuMjc2QS41LjUgMCAwIDEgNy41IDExaDFhLjUuNSAwIDAgMSAuNDc0LjY1OGwtLjI4Ljg0Mkg5LjVhLjUuNSAwIDAgMSAuMzkuODEybC0yIDIuNWEuNS41IDAgMCAxLS44NzUtLjQzM0w3LjM2IDE0SDYuNWEuNS41IDAgMCAxLS40NDctLjcyNGwxLTJ6bTYuMzUyLTcuMjQ5YTUuMDAxIDUuMDAxIDAgMCAwLTkuNDk5LTEuMDA0QTMuNSAzLjUgMCAxIDAgMy41IDEwSDEzYTMgMyAwIDAgMCAuNDA1LTUuOTczelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * backspace-reverse-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/backspace-reverse-fill/}.
+ */
+export const backspaceReverseFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-reverse-fill" viewBox="0 0 16 16">
+  <path d="M0 3a2 2 0 0 1 2-2h7.08a2 2 0 0 1 1.519.698l4.843 5.651a1 1 0 0 1 0 1.302L10.6 14.3a2 2 0 0 1-1.52.7H2a2 2 0 0 1-2-2V3zm9.854 2.854a.5.5 0 0 0-.708-.708L7 7.293 4.854 5.146a.5.5 0 1 0-.708.708L6.293 8l-2.147 2.146a.5.5 0 0 0 .708.708L7 8.707l2.146 2.147a.5.5 0 0 0 .708-.708L7.707 8l2.147-2.146z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFja3NwYWNlLXJldmVyc2UtZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvYmFja3NwYWNlLXJldmVyc2UtZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLG9CQUFvQixHQUFHOztPQUU3QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGJhY2tzcGFjZS1yZXZlcnNlLWZpbGwuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvYmFja3NwYWNlLXJldmVyc2UtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGJhY2tzcGFjZVJldmVyc2VGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWJhY2tzcGFjZS1yZXZlcnNlLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNMCAzYTIgMiAwIDAgMSAyLTJoNy4wOGEyIDIgMCAwIDEgMS41MTkuNjk4bDQuODQzIDUuNjUxYTEgMSAwIDAgMSAwIDEuMzAyTDEwLjYgMTQuM2EyIDIgMCAwIDEtMS41Mi43SDJhMiAyIDAgMCAxLTItMlYzem05Ljg1NCAyLjg1NGEuNS41IDAgMCAwLS43MDgtLjcwOEw3IDcuMjkzIDQuODU0IDUuMTQ2YS41LjUgMCAxIDAtLjcwOC43MDhMNi4yOTMgOGwtMi4xNDcgMi4xNDZhLjUuNSAwIDAgMCAuNzA4LjcwOEw3IDguNzA3bDIuMTQ2IDIuMTQ3YS41LjUgMCAwIDAgLjcwOC0uNzA4TDcuNzA3IDhsMi4xNDctMi4xNDZ6XCIvPlxuPC9zdmc+YDtcclxuIl19

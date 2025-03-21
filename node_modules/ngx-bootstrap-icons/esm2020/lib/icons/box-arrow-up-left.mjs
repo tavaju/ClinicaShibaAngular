@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * box-arrow-up-left.
+ *
+ * {@link https://icons.getbootstrap.com/icons/box-arrow-up-left/}.
+ */
+export const boxArrowUpLeft = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.364 3.5a.5.5 0 0 1 .5-.5H14.5A1.5 1.5 0 0 1 16 4.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 3 14.5V7.864a.5.5 0 1 1 1 0V14.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H7.864a.5.5 0 0 1-.5-.5z"/>
+  <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 0 1H1.707l8.147 8.146a.5.5 0 0 1-.708.708L1 1.707V5.5a.5.5 0 0 1-1 0v-5z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm94LWFycm93LXVwLWxlZnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2JveC1hcnJvdy11cC1sZWZ0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sY0FBYyxHQUFHOzs7T0FHdkIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBib3gtYXJyb3ctdXAtbGVmdC5cclxuICpcclxuICoge0BsaW5rIGh0dHBzOi8vaWNvbnMuZ2V0Ym9vdHN0cmFwLmNvbS9pY29ucy9ib3gtYXJyb3ctdXAtbGVmdC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGJveEFycm93VXBMZWZ0ID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWJveC1hcnJvdy11cC1sZWZ0XCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBmaWxsLXJ1bGU9XCJldmVub2RkXCIgZD1cIk03LjM2NCAzLjVhLjUuNSAwIDAgMSAuNS0uNUgxNC41QTEuNSAxLjUgMCAwIDEgMTYgNC41djEwYTEuNSAxLjUgMCAwIDEtMS41IDEuNWgtMTBBMS41IDEuNSAwIDAgMSAzIDE0LjVWNy44NjRhLjUuNSAwIDEgMSAxIDBWMTQuNWEuNS41IDAgMCAwIC41LjVoMTBhLjUuNSAwIDAgMCAuNS0uNXYtMTBhLjUuNSAwIDAgMC0uNS0uNUg3Ljg2NGEuNS41IDAgMCAxLS41LS41elwiLz5cbiAgPHBhdGggZmlsbC1ydWxlPVwiZXZlbm9kZFwiIGQ9XCJNMCAuNUEuNS41IDAgMCAxIC41IDBoNWEuNS41IDAgMCAxIDAgMUgxLjcwN2w4LjE0NyA4LjE0NmEuNS41IDAgMCAxLS43MDguNzA4TDEgMS43MDdWNS41YS41LjUgMCAwIDEtMSAwdi01elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

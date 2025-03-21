@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * brightness-low.
+ *
+ * {@link https://icons.getbootstrap.com/icons/brightness-low/}.
+ */
+export const brightnessLow = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-low" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm.5-9.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707zM3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnJpZ2h0bmVzcy1sb3cuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2JyaWdodG5lc3MtbG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sYUFBYSxHQUFHOztPQUV0QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGJyaWdodG5lc3MtbG93LlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2JyaWdodG5lc3MtbG93L30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgYnJpZ2h0bmVzc0xvdyA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1icmlnaHRuZXNzLWxvd1wiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk04IDExYTMgMyAwIDEgMSAwLTYgMyAzIDAgMCAxIDAgNnptMCAxYTQgNCAwIDEgMCAwLTggNCA0IDAgMCAwIDAgOHptLjUtOS41YS41LjUgMCAxIDEtMSAwIC41LjUgMCAwIDEgMSAwem0wIDExYS41LjUgMCAxIDEtMSAwIC41LjUgMCAwIDEgMSAwem01LTVhLjUuNSAwIDEgMSAwLTEgLjUuNSAwIDAgMSAwIDF6bS0xMSAwYS41LjUgMCAxIDEgMC0xIC41LjUgMCAwIDEgMCAxem05Ljc0My00LjAzNmEuNS41IDAgMSAxLS43MDctLjcwNy41LjUgMCAwIDEgLjcwNy43MDd6bS03Ljc3OSA3Ljc3OWEuNS41IDAgMSAxLS43MDctLjcwNy41LjUgMCAwIDEgLjcwNy43MDd6bTcuMDcyIDBhLjUuNSAwIDEgMSAuNzA3LS43MDcuNS41IDAgMCAxLS43MDcuNzA3ek0zLjc1NyA0LjQ2NGEuNS41IDAgMSAxIC43MDctLjcwNy41LjUgMCAwIDEtLjcwNy43MDd6XCIvPlxuPC9zdmc+YDtcclxuIl19

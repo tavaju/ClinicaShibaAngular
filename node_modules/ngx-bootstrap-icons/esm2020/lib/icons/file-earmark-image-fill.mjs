@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-earmark-image-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-earmark-image-fill/}.
+ */
+export const fileEarmarkImageFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-image-fill" viewBox="0 0 16 16">
+  <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707v5.586l-2.73-2.73a1 1 0 0 0-1.52.127l-1.889 2.644-1.769-1.062a1 1 0 0 0-1.222.15L2 12.292V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zm-1.498 4a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
+  <path d="M10.564 8.27 14 11.708V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-.293l3.578-3.577 2.56 1.536 2.426-3.395z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXJtYXJrLWltYWdlLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2ZpbGUtZWFybWFyay1pbWFnZS1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sb0JBQW9CLEdBQUc7OztPQUc3QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGZpbGUtZWFybWFyay1pbWFnZS1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZpbGUtZWFybWFyay1pbWFnZS1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZmlsZUVhcm1hcmtJbWFnZUZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZS1lYXJtYXJrLWltYWdlLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNCAwaDUuMjkzQTEgMSAwIDAgMSAxMCAuMjkzTDEzLjcwNyA0YTEgMSAwIDAgMSAuMjkzLjcwN3Y1LjU4NmwtMi43My0yLjczYTEgMSAwIDAgMC0xLjUyLjEyN2wtMS44ODkgMi42NDQtMS43NjktMS4wNjJhMSAxIDAgMCAwLTEuMjIyLjE1TDIgMTIuMjkyVjJhMiAyIDAgMCAxIDItMnptNS41IDEuNXYyYTEgMSAwIDAgMCAxIDFoMmwtMy0zem0tMS40OTggNGExLjUgMS41IDAgMSAwLTMgMCAxLjUgMS41IDAgMCAwIDMgMHpcIi8+XG4gIDxwYXRoIGQ9XCJNMTAuNTY0IDguMjcgMTQgMTEuNzA4VjE0YTIgMiAwIDAgMS0yIDJINGEyIDIgMCAwIDEtMi0ydi0uMjkzbDMuNTc4LTMuNTc3IDIuNTYgMS41MzYgMi40MjYtMy4zOTV6XCIvPlxuPC9zdmc+YDtcclxuIl19

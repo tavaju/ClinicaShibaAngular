@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * file-earmark-lock2-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/file-earmark-lock2-fill/}.
+ */
+export const fileEarmarkLock2Fill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-lock2-fill" viewBox="0 0 16 16">
+  <path d="M7 7a1 1 0 0 1 2 0v1H7V7z"/>
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZS1lYXJtYXJrLWxvY2syLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL2ZpbGUtZWFybWFyay1sb2NrMi1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sb0JBQW9CLEdBQUc7OztPQUc3QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIGZpbGUtZWFybWFyay1sb2NrMi1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2ZpbGUtZWFybWFyay1sb2NrMi1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgZmlsZUVhcm1hcmtMb2NrMkZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZmlsZS1lYXJtYXJrLWxvY2syLWZpbGxcIiB2aWV3Qm94PVwiMCAwIDE2IDE2XCI+XG4gIDxwYXRoIGQ9XCJNNyA3YTEgMSAwIDAgMSAyIDB2MUg3Vjd6XCIvPlxuICA8cGF0aCBkPVwiTTkuMjkzIDBINGEyIDIgMCAwIDAtMiAydjEyYTIgMiAwIDAgMCAyIDJoOGEyIDIgMCAwIDAgMi0yVjQuNzA3QTEgMSAwIDAgMCAxMy43MDcgNEwxMCAuMjkzQTEgMSAwIDAgMCA5LjI5MyAwek05LjUgMy41di0ybDMgM2gtMmExIDEgMCAwIDEtMS0xek0xMCA3djEuMDc2Yy41NC4xNjYgMSAuNTk3IDEgMS4yMjR2Mi40YzAgLjgxNi0uNzgxIDEuMy0xLjUgMS4zaC0zYy0uNzE5IDAtMS41LS40ODQtMS41LTEuM1Y5LjNjMC0uNjI3LjQ2LTEuMDU4IDEtMS4yMjRWN2EyIDIgMCAxIDEgNCAwelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

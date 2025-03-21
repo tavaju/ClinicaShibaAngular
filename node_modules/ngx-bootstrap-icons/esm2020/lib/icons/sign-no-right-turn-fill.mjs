@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * sign-no-right-turn-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/sign-no-right-turn-fill/}.
+ */
+export const signNoRightTurnFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-no-right-turn-fill" viewBox="0 0 16 16">
+  <path d="M14 13.292A8 8 0 0 0 2.707 2l4.097 4.098C7.025 6.034 7.259 6 7.5 6H9V4.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L9.41 8.658a.265.265 0 0 1-.026.02L14 13.291Zm-.708.708A8 8 0 0 1 2 2.707l3.885 3.884A2.495 2.495 0 0 0 5 8.5V11h1V8.5c0-.489.234-.923.596-1.197l6.696 6.696Z"/>
+  <path d="M7.707 7 9 8.293V7H7.707Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lnbi1uby1yaWdodC10dXJuLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3NpZ24tbm8tcmlnaHQtdHVybi1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sbUJBQW1CLEdBQUc7OztPQUc1QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHNpZ24tbm8tcmlnaHQtdHVybi1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3NpZ24tbm8tcmlnaHQtdHVybi1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3Qgc2lnbk5vUmlnaHRUdXJuRmlsbCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1zaWduLW5vLXJpZ2h0LXR1cm4tZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xNCAxMy4yOTJBOCA4IDAgMCAwIDIuNzA3IDJsNC4wOTcgNC4wOThDNy4wMjUgNi4wMzQgNy4yNTkgNiA3LjUgNkg5VjQuNTM0YS4yNS4yNSAwIDAgMSAuNDEtLjE5MmwyLjM2IDEuOTY2Yy4xMi4xLjEyLjI4NCAwIC4zODRMOS40MSA4LjY1OGEuMjY1LjI2NSAwIDAgMS0uMDI2LjAyTDE0IDEzLjI5MVptLS43MDguNzA4QTggOCAwIDAgMSAyIDIuNzA3bDMuODg1IDMuODg0QTIuNDk1IDIuNDk1IDAgMCAwIDUgOC41VjExaDFWOC41YzAtLjQ4OS4yMzQtLjkyMy41OTYtMS4xOTdsNi42OTYgNi42OTZaXCIvPlxuICA8cGF0aCBkPVwiTTcuNzA3IDcgOSA4LjI5M1Y3SDcuNzA3WlwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

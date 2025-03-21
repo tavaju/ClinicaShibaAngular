@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * bounding-box.
+ *
+ * {@link https://icons.getbootstrap.com/icons/bounding-box/}.
+ */
+export const boundingBox = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box" viewBox="0 0 16 16">
+  <path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2H5zm6 1v2h2v6h-2v2H5v-2H3V5h2V3h6zm1-2h3v3h-3V1zm3 11v3h-3v-3h3zM4 15H1v-3h3v3zM1 4V1h3v3H1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYm91bmRpbmctYm94LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9ib3VuZGluZy1ib3gudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxXQUFXLEdBQUc7O09BRXBCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogYm91bmRpbmctYm94LlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2JvdW5kaW5nLWJveC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGJvdW5kaW5nQm94ID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLWJvdW5kaW5nLWJveFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk01IDJWMEgwdjVoMnY2SDB2NWg1di0yaDZ2Mmg1di01aC0yVjVoMlYwaC01djJINXptNiAxdjJoMnY2aC0ydjJINXYtMkgzVjVoMlYzaDZ6bTEtMmgzdjNoLTNWMXptMyAxMXYzaC0zdi0zaDN6TTQgMTVIMXYtM2gzdjN6TTEgNFYxaDN2M0gxelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

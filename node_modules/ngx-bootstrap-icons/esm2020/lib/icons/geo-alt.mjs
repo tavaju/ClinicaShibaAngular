@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * geo-alt.
+ *
+ * {@link https://icons.getbootstrap.com/icons/geo-alt/}.
+ */
+export const geoAlt = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2VvLWFsdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvZ2VvLWFsdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLE1BQU0sR0FBRzs7O09BR2YsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBnZW8tYWx0LlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2dlby1hbHQvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBnZW9BbHQgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktZ2VvLWFsdFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xMi4xNjYgOC45NGMtLjUyNCAxLjA2Mi0xLjIzNCAyLjEyLTEuOTYgMy4wN0EzMS40OTMgMzEuNDkzIDAgMCAxIDggMTQuNThhMzEuNDgxIDMxLjQ4MSAwIDAgMS0yLjIwNi0yLjU3Yy0uNzI2LS45NS0xLjQzNi0yLjAwOC0xLjk2LTMuMDdDMy4zMDQgNy44NjcgMyA2Ljg2MiAzIDZhNSA1IDAgMCAxIDEwIDBjMCAuODYyLS4zMDUgMS44NjctLjgzNCAyLjk0ek04IDE2czYtNS42ODYgNi0xMEE2IDYgMCAwIDAgMiA2YzAgNC4zMTQgNiAxMCA2IDEwelwiLz5cbiAgPHBhdGggZD1cIk04IDhhMiAyIDAgMSAxIDAtNCAyIDIgMCAwIDEgMCA0em0wIDFhMyAzIDAgMSAwIDAtNiAzIDMgMCAwIDAgMCA2elwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

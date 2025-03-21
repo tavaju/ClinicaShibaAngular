@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * bell-slash-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/bell-slash-fill/}.
+ */
+export const bellSlashFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-slash-fill" viewBox="0 0 16 16">
+  <path d="M5.164 14H15c-1.5-1-2-5.902-2-7 0-.264-.02-.523-.06-.776L5.164 14zm6.288-10.617A4.988 4.988 0 0 0 8.995 2.1a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 7c0 .898-.335 4.342-1.278 6.113l9.73-9.73zM10 15a2 2 0 1 1-4 0h4zm-9.375.625a.53.53 0 0 0 .75.75l14.75-14.75a.53.53 0 0 0-.75-.75L.625 15.625z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmVsbC1zbGFzaC1maWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9iZWxsLXNsYXNoLWZpbGwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7O09BRXRCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBtYXgtbGVuICovXHJcblxyXG4vKipcclxuICogYmVsbC1zbGFzaC1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL2JlbGwtc2xhc2gtZmlsbC99LlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGJlbGxTbGFzaEZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktYmVsbC1zbGFzaC1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTUuMTY0IDE0SDE1Yy0xLjUtMS0yLTUuOTAyLTItNyAwLS4yNjQtLjAyLS41MjMtLjA2LS43NzZMNS4xNjQgMTR6bTYuMjg4LTEwLjYxN0E0Ljk4OCA0Ljk4OCAwIDAgMCA4Ljk5NSAyLjFhMSAxIDAgMSAwLTEuOTkgMEE1LjAwMiA1LjAwMiAwIDAgMCAzIDdjMCAuODk4LS4zMzUgNC4zNDItMS4yNzggNi4xMTNsOS43My05Ljczek0xMCAxNWEyIDIgMCAxIDEtNCAwaDR6bS05LjM3NS42MjVhLjUzLjUzIDAgMCAwIC43NS43NWwxNC43NS0xNC43NWEuNTMuNTMgMCAwIDAtLjc1LS43NUwuNjI1IDE1LjYyNXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * markdown-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/markdown-fill/}.
+ */
+export const markdownFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-markdown-fill" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm11.5 1a.5.5 0 0 0-.5.5v3.793L9.854 8.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L12 9.293V5.5a.5.5 0 0 0-.5-.5zM3.56 7.01h.056l1.428 3.239h.774l1.42-3.24h.056V11h1.073V5.001h-1.2l-1.71 3.894h-.039l-1.71-3.894H2.5V11h1.06V7.01z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFya2Rvd24tZmlsbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvbWFya2Rvd24tZmlsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLFlBQVksR0FBRzs7T0FFckIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBtYXJrZG93bi1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL21hcmtkb3duLWZpbGwvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBtYXJrZG93bkZpbGwgPSBgPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjE2XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIGNsYXNzPVwiYmkgYmktbWFya2Rvd24tZmlsbFwiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0wIDRhMiAyIDAgMCAxIDItMmgxMmEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMkgyYTIgMiAwIDAgMS0yLTJWNHptMTEuNSAxYS41LjUgMCAwIDAtLjUuNXYzLjc5M0w5Ljg1NCA4LjE0NmEuNS41IDAgMSAwLS43MDguNzA4bDIgMmEuNS41IDAgMCAwIC43MDggMGwyLTJhLjUuNSAwIDAgMC0uNzA4LS43MDhMMTIgOS4yOTNWNS41YS41LjUgMCAwIDAtLjUtLjV6TTMuNTYgNy4wMWguMDU2bDEuNDI4IDMuMjM5aC43NzRsMS40Mi0zLjI0aC4wNTZWMTFoMS4wNzNWNS4wMDFoLTEuMmwtMS43MSAzLjg5NGgtLjAzOWwtMS43MS0zLjg5NEgyLjVWMTFoMS4wNlY3LjAxelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

@@ -1,0 +1,11 @@
+/* eslint-disable max-len */
+/**
+ * person-bounding-box.
+ *
+ * {@link https://icons.getbootstrap.com/icons/person-bounding-box/}.
+ */
+export const personBoundingBox = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+  <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGVyc29uLWJvdW5kaW5nLWJveC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL25neC1ib290c3RyYXAtaWNvbnMtbGliL3NyYy9saWIvaWNvbnMvcGVyc29uLWJvdW5kaW5nLWJveC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0QkFBNEI7QUFFNUI7Ozs7R0FJRztBQUNILE1BQU0sQ0FBQyxNQUFNLGlCQUFpQixHQUFHOzs7T0FHMUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBwZXJzb24tYm91bmRpbmctYm94LlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3BlcnNvbi1ib3VuZGluZy1ib3gvfS5cclxuICovXHJcbmV4cG9ydCBjb25zdCBwZXJzb25Cb3VuZGluZ0JveCA9IGA8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjE2XCIgaGVpZ2h0PVwiMTZcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgY2xhc3M9XCJiaSBiaS1wZXJzb24tYm91bmRpbmctYm94XCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTEuNSAxYS41LjUgMCAwIDAtLjUuNXYzYS41LjUgMCAwIDEtMSAwdi0zQTEuNSAxLjUgMCAwIDEgMS41IDBoM2EuNS41IDAgMCAxIDAgMWgtM3pNMTEgLjVhLjUuNSAwIDAgMSAuNS0uNWgzQTEuNSAxLjUgMCAwIDEgMTYgMS41djNhLjUuNSAwIDAgMS0xIDB2LTNhLjUuNSAwIDAgMC0uNS0uNWgtM2EuNS41IDAgMCAxLS41LS41ek0uNSAxMWEuNS41IDAgMCAxIC41LjV2M2EuNS41IDAgMCAwIC41LjVoM2EuNS41IDAgMCAxIDAgMWgtM0ExLjUgMS41IDAgMCAxIDAgMTQuNXYtM2EuNS41IDAgMCAxIC41LS41em0xNSAwYS41LjUgMCAwIDEgLjUuNXYzYTEuNSAxLjUgMCAwIDEtMS41IDEuNWgtM2EuNS41IDAgMCAxIDAtMWgzYS41LjUgMCAwIDAgLjUtLjV2LTNhLjUuNSAwIDAgMSAuNS0uNXpcIi8+XG4gIDxwYXRoIGQ9XCJNMyAxNHMtMSAwLTEtMSAxLTQgNi00IDYgMyA2IDQtMSAxLTEgMUgzem04LTlhMyAzIDAgMSAxLTYgMCAzIDMgMCAwIDEgNiAwelwiLz5cbjwvc3ZnPmA7XHJcbiJdfQ==

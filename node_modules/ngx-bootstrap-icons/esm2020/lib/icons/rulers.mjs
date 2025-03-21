@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * rulers.
+ *
+ * {@link https://icons.getbootstrap.com/icons/rulers/}.
+ */
+export const rulers = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rulers" viewBox="0 0 16 16">
+  <path d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1H1z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicnVsZXJzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vcHJvamVjdHMvbmd4LWJvb3RzdHJhcC1pY29ucy1saWIvc3JjL2xpYi9pY29ucy9ydWxlcnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNEJBQTRCO0FBRTVCOzs7O0dBSUc7QUFDSCxNQUFNLENBQUMsTUFBTSxNQUFNLEdBQUc7O09BRWYsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG1heC1sZW4gKi9cclxuXHJcbi8qKlxyXG4gKiBydWxlcnMuXHJcbiAqXHJcbiAqIHtAbGluayBodHRwczovL2ljb25zLmdldGJvb3RzdHJhcC5jb20vaWNvbnMvcnVsZXJzL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgcnVsZXJzID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLXJ1bGVyc1wiIHZpZXdCb3g9XCIwIDAgMTYgMTZcIj5cbiAgPHBhdGggZD1cIk0xIDBhMSAxIDAgMCAwLTEgMXYxNGExIDEgMCAwIDAgMSAxaDV2LTFIMnYtMWg0di0xSDR2LTFoMnYtMUgydi0xaDRWOUg0VjhoMlY3SDJWNmg0VjJoMXY0aDFWNGgxdjJoMVYyaDF2NGgxVjRoMXYyaDFWMmgxdjRoMVYxYTEgMSAwIDAgMC0xLTFIMXpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=

@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+/**
+ * person-vcard-fill.
+ *
+ * {@link https://icons.getbootstrap.com/icons/person-vcard-fill/}.
+ */
+export const personVcardFill = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGVyc29uLXZjYXJkLWZpbGwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9uZ3gtYm9vdHN0cmFwLWljb25zLWxpYi9zcmMvbGliL2ljb25zL3BlcnNvbi12Y2FyZC1maWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRCQUE0QjtBQUU1Qjs7OztHQUlHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sZUFBZSxHQUFHOztPQUV4QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgbWF4LWxlbiAqL1xyXG5cclxuLyoqXHJcbiAqIHBlcnNvbi12Y2FyZC1maWxsLlxyXG4gKlxyXG4gKiB7QGxpbmsgaHR0cHM6Ly9pY29ucy5nZXRib290c3RyYXAuY29tL2ljb25zL3BlcnNvbi12Y2FyZC1maWxsL30uXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgcGVyc29uVmNhcmRGaWxsID0gYDxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTZcIiBoZWlnaHQ9XCIxNlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBjbGFzcz1cImJpIGJpLXBlcnNvbi12Y2FyZC1maWxsXCIgdmlld0JveD1cIjAgMCAxNiAxNlwiPlxuICA8cGF0aCBkPVwiTTAgNGEyIDIgMCAwIDEgMi0yaDEyYTIgMiAwIDAgMSAyIDJ2OGEyIDIgMCAwIDEtMiAySDJhMiAyIDAgMCAxLTItMlY0Wm05IDEuNWEuNS41IDAgMCAwIC41LjVoNGEuNS41IDAgMCAwIDAtMWgtNGEuNS41IDAgMCAwLS41LjVaTTkgOGEuNS41IDAgMCAwIC41LjVoNGEuNS41IDAgMCAwIDAtMWgtNEEuNS41IDAgMCAwIDkgOFptMSAyLjVhLjUuNSAwIDAgMCAuNS41aDNhLjUuNSAwIDAgMCAwLTFoLTNhLjUuNSAwIDAgMC0uNS41Wm0tMSAyQzkgMTAuNTY3IDcuMjEgOSA1IDljLTIuMDg2IDAtMy44IDEuMzk4LTMuOTg0IDMuMTgxQTEgMSAwIDAgMCAyIDEzaDYuOTZjLjAyNi0uMTYzLjA0LS4zMy4wNC0uNVpNNyA2YTIgMiAwIDEgMC00IDAgMiAyIDAgMCAwIDQgMFpcIi8+XG48L3N2Zz5gO1xyXG4iXX0=
