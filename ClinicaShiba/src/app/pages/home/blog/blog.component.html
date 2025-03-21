@@ -1,84 +1,29 @@
-<section class="blog scroll-reveal" appScrollReveal>
+<section class="blog scroll-reveal">
   <div class="blog-header">
     <div>
       <h2>Blog</h2>
-      <p>
-        Entérate de todo lo que debes saber para darle la mejor vida a tu
-        mascota.
-      </p>
+      <p>Entérate de todo lo que debes saber para darle la mejor vida a tu mascota.</p>
     </div>
     <div class="blog-nav">
-      <button class="nav-button prev">
-        <img
-          src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-left.svg"
-          alt="Previous" />
+      <button class="nav-button prev" (click)="prev()">
+        <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-left.svg" alt="Prev" />
       </button>
-      <button class="nav-button next">
-        <img
-          src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-right.svg"
-          alt="Next" />
+      <button class="nav-button next" (click)="next()">
+        <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-right.svg" alt="Next" />
       </button>
     </div>
   </div>
 
   <div class="blog-grid">
-    <article class="blog-card scroll-reveal" appScrollReveal>
-      <img
-        src="https://images.unsplash.com/photo-1548403119-4f9f60f7c064?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="El Reto de Viajar con Gatos" />
+    <article class="blog-card scroll-reveal" *ngFor="let post of visiblePosts()">
+      <img [src]="post.image" [alt]="post.title" />
       <div class="blog-content">
-        <h3>El Reto de Viajar con Gatos</h3>
-        <p>Personalizamos nuestras recomendaciones según tus necesidades específicas.</p>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.text }}</p>
         <div class="tags">
-          <span class="tag">Datos Curiosos</span>
-          <span class="tag">Gatos</span>
+          <span class="tag" *ngFor="let tag of post.tags">{{ tag }}</span>
         </div>
-        <a routerLink="/blog" class="read-more-button">Leer más</a>
-      </div>
-    </article>
-
-    <article class="blog-card scroll-reveal" appScrollReveal>
-      <img
-        src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=500"
-        alt="Perros vs Gatos" />
-      <div class="blog-content">
-        <h3>Perros v.s Gatos</h3>
-        <p>El buen cuidado: una necesidad de perros y gatos.</p>
-        <div class="tags">
-          <span class="tag">Perros</span>
-          <span class="tag">Gatos</span>
-        </div>
-        <a routerLink="/blog" class="read-more-button">Leer más</a>
-      </div>
-    </article>
-
-    <article class="blog-card scroll-reveal" appScrollReveal>
-      <img
-        src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500"
-        alt="Ladridos y Salud" />
-      <div class="blog-content">
-        <h3>Ladridos y Salud</h3>
-        <p>Que sus ladridos sean de felicidad: ¿Cómo cuidar a mi mascota?</p>
-        <div class="tags">
-          <span class="tag">Datos Curiosos</span>
-          <span class="tag">Perros</span>
-        </div>
-        <a routerLink="/blog" class="read-more-button">Leer más</a>
-      </div>
-    </article>
-
-    <article class="blog-card scroll-reveal" appScrollReveal>
-      <img
-        src="https://plus.unsplash.com/premium_photo-1738781517833-e24e4a6561f7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Tips de viaje" />
-      <div class="blog-content">
-        <h3>Tips de viaje con Perros</h3>
-        <p>Personalizamos nuestras recomendaciones según tus necesidades específicas.</p>
-        <div class="tags">
-          <span class="tag">Datos Curiosos</span>
-          <span class="tag">Perros</span>
-        </div>
-        <a routerLink="/blog" class="read-more-button">Leer más</a>
+        <a [routerLink]="post.link" class="read-more-button">Leer más</a>
       </div>
     </article>
   </div>

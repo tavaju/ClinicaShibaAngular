@@ -1,6 +1,6 @@
-<section id="cta" class="cta scroll-reveal" appScrollReveal>
-  <div class="cta-content scroll-reveal" appScrollReveal>
-    <div class="cta-text scroll-reveal" appScrollReveal>
+<section id="cta" class="cta scroll-reveal">
+  <div class="cta-content scroll-reveal">
+    <div class="cta-text scroll-reveal">
       <h2>
         Recibe información útil y de calidad sobre el cuidado de tu mascota.
       </h2>
@@ -13,29 +13,49 @@
 
     <form
       class="contact-form scroll-reveal"
-      appScrollReveal
-      (submit)="handleSubmit($event)"
-    >
+      (ngSubmit)="handleSubmit()"
+      #contactForm="ngForm">
+
       <div class="form-group">
-        <input type="text" placeholder="Nombre completo" required id="nombre" />
+        <input
+          type="text"
+          name="nombre"
+          [(ngModel)]="nombre"
+          placeholder="Nombre completo"
+          required />
         <input
           type="email"
+          name="email"
+          [(ngModel)]="email"
           placeholder="Correo electrónico"
-          required
-          id="email"
-        />
+          required />
       </div>
+
       <div class="form-group">
-        <input type="tel" placeholder="Teléfono" id="telefono" />
+        <input
+          type="tel"
+          name="telefono"
+          [(ngModel)]="telefono"
+          placeholder="Teléfono" />
       </div>
+
       <textarea
+        name="mensaje"
+        [(ngModel)]="mensaje"
         placeholder="Tu mensaje"
-        required
         rows="4"
-        id="mensaje"
-      ></textarea>
-      <button type="submit" class="btn white">Enviar mensaje</button>
-      <div id="formStatus" class="form-status">{{ formStatus }}</div>
+        required></textarea>
+
+      <button type="submit" class="btn white" [disabled]="!contactForm.form.valid">
+        Enviar mensaje
+      </button>
+
+      <div
+        class="form-status"
+        *ngIf="formStatus === 'success'"
+        [class.success]="true">
+        ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+      </div>
     </form>
   </div>
 </section>

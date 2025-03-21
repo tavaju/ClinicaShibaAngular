@@ -1,65 +1,50 @@
-<section id="testimonials" class="testimonials scroll-reveal" appScrollReveal>
+<section id="testimonials" class="testimonials scroll-reveal">
   <h2>Algunos Testimonios</h2>
 
-  <div class="testimonial-carousel scroll-reveal" appScrollReveal>
-    <button class="carousel-arrow prev">
-      <img
-        src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-left.svg"
-        alt="Previous" />
+  <div class="testimonial-carousel scroll-reveal">
+    <button class="carousel-arrow prev" (click)="prev()">
+      <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-left.svg" alt="Prev" />
     </button>
 
-    <article class="testimonial-card scroll-reveal" appScrollReveal>
+    <article class="testimonial-card scroll-reveal" [ngClass]="fadeClass">
       <figure class="testimonial-image-container">
         <div class="image-background"></div>
         <img
-          src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400"
+          [src]="testimonials[currentIndex].image"
           alt="Testimonial"
-          class="testimonial-image" />
+          class="testimonial-image"
+        />
       </figure>
       <div class="testimonial-content">
         <div class="rating">
-          <img
-            src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star.svg"
-            alt="Star"
-            class="star" />
-          <img
-            src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star.svg"
-            alt="Star"
-            class="star" />
-          <img
-            src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star.svg"
-            alt="Star"
-            class="star" />
-          <img
-            src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star.svg"
-            alt="Star"
-            class="star" />
-          <img
-            src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star.svg"
-            alt="Star"
-            class="star" />
+          <span
+            class="star"
+            *ngFor="
+              let star of generateStars(testimonials[currentIndex].rating)
+            "
+          >
+            {{ star }}
+          </span>
         </div>
-        <p class="testimonial-text scroll-reveal" appScrollReveal>
-          "Son muy buenos, gracias por la ayuda, logramos resolver la
-          urgencia de nuestro pequeño, y todo salió bien finalmente. También
-          tienen una página web increíble, super fácil de usar y muy linda
-          para ser una veterinaria :)"
+        <p class="testimonial-text">"{{ testimonials[currentIndex].text }}"</p>
+        <p class="testimonial-author">
+          {{ testimonials[currentIndex].author }}
         </p>
-        <p class="testimonial-author">Viviana Suárez</p>
-        <p class="testimonial-pet">con su mascota Toby</p>
+        <p class="testimonial-pet">{{ testimonials[currentIndex].pet }}</p>
       </div>
     </article>
 
-    <button class="carousel-arrow next">
-      <img
-        src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-right.svg"
-        alt="Next" />
+    <button class="carousel-arrow next" (click)="next()">
+      <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-right.svg" alt="Next" />
     </button>
 
     <div class="carousel-dots">
-      <button class="dot active"></button>
-      <button class="dot"></button>
-      <button class="dot"></button>
+      <button
+        class="dot"
+        *ngFor="let testimonial of testimonials; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="goTo(i)"
+      ></button>
     </div>
   </div>
 </section>

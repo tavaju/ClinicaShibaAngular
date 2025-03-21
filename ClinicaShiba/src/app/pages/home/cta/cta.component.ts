@@ -6,11 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./cta.component.css'],
 })
 export class CtaComponent {
-  formStatus: string = '';
+  nombre = '';
+  email = '';
+  telefono = '';
+  mensaje = '';
+  formStatus: string | null = null;
+  timeoutId: any;
 
-  handleSubmit(event: Event): void {
-    event.preventDefault();
-    this.formStatus = '✅ ¡Mensaje enviado con éxito!';
-    setTimeout(() => (this.formStatus = ''), 4000);
+  handleSubmit(): void {
+    if (!this.nombre || !this.email || !this.mensaje) return;
+
+    this.formStatus = 'success';
+
+    // Limpiar campos
+    this.nombre = '';
+    this.email = '';
+    this.telefono = '';
+    this.mensaje = '';
+
+    // Ocultar mensaje luego de 5s
+    clearTimeout(this.timeoutId);
+    this.timeoutId = setTimeout(() => {
+      this.formStatus = null;
+    }, 5000);
   }
 }

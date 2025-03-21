@@ -18,19 +18,25 @@
         <img
           src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search.svg"
           alt="Search"
-          class="search-icon" />
+          class="search-icon"
+        />
       </div>
       <div class="cart-icon">
         <img
           src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shopping-cart.svg"
-          alt="Cart" />
+          alt="Cart"
+        />
       </div>
-      <div class="profile-container">
+      <div class="profile-container" #profileRef (click)="toggleDropdown()">
         <img
           src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100"
           alt="Profile"
-          class="profile-pic" />
-        <div class="profile-dropdown">
+          class="profile-pic"
+        />
+        <div
+          class="profile-dropdown"
+          [class.active]="isDropdownOpen"
+          [style.display]="isDropdownOpen ? 'block' : 'none'">
           <a routerLink="/login" class="login-btn">Iniciar sesión</a>
         </div>
       </div>

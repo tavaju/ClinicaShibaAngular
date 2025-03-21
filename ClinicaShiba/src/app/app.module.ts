@@ -14,6 +14,7 @@ import { BlogComponent } from './pages/home/blog/blog.component';
 import { CtaComponent } from './pages/home/cta/cta.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
