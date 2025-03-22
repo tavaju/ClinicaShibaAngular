@@ -6,11 +6,27 @@
     </article>
 
     <article class="nav-center">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Inicio</a>
-      <a routerLink="/specialties" routerLinkActive="active" class="nav-link">Especialidades</a>
-      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Blog</a>
-      <a [routerLink]="['/']" [fragment]="'cta'" class="nav-link">Contacto</a>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link"
+        >Inicio</a
+      >
+      <a routerLink="/specialties" routerLinkActive="active" class="nav-link"
+        >Especialidades</a
+      >
 
+      <a
+        routerLink="/blog"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link"
+      >
+        Blog
+      </a>
+
+      <a [routerLink]="['/']" [fragment]="'cta'" class="nav-link">Contacto</a>
     </article>
 
     <article class="nav-right">
@@ -37,7 +53,8 @@
         <div
           class="profile-dropdown"
           [class.active]="isDropdownOpen"
-          [style.display]="isDropdownOpen ? 'block' : 'none'">
+          [style.display]="isDropdownOpen ? 'block' : 'none'"
+        >
           <a routerLink="/login" class="login-btn">Iniciar sesión</a>
         </div>
       </div>
