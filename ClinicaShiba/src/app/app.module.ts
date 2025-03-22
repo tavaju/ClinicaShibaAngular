@@ -15,6 +15,14 @@ import { CtaComponent } from './pages/home/cta/cta.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent }, // Página de inicio
+  { path: 'specialties', component: SpecialtiesComponent },
+  { path: 'blog', component: HomeComponent }, // Cambia según tu estructura real
+  { path: '**', component: HomeComponent },
+];
 
 @NgModule({
   declarations: [
@@ -29,14 +37,15 @@ import { FormsModule } from '@angular/forms';
     BlogComponent,
     CtaComponent,
     FooterComponent,
-    ScrollRevealDirective
+    ScrollRevealDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule.forRoot(routes, { anchorScrolling: 'enabled' }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

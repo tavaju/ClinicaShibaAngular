@@ -1,4 +1,4 @@
-<section class="blog scroll-reveal">
+<section class="blog scroll-reveal" appScrollReveal>
   <div class="blog-header">
     <div>
       <h2>Blog</h2>
@@ -14,8 +14,8 @@
     </div>
   </div>
 
-  <div class="blog-grid">
-    <article class="blog-card scroll-reveal" *ngFor="let post of visiblePosts()">
+  <div class="blog-grid" appScrollReveal>
+    <article class="blog-card scroll-reveal" *ngFor="let post of visiblePosts()" appScrollReveal>
       <img [src]="post.image" [alt]="post.title" />
       <div class="blog-content">
         <h3>{{ post.title }}</h3>

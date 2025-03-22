@@ -1,12 +1,19 @@
-<section id="testimonials" class="testimonials scroll-reveal">
-  <h2>Algunos Testimonios</h2>
+<section id="testimonials" class="testimonials scroll-reveal" appScrollReveal>
+  <h2 appScrollReveal>Algunos Testimonios</h2>
 
-  <div class="testimonial-carousel scroll-reveal">
+  <div class="testimonial-carousel scroll-reveal" appScrollReveal>
     <button class="carousel-arrow prev" (click)="prev()">
-      <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-left.svg" alt="Prev" />
+      <img
+        src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-left.svg"
+        alt="Prev"
+      />
     </button>
 
-    <article class="testimonial-card scroll-reveal" [ngClass]="fadeClass">
+    <article
+      class="testimonial-card scroll-reveal"
+      [ngClass]="fadeClass"
+      appScrollReveal
+    >
       <figure class="testimonial-image-container">
         <div class="image-background"></div>
         <img
@@ -15,7 +22,7 @@
           class="testimonial-image"
         />
       </figure>
-      <div class="testimonial-content">
+      <div class="testimonial-content" appScrollReveal>
         <div class="rating">
           <span
             class="star"
@@ -35,7 +42,10 @@
     </article>
 
     <button class="carousel-arrow next" (click)="next()">
-      <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-right.svg" alt="Next" />
+      <img
+        src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-right.svg"
+        alt="Next"
+      />
     </button>
 
     <div class="carousel-dots">

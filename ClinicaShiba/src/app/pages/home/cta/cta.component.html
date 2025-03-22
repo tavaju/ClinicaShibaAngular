@@ -1,6 +1,6 @@
-<section id="cta" class="cta scroll-reveal">
-  <div class="cta-content scroll-reveal">
-    <div class="cta-text scroll-reveal">
+<section id="cta" class="cta scroll-reveal" appScrollReveal>
+  <div class="cta-content scroll-reveal" appScrollReveal>
+    <div class="cta-text scroll-reveal" appScrollReveal>
       <h2>
         Recibe información útil y de calidad sobre el cuidado de tu mascota.
       </h2>
@@ -14,7 +14,7 @@
     <form
       class="contact-form scroll-reveal"
       (ngSubmit)="handleSubmit()"
-      #contactForm="ngForm">
+      #contactForm="ngForm" appScrollReveal>
 
       <div class="form-group">
         <input

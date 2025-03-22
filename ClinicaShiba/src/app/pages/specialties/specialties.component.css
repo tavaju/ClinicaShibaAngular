@@ -1,0 +1,260 @@
+.specialties-hero {
+  background: url("/assets/backgrounds/login_background.svg") center/cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.floating-card {
+  position: relative;
+  width: 80%;
+  height: 450px;
+  max-width: 1200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(252, 251, 250, 0.531);
+}
+
+.floating-card-bg {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  filter: brightness(0.8);
+}
+
+.floating-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  text-align: center;
+  color: white;
+  text-align: left;
+}
+
+.floating-card-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: "shiba-font", sans-serif;
+}
+
+.floating-card-content p {
+  font-size: 1.5rem;
+  color: #d1c4e9;
+  font-family: "shiba-font", sans-serif;
+}
+
+.specialties-section {
+  max-width: 1280px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.specialties-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4c1d95;
+  margin-bottom: 3rem;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  visibility: visible; /* Asegurar que no esté oculto */
+  opacity: 1; /* Asegurar que no esté transparente */
+}
+
+.especialidades-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.especialidades-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.2);
+}
+
+.especialidades-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.subtitle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.subtitle-detail {
+  width: 75px;
+  height: auto;
+  position: relative;
+}
+
+.subtitle-detail.left {
+  margin-right: -10px;
+  top: 5px;
+}
+
+.subtitle-detail.right {
+  margin-left: -10px;
+  top: -5px;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  color: #4c1d95;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card-content p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f5f3ff;
+  color: #8b5cf6;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.consultation-card {
+  background: url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  opacity: 1;
+}
+
+.consultation-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.consultation-card .card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.consultation-card .search-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #8b5cf6;
+}
+
+.consultation-card p {
+  color: #374151;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.consultation-btn {
+  background: #4c1d95;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.consultation-btn:hover {
+  background: #3b0d78;
+}
+
+.consultation-card .consultation-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .consultation-card .search-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .consultation-card p {
+    font-size: 1rem;
+  }
+
+  .consultation-btn {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .specialties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .specialties-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specialties-section h2::before,
+  .specialties-section h2::after {
+    display: none;
+  }
+}

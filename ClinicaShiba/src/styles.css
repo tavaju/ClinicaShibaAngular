@@ -20,6 +20,22 @@ h3 {
   font-family: "shiba-font", sans-serif;
 }
 
+
+.nav-link {
+  text-decoration: none;
+  color: #6b7280; /* Color normal */
+  padding: 10px;
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.nav-link.active {
+  color: #8b5cf6; /* Color resaltado */
+  font-weight: bold;
+  border-bottom: 2px solid #8b5cf6;
+}
+
+
+
 /* Animaciones globales */
 .hidden {
   opacity: 0;

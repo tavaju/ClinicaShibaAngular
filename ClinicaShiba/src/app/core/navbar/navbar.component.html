@@ -6,10 +6,11 @@
     </article>
 
     <article class="nav-center">
-      <a routerLink="/" class="nav-link active">Inicio</a>
-      <a routerLink="/specialties" class="nav-link">Especialidades</a>
-      <a routerLink="/blog" class="nav-link">Blog</a>
-      <a href="#cta" class="nav-link">Contacto</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Inicio</a>
+      <a routerLink="/specialties" routerLinkActive="active" class="nav-link">Especialidades</a>
+      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Blog</a>
+      <a [routerLink]="['/']" [fragment]="'cta'" class="nav-link">Contacto</a>
+
     </article>
 
     <article class="nav-right">
