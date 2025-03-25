@@ -1,0 +1,34 @@
+.banner {
+  width: 100%;
+  background-color: #7c3aed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 6rem;
+  height: 4.5rem;
+  object-fit: cover;
+  margin-right: 0px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "shiba-font", sans-serif;
+  padding-left: 0%;
+  margin-left: 0px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

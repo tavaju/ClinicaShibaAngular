@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,15 +15,12 @@ import { BlogComponent } from './pages/home/blog/blog.component';
 import { CtaComponent } from './pages/home/cta/cta.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
-import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent }, // Página de inicio
-  { path: 'specialties', component: SpecialtiesComponent },
-  { path: 'blog', component: HomeComponent }, // Cambia según tu estructura real
-  { path: '**', component: HomeComponent },
-];
+// Import pet components
+import { PetListComponent } from './pages/pets/pet-list/pet-list.component';
+import { PetFormComponent } from './pages/pets/pet-form/pet-form.component';
+import { PetDetailComponent } from './pages/pets/pet-detail/pet-detail.component';
+import { PetBannerComponent } from './pages/pets/pet-banner/pet-banner.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +36,17 @@ const routes: Routes = [
     CtaComponent,
     FooterComponent,
     ScrollRevealDirective,
+    // Pet components
+    PetListComponent,
+    PetFormComponent,
+    PetDetailComponent,
+    PetBannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(routes, { anchorScrolling: 'enabled' }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

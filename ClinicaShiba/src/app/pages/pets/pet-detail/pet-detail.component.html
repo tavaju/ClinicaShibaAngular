@@ -1,0 +1,74 @@
+<app-pet-banner></app-pet-banner>
+
+<section class="container" *ngIf="pet">
+  <article class="detail-header">
+    <div class="title-section">
+      <i class="lucide-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/></svg>
+      </i>
+      <h1>Detalles de la Mascota</h1>
+    </div>
+    <div class="actions">
+      <button (click)="navigateToEdit()" class="edit-button">
+        <i class="lucide-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+        </i>
+        Editar
+      </button>
+      <button (click)="goBack()" class="back-button">
+        <i class="lucide-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </i>
+        Volver
+      </button>
+    </div>
+  </article>
+
+  <article class="pet-detail-content">
+    <div class="pet-image">
+      <img [src]="pet.foto" *ngIf="pet.foto" alt="Foto de la mascota">
+      <div class="no-image" *ngIf="!pet.foto">
+        <i class="lucide-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="2" y2="22"/><path d="M10.41 10.41a2 2 0 1 1-2.83-2.83"/><line x1="13.5" x2="6.5" y1="13.5" y2="20.5"/><line x1="2" x2="8.5" y1="14" y2="14"/><path d="M5 18a14.2 14.2 0 0 1-3-9"/><path d="M22 18.5c-1.2-1.2-2.59-3.3-3-5.5"/><path d="M9 20.5c1.333.667 2.667 1 4 1 4.1 0 7.225-2.225 8-5"/><path d="M12 12c0-1.1.9-2 2-2s2 .9 2 2"/></svg>
+        </i>
+        <span>Sin imagen</span>
+      </div>
+    </div>
+
+    <div class="pet-info">
+      <div class="info-group">
+        <h2>{{ pet.nombre }}</h2>
+        <span class="status" [class.active]="pet.estado" [class.inactive]="!pet.estado">
+          {{ pet.getEstadoTexto() }}
+        </span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-item">
+          <label>Raza:</label>
+          <span>{{ pet.raza }}</span>
+        </div>
+        <div class="info-item">
+          <label>Edad:</label>
+          <span>{{ pet.edad }} años</span>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-item">
+          <label>Peso:</label>
+          <span>{{ pet.peso }} kg</span>
+        </div>
+        <div class="info-item">
+          <label>Cédula del Cliente:</label>
+          <span>{{ pet.getCedulaCliente() || 'No asignado' }}</span>
+        </div>
+      </div>
+
+      <div class="info-item full-width">
+        <label>Enfermedad:</label>
+        <span>{{ pet.enfermedad || 'Ninguna' }}</span>
+      </div>
+    </div>
+  </article>
+</section>
