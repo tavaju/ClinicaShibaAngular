@@ -1,0 +1,260 @@
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-section i {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #7c3aed;
+}
+
+.title-section h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+}
+
+.search-input {
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  background-color: #f5f3ff;
+  color: #4c1d95;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+}
+
+th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+td {
+  padding: 1rem 1.5rem;
+  color: #374151;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.pet-link {
+  color: #7c3aed;
+  text-decoration: none;
+  transition: color 0.2s;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: bold;
+  font-size: larger;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.actions-header {
+  text-align: right;
+}
+
+.actions-cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.action-button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-button i {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.edit-button {
+  color: #2563eb;
+}
+
+.edit-button:hover {
+  background-color: #eff6ff;
+  box-shadow: 0 0 0 2px #eff6ff;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  background-color: #f5f3ff;
+  color: #7c3aed;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-left: 1rem;
+}
+
+.add-button:hover {
+  background-color: #ede9fe;
+}
+
+.refresh-button {
+  display: none;
+}
+
+.refresh-button i {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-button {
+  padding: 0.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  background: none;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #f3f4f6;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button i {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.pagination-info {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.lucide-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: currentColor;
+}
+
+.search-icon .lucide-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .table-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .add-button {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .pagination {
+    width: 100%;
+    justify-content: center;
+  }
+}
