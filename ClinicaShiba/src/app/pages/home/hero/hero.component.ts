@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -7,6 +8,8 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class HeroComponent implements AfterViewInit {
   @ViewChild('heroContent') heroContent!: ElementRef;
+
+  constructor(private router: Router) {}
 
   ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
@@ -21,5 +24,11 @@ export class HeroComponent implements AfterViewInit {
     );
 
     observer.observe(this.heroContent.nativeElement);
+  }
+
+  buscarMascota(id: string) {
+    if (id && id.trim() !== '') {
+      this.router.navigate(['/pets', id]);
+    }
   }
 }
