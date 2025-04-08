@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Mascota } from '../../../model/mascota';
 import { PetService } from '../../../services/pet.service';
+import { Mascota } from '../../../model/mascota';
 
 @Component({
   selector: 'app-pet-form',
@@ -37,9 +37,8 @@ export class PetFormComponent implements OnInit {
     if (id) {
       this.isEditMode = true;
       this.petId = +id;
-      this.petService.findById(this.petId).subscribe(pet => {
-        if (pet) {
-          // Fill the form with pet data
+      this.petService.getPetByIdFromApi(this.petId).subscribe({
+        next: (pet) => {
           this.petForm.patchValue({
             nombre: pet.nombre,
             edad: pet.edad,
@@ -50,29 +49,35 @@ export class PetFormComponent implements OnInit {
             estado: pet.estado,
             cedulaCliente: pet.cliente?.cedula || ''
           });
-        } else {
-          // Navigate back if pet not found
-          this.router.navigate(['/pets']);
+        },
+        error: () => {
+          this.router.navigate(['/pets']); // Si no existe la mascota, redirigir
         }
       });
+    } else {
+      this.router.navigate(['/pets']);
     }
   }
 
   onSubmit(): void {
     if (this.petForm.valid) {
       const petData = this.petForm.value;
-      
+      const cedulaCliente = petData.cedulaCliente;
+      delete petData.cedulaCliente;
+
       if (this.isEditMode && this.petId) {
         this.petService.updatePet({ 
           ...petData, 
           id: this.petId 
+        }, cedulaCliente).subscribe(() => {
+          this.router.navigate(['/pets']);
         });
       } else {
-        this.petService.addPet(petData);
+        this.petService.addPet(petData, cedulaCliente).subscribe(() => {
+          this.router.navigate(['/pets']);
+        });
       }
-      this.router.navigate(['/pets']);
     } else {
-      // Mark all fields as touched to show validation errors
       Object.keys(this.petForm.controls).forEach(key => {
         this.petForm.get(key)?.markAsTouched();
       });

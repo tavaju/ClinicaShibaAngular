@@ -25,7 +25,7 @@ export class PetListComponent implements OnInit, OnDestroy {
     
     // Subscribe to regular updates
     this.subscription.add(
-      this.petService.findAll().subscribe(pets => {
+      this.petService.getPets().subscribe(pets => {
         this.pets = pets;
       })
     );
@@ -37,18 +37,14 @@ export class PetListComponent implements OnInit, OnDestroy {
   }
 
   loadPets(): void {
-    this.petService.findAll().subscribe(pets => {
+    this.petService.getPets().subscribe(pets => {
       this.pets = pets;
     });
   }
 
   onSearch(): void {
     if (this.searchQuery.trim()) {
-      this.subscription.add(
-        this.petService.searchPets(this.searchQuery).subscribe(pets => {
-          this.pets = pets;
-        })
-      );
+      this.pets = this.petService.searchPets(this.searchQuery);
     } else {
       this.loadPets();
     }

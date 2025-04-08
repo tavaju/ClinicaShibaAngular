@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Mascota } from '../../../model/mascota';
 import { PetService } from '../../../services/pet.service';
+import { Mascota } from '../../../model/mascota';
 
 @Component({
   selector: 'app-pet-detail',
@@ -18,34 +18,26 @@ export class PetDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // Obtener el id de la URL
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      const petId = +id; // Convertir a número
 
-    /*
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      const petId = +id;
-      this.pet = this.petService.getPetById(petId);
-      if (!this.pet) {
-        this.router.navigate(['/pets']);
-      }
-    }
-      */
-     //llamar a la api
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      const petId = +id;
-      this.petService.findById(petId).subscribe(
-        (pet) => {
+      // Realizar la solicitud para obtener los detalles de la mascota
+      this.petService.getPetByIdFromApi(petId).subscribe({
+        next: (pet) => {
+          console.log('Mascota obtenida:', pet); // Verifica qué datos se están recibiendo
           this.pet = pet;
         },
-        (error) => {
-          console.error('Error fetching pet details:', error);
-          this.router.navigate(['/pets']);
+        error: () => {
+          this.router.navigate(['/pets']); // Si hay error, redirigir a la lista
         }
-      );
+      });
     } else {
       this.router.navigate(['/pets']);
     }
   }
+
 
   navigateToEdit(): void {
     if (this.pet?.id) {

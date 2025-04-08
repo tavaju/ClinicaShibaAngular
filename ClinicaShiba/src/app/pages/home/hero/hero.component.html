@@ -1,4 +1,3 @@
-
 <section id="hero" class="hero">
   <figure class="hero-image">
     <img
@@ -32,7 +31,7 @@
             class="service-img" />
           <figcaption class="service-text">
             <h3>Consulta la lista completa de nuestros pacientes</h3>
-            <a routerLink="/mascota/all" class="hero-read-more">Ver más</a>
+            <a routerLink="/pets" class="hero-read-more">Ver más</a>
           </figcaption>
         </figure>
       </article>
@@ -44,11 +43,12 @@
             class="service-img" />
           <figcaption class="service-text">
             <h3>Encuentra la información de tu mascota aquí</h3>
-            <form action="/mascota/find" method="get">
+            <form (ngSubmit)="buscarMascota(mascotaId.value)">
               <input
                 type="text"
-                name="id"
+                #mascotaId
                 placeholder="ID de la mascota"
+                class="pet-id-input"
                 required />
               <button type="submit" class="hero-read-more">Ver más</button>
             </form>
