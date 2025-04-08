@@ -13,17 +13,15 @@ export class PetListComponent implements OnInit, OnDestroy {
   pets: Mascota[] = [];
   searchQuery: string = '';
   private subscription: Subscription = new Subscription();
-  
+
   constructor(
     private petService: PetService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    // Initial load
     this.loadPets();
-    
-    // Subscribe to regular updates
+
     this.subscription.add(
       this.petService.getPets().subscribe(pets => {
         this.pets = pets;
@@ -32,7 +30,6 @@ export class PetListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Clean up subscriptions when component is destroyed
     this.subscription.unsubscribe();
   }
 
@@ -52,5 +49,21 @@ export class PetListComponent implements OnInit, OnDestroy {
 
   editPet(id: number): void {
     this.router.navigate(['/pets/edit', id]);
+  }
+
+  // Método para desactivar la mascota
+  deactivatePet(id: number): void {
+    if (confirm('¿Estás seguro de que quieres desactivar esta mascota?')) {
+      this.petService.deactivatePet(id).subscribe({
+        next: () => {
+          alert('Mascota desactivada correctamente');
+          this.loadPets();  // Recarga la lista de mascotas después de desactivar
+        },
+        error: (err) => {
+          console.error('Error al desactivar la mascota', err);
+          alert('Hubo un error al desactivar la mascota');
+        }
+      });
+    }
   }
 }

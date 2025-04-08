@@ -5,30 +5,32 @@ export class Cliente {
   id?: number;
 
   /** Obligatorio */
-  cedula: string;
+  cedula?: string;
 
   /** Obligatorio */
-  nombre: string;
+  nombre?: string;
 
   /** Obligatorio, debe tener formato de correo */
-  correo: string;
+  correo?: string;
 
   /** Obligatorio */
-  celular: string;
+  celular?: string;
 
   /** Obligatorio */
-  contrasena: string;
+  contrasena?: string;
 
   /** Lista de mascotas del cliente */
-  mascotas: Mascota[];
+  mascotas?: Mascota[];
 
-  constructor(data: Partial<Cliente> = {}) {
-    this.id = data.id;
-    this.cedula = data.cedula || '';
-    this.nombre = data.nombre || '';
-    this.correo = data.correo || '';
-    this.celular = data.celular || '';
-    this.contrasena = data.contrasena || '';
-    this.mascotas = data.mascotas ?? [];
+  constructor(data?: any) {
+    if (data) {
+      this.id = data.id;
+      this.cedula = data.cedula;
+      this.nombre = data.nombre;
+      this.correo = data.correo;
+      this.celular = data.celular;
+      this.contrasena = data.contrasena;
+      this.mascotas = data.mascotas || [];
+    }
   }
 }
