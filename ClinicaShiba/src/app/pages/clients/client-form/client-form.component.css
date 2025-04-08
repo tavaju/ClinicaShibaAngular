@@ -167,6 +167,9 @@ input:focus {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  min-width: 180px;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .submit-button:hover {
@@ -181,6 +184,39 @@ input:focus {
 .submit-button i {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.primary-button {
+  background-color: var(--purple-600);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.primary-button:hover {
+  background-color: var(--purple-900);
+  transform: translateY(-1px);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+}
+
+.primary-button i {
+  display: inline-flex;
+}
+
+.primary-button span {
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
