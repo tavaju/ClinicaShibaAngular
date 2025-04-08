@@ -1,0 +1,185 @@
+<section class="container">
+    <article class="form-header">
+      <div class="title-section">
+        <i class="lucide-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </i>
+        <h1>{{ isEditMode ? 'Modificar' : 'Crear Nuevo' }} Cliente</h1>
+      </div>
+    </article>
+  
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()" class="form-container">
+      <article class="form-grid">
+        <div class="form-group">
+          <label for="cedula">Cédula</label>
+          <div class="input-container">
+            <i class="lucide-icon input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </i>
+            <input
+              formControlName="cedula"
+              type="text"
+              id="cedula"
+              placeholder="Ingresa la cédula"
+            />
+          </div>
+          <div *ngIf="clientForm.get('cedula')?.invalid && clientForm.get('cedula')?.touched" class="error-message">
+            La cédula es obligatoria y no puede tener más de 20 caracteres
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <div class="input-container">
+            <i class="lucide-icon input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </i>
+            <input
+              formControlName="nombre"
+              type="text"
+              id="nombre"
+              placeholder="Ingresa el nombre"
+            />
+          </div>
+          <div *ngIf="clientForm.get('nombre')?.invalid && clientForm.get('nombre')?.touched" class="error-message">
+            El nombre es obligatorio y no puede tener más de 100 caracteres
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="correo">Correo</label>
+          <div class="input-container">
+            <i class="lucide-icon input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </i>
+            <input
+              formControlName="correo"
+              type="email"
+              id="correo"
+              placeholder="Ingresa el correo"
+            />
+          </div>
+          <div *ngIf="clientForm.get('correo')?.invalid && clientForm.get('correo')?.touched" class="error-message">
+            Ingresa un correo electrónico válido
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="celular">Celular</label>
+          <div class="input-container">
+            <i class="lucide-icon input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </i>
+            <input
+              formControlName="celular"
+              type="text"
+              id="celular"
+              placeholder="Ingresa el celular"
+            />
+          </div>
+          <div *ngIf="clientForm.get('celular')?.invalid && clientForm.get('celular')?.touched" class="error-message">
+            El celular es obligatorio y no puede tener más de 10 caracteres
+          </div>
+        </div>
+  
+        <ng-container *ngIf="!isEditMode">
+          <div class="form-group">
+            <label for="contrasena">Contraseña</label>
+            <div class="input-container">
+              <i class="lucide-icon input-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </i>
+              <input
+                formControlName="contrasena"
+                type="password"
+                id="contrasena"
+                placeholder="Ingresa la contraseña"
+              />
+            </div>
+            <div *ngIf="clientForm.get('contrasena')?.invalid && clientForm.get('contrasena')?.touched" class="error-message">
+              La contraseña debe tener entre 8 y 50 caracteres
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Contraseña</label>
+            <div class="input-container">
+              <i class="lucide-icon input-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </i>
+              <input
+                formControlName="confirmPassword"
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirma la contraseña"
+              />
+            </div>
+          </div>
+        </ng-container>
+  
+        <ng-container *ngIf="isEditMode">
+          <div class="form-group password-toggle">
+            <label class="toggle-container">
+              <input
+                type="checkbox"
+                formControlName="changePassword"
+              />
+              <span class="toggle-label">
+                <i class="lucide-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z"/><circle cx="16.5" cy="7.5" r=".5"/></svg>
+                </i>
+                Cambiar contraseña
+              </span>
+            </label>
+          </div>
+  
+          <ng-container *ngIf="clientForm.get('changePassword')?.value">
+            <div class="form-group">
+              <label for="newPassword">Nueva Contraseña</label>
+              <div class="input-container">
+                <i class="lucide-icon input-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </i>
+                <input
+                  formControlName="newPassword"
+                  type="password"
+                  id="newPassword"
+                  placeholder="Nueva contraseña"
+                />
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="confirmNewPassword">Confirmar Nueva Contraseña</label>
+              <div class="input-container">
+                <i class="lucide-icon input-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </i>
+                <input
+                  formControlName="confirmNewPassword"
+                  type="password"
+                  id="confirmNewPassword"
+                  placeholder="Confirmar nueva contraseña"
+                />
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </article>
+  
+      <article class="form-footer">
+        <a routerLink="/clients" class="cancel-button">
+          <i class="lucide-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </i>
+          Cancelar
+        </a>
+        <button type="submit" class="submit-button" [disabled]="clientForm.invalid">
+          <i class="lucide-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          </i>
+          {{ isEditMode ? 'Guardar Cambios' : 'Crear Cliente' }}
+        </button>
+      </article>
+    </form>
+  </section>

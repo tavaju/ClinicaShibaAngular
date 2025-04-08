@@ -1,0 +1,71 @@
+<section class="container">
+    <article class="table-header">
+      <div class="title-section">
+        <i class="lucide-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </i>
+        <h1>Lista de Clientes</h1>
+        <a routerLink="/clients/add" class="add-button">Agregar Cliente</a>
+      </div>
+      <div class="search-section">
+        <div class="search-container">
+          <i class="lucide-icon search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </i>
+          <input
+            type="text"
+            [(ngModel)]="searchQuery"
+            (input)="onSearch(searchQuery)"
+            placeholder="Buscar cliente..."
+            class="search-input"
+          />
+        </div>
+      </div>
+    </article>
+  
+    <article class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Celular</th>
+            <th class="actions-header">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td>{{client.cedula}}</td>
+            <td>{{client.nombre}}</td>
+            <td>{{client.correo}}</td>
+            <td>{{client.celular}}</td>
+            <td class="actions-cell">
+              <a [routerLink]="['/clients/edit', client.id]" class="action-button edit-button">
+                <i class="lucide-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                </i>
+              </a>
+              <button class="action-button delete-button" (click)="confirmDelete(client)">
+                <i class="lucide-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                </i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </section>
+  
+  <!-- Delete Confirmation Modal -->
+  <div *ngIf="showDeleteModal" class="modal">
+    <article class="modal-content">
+      <h2>Confirmar eliminación</h2>
+      <p>¿Está seguro que desea eliminar al cliente {{selectedClient?.nombre}}?</p>
+      <div class="modal-buttons">
+        <button (click)="onDeleteConfirmed()" class="confirm-button">Aceptar</button>
+        <button (click)="onDeleteCancelled()" class="cancel-button">Cancelar</button>
+      </div>
+    </article>
+  </div>
