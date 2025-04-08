@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Mascota } from '../../../model/mascota';
 import { PetService } from '../../../services/pet.service';
+import { Mascota } from '../../../model/mascota';
 
 @Component({
   selector: 'app-pet-form',
@@ -37,41 +37,58 @@ export class PetFormComponent implements OnInit {
     if (id) {
       this.isEditMode = true;
       this.petId = +id;
-      const pet = this.petService.getPetById(this.petId);
-      if (pet) {
-        // Fill the form with pet data
-        this.petForm.patchValue({
-          nombre: pet.nombre,
-          edad: pet.edad,
-          raza: pet.raza,
-          peso: pet.peso,
-          enfermedad: pet.enfermedad,
-          foto: pet.foto,
-          estado: pet.estado,
-          cedulaCliente: pet.cliente?.cedula || ''
-        });
-      } else {
-        // Navigate back if pet not found
-        this.router.navigate(['/pets']);
-      }
+      this.petService.getPetByIdFromApi(this.petId).subscribe({
+        next: (pet) => {
+          this.petForm.patchValue({
+            nombre: pet.nombre,
+            edad: pet.edad,
+            raza: pet.raza,
+            peso: pet.peso,
+            enfermedad: pet.enfermedad,
+            foto: pet.foto,
+            estado: pet.estado,
+            cedulaCliente: pet.cliente?.cedula || ''
+          });
+        },
+        error: () => {
+          this.router.navigate(['/pets']); // Si no existe la mascota, redirigir
+        }
+      });
     }
   }
 
   onSubmit(): void {
     if (this.petForm.valid) {
       const petData = this.petForm.value;
-      
+      const cedulaCliente = petData.cedulaCliente;
+      delete petData.cedulaCliente;
+
       if (this.isEditMode && this.petId) {
+        // Llamada para actualizar la mascota
         this.petService.updatePet({ 
           ...petData, 
           id: this.petId 
+        }, cedulaCliente).subscribe({
+          next: (updatedPet) => {
+            console.log('Mascota actualizada:', updatedPet);
+            this.router.navigate(['/pets']);
+          },
+          error: (err) => {
+            console.error('Error al actualizar la mascota', err);
+          }
         });
       } else {
-        this.petService.addPet(petData);
+        // Llamada para agregar una nueva mascota
+        this.petService.addPet(petData, cedulaCliente).subscribe({
+          next: () => {
+            this.router.navigate(['/pets']);
+          },
+          error: (err) => {
+            console.error('Error al agregar la mascota', err);
+          }
+        });
       }
-      this.router.navigate(['/pets']);
     } else {
-      // Mark all fields as touched to show validation errors
       Object.keys(this.petForm.controls).forEach(key => {
         this.petForm.get(key)?.markAsTouched();
       });
