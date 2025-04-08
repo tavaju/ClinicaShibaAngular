@@ -54,8 +54,6 @@ export class PetFormComponent implements OnInit {
           this.router.navigate(['/pets']); // Si no existe la mascota, redirigir
         }
       });
-    } else {
-      this.router.navigate(['/pets']);
     }
   }
 
@@ -66,15 +64,28 @@ export class PetFormComponent implements OnInit {
       delete petData.cedulaCliente;
 
       if (this.isEditMode && this.petId) {
+        // Llamada para actualizar la mascota
         this.petService.updatePet({ 
           ...petData, 
           id: this.petId 
-        }, cedulaCliente).subscribe(() => {
-          this.router.navigate(['/pets']);
+        }, cedulaCliente).subscribe({
+          next: (updatedPet) => {
+            console.log('Mascota actualizada:', updatedPet);
+            this.router.navigate(['/pets']);
+          },
+          error: (err) => {
+            console.error('Error al actualizar la mascota', err);
+          }
         });
       } else {
-        this.petService.addPet(petData, cedulaCliente).subscribe(() => {
-          this.router.navigate(['/pets']);
+        // Llamada para agregar una nueva mascota
+        this.petService.addPet(petData, cedulaCliente).subscribe({
+          next: () => {
+            this.router.navigate(['/pets']);
+          },
+          error: (err) => {
+            console.error('Error al agregar la mascota', err);
+          }
         });
       }
     } else {
