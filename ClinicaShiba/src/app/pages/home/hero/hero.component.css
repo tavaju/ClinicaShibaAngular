@@ -151,3 +151,21 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.pet-id-input {
+  height: 48px;
+  border-radius: 0.75rem;
+  padding: 0 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pet-id-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+}
