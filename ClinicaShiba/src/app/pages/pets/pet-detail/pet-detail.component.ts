@@ -18,6 +18,8 @@ export class PetDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+
+    /*
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       const petId = +id;
@@ -25,6 +27,23 @@ export class PetDetailComponent implements OnInit {
       if (!this.pet) {
         this.router.navigate(['/pets']);
       }
+    }
+      */
+     //llamar a la api
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      const petId = +id;
+      this.petService.findById(petId).subscribe(
+        (pet) => {
+          this.pet = pet;
+        },
+        (error) => {
+          console.error('Error fetching pet details:', error);
+          this.router.navigate(['/pets']);
+        }
+      );
+    } else {
+      this.router.navigate(['/pets']);
     }
   }
 

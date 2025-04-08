@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Mascota } from '../model/mascota';
 import { Cliente } from '../model/cliente';
+import { HttpClient } from '@angular/common/http';
 
 // Create an interface that extends Mascota but includes cedulaCliente
 interface MascotaFormData extends Partial<Mascota> {
@@ -12,72 +13,40 @@ interface MascotaFormData extends Partial<Mascota> {
   providedIn: 'root'
 })
 export class PetService {
-  private mockPets: Mascota[] = [
-    new Mascota({
-      id: 1,
-      nombre: 'Luna',
-      raza: 'Labrador',
-      edad: 3,
-      peso: 25.5,
-      enfermedad: 'Ninguna',
-      foto: 'https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=300',
-      estado: true,
-      cliente: new Cliente({
-        id: 1,
-        cedula: '123456789',
-        nombre: 'Juan Pérez',
-        correo: 'juan@example.com',
-        celular: '1234567890',
-        contrasena: 'password123'
-      })
-    }),
-    new Mascota({
-      id: 2,
-      nombre: 'Max',
-      raza: 'Pastor Alemán',
-      edad: 5,
-      peso: 30.2,
-      enfermedad: 'Artritis',
-      foto: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?q=80&w=300',
-      estado: true,
-      cliente: new Cliente({
-        id: 2,
-        cedula: '987654321',
-        nombre: 'María López',
-        correo: 'maria@example.com',
-        celular: '0987654321',
-        contrasena: 'password456'
-      })
-    }),
-    new Mascota({
-      id: 3,
-      nombre: 'Bella',
-      raza: 'Golden Retriever',
-      edad: 2,
-      peso: 22.8,
-      enfermedad: 'Ninguna',
-      foto: 'https://images.unsplash.com/photo-1633722715463-d30f4f325e24?q=80&w=300',
-      estado: true,
-      cliente: new Cliente({
-        id: 3,
-        cedula: '456789123',
-        nombre: 'Carlos Ruiz',
-        correo: 'carlos@example.com',
-        celular: '5678901234',
-        contrasena: 'password789'
-      })
-    })
-  ];
+  
 
-  private pets = new BehaviorSubject<Mascota[]>(this.mockPets);
+  //private pets = new BehaviorSubject<Mascota[]>(this.mockPets);
   // Define the property as possibly undefined to fix the TypeScript error
-  private broadcastChannel?: BroadcastChannel;
+  //private broadcastChannel?: BroadcastChannel;
 
-  constructor() {
+  constructor(private http: HttpClient) {
+
+    
     // Initialize the BroadcastChannel for cross-tab communication
-    this.initBroadcastChannel();
+    //this.initBroadcastChannel();
   }
 
+  findAll(): Observable<Mascota[]> {
+    return this.http.get<Mascota[]>('http://localhost:8090/mascota/all');
+  }
+  findById(id: number): Observable<Mascota> {
+    return this.http.get<Mascota>(`http://localhost:8090/mascota/find/${id}`);
+  }
+  deleteById(id: number): Observable<void> {
+    return this.http.delete<void>(`http://localhost:8090/mascota/delete/?id=${id}`);
+  }
+  addPet(pet: Mascota): Observable<Mascota> {
+    return this.http.post<Mascota>('http://localhost:8090/mascota/save', pet);
+  }
+  updatePet(pet: Mascota): Observable<Mascota> {
+    return this.http.put<Mascota>('http://localhost:8090/mascota/update', pet);
+  }
+  searchPets(query: string): Observable<Mascota[]> {
+    return this.http.get<Mascota[]>(`http://localhost:8090/mascota/search?query=${query}`);
+  }
+
+
+  /*
   private initBroadcastChannel(): void {
     try {
       this.broadcastChannel = new BroadcastChannel('pets_data_channel');
@@ -224,4 +193,5 @@ export class PetService {
       pet.cliente?.nombre.toLowerCase().includes(query)
     );
   }
+    */
 }

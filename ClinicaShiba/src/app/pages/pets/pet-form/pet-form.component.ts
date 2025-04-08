@@ -37,23 +37,24 @@ export class PetFormComponent implements OnInit {
     if (id) {
       this.isEditMode = true;
       this.petId = +id;
-      const pet = this.petService.getPetById(this.petId);
-      if (pet) {
-        // Fill the form with pet data
-        this.petForm.patchValue({
-          nombre: pet.nombre,
-          edad: pet.edad,
-          raza: pet.raza,
-          peso: pet.peso,
-          enfermedad: pet.enfermedad,
-          foto: pet.foto,
-          estado: pet.estado,
-          cedulaCliente: pet.cliente?.cedula || ''
-        });
-      } else {
-        // Navigate back if pet not found
-        this.router.navigate(['/pets']);
-      }
+      this.petService.findById(this.petId).subscribe(pet => {
+        if (pet) {
+          // Fill the form with pet data
+          this.petForm.patchValue({
+            nombre: pet.nombre,
+            edad: pet.edad,
+            raza: pet.raza,
+            peso: pet.peso,
+            enfermedad: pet.enfermedad,
+            foto: pet.foto,
+            estado: pet.estado,
+            cedulaCliente: pet.cliente?.cedula || ''
+          });
+        } else {
+          // Navigate back if pet not found
+          this.router.navigate(['/pets']);
+        }
+      });
     }
   }
 
