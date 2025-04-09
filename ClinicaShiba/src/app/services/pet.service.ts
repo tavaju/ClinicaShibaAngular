@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Mascota } from '../model/mascota';
+import { Cliente } from '../model/cliente';
 
 @Injectable({
   providedIn: 'root'
@@ -35,16 +36,26 @@ export class PetService {
     );
   }
 
-  addPet(pet: Mascota, idCliente: number | string): Observable<void> {
-    return this.http.post<void>(`${this.baseUrl}/add?idCliente=${idCliente}`, pet);
+  // Add a new pet with client cedula
+  addPet(pet: Mascota, cedula: string): Observable<Mascota> {
+    // Match the parameter name 'cedula' as used in the controller
+    return this.http.post<Mascota>(`${this.baseUrl}/add?cedula=${encodeURIComponent(cedula)}`, pet);
   }
-  
-  updatePet(pet: Mascota, idCliente: number): Observable<Mascota> {
-    return this.http.put<Mascota>(`${this.baseUrl}/update/${pet.id}?idCliente=${idCliente}`, pet);
-  }
-  
-  
 
+  // Update pet
+  updatePet(pet: Mascota, cedula?: string): Observable<Mascota> {
+    // Update endpoint to match the controller method
+    return this.http.put<Mascota>(`${this.baseUrl}/update/${pet.id}`, pet);
+  }
+
+  deletePet(id: number): Observable<void> {
+    return this.http.put<void>(`${this.baseUrl}/update/${id}?estado=false`, {});  // Aquí usamos PUT para actualizar el estado
+  }
+
+  deactivatePet(id: number): Observable<Mascota> {
+    return this.http.put<Mascota>(`${this.baseUrl}/deactivate/${id}`, {});  // Llamada PUT para desactivar la mascota
+  }
+  
   // Buscar mascotas localmente
   searchPets(query: string): Mascota[] {
     const currentPets = this.petsSubject.getValue();

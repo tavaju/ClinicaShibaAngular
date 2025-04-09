@@ -23,6 +23,10 @@ import { PetFormComponent } from './pages/pets/pet-form/pet-form.component';
 import { PetDetailComponent } from './pages/pets/pet-detail/pet-detail.component';
 import { PetBannerComponent } from './pages/pets/pet-banner/pet-banner.component';
 
+// Import client components
+import { ClientListComponent } from './pages/clients/client-list/client-list.component';
+import { ClientFormComponent } from './pages/clients/client-form/client-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +45,10 @@ import { PetBannerComponent } from './pages/pets/pet-banner/pet-banner.component
     PetListComponent,
     PetFormComponent,
     PetDetailComponent,
-    PetBannerComponent
+    PetBannerComponent,
+    // Client components
+    ClientListComponent,
+    ClientFormComponent
   ],
   imports: [
     BrowserModule,
