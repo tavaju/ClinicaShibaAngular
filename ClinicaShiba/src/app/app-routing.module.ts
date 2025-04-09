@@ -16,6 +16,9 @@ import { ClientFormComponent } from './pages/clients/client-form/client-form.com
 // Import CTA component
 import { CtaComponent } from './pages/home/cta/cta.component';
 
+// Import Login Component
+import { LoginUserComponent } from './pages/login/login-user/login-user.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'specialties', component: SpecialtiesComponent },
@@ -31,9 +34,12 @@ const routes: Routes = [
   { path: 'clients', component: ClientListComponent },
   { path: 'clients/add', component: ClientFormComponent },
   { path: 'clients/edit/:id', component: ClientFormComponent },
-  
+
   // CTA route within Home
   { path: 'cta', component: CtaComponent },
+
+  // Login route
+  { path: 'login', component: LoginUserComponent },
 
   // Always put the wildcard route last
   { path: '**', redirectTo: '' }

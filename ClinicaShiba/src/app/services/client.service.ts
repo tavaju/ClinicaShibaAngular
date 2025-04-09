@@ -82,4 +82,9 @@ export class ClientService {
       client.cedula?.toLowerCase().includes(query.toLowerCase())
     );
   }
+
+  // Login client (nuevo método)
+  loginClient(email: string, password: string): Observable<Cliente> {
+    return this.http.post<Cliente>(`${this.baseUrl}/login`, { email, password });
+  }
 }

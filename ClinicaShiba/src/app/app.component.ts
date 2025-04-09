@@ -5,6 +5,7 @@ import {
   ElementRef,
   HostListener,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,13 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('bannerRef') bannerRef!: ElementRef;
 
   lastScrollTop = 0;
+  isLoginRoute: boolean = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      this.isLoginRoute = this.router.url === '/login';
+    });
+  }
 
   ngAfterViewInit(): void {
     this.handleScroll(); // inicializa por si carga ya con scroll
