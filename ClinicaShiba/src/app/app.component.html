@@ -1,4 +1,10 @@
-<app-banner #bannerRef></app-banner>
-<app-navbar #navbarRef></app-navbar>
+<div *ngIf="!isLoginRoute">
+  <app-banner #bannerRef></app-banner>
+  <app-navbar #navbarRef></app-navbar>
+</div>
+
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+
+<div *ngIf="!isLoginRoute">
+  <app-footer></app-footer>
+</div>

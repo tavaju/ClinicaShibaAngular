@@ -1,0 +1,272 @@
+/* Pagina de login */
+@font-face {
+    font-family: "shiba-font";
+    src: url("/assets/fonts/fonnts.com-New_Order_Semibold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #5D4E9C;
+    --secondary-color: #8B7ED3;
+    --text-color: #333333;
+    --light-gray: #F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    background-image: url('/assets/backgrounds/login_background.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.login-container {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 81%;
+    margin: auto;
+    position: relative;
+    transform: translateY(0);
+    min-height: fit-content;
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.shiba-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+
+h2 {
+    color: var(--text-color);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--light-gray);
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary-color);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5D4E9C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; 
+    z-index: 10;
+}
+
+button[type="submit"]:hover {
+    background-color: #8B7ED3;
+}
+
+
+.image-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        display: none;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+}
+
+.brand-name {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: clamp(24px, 3vw, 34px);
+    font-family: "shiba-font", sans-serif;
+    z-index: 1000;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: clamp(10px, 2vw, 20px);
+    transition: all 0.3s ease;
+}
+
+@media (max-height: 600px), (max-width: 1024px) {
+    body {
+        align-items: flex-start;
+        padding-top: 100px; 
+    }
+
+    .brand-name {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: auto;
+        background-color: rgba(93, 78, 156, 0.8);
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        padding: 8px 16px;
+    }
+
+    .login-container {
+        margin: 20px auto;
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .brand-name {
+        font-size: clamp(18px, 2vw, 24px);
+        padding: 6px 12px;
+    }
+}
+
+.back-to-home {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.home-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.login-background {
+  background-image: url('/assets/backgrounds/login_background.svg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button {
+  display: block; /* Ensure the button is always visible */
+  background-color: #6a0dad; /* Purple color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #5a0c9a; /* Darker purple on hover */
+}
