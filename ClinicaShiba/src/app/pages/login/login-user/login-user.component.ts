@@ -18,12 +18,12 @@ export class LoginUserComponent {
   onSubmit() {
     this.clientService.loginClient(this.email, this.password).subscribe(
       (response) => {
-        // Si el login es exitoso, redirigir al perfil del cliente
-        this.router.navigate(['/client', response.id]);
+        // Si el login es exitoso, redirigir a /pets
+        this.router.navigate(['/pets']);
       },
       (error) => {
         // Mostrar el mensaje de error si el login falla
-        this.errorMessage = 'Correo o contraseña incorrectos';
+        this.errorMessage = error.error?.message || 'Correo o contraseña incorrectos';
       }
     );
   }

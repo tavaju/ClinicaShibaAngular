@@ -140,18 +140,21 @@ input {
 button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: var(--primary-color);
+    background-color: #5D4E9C;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: block; 
+    z-index: 10;
 }
 
 button[type="submit"]:hover {
-    background-color: var(--secondary-color);
+    background-color: #8B7ED3;
 }
+
 
 .image-container {
     flex: 1;
@@ -251,4 +254,19 @@ button[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.submit-button {
+  display: block; /* Ensure the button is always visible */
+  background-color: #6a0dad; /* Purple color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #5a0c9a; /* Darker purple on hover */
 }
