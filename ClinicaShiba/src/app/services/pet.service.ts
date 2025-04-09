@@ -9,6 +9,7 @@ import { Cliente } from '../model/cliente';
 })
 export class PetService {
   private baseUrl = 'http://localhost:8090/mascota';
+  private clienteUrl = 'http://localhost:8090/cliente';
   private petsSubject = new BehaviorSubject<Mascota[]>([]);
 
   constructor(private http: HttpClient) {}
@@ -29,11 +30,23 @@ export class PetService {
     return pets.find(pet => pet.id === id);
   }
 
-  // Obtener una mascota por ID desde el backend (versión alternativa con Observable)
+  // Obtener una mascota por ID desde el backend (versión optimizada)
   getPetByIdFromApi(id: number): Observable<Mascota> {
     return this.http.get<any>(`${this.baseUrl}/find?id=${id}`).pipe(
-      map((data) => new Mascota(data))  // Convertimos el objeto plano en una instancia de la clase Mascota
+      map((data) => {
+        const mascota = new Mascota(data);
+        // Solo almacenamos la cédula del cliente, no todo el objeto cliente
+        if (data.cedulaCliente) {
+          mascota.cliente = { cedula: data.cedulaCliente } as Cliente;
+        }
+        return mascota;
+      })
     );
+  }
+  
+  // Nuevo método para obtener los datos del cliente por cédula
+  getClienteByCedula(cedula: string): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.clienteUrl}/find?cedula=${cedula}`);
   }
 
   // Add a new pet with client cedula
