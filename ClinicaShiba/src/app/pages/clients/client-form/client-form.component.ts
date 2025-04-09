@@ -13,7 +13,6 @@ export class ClientFormComponent implements OnInit {
   clientForm: FormGroup;
   isEditMode = false;
   clientId?: number;
-  showPasswordFields = false;
 
   constructor(
     private fb: FormBuilder,
@@ -21,13 +20,14 @@ export class ClientFormComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {
+    // Definir los campos como opcionales
     this.clientForm = this.fb.group({
       cedula: ['', [Validators.required, Validators.maxLength(20)]],
-      nombre: ['', [Validators.required, Validators.maxLength(100)]],
-      correo: ['', [Validators.required, Validators.email]],
-      celular: ['', [Validators.required, Validators.maxLength(10)]],
-      contrasena: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(50)]],
-      confirmPassword: ['', [Validators.required]],
+      nombre: ['', [Validators.maxLength(100)]],  // No obligatorio para editar
+      correo: ['', [Validators.email]],  // No obligatorio para editar
+      celular: ['', [Validators.maxLength(10)]],  // No obligatorio para editar
+      contrasena: ['', [Validators.minLength(8), Validators.maxLength(50)]],  // No obligatorio para editar
+      confirmPassword: [''],
       changePassword: [false],
       newPassword: [''],
       confirmNewPassword: ['']
@@ -39,88 +39,71 @@ export class ClientFormComponent implements OnInit {
     if (id) {
       this.isEditMode = true;
       this.clientId = +id;
-      this.loadClient(this.clientId);
-      this.updateFormValidation();
+      this.clientService.getClientById(this.clientId).subscribe({
+        next: (client) => {
+          this.clientForm.patchValue({
+            cedula: client.cedula,
+            nombre: client.nombre,
+            correo: client.correo,
+            celular: client.celular
+          });
+        },
+        error: () => {
+          this.router.navigate(['/clients']);
+        }
+      });
     }
-  }
-
-  private loadClient(id: number): void {
-    this.clientService.getClientById(id).subscribe({
-      next: (client) => {
-        this.clientForm.patchValue({
-          cedula: client.cedula,
-          nombre: client.nombre,
-          correo: client.correo,
-          celular: client.celular
-        });
-        this.clientForm.get('contrasena')?.clearValidators();
-        this.clientForm.get('confirmPassword')?.clearValidators();
-        this.clientForm.updateValueAndValidity();
-      },
-      error: (error) => {
-        console.error('Error loading client:', error);
-        this.router.navigate(['/clients']);
-      }
-    });
-  }
-
-  private updateFormValidation(): void {
-    const changePassword = this.clientForm.get('changePassword');
-    const newPassword = this.clientForm.get('newPassword');
-    const confirmNewPassword = this.clientForm.get('confirmNewPassword');
-
-    changePassword?.valueChanges.subscribe(value => {
-      if (value) {
-        newPassword?.setValidators([Validators.required, Validators.minLength(8), Validators.maxLength(50)]);
-        confirmNewPassword?.setValidators([Validators.required]);
-      } else {
-        newPassword?.clearValidators();
-        confirmNewPassword?.clearValidators();
-      }
-      newPassword?.updateValueAndValidity();
-      confirmNewPassword?.updateValueAndValidity();
-    });
   }
 
   onSubmit(): void {
     if (this.clientForm.valid) {
       const formData = this.clientForm.value;
-      
+
       if (this.isEditMode && this.clientId) {
-        this.clientService.updateClient(
-          this.clientId,
-          {
-            id: this.clientId,
-            cedula: formData.cedula,
-            nombre: formData.nombre,
-            correo: formData.correo,
-            celular: formData.celular,
-            contrasena: formData.contrasena,
-            mascotas: []
-          },
-          formData.changePassword,
-          formData.newPassword,
-          formData.confirmNewPassword
-        ).subscribe({
-          next: () => this.router.navigate(['/clients']),
-          error: (error) => console.error('Error updating client:', error)
-        });
+        // Si el cliente tiene algún campo cambiado, solo actualiza esos campos
+        const updatedClient: Cliente = {
+          id: this.clientId,
+          cedula: formData.cedula,
+          nombre: formData.nombre || undefined,  // Solo actualiza si se cambió
+          correo: formData.correo || undefined,  // Solo actualiza si se cambió
+          celular: formData.celular || undefined,  // Solo actualiza si se cambió
+          contrasena: formData.contrasena || undefined // Solo actualiza si se cambió
+        };
+
+        // Llamar al servicio para actualizar el cliente
+        this.clientService.updateClient(this.clientId, updatedClient, formData.changePassword, formData.newPassword, formData.confirmNewPassword)
+          .subscribe({
+            next: () => this.router.navigate(['/clients']),
+            error: (err) => {
+              console.error('Error al actualizar el cliente:', err);
+              alert('Error al actualizar el cliente.');
+            }
+          });
       } else {
-        this.clientService.addClient(
-          new Cliente({
-            cedula: formData.cedula,
-            nombre: formData.nombre,
-            correo: formData.correo,
-            celular: formData.celular,
-            contrasena: formData.contrasena,
-            mascotas: []
-          }),
-          formData.confirmPassword
-        ).subscribe({
-          next: () => this.router.navigate(['/clients']),
-          error: (error) => console.error('Error creating client:', error)
+        // Crear cliente
+        const newClient = new Cliente({
+          cedula: formData.cedula,
+          nombre: formData.nombre,
+          correo: formData.correo,
+          celular: formData.celular,
+          contrasena: formData.contrasena
         });
+
+        this.clientService.addClient(newClient, formData.confirmPassword)
+          .subscribe({
+            next: () => this.router.navigate(['/clients']),
+            error: (err) => {
+              console.error('Error al crear el cliente:', err);
+              alert('Error al crear el cliente.');
+            }
+          });
       }
+    } else {
+      Object.keys(this.clientForm.controls).forEach(key => {
+        const control = this.clientForm.get(key);
+        control?.markAsTouched();
+      });
+      alert('Por favor, completa todos los campos correctamente.');
     }
   }
 }

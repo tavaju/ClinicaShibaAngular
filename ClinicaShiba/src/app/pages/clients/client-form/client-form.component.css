@@ -92,6 +92,7 @@ input {
   font-size: 1rem;
   outline: none;
   transition: all 0.2s;
+  padding-left: 2.5rem; /* Espacio para el ícono */
 }
 
 input:focus {
@@ -159,26 +160,26 @@ input:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--purple-600);
+  padding: 0.75rem 1.5rem;
+  background-color: #7c3aed;
   color: white;
   border: none;
   border-radius: 0.5rem;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
-  min-width: 180px;
-  visibility: visible !important;
-  opacity: 1 !important;
 }
 
 .submit-button:hover {
   background-color: var(--purple-900);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .submit-button:disabled {
   background-color: var(--gray-400);
   cursor: not-allowed;
+  transform: none;
 }
 
 .submit-button i {
@@ -191,8 +192,8 @@ input:focus {
   color: white;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 4px;
-  display: flex;
+  border-radius: 8px;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -200,6 +201,8 @@ input:focus {
   border: none;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .primary-button:hover {
@@ -217,6 +220,60 @@ input:focus {
 
 .primary-button span {
   display: inline-block;
+}
+
+.align-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea los elementos a la derecha */
+  text-align: right; /* Alinea el texto a la derecha */
+}
+
+.align-right .form-group {
+  width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+  max-width: 400px; /* Limita el ancho máximo de los campos */
+}
+
+.align-right label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.align-right .input-container {
+  width: 100%;
+  position: relative;
+}
+
+.align-right input[type="checkbox"] {
+  margin-left: auto; /* Alinea el checkbox a la derecha */
+}
+
+.align-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos a la izquierda */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.align-left .form-group {
+  width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+  max-width: 400px; /* Limita el ancho máximo de los campos */
+}
+
+.align-left label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.align-left .input-container {
+  width: 100%;
+  position: relative;
+}
+
+.align-left input[type="checkbox"] {
+  margin-right: auto; /* Alinea el checkbox a la izquierda */
 }
 
 @media (max-width: 768px) {
