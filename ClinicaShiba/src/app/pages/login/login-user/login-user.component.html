@@ -17,7 +17,7 @@
           </div>
         </div>
         <!-- Formulario de inicio de sesión -->
-        <form (ngSubmit)="onSubmit()">
+        <form (ngSubmit)="onSubmit($event)">
           <div class="form-group">
             <label for="email">Email</label>
             <input
@@ -68,4 +68,3 @@
       </article>
     </div>
   </div>
-  

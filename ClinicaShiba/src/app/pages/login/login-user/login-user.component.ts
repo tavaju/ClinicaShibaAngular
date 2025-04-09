@@ -15,17 +15,20 @@ export class LoginUserComponent {
 
   constructor(private clientService: ClientService, private router: Router) {}
 
-  onSubmit() {
-    this.clientService.loginClient(this.email, this.password).subscribe(
-      (response) => {
+  onSubmit(event: Event) {
+    event.preventDefault();
+    this.clientService.getClients().subscribe((clients) => {
+      const matchingClient = clients.find(client =>
+        client.correo === this.email && client.contrasena === this.password
+      );
+      if (matchingClient) {
         // Si el login es exitoso, redirigir a /pets
         this.router.navigate(['/pets']);
-      },
-      (error) => {
+      } else {
         // Mostrar el mensaje de error si el login falla
-        this.errorMessage = error.error?.message || 'Correo o contraseña incorrectos';
+        this.errorMessage = 'Correo o contraseña incorrectos';
       }
-    );
+    });
   }
 
   togglePassword() {
