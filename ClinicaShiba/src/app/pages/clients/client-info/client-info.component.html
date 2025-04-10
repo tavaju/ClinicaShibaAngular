@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="client-section">
+    <div class="section-header">
+      <div class="title-section">
+        <i data-lucide="user"></i>
+        <h1>Información del Cliente</h1>
+      </div>
+    </div>
+ 
+    <div class="client-card" *ngIf="client">
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">
+            <i data-lucide="id-card"></i>
+            <span>Cédula</span>
+          </div>
+          <p class="info-value">{{ client.cedula }}</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">
+            <i data-lucide="user"></i>
+            <span>Nombre</span>
+          </div>
+          <p class="info-value">{{ client.nombre }}</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">
+            <i data-lucide="mail"></i>
+            <span>Correo</span>
+          </div>
+          <p class="info-value">{{ client.correo }}</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">
+            <i data-lucide="phone"></i>
+            <span>Celular</span>
+          </div>
+          <p class="info-value">{{ client.celular }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="pets-section">
+    <div class="section-header">
+      <div class="title-section">
+        <i data-lucide="paw-print"></i>
+        <h2>Mis Mascotas</h2>
+      </div>
+    </div>
+ 
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Raza</th>
+            <th>Edad</th>
+            <th>Peso</th>
+            <th>Foto</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pet of pets">
+            <td>{{ pet.nombre }}</td>
+            <td>{{ pet.raza }}</td>
+            <td>{{ pet.edad }}</td>
+            <td>{{ pet.peso }}</td>
+            <td class="pet-image">
+              <img [src]="pet.foto" alt="Foto de Mascota" />
+            </td>
+            <td>
+              <span [class.status-active]="pet.estado" [class.status-inactive]="!pet.estado">
+                {{ pet.estado ? 'Activo' : 'Inactivo' }}
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="pets.length === 0">
+            <td colspan="6" class="empty-message">
+              <div class="empty-content">
+                <i data-lucide="alert-circle"></i>
+                <p>No tienes mascotas registradas</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+ 
+<script>
+  // Inicializar los íconos de Lucide
+  lucide.createIcons();
+</script>

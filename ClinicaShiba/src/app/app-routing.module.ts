@@ -18,6 +18,7 @@ import { CtaComponent } from './pages/home/cta/cta.component';
 
 // Import Login Component
 import { LoginUserComponent } from './pages/login/login-user/login-user.component';
+import { ClientInfoComponent } from './pages/clients/client-info/client-info.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,11 +30,12 @@ const routes: Routes = [
   { path: 'pets/add', component: PetFormComponent },
   { path: 'pets/edit/:id', component: PetFormComponent },
   { path: 'pets/:id', component: PetDetailComponent },
-  
+
   // Client routes
   { path: 'clients', component: ClientListComponent },
   { path: 'clients/add', component: ClientFormComponent },
   { path: 'clients/edit/:id', component: ClientFormComponent },
+  { path: 'clients/info', component: ClientInfoComponent },
 
   // CTA route within Home
   { path: 'cta', component: CtaComponent },
@@ -42,7 +44,7 @@ const routes: Routes = [
   { path: 'login', component: LoginUserComponent },
 
   // Always put the wildcard route last
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

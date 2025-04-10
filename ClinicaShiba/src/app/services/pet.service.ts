@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { Mascota } from '../model/mascota';
 import { Cliente } from '../model/cliente';
 
@@ -88,5 +88,23 @@ export class PetService {
         pet.nombre?.toLowerCase().includes(query.toLowerCase()) ||
         pet.raza?.toLowerCase().includes(query.toLowerCase())
     );
+  }
+
+  getPetsByClientId(clientId: number): Observable<Mascota[]> {
+    return this.http
+      .get<Mascota[]>(`${this.baseUrl}/findByClientId?clientId=${clientId}`)
+      .pipe(
+        map((pets) => {
+          console.log('Respuesta del servidor para getPetsByClientId:', pets); // Debug log
+          return pets;
+        }),
+        catchError((error) => {
+          console.error(
+            `Error buscando mascotas para el cliente ${clientId}:`,
+            error
+          ); // Error log
+          throw error;
+        })
+      );
   }
 }

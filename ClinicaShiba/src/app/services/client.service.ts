@@ -96,4 +96,22 @@ export class ClientService {
       password,
     });
   }
+
+
+  getClientByEmail(email: string): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.baseUrl}/findByEmail?email=${email}`).pipe(
+      map(client => {
+        console.log('Respuesta del servidor para getClientByEmail:', client); // Debug log
+        if (!client) {
+          throw new Error(`No se encontró cliente con correo: ${email}`);
+        }
+        return new Cliente(client);
+      }),
+      catchError(error => {
+        console.error(`Error buscando cliente con correo ${email}:`, error); // Error log
+        throw new Error(`No se encontró cliente con correo: ${email}`);
+      })
+    );
+  }
+
 }

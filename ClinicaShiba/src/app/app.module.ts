@@ -27,6 +27,7 @@ import { PetBannerComponent } from './pages/pets/pet-banner/pet-banner.component
 import { ClientListComponent } from './pages/clients/client-list/client-list.component';
 import { ClientFormComponent } from './pages/clients/client-form/client-form.component';
 import { LoginUserComponent } from './pages/login/login-user/login-user.component';
+import { ClientInfoComponent } from './pages/clients/client-info/client-info.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { LoginUserComponent } from './pages/login/login-user/login-user.componen
     // Client components
     ClientListComponent,
     ClientFormComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    ClientInfoComponent
   ],
   imports: [
     BrowserModule,
