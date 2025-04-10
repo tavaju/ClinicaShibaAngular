@@ -4,7 +4,7 @@ import { BehaviorSubject, map, Observable, catchError } from 'rxjs';
 import { Cliente } from '../model/cliente';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClientService {
   private baseUrl = 'http://localhost:8090/cliente';
@@ -14,40 +14,45 @@ export class ClientService {
 
   // Get all clients
   getClients(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(`${this.baseUrl}/all`).pipe(
-      map(clients => clients.map(client => new Cliente(client)))
-    );
+    return this.http
+      .get<Cliente[]>(`${this.baseUrl}/all`)
+      .pipe(map((clients) => clients.map((client) => new Cliente(client))));
   }
 
   // Get client by ID
   getClientById(id: number): Observable<Cliente> {
-    return this.http.get<Cliente>(`${this.baseUrl}/find/${id}`).pipe(
-      map(client => new Cliente(client))
-    );
+    return this.http
+      .get<Cliente>(`${this.baseUrl}/find/${id}`)
+      .pipe(map((client) => new Cliente(client)));
   }
 
   // Get client by cédula
   getClientByCedula(cedula: string): Observable<Cliente> {
-    return this.http.get<Cliente>(`${this.baseUrl}/findByCedula?cedula=${cedula}`).pipe(
-      map(client => {
-        if (!client) {
+    return this.http
+      .get<Cliente>(`${this.baseUrl}/findByCedula?cedula=${cedula}`)
+      .pipe(
+        map((client) => {
+          if (!client) {
+            throw new Error(`No se encontró cliente con cédula: ${cedula}`);
+          }
+          return new Cliente(client);
+        }),
+        catchError((error) => {
+          console.error(`Error buscando cliente con cédula ${cedula}:`, error);
           throw new Error(`No se encontró cliente con cédula: ${cedula}`);
-        }
-        return new Cliente(client);
-      }),
-      catchError(error => {
-        console.error(`Error buscando cliente con cédula ${cedula}:`, error);
-        throw new Error(`No se encontró cliente con cédula: ${cedula}`);
-      })
-    );
+        })
+      );
   }
 
   // Add new client
-  addClient(client: Cliente, confirmPassword: string): Observable<void> {
-    return this.http.post<void>(`${this.baseUrl}/add`, {
-      ...client,
-      confirmPassword
-    });
+  addClient(client: Cliente, confirmPassword: string): Observable<any> {
+    return this.http.post<void>(
+      `${this.baseUrl}/add?confirmPassword=${confirmPassword}`,
+      {
+        ...client,
+        confirmPassword,
+      }
+    );
   }
 
   // Update client
@@ -60,7 +65,7 @@ export class ClientService {
   ): Observable<void> {
     const url = `${this.baseUrl}/update/${id}`;
     const params: any = { changePassword };
-    
+
     if (changePassword && newPassword && confirmPassword) {
       params.newPassword = newPassword;
       params.confirmPassword = confirmPassword;
@@ -77,14 +82,36 @@ export class ClientService {
   // Search clients locally
   searchClients(query: string): Cliente[] {
     const currentClients = this.clientsSubject.getValue();
-    return currentClients.filter(client =>
-      client.nombre?.toLowerCase().includes(query.toLowerCase()) ||
-      client.cedula?.toLowerCase().includes(query.toLowerCase())
+    return currentClients.filter(
+      (client) =>
+        client.nombre?.toLowerCase().includes(query.toLowerCase()) ||
+        client.cedula?.toLowerCase().includes(query.toLowerCase())
     );
   }
 
   // Login client (nuevo método)
   loginClient(email: string, password: string): Observable<Cliente> {
-    return this.http.post<Cliente>(`${this.baseUrl}/login`, { email, password });
+    return this.http.post<Cliente>(`${this.baseUrl}/login`, {
+      email,
+      password,
+    });
   }
+
+
+  getClientByEmail(email: string): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.baseUrl}/findByEmail?email=${email}`).pipe(
+      map(client => {
+        console.log('Respuesta del servidor para getClientByEmail:', client); // Debug log
+        if (!client) {
+          throw new Error(`No se encontró cliente con correo: ${email}`);
+        }
+        return new Cliente(client);
+      }),
+      catchError(error => {
+        console.error(`Error buscando cliente con correo ${email}:`, error); // Error log
+        throw new Error(`No se encontró cliente con correo: ${email}`);
+      })
+    );
+  }
+
 }

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-user',
   templateUrl: './login-user.component.html',
-  styleUrls: ['./login-user.component.css']
+  styleUrls: ['./login-user.component.css'],
 })
 export class LoginUserComponent {
   email: string = '';
@@ -18,12 +18,15 @@ export class LoginUserComponent {
   onSubmit(event: Event) {
     event.preventDefault();
     this.clientService.getClients().subscribe((clients) => {
-      const matchingClient = clients.find(client =>
-        client.correo === this.email && client.contrasena === this.password
+      const matchingClient = clients.find(
+        (client) =>
+          client.correo === this.email && client.contrasena === this.password
       );
       if (matchingClient) {
-        // Si el login es exitoso, redirigir a /pets
-        this.router.navigate(['/pets']);
+        // Si el login es exitoso, redirigir a /clients/info con el email como parámetro
+        this.router.navigate(['/clients/info'], {
+          queryParams: { email: this.email },
+        });
       } else {
         // Mostrar el mensaje de error si el login falla
         this.errorMessage = 'Correo o contraseña incorrectos';
@@ -32,7 +35,10 @@ export class LoginUserComponent {
   }
 
   togglePassword() {
-    const passwordField = document.getElementById('password') as HTMLInputElement;
-    passwordField.type = passwordField.type === 'password' ? 'text' : 'password';
+    const passwordField = document.getElementById(
+      'password'
+    ) as HTMLInputElement;
+    passwordField.type =
+      passwordField.type === 'password' ? 'text' : 'password';
   }
 }
