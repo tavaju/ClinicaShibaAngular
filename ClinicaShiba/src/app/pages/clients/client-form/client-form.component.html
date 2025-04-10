@@ -2,13 +2,25 @@
   <article class="form-header">
     <div class="title-section">
       <i class="lucide-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
-          <polyline points="17 21 17 13 7 13 7 21"/>
-          <polyline points="7 3 7 8 15 8"/>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+          />
+          <polyline points="17 21 17 13 7 13 7 21" />
+          <polyline points="7 3 7 8 15 8" />
         </svg>
       </i>
-      <h1>{{ isEditMode ? 'Modificar' : 'Crear Cliente' }}</h1>
+      <h1>{{ isEditMode ? "Modificar" : "Crear Cliente" }}</h1>
     </div>
   </article>
 
@@ -18,12 +30,27 @@
         <label for="cedula">Cédula</label>
         <div class="input-container">
           <i class="lucide-icon input-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
           </i>
-          <input formControlName="cedula" type="text" id="cedula" placeholder="Ingresa la cédula" />
+          <input
+            formControlName="cedula"
+            type="text"
+            id="cedula"
+            placeholder="Ingresa la cédula"
+          />
         </div>
       </div>
 
@@ -31,12 +58,27 @@
         <label for="nombre">Nombre</label>
         <div class="input-container">
           <i class="lucide-icon input-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="7" r="4"/>
-              <path d="M5.5 21a10 10 0 0 1 13 0"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="7" r="4" />
+              <path d="M5.5 21a10 10 0 0 1 13 0" />
             </svg>
           </i>
-          <input formControlName="nombre" type="text" id="nombre" placeholder="Ingresa el nombre" />
+          <input
+            formControlName="nombre"
+            type="text"
+            id="nombre"
+            placeholder="Ingresa el nombre"
+          />
         </div>
       </div>
 
@@ -44,12 +86,27 @@
         <label for="correo">Correo</label>
         <div class="input-container">
           <i class="lucide-icon input-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="16" x="2" y="4" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
           </i>
-          <input formControlName="correo" type="email" id="correo" placeholder="Ingresa el correo" />
+          <input
+            formControlName="correo"
+            type="email"
+            id="correo"
+            placeholder="Ingresa el correo"
+          />
         </div>
       </div>
 
@@ -57,11 +114,28 @@
         <label for="celular">Celular</label>
         <div class="input-container">
           <i class="lucide-icon input-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
             </svg>
           </i>
-          <input formControlName="celular" type="text" id="celular" placeholder="Ingresa el celular" />
+          <input
+            formControlName="celular"
+            type="text"
+            id="celular"
+            placeholder="Ingresa el celular"
+          />
         </div>
       </div>
 
@@ -69,7 +143,11 @@
       <div class="form-group align-left">
         <label for="changePassword">¿Deseas cambiar la contraseña?</label>
         <div class="input-container">
-          <input type="checkbox" formControlName="changePassword" id="changePassword" />
+          <input
+            type="checkbox"
+            formControlName="changePassword"
+            id="changePassword"
+          />
         </div>
       </div>
 
@@ -78,12 +156,27 @@
           <label for="newPassword">Nueva Contraseña</label>
           <div class="input-container">
             <i class="lucide-icon input-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 11l8-8 5 5-8 8H3v-5Z"/>
-                <path d="M15 7a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 11l8-8 5 5-8 8H3v-5Z" />
+                <path d="M15 7a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z" />
               </svg>
             </i>
-            <input formControlName="newPassword" type="password" id="newPassword" placeholder="Nueva contraseña" />
+            <input
+              formControlName="newPassword"
+              type="password"
+              id="newPassword"
+              placeholder="Nueva contraseña"
+            />
           </div>
         </div>
 
@@ -91,12 +184,27 @@
           <label for="confirmNewPassword">Confirmar Nueva Contraseña</label>
           <div class="input-container">
             <i class="lucide-icon input-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 11l8-8 5 5-8 8H3v-5Z"/>
-                <path d="M15 7a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 11l8-8 5 5-8 8H3v-5Z" />
+                <path d="M15 7a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z" />
               </svg>
             </i>
-            <input formControlName="confirmNewPassword" type="password" id="confirmNewPassword" placeholder="Confirmar nueva contraseña" />
+            <input
+              id="confirmPassword"
+              type="password"
+              formControlName="confirmPassword"
+              placeholder="Confirma la contraseña"
+            />
           </div>
         </div>
       </div>
@@ -104,11 +212,31 @@
 
     <article class="form-footer">
       <a routerLink="/clients" class="cancel-button">Cancelar</a>
-      <button type="submit" class="submit-button" [disabled]="clientForm.invalid">
+      <button
+        type="submit"
+        class="submit-button"
+        [disabled]="clientForm.invalid"
+      >
         <i class="lucide-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+            />
+            <polyline points="17 21 17 13 7 13 7 21" />
+            <polyline points="7 3 7 8 15 8" />
+          </svg>
         </i>
-        {{ isEditMode ? 'Guardar Cambios' : 'Crear Cliente' }}
+        {{ isEditMode ? "Guardar Cambios" : "Crear Cliente" }}
       </button>
     </article>
   </form>

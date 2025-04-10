@@ -5,7 +5,7 @@ import { Mascota } from '../model/mascota';
 import { Cliente } from '../model/cliente';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PetService {
   private baseUrl = 'http://localhost:8090/mascota';
@@ -17,17 +17,22 @@ export class PetService {
   // Obtener todas las mascotas
   getPets(): Observable<Mascota[]> {
     return this.http.get<any[]>(`${this.baseUrl}/all`).pipe(
-      map((data) => data.map(item => new Mascota({
-        ...item,
-        cliente: { cedula: item.cedulaCliente }  // Mapea la cédula manualmente
-      })))
+      map((data) =>
+        data.map(
+          (item) =>
+            new Mascota({
+              ...item,
+              cliente: { cedula: item.cedulaCliente }, // Mapea la cédula manualmente
+            })
+        )
+      )
     );
-  }  
+  }
 
   // Obtener una mascota por ID
   getPetById(id: number): Mascota | undefined {
     const pets = this.petsSubject.getValue();
-    return pets.find(pet => pet.id === id);
+    return pets.find((pet) => pet.id === id);
   }
 
   // Obtener una mascota por ID desde el backend (versión optimizada)
@@ -43,7 +48,7 @@ export class PetService {
       })
     );
   }
-  
+
   // Nuevo método para obtener los datos del cliente por cédula
   getClienteByCedula(cedula: string): Observable<Cliente> {
     return this.http.get<Cliente>(`${this.clienteUrl}/find?cedula=${cedula}`);
@@ -52,29 +57,36 @@ export class PetService {
   // Add a new pet with client cedula
   addPet(pet: Mascota, cedula: string): Observable<Mascota> {
     // Match the parameter name 'cedula' as used in the controller
-    return this.http.post<Mascota>(`${this.baseUrl}/add?cedula=${encodeURIComponent(cedula)}`, pet);
+    return this.http.post<Mascota>(
+      `${this.baseUrl}/add?cedula=${encodeURIComponent(cedula)}`,
+      pet
+    );
   }
 
   // Update pet
   updatePet(pet: Mascota, cedula?: string): Observable<Mascota> {
-    // Update endpoint to match the controller method
-    return this.http.put<Mascota>(`${this.baseUrl}/update/${pet.id}`, pet);
+    const url = cedula
+      ? `${this.baseUrl}/update/${pet.id}?cedula=${encodeURIComponent(cedula)}`
+      : `${this.baseUrl}/update/${pet.id}`;
+
+    return this.http.put<Mascota>(url, pet);
   }
 
   deletePet(id: number): Observable<void> {
-    return this.http.put<void>(`${this.baseUrl}/update/${id}?estado=false`, {});  // Aquí usamos PUT para actualizar el estado
+    return this.http.put<void>(`${this.baseUrl}/update/${id}?estado=false`, {}); // Aquí usamos PUT para actualizar el estado
   }
 
   deactivatePet(id: number): Observable<Mascota> {
-    return this.http.put<Mascota>(`${this.baseUrl}/deactivate/${id}`, {});  // Llamada PUT para desactivar la mascota
+    return this.http.put<Mascota>(`${this.baseUrl}/deactivate/${id}`, {}); // Llamada PUT para desactivar la mascota
   }
-  
+
   // Buscar mascotas localmente
   searchPets(query: string): Mascota[] {
     const currentPets = this.petsSubject.getValue();
-    return currentPets.filter(pet =>
-      pet.nombre?.toLowerCase().includes(query.toLowerCase()) ||
-      pet.raza?.toLowerCase().includes(query.toLowerCase())
+    return currentPets.filter(
+      (pet) =>
+        pet.nombre?.toLowerCase().includes(query.toLowerCase()) ||
+        pet.raza?.toLowerCase().includes(query.toLowerCase())
     );
   }
 }
