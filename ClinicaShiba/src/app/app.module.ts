@@ -28,6 +28,7 @@ import { ClientListComponent } from './pages/clients/client-list/client-list.com
 import { ClientFormComponent } from './pages/clients/client-form/client-form.component';
 import { LoginUserComponent } from './pages/login/login-user/login-user.component';
 import { ClientInfoComponent } from './pages/clients/client-info/client-info.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ClientInfoComponent } from './pages/clients/client-info/client-info.com
     ClientListComponent,
     ClientFormComponent,
     LoginUserComponent,
-    ClientInfoComponent
+    ClientInfoComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

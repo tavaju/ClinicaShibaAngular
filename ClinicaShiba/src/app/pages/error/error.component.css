@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: linear-gradient(180deg, #EFF6FF 0%, #DBEAFE 100%);
+}
+
+.container {
+    max-width: 80%; /* Increased from 42rem */
+    width: 100%;
+    height: 80vh; /* Added to fill more of the page vertically */
+    margin: auto; /* Center the container */
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Added to help with centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+.paw-print {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.paw-print-top {
+    top: 1rem;
+    left: 1rem;
+}
+
+.paw-print-bottom {
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.logo-container {
+    width: 8rem;
+    height: 8rem;
+    background: #f3e8ff; /* Changed from #DBEAFE to a light purple */
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 4rem;
+    height: 4rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1F2937;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #4B5563;
+    margin-bottom: 2rem;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #E5E7EB, transparent);
+    margin: 2rem 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #7c3aed; /* Changed from #3B82F6 */
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #6d28d9; /* Changed from #2563EB to a darker purple */
+}
+
+.btn-secondary {
+    background: #F3F4F6;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background: #E5E7EB;
+}
+
+.btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.decoration {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    background: #f3e8ff; /* Changed from #DBEAFE to a light purple */
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.decoration-top {
+    top: -4rem;
+    left: -4rem;
+}
+
+.decoration-bottom {
+    bottom: -4rem;
+    right: -4rem;
+}
+
+@media (max-width: 640px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

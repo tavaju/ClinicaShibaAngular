@@ -65,7 +65,7 @@
 }
 
 .add-button:hover {
-  background-color: #ede9fe;
+  background-color: #fee9e9;
 }
 
 .search-section {
@@ -184,11 +184,11 @@ tr:nth-child(odd) {
 }
 
 .delete-button {
-  color: var(--red-600);
+  color: var(#dc2626);
 }
 
 .delete-button:hover {
-  background-color: var(--red-50);
+  background-color: var(#dc2626);
 }
 
 .modal {
@@ -233,7 +233,7 @@ tr:nth-child(odd) {
 
 .confirm-button {
   padding: 0.5rem 1rem;
-  background-color: var(--red-600);
+  background-color:#dc2626;
   color: white;
   border: none;
   border-radius: 0.375rem;

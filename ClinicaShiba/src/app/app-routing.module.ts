@@ -20,6 +20,9 @@ import { CtaComponent } from './pages/home/cta/cta.component';
 import { LoginUserComponent } from './pages/login/login-user/login-user.component';
 import { ClientInfoComponent } from './pages/clients/client-info/client-info.component';
 
+// Import Error Component
+import { ErrorComponent } from './pages/error/error.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'specialties', component: SpecialtiesComponent },
@@ -42,9 +45,12 @@ const routes: Routes = [
 
   // Login route
   { path: 'login', component: LoginUserComponent },
+  
+  // Explicit error route
+  { path: 'error', component: ErrorComponent },
 
-  // Always put the wildcard route last
-  { path: '**', redirectTo: '' },
+  // Always put the wildcard route last - redirect to error page
+  { path: '**', redirectTo: '/error' }
 ];
 
 @NgModule({

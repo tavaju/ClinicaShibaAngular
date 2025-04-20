@@ -40,7 +40,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let pet of pets">
+        <tr *ngFor="let pet of filteredPets">
           <td>
             <a class="pet-link" [routerLink]="['/pets', pet.id]">
               {{ pet.nombre }}
@@ -70,7 +70,6 @@
               </i>
             </button>
           
-            <!-- Botón de desactivación -->
             <button (click)="deactivatePet(pet.id!)" class="action-button delete-button">
               <i class="lucide-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -79,7 +78,6 @@
               </i>
             </button>
           </td>          
-          
         </tr>
       </tbody>
     </table>
@@ -87,13 +85,19 @@
 
   <article class="table-footer">
     <div class="pagination">
-      <button class="pagination-button" disabled>
+      <button 
+        class="pagination-button" 
+        [disabled]="currentPage === 1"
+        (click)="previousPage()">
         <i class="lucide-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         </i>
       </button>
-      <span class="pagination-info">Página 1 de 1</span>
-      <button class="pagination-button" disabled>
+      <span class="pagination-info">Página {{ currentPage }} de {{ totalPages }}</span>
+      <button 
+        class="pagination-button" 
+        [disabled]="currentPage === totalPages"
+        (click)="nextPage()">
         <i class="lucide-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </i>

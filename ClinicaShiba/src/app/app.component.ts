@@ -4,25 +4,51 @@ import {
   ViewChild,
   ElementRef,
   HostListener,
+  OnInit,
+  OnDestroy,
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('navbarRef') navbarRef!: ElementRef;
   @ViewChild('bannerRef') bannerRef!: ElementRef;
 
   lastScrollTop = 0;
   isLoginRoute: boolean = false;
+  isErrorRoute: boolean = false;
+  hideHeaderFooter: boolean = false;
+  private routerSubscription: Subscription | undefined;
 
   constructor(private router: Router) {
-    this.router.events.subscribe(() => {
-      this.isLoginRoute = this.router.url === '/login';
+    this.routerSubscription = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      // Check if current route is the error page
+      this.hideHeaderFooter = event.urlAfterRedirects === '/error';
     });
+  }
+
+  ngOnInit(): void {
+    this.routerSubscription = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      // Check if current route is the error page
+      this.hideHeaderFooter = event.urlAfterRedirects === '/error';
+    });
+  }
+
+  ngOnDestroy(): void {
+    // Clean up subscription to prevent memory leaks
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
   }
 
   ngAfterViewInit(): void {
