@@ -17,7 +17,7 @@ export class Veterinario {
   foto?: string;
 
   // Relaciones
-  administrador!: Administrador; // Obligatorio
+  administrador?: Administrador; 
   mascotas?: Mascota[]; // Relación muchos a muchos
   tratamientos?: Tratamiento[]; // Relación uno a muchos
 

@@ -14,17 +14,17 @@
           stroke-linejoin="round"
         >
           <path
-            d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+            d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"
           />
-          <polyline points="17 21 17 13 7 13 7 21" />
-          <polyline points="7 3 7 8 15 8" />
         </svg>
       </i>
-      <h1>{{ isEditMode ? "Modificar Cliente" : "Crear Cliente" }}</h1>
+      <h1>
+        {{ isEditMode ? "Modificar Veterinario" : "Crear Nuevo Veterinario" }}
+      </h1>
     </div>
   </article>
 
-  <form [formGroup]="clientForm" (ngSubmit)="onSubmit()" class="form-container">
+  <form [formGroup]="vetForm" (ngSubmit)="onSubmit()" class="form-container">
     <article class="form-grid">
       <div class="form-group">
         <label for="cedula">Cédula</label>
@@ -83,35 +83,7 @@
       </div>
 
       <div class="form-group">
-        <label for="correo">Correo</label>
-        <div class="input-container">
-          <i class="lucide-icon input-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
-          </i>
-          <input
-            formControlName="correo"
-            type="email"
-            id="correo"
-            placeholder="Ingresa el correo"
-          />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="celular">Celular</label>
+        <label for="especialidad">Especialidad</label>
         <div class="input-container">
           <i class="lucide-icon input-icon">
             <svg
@@ -126,15 +98,76 @@
               stroke-linejoin="round"
             >
               <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
               />
+              <path d="m9 12 2 2 4-4" />
             </svg>
           </i>
           <input
-            formControlName="celular"
+            formControlName="especialidad"
             type="text"
-            id="celular"
-            placeholder="Ingresa el celular"
+            id="especialidad"
+            placeholder="Ingresa la especialidad"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="foto">Foto (URL)</label>
+        <div class="input-container">
+          <i class="lucide-icon input-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+              />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </i>
+          <input
+            formControlName="foto"
+            type="text"
+            id="foto"
+            placeholder="Ingresa la URL de la foto"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="numAtenciones">Número de Atenciones</label>
+        <div class="input-container">
+          <i class="lucide-icon input-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+              />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </i>
+          <input
+            formControlName="numAtenciones"
+            type="number"
+            id="numAtenciones"
+            placeholder="Ingresa el número de atenciones"
           />
         </div>
       </div>
@@ -154,8 +187,10 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+              />
+              <path d="m9 12 2 2 4-4" />
             </svg>
           </i>
           <input
@@ -182,8 +217,10 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+              />
+              <path d="m9 12 2 2 4-4" />
             </svg>
           </i>
           <input
@@ -197,7 +234,7 @@
     </article>
 
     <article class="form-footer">
-      <a routerLink="/clients" class="cancel-button">
+      <a routerLink="/vets" class="cancel-button">
         <i class="lucide-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -216,11 +253,7 @@
         </i>
         Cancelar
       </a>
-      <button
-        type="submit"
-        class="submit-button"
-        [disabled]="clientForm.invalid"
-      >
+      <button type="submit" class="submit-button" [disabled]="vetForm.invalid">
         <i class="lucide-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +273,7 @@
             <polyline points="7 3 7 8 15 8" />
           </svg>
         </i>
-        {{ isEditMode ? "Guardar Cambios" : "Crear Cliente" }}
+        {{ isEditMode ? "Guardar Cambios" : "Crear Veterinario" }}
       </button>
     </article>
   </form>

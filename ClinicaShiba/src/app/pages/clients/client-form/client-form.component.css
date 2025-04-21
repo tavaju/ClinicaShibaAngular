@@ -33,19 +33,19 @@
 .title-section {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 0.75rem;
 }
 
 .title-section i {
   width: 1.5rem;
   height: 1.5rem;
-  color: var(--purple-600);
+  color: #7c3aed;
 }
 
 .title-section h1 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--gray-800);
+  color: #1f2937;
   margin: 0;
 }
 
@@ -67,7 +67,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: var(--gray-600);
+  color: #4b5563;
 }
 
 .input-container {
@@ -81,27 +81,28 @@ label {
   transform: translateY(-50%);
   width: 1.25rem;
   height: 1.25rem;
-  color: var(--gray-400);
+  color: #9ca3af;
 }
 
-input {
+input,
+select {
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 2.5rem;
-  border: 1px solid var(--gray-200);
+  border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
   font-size: 1rem;
   outline: none;
   transition: all 0.2s;
-  padding-left: 2.5rem; /* Espacio para el ícono */
 }
 
-input:focus {
-  border-color: var(--purple-500);
+input:focus,
+select:focus {
+  border-color: #8b5cf6;
   box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
 }
 
 .error-message {
-  color: var(--red-600);
+  color: #ef4444;
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
@@ -129,7 +130,7 @@ input:focus {
   justify-content: flex-end;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--gray-200);
+  border-top: 1px solid #e5e7eb;
   gap: 1rem;
 }
 
@@ -137,9 +138,9 @@ input:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--gray-200);
-  color: var(--gray-700);
+  padding: 0.75rem 1.5rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
   border: none;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -148,7 +149,7 @@ input:focus {
 }
 
 .cancel-button:hover {
-  background-color: var(--gray-300);
+  background-color: #e5e7eb;
 }
 
 .cancel-button i {
@@ -171,15 +172,12 @@ input:focus {
 }
 
 .submit-button:hover {
-  background-color: var(--purple-900);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #6d28d9;
 }
 
 .submit-button:disabled {
-  background-color: var(--gray-400);
+  background-color: #9ca3af;
   cursor: not-allowed;
-  transform: none;
 }
 
 .submit-button i {
@@ -200,7 +198,7 @@ input:focus {
   font-weight: bold;
   border: none;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -293,7 +291,8 @@ input:focus {
     flex-direction: column;
   }
 
-  .cancel-button, .submit-button {
+  .cancel-button,
+  .submit-button {
     width: 100%;
     justify-content: center;
   }
