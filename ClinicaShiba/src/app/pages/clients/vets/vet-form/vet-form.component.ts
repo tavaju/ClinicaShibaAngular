@@ -32,6 +32,7 @@ export class VetFormComponent implements OnInit {
       changePassword: [false],
       newPassword: [''],
       confirmPassword: [''],
+      estado: [true, Validators.required], // Add estado control
     });
 
     const id = this.route.snapshot.paramMap.get('id');
@@ -45,6 +46,7 @@ export class VetFormComponent implements OnInit {
           especialidad: vet.especialidad,
           foto: vet.foto,
           numAtenciones: vet.numAtenciones,
+          estado: vet.estado, // Patch estado value
         });
       });
     }
@@ -64,15 +66,20 @@ export class VetFormComponent implements OnInit {
       return;
     }
 
-    const vetData: Veterinario = {
-      cedula: formData.cedula,
-      nombre: formData.nombre,
-      especialidad: formData.especialidad,
-      foto: formData.foto,
-      numAtenciones: formData.numAtenciones,
-      contrasena: formData.contrasena || '',
-      administrador: undefined,
-    };
+    // Create an instance of Veterinario
+    const vetData = new Veterinario(
+      formData.cedula,
+      formData.nombre,
+      formData.especialidad,
+      formData.numAtenciones,
+      formData.contrasena || '',
+      undefined, // Pass undefined for administrador
+      formData.foto,
+      undefined, // Pass undefined for mascotas
+      undefined, // Pass undefined for tratamientos
+      this.vetId, // Use vetId if available
+      formData.estado // Include estado
+    );
 
     if (this.isEditMode && this.vetId) {
       this.vetService

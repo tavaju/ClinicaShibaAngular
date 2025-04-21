@@ -24,7 +24,11 @@ export class VetService {
   // Add a new veterinarian
   addVet(vet: Veterinario, confirmPassword: string): Observable<void> {
     const params = { confirmPassword };
-    return this.http.post<void>(`${this.baseUrl}/add`, vet, { params });
+    return this.http.post<void>(
+      `${this.baseUrl}/add`,
+      { ...vet, estado: vet.estado },
+      { params }
+    );
   }
 
   // Update an existing veterinarian
@@ -44,6 +48,7 @@ export class VetService {
       numAtenciones: vet.numAtenciones,
       cedula: vet.cedula, // Ensure cedula is included
       nombre: vet.nombre, // Ensure nombre is included
+      estado: vet.estado, // Include estado
     };
     return this.http.post<void>(`${this.baseUrl}/update/${id}`, vet, {
       params,

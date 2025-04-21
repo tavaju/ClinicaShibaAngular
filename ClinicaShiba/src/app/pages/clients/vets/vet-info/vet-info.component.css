@@ -136,8 +136,16 @@
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+.active {
   background-color: #ecfdf5;
   color: #059669;
+}
+
+.inactive {
+  background-color: #fef2f2;
+  color: #dc2626;
 }
 
 .info-row {

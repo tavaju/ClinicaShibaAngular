@@ -24,6 +24,11 @@ export class VetInfoComponent implements OnInit {
     });
   }
 
+  // Add a method to get estado text
+  getEstadoTexto(): string {
+    return this.veterinario?.estado ? 'Activo' : 'Inactivo';
+  }
+
   navigateToEdit(): void {
     if (this.veterinario?.id) {
       this.router.navigate(['/vets/edit', this.veterinario.id]);
