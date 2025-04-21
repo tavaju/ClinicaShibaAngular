@@ -17,9 +17,12 @@ export class Veterinario {
   foto?: string;
 
   // Relaciones
-  administrador!: Administrador; // Obligatorio
+  administrador?: Administrador;
   mascotas?: Mascota[]; // Relación muchos a muchos
   tratamientos?: Tratamiento[]; // Relación uno a muchos
+
+  // Estado del veterinario
+  estado: boolean = true; // Default to true (active)
 
   constructor(
     cedula: string,
@@ -27,22 +30,28 @@ export class Veterinario {
     especialidad: string,
     numAtenciones: number,
     contrasena: string,
-    administrador: Administrador,
+    administrador?: Administrador, // Make administrador optional
     foto?: string,
     mascotas?: Mascota[],
     tratamientos?: Tratamiento[],
-    id?: number
+    id?: number,
+    estado: boolean = true
   ) {
     this.cedula = cedula;
     this.nombre = nombre;
     this.especialidad = especialidad;
     this.numAtenciones = numAtenciones;
     this.contrasena = contrasena;
-    this.administrador = administrador;
+    this.administrador = administrador; // Assign optional administrador
 
     if (foto) this.foto = foto;
     if (mascotas) this.mascotas = mascotas;
     if (tratamientos) this.tratamientos = tratamientos;
     if (id !== undefined) this.id = id;
+    this.estado = estado;
+  }
+
+  getEstadoTexto(): string {
+    return this.estado ? 'Activo' : 'Inactivo';
   }
 }

@@ -1,0 +1,93 @@
+<section class="container" *ngIf="veterinario">
+  <article class="detail-header">
+    <div class="title-section">
+      <i data-lucide="user"></i>
+      <h1>Detalles del Veterinario</h1>
+    </div>
+    <div class="actions">
+      <button (click)="navigateToEdit()" class="edit-button">
+        <i class="lucide-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+            <path d="m15 5 4 4" />
+          </svg>
+        </i>
+        Editar
+      </button>
+      <button (click)="goBack()" class="back-button">
+        <i class="lucide-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+        </i>
+        Volver
+      </button>
+    </div>
+  </article>
+
+  <article class="vet-detail-content">
+    <div class="vet-image">
+      <img
+        [src]="veterinario.foto"
+        *ngIf="veterinario.foto"
+        alt="Foto del Veterinario"
+      />
+      <div class="no-image" *ngIf="!veterinario.foto">
+        <i data-lucide="image"></i>
+        <span>Sin imagen</span>
+      </div>
+    </div>
+
+    <div class="vet-info">
+      <div class="info-group">
+        <h2>{{ veterinario.nombre }}</h2>
+        <span
+          class="status"
+          [class.active]="veterinario.estado"
+          [class.inactive]="!veterinario.estado"
+        >
+          {{ getEstadoTexto() }}
+        </span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-item">
+          <label>Cédula:</label>
+          <span>{{ veterinario.cedula }}</span>
+        </div>
+        <div class="info-item">
+          <label>Especialidad:</label>
+          <span>{{ veterinario.especialidad }}</span>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-item">
+          <label>Número de Atenciones:</label>
+          <span>{{ veterinario.numAtenciones }}</span>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

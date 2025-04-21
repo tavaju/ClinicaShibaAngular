@@ -144,6 +144,15 @@ tr:nth-child(even) {
   box-shadow: 0 0 0 2px #eff6ff;
 }
 
+.delete-button {
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #feece9;
+}
+
+
 .add-button {
   padding: 0.5rem 1rem;
   background-color: #f5f3ff;

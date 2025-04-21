@@ -57,7 +57,7 @@ export class PetListComponent implements OnInit, OnDestroy {
       this.petService.deactivatePet(id).subscribe({
         next: () => {
           alert('Mascota desactivada correctamente');
-          this.loadPets();  // Recarga la lista de mascotas después de desactivar
+          this.loadPets(); 
         },
         error: (err) => {
           console.error('Error al desactivar la mascota', err);
