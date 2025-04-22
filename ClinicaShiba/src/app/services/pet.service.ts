@@ -107,4 +107,15 @@ export class PetService {
         })
       );
   }
+
+  //buscar todas las drogas en /tratamiento
+  getAllDrugs(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/tratamiento`).pipe(
+      map((data) => data),
+      catchError((error) => {
+        console.error('Error fetching drugs:', error);
+        throw error;
+      })
+    );
+  }
 }
