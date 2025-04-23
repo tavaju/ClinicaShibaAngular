@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Dar Tratamiento</h2>
+  <form (ngSubmit)="giveTreatment()">
+    <div class="form-group">
+      <label for="veterinarioId">ID Veterinario:</label>
+      <input
+        type="number"
+        id="veterinarioId"
+        [(ngModel)]="veterinarioId"
+        name="veterinarioId"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="droga">Selecciona la Droga a Aplicar:</label>
+      <select id="droga" [(ngModel)]="selectedDrogaId" name="droga" required>
+        <option *ngFor="let drug of availableDrugs" [value]="drug.id">
+          {{ drug.nombre }} (Disponibles: {{ drug.unidadesDisponibles }})
+        </option>
+      </select>
+      <div *ngIf="availableDrugs.length === 0">No hay drogas disponibles.</div>
+    </div>
+
+    <div class="form-footer">
+      <button type="submit" class="submit-button">Dar Tratamiento</button>
+    </div>
+  </form>
+</div>

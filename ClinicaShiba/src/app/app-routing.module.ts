@@ -8,6 +8,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { PetListComponent } from './pages/pets/pet-list/pet-list.component';
 import { PetFormComponent } from './pages/pets/pet-form/pet-form.component';
 import { PetDetailComponent } from './pages/pets/pet-detail/pet-detail.component';
+import { GiveTreatmentComponent } from './pages/pets/give-treatment/give-treatment.component';
 
 // Import client components
 import { ClientListComponent } from './pages/clients/client-list/client-list.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'pets/add', component: PetFormComponent },
   { path: 'pets/edit/:id', component: PetFormComponent },
   { path: 'pets/:id', component: PetDetailComponent },
+  { path: 'pets/give-treatment/:mascotaId', component: GiveTreatmentComponent },
 
   // Client routes
   { path: 'clients', component: ClientListComponent },

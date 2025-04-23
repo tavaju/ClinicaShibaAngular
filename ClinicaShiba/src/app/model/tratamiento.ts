@@ -10,7 +10,7 @@ export class Tratamiento {
   fecha!: Date;
 
   // Relaciones
-  drogas?: Droga[]; // Puede ser una lista vacía o no estar cargada aún
+  droga: Droga; // Relación 1 a 1
   mascota!: Mascota; // Obligatorio
   veterinario!: Veterinario; // Obligatorio
 
@@ -18,13 +18,22 @@ export class Tratamiento {
     fecha: Date,
     mascota: Mascota,
     veterinario: Veterinario,
-    drogas?: Droga[],
+    droga: Droga,
     id?: number
   ) {
     this.fecha = fecha;
     this.mascota = mascota;
     this.veterinario = veterinario;
-    if (drogas) this.drogas = drogas;
+    this.droga = droga;
     if (id !== undefined) this.id = id;
+  }
+
+  static create(
+    fecha: Date,
+    mascota: Mascota,
+    veterinario: Veterinario,
+    droga: Droga
+  ): Tratamiento {
+    return new Tratamiento(fecha, mascota, veterinario, droga);
   }
 }

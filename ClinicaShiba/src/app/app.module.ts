@@ -31,6 +31,7 @@ import { ClientInfoComponent } from './pages/clients/client-info/client-info.com
 import { VetInfoComponent } from './pages/clients/vets/vet-info/vet-info.component';
 import { VetFormComponent } from './pages/clients/vets/vet-form/vet-form.component';
 import { VetListComponent } from './pages/clients/vets/vet-list/vet-list.component';
+import { GiveTreatmentComponent } from './pages/pets/give-treatment/give-treatment.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { VetListComponent } from './pages/clients/vets/vet-list/vet-list.compone
     ClientInfoComponent,
     VetInfoComponent,
     VetFormComponent,
-    VetListComponent
+    VetListComponent,
+    GiveTreatmentComponent
   ],
   imports: [
     BrowserModule,
