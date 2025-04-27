@@ -1,0 +1,70 @@
+<div class="login-background">
+    <div class="brand-name">Clínica Shiba</div>
+    <div class="login-container">
+      <article class="form-container">
+        <div class="logo-container">
+          <img
+            src="/assets/logos/shiba_sinfondo.png"
+            alt="Shiba Logo"
+            class="shiba-logo" />
+          <h2>Portal Veterinarios</h2>
+          <!-- Mostrar el mensaje de error para contraseña incorrecta o cédula no encontrada -->
+          <div
+            *ngIf="errorMessage && errorMessage.trim() !== ''"
+            class="error-message"
+            style="color: #ff3860; text-align: center; margin: 10px 0; padding: 10px; border-radius: 4px; background-color: #feecf0; font-size: 14px;">
+            <span>{{ errorMessage }}</span>
+          </div>
+        </div>
+        <!-- Formulario de inicio de sesión para veterinarios -->
+        <form (ngSubmit)="onSubmit($event)">
+          <div class="form-group">
+            <label for="cedula">Cédula</label>
+            <input
+              type="text"
+              id="cedula"
+              [(ngModel)]="cedula"
+              name="cedula"
+              placeholder="Ingrese su número de cédula"
+              required />
+          </div>
+  
+          <!-- Campo para la contraseña -->
+          <div class="form-group password-group">
+            <label for="password">Contraseña</label>
+            <div class="password-input-container">
+              <input
+                type="password"
+                id="password"
+                [(ngModel)]="password"
+                name="password"
+                placeholder="Ingrese su contraseña"
+                required />
+              <i class="far fa-eye-slash toggle-password" (click)="togglePassword()"></i>
+            </div>
+          </div>
+  
+          <!-- Opciones del formulario -->
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" [(ngModel)]="rememberMe" name="remember" />
+              <span>Recuérdame</span>
+            </label>
+            <a href="#" class="forgot-password">Olvidé mi contraseña</a>
+          </div>
+  
+          <button type="submit">Ingresar</button>
+        </form>
+  
+        <div class="back-to-home">
+          <a href="/" class="home-link">Volver al inicio</a>
+        </div>
+      </article>
+  
+      <article class="image-container">
+        <img
+          src="/assets/images/vet-dog.png"
+          alt="Veterinario" />
+      </article>
+    </div>
+  </div>

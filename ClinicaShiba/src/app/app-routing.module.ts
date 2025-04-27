@@ -17,8 +17,10 @@ import { ClientFormComponent } from './pages/clients/client-form/client-form.com
 // Import CTA component
 import { CtaComponent } from './pages/home/cta/cta.component';
 
-// Import Login Component
+// Import Login Components
 import { LoginUserComponent } from './pages/login/login-user/login-user.component';
+import { LoginVeterinarianComponent } from './pages/login/login-veterinarian/login-veterinarian.component';
+
 import { ClientInfoComponent } from './pages/clients/client-info/client-info.component';
 import { VetListComponent } from './pages/clients/vets/vet-list/vet-list.component';
 import { VetFormComponent } from './pages/clients/vets/vet-form/vet-form.component';
@@ -52,8 +54,9 @@ const routes: Routes = [
   // CTA route within Home
   { path: 'cta', component: CtaComponent },
 
-  // Login route
+  // Login routes
   { path: 'login', component: LoginUserComponent },
+  { path: 'login/vet', component: LoginVeterinarianComponent },
 
   // Always put the wildcard route last
   { path: '**', redirectTo: '' },

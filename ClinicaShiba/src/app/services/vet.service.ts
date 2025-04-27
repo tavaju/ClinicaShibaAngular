@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, map } from 'rxjs';
 import { Veterinario } from '../model/veterinario';
 
 @Injectable({
@@ -19,6 +19,39 @@ export class VetService {
   // Fetch a veterinarian by ID
   getVetById(id: number): Observable<Veterinario> {
     return this.http.get<Veterinario>(`${this.baseUrl}/find/${id}`);
+  }
+
+  // Fetch a veterinarian by cédula
+  getVetByCedula(cedula: string): Observable<Veterinario> {
+    return this.http.get<Veterinario>(`${this.baseUrl}/find/cedula/${cedula}`).pipe(
+      map(vet => {
+        if (!vet) {
+          throw new Error(`No se encontró veterinario con cédula: ${cedula}`);
+        }
+        return vet;
+      }),
+      catchError(error => {
+        console.error(`Error buscando veterinario con cédula ${cedula}:`, error);
+        throw new Error(`No se encontró veterinario con cédula: ${cedula}`);
+      })
+    );
+  }
+
+  // Authenticate a veterinarian with cédula and password
+  authenticateVet(cedula: string, password: string): Observable<Veterinario> {
+    return this.getAllVets().pipe(
+      map(vets => {
+        const matchingVet = vets.find(
+          vet => vet.cedula === cedula && vet.contrasena === password && vet.estado === true
+        );
+        
+        if (!matchingVet) {
+          throw new Error('Cédula o contraseña incorrectos');
+        }
+        
+        return matchingVet;
+      })
+    );
   }
 
   // Add a new veterinarian
