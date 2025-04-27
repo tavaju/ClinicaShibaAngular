@@ -1,0 +1,256 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  border: 1px solid #ff8a8a;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.error-message button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.vet-info-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.detail-header {
+  margin-bottom: 1.5rem;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title-section i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3498db;
+}
+
+.title-section h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.vet-detail-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.vet-image {
+  flex: 0 0 200px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.vet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  width: 100%;
+  height: 100%;
+}
+
+.no-image i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.vet-info {
+  flex: 1;
+}
+
+.info-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.info-group h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status.active {
+  background-color: #e6fff2;
+  color: #00cc66;
+}
+
+.status.inactive {
+  background-color: #ffe6e6;
+  color: #ff4d4d;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.info-item span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.pets-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #555;
+}
+
+.pet-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pet-link:hover {
+  text-decoration: underline;
+}
+
+.status-active {
+  color: #00cc66;
+  font-weight: 500;
+}
+
+.status-inactive {
+  color: #ff4d4d;
+  font-weight: 500;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.action-button:hover {
+  background-color: #f0f0f0;
+}
+
+.view-button {
+  color: #3498db;
+}
+
+.treatment-button {
+  color: #f39c12;
+}
+
+.no-pets-message {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.25rem;
+  color: #666;
+}

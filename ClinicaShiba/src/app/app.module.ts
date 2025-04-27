@@ -33,6 +33,7 @@ import { VetFormComponent } from './pages/clients/vets/vet-form/vet-form.compone
 import { VetListComponent } from './pages/clients/vets/vet-list/vet-list.component';
 import { GiveTreatmentComponent } from './pages/pets/give-treatment/give-treatment.component';
 import { LoginVeterinarianComponent } from './pages/login/login-veterinarian/login-veterinarian.component';
+import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { LoginVeterinarianComponent } from './pages/login/login-veterinarian/log
     VetFormComponent,
     VetListComponent,
     GiveTreatmentComponent,
-    LoginVeterinarianComponent
+    LoginVeterinarianComponent,
+    VetDashboardComponent
   ],
   imports: [
     BrowserModule,

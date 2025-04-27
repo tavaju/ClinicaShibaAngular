@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map } from 'rxjs';
 import { Veterinario } from '../model/veterinario';
+import { Mascota } from '../model/mascota';
 
 @Injectable({
   providedIn: 'root',
@@ -33,6 +34,16 @@ export class VetService {
       catchError(error => {
         console.error(`Error buscando veterinario con cédula ${cedula}:`, error);
         throw new Error(`No se encontró veterinario con cédula: ${cedula}`);
+      })
+    );
+  }
+
+  // Get all pets treated by a veterinarian
+  getPetsByVeterinarioId(veterinarioId: number): Observable<Mascota[]> {
+    return this.http.get<Mascota[]>(`${this.baseUrl}/findByVeterinarioId?veterinarioId=${veterinarioId}`).pipe(
+      catchError(error => {
+        console.error(`Error obteniendo mascotas tratadas por veterinario ID ${veterinarioId}:`, error);
+        throw new Error(`No se pudieron cargar las mascotas tratadas por el veterinario.`);
       })
     );
   }
@@ -78,7 +89,6 @@ export class VetService {
       confirmPassword,
       especialidad: vet.especialidad,
       foto: vet.foto,
-      numAtenciones: vet.numAtenciones,
       cedula: vet.cedula, // Ensure cedula is included
       nombre: vet.nombre, // Ensure nombre is included
       estado: vet.estado, // Include estado

@@ -25,6 +25,7 @@ import { ClientInfoComponent } from './pages/clients/client-info/client-info.com
 import { VetListComponent } from './pages/clients/vets/vet-list/vet-list.component';
 import { VetFormComponent } from './pages/clients/vets/vet-form/vet-form.component';
 import { VetInfoComponent } from './pages/clients/vets/vet-info/vet-info.component';
+import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'vets/edit/:id', component: VetFormComponent },
   { path: 'vets/info', component: VetInfoComponent },
   { path: 'vets/info/:id', component: VetInfoComponent },
+  {path: 'vets/dashboard', component: VetDashboardComponent},
 
   // CTA route within Home
   { path: 'cta', component: CtaComponent },

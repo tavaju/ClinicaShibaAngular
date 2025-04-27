@@ -115,6 +115,31 @@
   flex: 1;
 }
 
+.loading-container, .error-message {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-container p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  border: 1px solid #ff8a8a;
+}
+
+.error-message p {
+  color: #d63031;
+  font-size: 1.1rem;
+}
+
 .info-group {
   display: flex;
   justify-content: space-between;

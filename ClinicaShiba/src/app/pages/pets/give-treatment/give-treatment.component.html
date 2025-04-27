@@ -1,29 +1,37 @@
 <div class="container">
-  <h2>Dar Tratamiento</h2>
-  <form (ngSubmit)="giveTreatment()">
-    <div class="form-group">
-      <label for="veterinarioId">ID Veterinario:</label>
-      <input
-        type="number"
-        id="veterinarioId"
-        [(ngModel)]="veterinarioId"
-        name="veterinarioId"
-        required
-      />
+  <div class="treatment-header">
+    <h2>Dar Tratamiento</h2>
+    <a routerLink="/vets/dashboard" class="back-link">Volver al Dashboard</a>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div *ngIf="loading" class="loading-message">
+    <p>Cargando...</p>
+  </div>
+
+  <form (ngSubmit)="giveTreatment()" *ngIf="!loading && !errorMessage">
+    <div class="form-group vet-info">
+      <p>Tratamiento a suministrar como <strong>Veterinario ID: {{ veterinarioId }}</strong></p>
+      <p>A la <strong>Mascota ID: {{ mascotaId }}</strong></p>
     </div>
 
     <div class="form-group">
-      <label for="droga">Selecciona la Droga a Aplicar:</label>
+      <label for="droga">Selecciona el Medicamento a Aplicar:</label>
       <select id="droga" [(ngModel)]="selectedDrogaId" name="droga" required>
+        <option value="" disabled selected>-- Selecciona un medicamento --</option>
         <option *ngFor="let drug of availableDrugs" [value]="drug.id">
           {{ drug.nombre }} (Disponibles: {{ drug.unidadesDisponibles }})
         </option>
       </select>
-      <div *ngIf="availableDrugs.length === 0">No hay drogas disponibles.</div>
+      <div *ngIf="availableDrugs.length === 0" class="empty-drugs-message">No hay medicamentos disponibles.</div>
     </div>
 
     <div class="form-footer">
-      <button type="submit" class="submit-button">Dar Tratamiento</button>
+      <button type="button" routerLink="/vets/dashboard" class="cancel-button">Cancelar</button>
+      <button type="submit" class="submit-button" [disabled]="!selectedDrogaId">Dar Tratamiento</button>
     </div>
   </form>
 </div>

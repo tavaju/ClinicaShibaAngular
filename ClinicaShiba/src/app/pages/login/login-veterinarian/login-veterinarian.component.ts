@@ -19,13 +19,14 @@ export class LoginVeterinarianComponent {
     event.preventDefault();
     this.vetService.authenticateVet(this.cedula, this.password).subscribe({
       next: (vet) => {
-        // Si el login es exitoso, redirigir a /vets/info con la cédula como parámetro
-        this.router.navigate(['/vets/info'], {
-          queryParams: { cedula: this.cedula },
-        });
+        // Store vet ID in localStorage for future reference
+        localStorage.setItem('currentVetId', vet.id!.toString());
+        
+        // Redirect to the vet dashboard
+        this.router.navigate(['/vets/dashboard']);
       },
       error: (error) => {
-        // Mostrar el mensaje de error si el login falla
+        // Show error message if login fails
         this.errorMessage = 'Cédula o contraseña incorrectos';
         console.error('Error de autenticación:', error);
       }
