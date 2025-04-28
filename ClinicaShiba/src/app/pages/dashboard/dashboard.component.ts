@@ -1,6 +1,13 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { 
+  faMedkit, faPaw, faDollarSign, faChartLine, 
+  faRotate, faTriangleExclamation, faCalendarAlt,
+  faStethoscope, faSyringe, faClock
+} from '@fortawesome/free-solid-svg-icons';
 import { DashboardService } from '../../services/dashboard.service';
-import { DashboardData, TopTratamiento, TratamientoPorMedicamento } from '../../model/dashboard';
+import { DashboardData, TratamientoPorMedicamento, TopTratamiento } from '../../model/dashboard';
 import { Subscription, interval } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import Chart from 'chart.js/auto';
@@ -8,13 +15,25 @@ import Chart from 'chart.js/auto';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   @ViewChild('medicamentoChart') medicamentoChartRef!: ElementRef;
   @ViewChild('topTratamientosChart') topTratamientosChartRef!: ElementRef;
   @ViewChild('veterinariosChart') veterinariosChartRef!: ElementRef;
   @ViewChild('mascotasChart') mascotasChartRef!: ElementRef;
+
+  // Font Awesome icons
+  faMedkit = faMedkit;
+  faPaw = faPaw;
+  faDollarSign = faDollarSign;
+  faChartLine = faChartLine;
+  faRotate = faRotate;
+  faTriangleExclamation = faTriangleExclamation;
+  faCalendarAlt = faCalendarAlt;
+  faStethoscope = faStethoscope;
+  faSyringe = faSyringe;
+  faClock = faClock;
 
   dashboardData!: DashboardData;
   loading = true;
@@ -48,7 +67,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   loadDashboardData(): void {
     this.loading = true;
+    this.error = false;
     this.currentDate = new Date();
+    
     this.dashboardService.getDashboardData()
       .subscribe({
         next: (data) => {
@@ -77,6 +98,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (updatedData) => {
           this.dashboardData = updatedData;
+          this.currentDate = new Date();
           this.updateCharts();
         },
         error: (err) => console.error('Error en la actualización de datos:', err)
@@ -118,30 +140,73 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     const ctx = this.medicamentoChartRef.nativeElement.getContext('2d');
     
-    const labels = this.dashboardData.tratamientosPorMedicamento.map(item => item.nombreMedicamento);
-    const data = this.dashboardData.tratamientosPorMedicamento.map(item => item.cantidad);
+    const labels = this.dashboardData.tratamientosPorMedicamento.map((item: TratamientoPorMedicamento) => item.nombreMedicamento);
+    const data = this.dashboardData.tratamientosPorMedicamento.map((item: TratamientoPorMedicamento) => item.cantidad);
     
     this.medicamentoChart = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: labels,
         datasets: [{
-          label: 'Tratamientos por Medicamento (Último Mes)',
+          label: 'Tratamientos',
           data: data,
-          backgroundColor: 'rgba(54, 162, 235, 0.5)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
+          backgroundColor: 'rgba(83, 166, 156, 0.8)',
+          borderColor: 'rgba(83, 166, 156, 1)',
+          borderWidth: 1,
+          borderRadius: 6,
+          barThickness: 24,
+          maxBarThickness: 32
         }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: 'rgba(50, 50, 50, 0.9)',
+            titleFont: {
+              size: 14,
+              weight: 'bold'
+            },
+            bodyFont: {
+              size: 13
+            },
+            padding: 12,
+            cornerRadius: 6,
+            displayColors: false
+          }
+        },
         scales: {
           y: {
             beginAtZero: true,
             ticks: {
-              precision: 0
+              precision: 0,
+              font: {
+                size: 12
+              }
+            },
+            grid: {
+              display: true,
+              color: 'rgba(0, 0, 0, 0.05)'
+            }
+          },
+          x: {
+            ticks: {
+              font: {
+                size: 12
+              }
+            },
+            grid: {
+              display: false
             }
           }
+        },
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
         }
       }
     });
@@ -152,39 +217,62 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     const ctx = this.topTratamientosChartRef.nativeElement.getContext('2d');
     
-    const labels = this.dashboardData.topTratamientos.map(item => item.nombreMedicamento);
-    const data = this.dashboardData.topTratamientos.map(item => item.unidadesVendidas);
+    const labels = this.dashboardData.topTratamientos.map((item: TopTratamiento) => item.nombreMedicamento);
+    const data = this.dashboardData.topTratamientos.map((item: TopTratamiento) => item.unidadesVendidas);
     
     this.topTratamientosChart = new Chart(ctx, {
       type: 'pie',
       data: {
         labels: labels,
         datasets: [{
-          label: 'Top 3 Tratamientos',
+          label: 'Unidades Vendidas',
           data: data,
           backgroundColor: [
-            'rgba(255, 99, 132, 0.5)',
-            'rgba(54, 162, 235, 0.5)',
-            'rgba(255, 206, 86, 0.5)'
+            'rgba(83, 166, 156, 0.8)', 
+            'rgba(255, 183, 77, 0.8)', 
+            'rgba(126, 87, 194, 0.8)'
           ],
           borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)'
+            'rgba(83, 166, 156, 1)', 
+            'rgba(255, 183, 77, 1)', 
+            'rgba(126, 87, 194, 1)'
           ],
           borderWidth: 1
         }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: {
-            position: 'top',
+            position: 'right',
+            labels: {
+              font: {
+                size: 12
+              },
+              padding: 16,
+              usePointStyle: true,
+              pointStyle: 'circle'
+            }
           },
-          title: {
-            display: true,
-            text: 'Top 3 Tratamientos (Unidades Vendidas)'
+          tooltip: {
+            backgroundColor: 'rgba(50, 50, 50, 0.9)',
+            titleFont: {
+              size: 14,
+              weight: 'bold'
+            },
+            bodyFont: {
+              size: 13
+            },
+            padding: 12,
+            cornerRadius: 6
           }
+        },
+        animation: {
+          animateRotate: true,
+          animateScale: true,
+          duration: 1200,
+          easing: 'easeOutQuart'
         }
       }
     });
@@ -206,26 +294,50 @@ export class DashboardComponent implements OnInit, OnDestroy {
             this.dashboardData.veterinariosInactivos
           ],
           backgroundColor: [
-            'rgba(75, 192, 192, 0.5)',
-            'rgba(255, 99, 132, 0.5)'
+            'rgba(83, 166, 156, 0.8)',
+            'rgba(239, 83, 80, 0.8)'
           ],
           borderColor: [
-            'rgba(75, 192, 192, 1)',
-            'rgba(255, 99, 132, 1)'
+            'rgba(83, 166, 156, 1)',
+            'rgba(239, 83, 80, 1)'
           ],
           borderWidth: 1
         }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
+        cutout: '70%',
         plugins: {
           legend: {
-            position: 'top',
+            position: 'bottom',
+            labels: {
+              font: {
+                size: 12
+              },
+              padding: 16,
+              usePointStyle: true,
+              pointStyle: 'circle'
+            }
           },
-          title: {
-            display: true,
-            text: 'Estado de Veterinarios'
+          tooltip: {
+            backgroundColor: 'rgba(50, 50, 50, 0.9)',
+            titleFont: {
+              size: 14,
+              weight: 'bold'
+            },
+            bodyFont: {
+              size: 13
+            },
+            padding: 12,
+            cornerRadius: 6
           }
+        },
+        animation: {
+          animateRotate: true,
+          animateScale: true,
+          duration: 1200,
+          easing: 'easeOutQuart'
         }
       }
     });
@@ -236,53 +348,72 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     const ctx = this.mascotasChartRef.nativeElement.getContext('2d');
     
-    const activasPct = (this.dashboardData.mascotasActivas / this.dashboardData.mascotasTotales) * 100;
-    const inactivasPct = 100 - activasPct;
-    
     this.mascotasChart = new Chart(ctx, {
       type: 'doughnut',
       data: {
         labels: ['Activas', 'Inactivas'],
         datasets: [{
           label: 'Mascotas',
-          data: [activasPct, inactivasPct],
+          data: [
+            this.dashboardData.mascotasActivas, 
+            this.dashboardData.mascotasTotales - this.dashboardData.mascotasActivas
+          ],
           backgroundColor: [
-            'rgba(75, 192, 192, 0.5)',
-            'rgba(255, 99, 132, 0.5)'
+            'rgba(83, 166, 156, 0.8)',
+            'rgba(239, 83, 80, 0.8)'
           ],
           borderColor: [
-            'rgba(75, 192, 192, 1)',
-            'rgba(255, 99, 132, 1)'
+            'rgba(83, 166, 156, 1)',
+            'rgba(239, 83, 80, 1)'
           ],
           borderWidth: 1
         }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
+        cutout: '70%',
         plugins: {
           legend: {
-            position: 'top',
-          },
-          title: {
-            display: true,
-            text: 'Estado de Mascotas'
+            position: 'bottom',
+            labels: {
+              font: {
+                size: 12
+              },
+              padding: 16,
+              usePointStyle: true,
+              pointStyle: 'circle'
+            }
           },
           tooltip: {
+            backgroundColor: 'rgba(50, 50, 50, 0.9)',
             callbacks: {
-              label: (context) => {
+              label: (context: any) => {
                 const label = context.label || '';
                 const value = context.raw || 0;
                 const total = this.dashboardData.mascotasTotales;
-                const count = context.dataIndex === 0 ? 
-                  this.dashboardData.mascotasActivas :
-                  (total - this.dashboardData.mascotasActivas);
-                  
-                return `${label}: ${count} (${typeof value === 'number' ? value.toFixed(1) : '0'}%)`;
+                const percentage = ((value as number) / total * 100).toFixed(1);
+                return `${label}: ${value} (${percentage}%)`;
               }
-            }
+            },
+            titleFont: {
+              size: 14,
+              weight: 'bold'
+            },
+            bodyFont: {
+              size: 13
+            },
+            padding: 12,
+            cornerRadius: 6
           }
+        },
+        animation: {
+          animateRotate: true,
+          animateScale: true,
+          duration: 1200,
+          easing: 'easeOutQuart'
         }
       }
     });
   }
-} 
+}
