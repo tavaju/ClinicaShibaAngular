@@ -7,8 +7,8 @@
 }
 
 :root {
-    --primary-color: #898e8e; /* Color para administradores */
-    --secondary-color: #a6aaaa; /* Color para administradores */
+    --primary-color: #7c3aed; /* Color para administradores */
+    --secondary-color: #8b5cf6; /* Color secundario para administradores */
     --text-color: #333333;
     --light-gray: #F5F5F5;
 }
@@ -140,7 +140,7 @@ input {
 button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: var(--primary-color);
+    background-color: #898e8e;
     color: white;
     border: none;
     border-radius: 8px;
@@ -152,7 +152,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: var(--secondary-color);
+    background-color: #a6aaaa;
 }
 
 .image-container {
@@ -206,7 +206,7 @@ button[type="submit"]:hover {
         transform: translateX(-50%);
         text-align: center;
         width: auto;
-        background-color: rgba(137, 142, 142, 0.8); /* Color para administradores */
+        background-color: rgba(124, 58, 237, 0.8); /* Color para administradores con transparencia */
         border-radius: 10px;
         backdrop-filter: blur(5px);
         padding: 8px 16px;
