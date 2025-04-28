@@ -21,7 +21,11 @@ export class AppComponent implements AfterViewInit {
 
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
-      this.isLoginRoute = this.router.url === '/login';
+      // Check if the current route is any of the login routes
+      this.isLoginRoute =
+        this.router.url === '/login' ||
+        this.router.url === '/login/vet' ||
+        this.router.url === '/login/admin';
     });
   }
 

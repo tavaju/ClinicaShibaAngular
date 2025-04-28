@@ -1,0 +1,74 @@
+<div class="login-background">
+  <div class="brand-name">Clínica Shiba</div>
+  <div class="login-container">
+    <article class="form-container">
+      <div class="logo-container">
+        <img
+          src="/assets/logos/shiba_sinfondo.png"
+          alt="Shiba Logo"
+          class="shiba-logo" />
+        <h2>Portal Administradores</h2>
+        <!-- Mostrar el mensaje de error para contraseña incorrecta o cédula no encontrada -->
+        <div
+          *ngIf="errorMessage && errorMessage.trim() !== ''"
+          class="error-message"
+          style="color: #ff3860; text-align: center; margin: 10px 0; padding: 10px; border-radius: 4px; background-color: #feecf0; font-size: 14px;">
+          <span>{{ errorMessage }}</span>
+        </div>
+      </div>
+      <!-- Formulario de inicio de sesión para administradores -->
+      <form (ngSubmit)="onSubmit($event)">
+        <div class="form-group">
+          <label for="cedula">Cédula</label>
+          <input
+            type="text"
+            id="cedula"
+            [(ngModel)]="cedula"
+            name="cedula"
+            placeholder="Ingrese su número de cédula"
+            required />
+        </div>
+
+        <!-- Campo para la contraseña -->
+        <div class="form-group password-group">
+          <label for="password">Contraseña</label>
+          <div class="password-input-container">
+            <input
+              type="password"
+              id="password"
+              [(ngModel)]="password"
+              name="password"
+              placeholder="Ingrese su contraseña"
+              required />
+            <i class="far fa-eye-slash toggle-password" (click)="togglePassword()"></i>
+          </div>
+        </div>
+
+        <button type="submit">Ingresar</button>
+      </form>
+      
+      <!-- Opciones de ingreso para usuarios y veterinarios -->
+      <div class="login-options">
+        <h3>¿No eres administrador?</h3>
+        <div class="option-buttons">
+          <a routerLink="/login" class="option-button user-button">
+            <i class="fas fa-user"></i> Ingresar como Usuario
+          </a>
+          <a routerLink="/login/vet" class="option-button vet-button">
+            <i class="fas fa-user-md"></i> Ingresar como Veterinario
+          </a>
+        </div>
+      </div>
+
+      <div class="back-to-home">
+        <a href="/" class="home-link">Volver al inicio</a>
+      </div>
+    </article>
+
+    <article class="image-container">
+      <img
+        src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Administrador" />
+    </article>
+  </div>
+</div>
