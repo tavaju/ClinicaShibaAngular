@@ -27,7 +27,6 @@ export class VetFormComponent implements OnInit {
       nombre: ['', Validators.required],
       especialidad: ['', Validators.required],
       foto: [''],
-      numAtenciones: [0, Validators.required],
       contrasena: [''],
       changePassword: [false],
       newPassword: [''],
@@ -45,7 +44,6 @@ export class VetFormComponent implements OnInit {
           nombre: vet.nombre,
           especialidad: vet.especialidad,
           foto: vet.foto,
-          numAtenciones: vet.numAtenciones,
           estado: vet.estado, // Patch estado value
         });
       });
@@ -71,7 +69,6 @@ export class VetFormComponent implements OnInit {
       formData.cedula,
       formData.nombre,
       formData.especialidad,
-      formData.numAtenciones,
       formData.contrasena || '',
       undefined, // Pass undefined for administrador
       formData.foto,

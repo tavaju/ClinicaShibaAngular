@@ -10,7 +10,7 @@ export class Veterinario {
   cedula!: string;
   nombre!: string;
   especialidad!: string;
-  numAtenciones!: number;
+  numAtenciones?: number; // Now optional as it's calculated by the backend
   contrasena!: string;
 
   // Atributo opcional
@@ -28,19 +28,18 @@ export class Veterinario {
     cedula: string,
     nombre: string,
     especialidad: string,
-    numAtenciones: number,
     contrasena: string,
     administrador?: Administrador, // Make administrador optional
     foto?: string,
     mascotas?: Mascota[],
     tratamientos?: Tratamiento[],
     id?: number,
-    estado: boolean = true
+    estado: boolean = true,
+    numAtenciones?: number // Make numAtenciones optional and move to the end
   ) {
     this.cedula = cedula;
     this.nombre = nombre;
     this.especialidad = especialidad;
-    this.numAtenciones = numAtenciones;
     this.contrasena = contrasena;
     this.administrador = administrador; // Assign optional administrador
 
@@ -48,6 +47,7 @@ export class Veterinario {
     if (mascotas) this.mascotas = mascotas;
     if (tratamientos) this.tratamientos = tratamientos;
     if (id !== undefined) this.id = id;
+    if (numAtenciones !== undefined) this.numAtenciones = numAtenciones;
     this.estado = estado;
   }
 
