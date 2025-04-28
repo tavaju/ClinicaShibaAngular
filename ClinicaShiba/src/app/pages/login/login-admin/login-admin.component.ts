@@ -21,9 +21,8 @@ export class LoginAdminComponent {
         // Store admin ID in localStorage for future reference
         localStorage.setItem('currentAdminId', admin.id!.toString());
         
-        // Redirect to the admin dashboard (you can change this to the appropriate route)
-        // For now redirecting to the veterinarians list which admins likely manage
-        this.router.navigate(['/vets']);
+        // Redirect to the admin dashboard
+        this.router.navigate(['/dashboard']);
       },
       error: (error) => {
         // Show error message if login fails
