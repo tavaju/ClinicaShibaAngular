@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "chart.js": "^4.4.9",
     "ngx-bootstrap": "^19.0.2",
     "ngx-bootstrap-icons": "^1.9.3"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.41"
   }
 }

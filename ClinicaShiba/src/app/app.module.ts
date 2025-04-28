@@ -17,13 +17,13 @@ import { CtaComponent } from './pages/home/cta/cta.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 
-// Import pet components
+// Pet components
 import { PetListComponent } from './pages/pets/pet-list/pet-list.component';
 import { PetFormComponent } from './pages/pets/pet-form/pet-form.component';
 import { PetDetailComponent } from './pages/pets/pet-detail/pet-detail.component';
 import { PetBannerComponent } from './pages/pets/pet-banner/pet-banner.component';
 
-// Import client components
+// Client components
 import { ClientListComponent } from './pages/clients/client-list/client-list.component';
 import { ClientFormComponent } from './pages/clients/client-form/client-form.component';
 import { LoginUserComponent } from './pages/login/login-user/login-user.component';
@@ -34,6 +34,7 @@ import { VetListComponent } from './pages/clients/vets/vet-list/vet-list.compone
 import { GiveTreatmentComponent } from './pages/pets/give-treatment/give-treatment.component';
 import { LoginVeterinarianComponent } from './pages/login/login-veterinarian/login-veterinarian.component';
 import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginAdminComponent } from './pages/login/login-admin/login-admin.component';
 
 @NgModule({
@@ -66,6 +67,7 @@ import { LoginAdminComponent } from './pages/login/login-admin/login-admin.compo
     GiveTreatmentComponent,
     LoginVeterinarianComponent,
     VetDashboardComponent,
+    DashboardComponent,
     LoginAdminComponent
   ],
   imports: [
