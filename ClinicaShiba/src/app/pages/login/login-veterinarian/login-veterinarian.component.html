@@ -43,8 +43,8 @@
               <i class="far fa-eye-slash toggle-password" (click)="togglePassword()"></i>
             </div>
           </div>
-  
-          <!-- Opciones del formulario -->
+          
+          <!-- Opciones del formulario 
           <div class="form-options">
             <label class="remember-me">
               <input type="checkbox" [(ngModel)]="rememberMe" name="remember" />
@@ -52,9 +52,23 @@
             </label>
             <a href="#" class="forgot-password">Olvidé mi contraseña</a>
           </div>
+          -->
   
           <button type="submit">Ingresar</button>
         </form>
+        
+        <!-- Opciones de ingreso para usuarios y administradores -->
+        <div class="login-options">
+          <h3>¿No eres veterinario?</h3>
+          <div class="option-buttons">
+            <a routerLink="/login" class="option-button user-button">
+              <i class="fas fa-user"></i> Ingresar como Usuario
+            </a>
+            <a routerLink="/login/admin" class="option-button admin-button">
+              <i class="fas fa-user-shield"></i> Ingresar como Administrador
+            </a>
+          </div>
+        </div>
   
         <div class="back-to-home">
           <a href="/" class="home-link">Volver al inicio</a>

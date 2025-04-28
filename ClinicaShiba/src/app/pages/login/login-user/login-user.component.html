@@ -44,17 +44,22 @@
             </div>
           </div>
   
-          <!-- Opciones del formulario -->
-          <div class="form-options">
-            <label class="remember-me">
-              <input type="checkbox" [(ngModel)]="rememberMe" name="remember" />
-              <span>Recuérdame</span>
-            </label>
-            <a href="#" class="forgot-password">Olvidé mi contraseña</a>
-          </div>
   
           <button type="submit">Ingresar</button>
         </form>
+        
+        <!-- Opciones de ingreso para veterinarios y administradores -->
+        <div class="login-options">
+          <h3>¿Eres empleado de la clínica?</h3>
+          <div class="option-buttons">
+            <a routerLink="/login/vet" class="option-button vet-button">
+              <i class="fas fa-user-md"></i> Ingresar como Veterinario
+            </a>
+            <a routerLink="/login/admin" class="option-button admin-button">
+              <i class="fas fa-user-shield"></i> Ingresar como Administrador
+            </a>
+          </div>
+        </div>
   
         <div class="back-to-home">
           <a href="/" class="home-link">Volver al inicio</a>

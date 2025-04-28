@@ -232,7 +232,7 @@ tr:nth-child(odd) {
 
 .confirm-button {
   padding: 0.5rem 1rem;
-  background-color: var(--red-600);
+  background-color: #b91c1c;
   color: white;
   border: none;
   border-radius: 0.375rem;
@@ -242,12 +242,12 @@ tr:nth-child(odd) {
 }
 
 .confirm-button:hover {
-  background-color: #b91c1c;
+  background-color: #e38d8d;
 }
 
 .cancel-button {
   padding: 0.5rem 1rem;
-  background-color: var(--gray-200);
+  background-color: #f4f6f9;
   color: var(--gray-700);
   border: none;
   border-radius: 0.375rem;
@@ -257,7 +257,7 @@ tr:nth-child(odd) {
 }
 
 .cancel-button:hover {
-  background-color: var(--gray-300);
+  background-color: #d7d7d7;
 }
 
 @media (max-width: 768px) {

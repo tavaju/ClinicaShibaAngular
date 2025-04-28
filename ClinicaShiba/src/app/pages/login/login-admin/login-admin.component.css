@@ -7,8 +7,8 @@
 }
 
 :root {
-    --primary-color: #5D4E9C;
-    --secondary-color: #8B7ED3;
+    --primary-color: #898e8e; /* Color para administradores */
+    --secondary-color: #a6aaaa; /* Color para administradores */
     --text-color: #333333;
     --light-gray: #F5F5F5;
 }
@@ -22,7 +22,7 @@
 
 body {
     background-color: var(--light-gray);
-    background-image: url('/assets/backgrounds/login_background.svg');
+    background-image: url('/assets/backgrounds/loginAdmin.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -72,7 +72,7 @@ body {
 }
 
 h2 {
-    color: var(--text-color);
+    color: var(--primary-color);
     font-size: 24px;
     margin-bottom: 30px;
 }
@@ -140,7 +140,7 @@ input {
 button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #5D4E9C;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 8px;
@@ -152,7 +152,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #8B7ED3;
+    background-color: var(--secondary-color);
 }
 
 .image-container {
@@ -206,7 +206,7 @@ button[type="submit"]:hover {
         transform: translateX(-50%);
         text-align: center;
         width: auto;
-        background-color: rgba(93, 78, 156, 0.8);
+        background-color: rgba(137, 142, 142, 0.8); /* Color para administradores */
         border-radius: 10px;
         backdrop-filter: blur(5px);
         padding: 8px 16px;
@@ -246,7 +246,7 @@ button[type="submit"]:hover {
 }
 
 .login-background {
-  background-image: url('/assets/backgrounds/login_background.svg');
+  background-image: url('/assets/backgrounds/loginAdmin.svg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -255,22 +255,7 @@ button[type="submit"]:hover {
   justify-content: center;
 }
 
-.submit-button {
-  display: block; /* Ensure the button is always visible */
-  background-color: #6a0dad; /* Purple color */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.submit-button:hover {
-  background-color: #5a0c9a; /* Darker purple on hover */
-}
-
-/* Estilos para las opciones de ingreso para veterinarios y administradores */
+/* Estilos para las opciones de ingreso para diferentes roles */
 .login-options {
   margin-top: 1rem;
   text-align: center;
@@ -310,21 +295,22 @@ button[type="submit"]:hover {
   font-size: 1rem;
 }
 
+.user-button {
+  background-color: #5D4E9C;
+}
+
+.user-button:hover {
+  background-color: #8B7ED3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
 .vet-button {
   background-color: #fc7a43;
 }
 
 .vet-button:hover {
   background-color: #f4966e;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.admin-button {
-background-color: #898e8e;}
-
-.admin-button:hover {
-  background-color: #a6aaaa;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
