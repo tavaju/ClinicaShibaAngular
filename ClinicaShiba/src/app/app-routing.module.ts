@@ -26,6 +26,7 @@ import { VetListComponent } from './pages/clients/vets/vet-list/vet-list.compone
 import { VetFormComponent } from './pages/clients/vets/vet-form/vet-form.component';
 import { VetInfoComponent } from './pages/clients/vets/vet-info/vet-info.component';
 import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,6 +53,9 @@ const routes: Routes = [
   { path: 'vets/info', component: VetInfoComponent },
   { path: 'vets/info/:id', component: VetInfoComponent },
   {path: 'vets/dashboard', component: VetDashboardComponent},
+
+  // Dashboard route
+  { path: 'dashboard', component: DashboardComponent },
 
   // CTA route within Home
   { path: 'cta', component: CtaComponent },
