@@ -71,4 +71,53 @@
       </div>
     </div>
   </article>
+
+  <!-- Sección de Historial Médico -->
+  <article class="historial-section">
+    <div class="historial-header">
+      <div class="title-section">
+        <i class="lucide-icon historial-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </i>
+        <h2>Historial Médico</h2>
+      </div>
+    </div>
+
+    <div *ngIf="historialLoading" class="loading-indicator">
+      <p>Cargando historial médico...</p>
+    </div>
+
+    <div *ngIf="historialError" class="error-message">
+      <p>{{ historialError }}</p>
+    </div>
+
+    <div *ngIf="!historialLoading && !historialError">
+      <div *ngIf="historialMedico.length === 0" class="empty-historial">
+        <p>Esta mascota no tiene historial médico registrado aún.</p>
+      </div>
+
+      <div *ngIf="historialMedico.length > 0" class="historial-table-container">
+        <table class="historial-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Veterinario</th>
+              <th>Especialidad</th>
+              <th>Medicamento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let registro of historialMedico">
+              <td>{{ formatDate(registro.fecha) }}</td>
+              <td>{{ registro.nombreVeterinario }}</td>
+              <td>{{ registro.especialidadVeterinario }}</td>
+              <td>{{ registro.nombreDroga }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
 </section>
