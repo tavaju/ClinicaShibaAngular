@@ -63,8 +63,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let pet of pets">
-            <td>{{ pet.nombre }}</td>
-            <td>{{ pet.raza }}</td>
+            <td><a class="pet-link" [routerLink]="['/pets', pet.id]">{{ pet.nombre }}</a></td>            <td>{{ pet.raza }}</td>
             <td>{{ pet.edad }}</td>
             <td>{{ pet.peso }}</td>
             <td class="pet-image">

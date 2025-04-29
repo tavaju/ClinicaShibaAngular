@@ -9,7 +9,7 @@ import { switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-pet-list',
   templateUrl: './pet-list.component.html',
-  styleUrls: ['./pet-list.component.css']
+  styleUrls: ['./pet-list.component.css'],
 })
 export class PetListComponent implements OnInit, OnDestroy {
   pets: Mascota[] = [];
@@ -33,7 +33,7 @@ export class PetListComponent implements OnInit, OnDestroy {
   }
 
   loadPets(): void {
-    this.petService.getPets().subscribe(pets => {
+    this.petService.getPets().subscribe((pets) => {
       this.pets = pets;
       this.checkTreatments();
       this.fetchMascotaEstados(); // Fetch estado for each Mascota
@@ -41,9 +41,9 @@ export class PetListComponent implements OnInit, OnDestroy {
   }
 
   fetchMascotaEstados(): void {
-    this.pets.forEach(pet => {
+    this.pets.forEach((pet) => {
       if (pet.id) {
-        this.petService.getMascotaEstado(pet.id).subscribe(estado => {
+        this.petService.getMascotaEstado(pet.id).subscribe((estado) => {
           this.petsEstado.set(pet.id!, estado);
         });
       }
@@ -79,24 +79,26 @@ export class PetListComponent implements OnInit, OnDestroy {
       this.petService.deactivatePet(id).subscribe({
         next: () => {
           alert('Mascota desactivada correctamente');
-          this.loadPets(); 
+          this.loadPets();
         },
         error: (err) => {
           console.error('Error al desactivar la mascota', err);
           alert('Hubo un error al desactivar la mascota');
-        }
+        },
       });
     }
   }
 
   checkTreatments(): void {
-    this.pets.forEach(pet => {
+    this.pets.forEach((pet) => {
       if (pet.id) {
-        this.treatmentService.hasTreatment(pet.id).subscribe((hasTreatment: boolean) => {
-          if (hasTreatment) {
-            this.petsWithTreatment.add(pet.id!); 
-          }
-        });
+        this.treatmentService
+          .hasTreatment(pet.id)
+          .subscribe((hasTreatment: boolean) => {
+            if (hasTreatment) {
+              this.petsWithTreatment.add(pet.id!);
+            }
+          });
       }
     });
   }
