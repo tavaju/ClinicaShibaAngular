@@ -58,20 +58,18 @@ export class ClientFormComponent implements OnInit {
   onSubmit(): void {
     if (this.clientForm.valid) {
       const formData = this.clientForm.value;
-      console.log('Datos del formulario:', formData); // Depuración
+      console.log('Datos del formulario:', formData);
 
       if (this.isEditMode && this.clientId) {
-        // Si el cliente tiene algún campo cambiado, solo actualiza esos campos
         const updatedClient: Cliente = {
           id: this.clientId,
           cedula: formData.cedula,
-          nombre: formData.nombre || undefined, // Solo actualiza si se cambió
-          correo: formData.correo || undefined, // Solo actualiza si se cambió
-          celular: formData.celular || undefined, // Solo actualiza si se cambió
-          contrasena: formData.contrasena || undefined, // Solo actualiza si se cambió
+          nombre: formData.nombre || undefined, 
+          correo: formData.correo || undefined, 
+          celular: formData.celular || undefined, 
+          contrasena: formData.contrasena || undefined, 
         };
 
-        // Llamar al servicio para actualizar el cliente
         this.clientService
           .updateClient(
             this.clientId,
@@ -81,7 +79,7 @@ export class ClientFormComponent implements OnInit {
             formData.confirmNewPassword
           )
           .subscribe({
-            next: () => this.router.navigate(['/clients']),
+            next: () => this.router.navigate(['/vets/dashboard']),
             error: (err) => {
               console.error('Error al actualizar el cliente:', err);
               alert('Error al actualizar el cliente.');
@@ -95,13 +93,12 @@ export class ClientFormComponent implements OnInit {
           correo: formData.correo,
           celular: formData.celular,
           contrasena: formData.confirmPassword,
-
         });
 
         this.clientService
           .addClient(newClient, formData.confirmPassword)
           .subscribe({
-            next: () => this.router.navigate(['/clients']),
+            next: () => this.router.navigate(['/vets/dashboard']),
             error: (err) => {
               console.error('Error al crear el cliente:', err);
               alert('Error al crear el cliente.');

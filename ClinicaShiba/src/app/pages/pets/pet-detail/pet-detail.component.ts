@@ -8,7 +8,7 @@ import { HistorialMedico } from '../../../model/historial-medico';
 @Component({
   selector: 'app-pet-detail',
   templateUrl: './pet-detail.component.html',
-  styleUrls: ['./pet-detail.component.css']
+  styleUrls: ['./pet-detail.component.css'],
 })
 export class PetDetailComponent implements OnInit {
   pet?: Mascota;
@@ -35,28 +35,28 @@ export class PetDetailComponent implements OnInit {
         next: (pet) => {
           console.log('Mascota obtenida:', pet);
           this.pet = pet;
-          
+
           // Una vez tenemos la mascota, si tiene cliente asociado, cargamos sus datos
           if (pet.cliente?.cedula) {
             this.petService.getClienteByCedula(pet.cliente.cedula).subscribe({
               next: (cliente) => {
                 console.log('Cliente obtenido:', cliente);
                 this.cliente = cliente;
-                
+
                 // Asignamos el cliente completo a la mascota
                 this.pet!.cliente = cliente;
                 this.isLoading = false;
-                
+
                 // Cargamos el historial médico
                 this.cargarHistorialMedico(petId);
               },
               error: (error) => {
                 console.error('Error al cargar el cliente:', error);
                 this.isLoading = false;
-                
+
                 // Intentar cargar el historial médico aunque fallara la carga del cliente
                 this.cargarHistorialMedico(petId);
-              }
+              },
             });
           } else {
             this.isLoading = false;
@@ -68,7 +68,7 @@ export class PetDetailComponent implements OnInit {
           console.error('Error al cargar la mascota:', error);
           this.router.navigate(['/pets']); // Si hay error, redirigir a la lista
           this.isLoading = false;
-        }
+        },
       });
     } else {
       this.router.navigate(['/pets']);
@@ -86,7 +86,7 @@ export class PetDetailComponent implements OnInit {
         console.error('Error al cargar el historial médico:', error);
         this.historialError = 'No se pudo cargar el historial médico';
         this.historialLoading = false;
-      }
+      },
     });
   }
 
@@ -97,9 +97,9 @@ export class PetDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/pets']);
+    this.router.navigate(['/vets/dashboard']);
   }
-  
+
   // Método para formatear fechas
   formatDate(date: Date): string {
     return date.toLocaleDateString('es-ES', {
@@ -107,7 +107,7 @@ export class PetDetailComponent implements OnInit {
       month: '2-digit',
       year: 'numeric',
       hour: '2-digit',
-      minute: '2-digit'
+      minute: '2-digit',
     });
   }
 }
