@@ -88,7 +88,7 @@ export class VetFormComponent implements OnInit {
           formData.confirmPassword
         )
         .subscribe({
-          next: () => this.router.navigate(['/vets']),
+          next: () => this.router.navigate(['/admin/dashboard']),
           error: (err) => {
             console.error('Error al actualizar el veterinario:', err);
             alert('Error al actualizar el veterinario.');
@@ -96,7 +96,7 @@ export class VetFormComponent implements OnInit {
         });
     } else {
       this.vetService.addVet(vetData, formData.confirmPassword).subscribe({
-        next: () => this.router.navigate(['/vets']),
+        next: () => this.router.navigate(['/admin/dashboard']),
         error: (err) => {
           console.error('Error al crear el veterinario:', err);
           alert('Error al crear el veterinario.');
@@ -106,6 +106,6 @@ export class VetFormComponent implements OnInit {
   }
 
   onCancel(): void {
-    this.router.navigate(['/vets']);
+    this.router.navigate(['/admin/dashboard']);
   }
 }

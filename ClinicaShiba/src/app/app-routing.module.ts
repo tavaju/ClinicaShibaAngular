@@ -56,7 +56,7 @@ const routes: Routes = [
   { path: 'vets/dashboard', component: VetDashboardComponent },
 
   // Dashboard route
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'admin/dashboard', component: DashboardComponent },
 
   // CTA route within Home
   { path: 'cta', component: CtaComponent },
