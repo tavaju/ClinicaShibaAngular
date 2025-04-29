@@ -122,19 +122,29 @@ export class PetService {
 
   // Obtener el historial médico de una mascota
   getHistorialMedico(mascotaId: number): Observable<HistorialMedico[]> {
-    return this.http.get<HistorialMedico[]>(`${this.baseUrl}/historial-medico/${mascotaId}`).pipe(
-      map((historial) => {
-        console.log('Historial médico obtenido:', historial);
-        // Convertir el string de fecha a objeto Date
-        return historial.map(item => ({
-          ...item,
-          fecha: new Date(item.fecha)
-        }));
-      }),
-      catchError((error) => {
-        console.error(`Error al obtener historial médico para la mascota ${mascotaId}:`, error);
-        throw error;
-      })
-    );
+    return this.http
+      .get<HistorialMedico[]>(`${this.baseUrl}/historial-medico/${mascotaId}`)
+      .pipe(
+        map((historial) => {
+          console.log('Historial médico obtenido:', historial);
+          // Convertir el string de fecha a objeto Date
+          return historial.map((item) => ({
+            ...item,
+            fecha: new Date(item.fecha),
+          }));
+        }),
+        catchError((error) => {
+          console.error(
+            `Error al obtener historial médico para la mascota ${mascotaId}:`,
+            error
+          );
+          throw error;
+        })
+      );
+  }
+
+  // Fetch the estado of a Mascota by ID
+  getMascotaEstado(mascotaId: number): Observable<boolean> {
+    return this.http.get<boolean>(`${this.baseUrl}/estado/${mascotaId}`);
   }
 }

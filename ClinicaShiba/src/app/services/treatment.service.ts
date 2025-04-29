@@ -9,7 +9,7 @@ import { Mascota } from '../model/mascota';
   providedIn: 'root',
 })
 export class TreatmentService {
-  private baseUrl = 'http://localhost:8090/droga'; 
+  private baseUrl = 'http://localhost:8090/droga';
   private mascotaUrl = 'http://localhost:8090/mascota';
   private veterinarioUrl = 'http://localhost:8090/veterinario';
 
@@ -24,54 +24,75 @@ export class TreatmentService {
     veterinarioId: number,
     drogaId: number
   ): Observable<Tratamiento> {
-    return this.http.post<Tratamiento>(
-      `${this.mascotaUrl}/darTratamiento/${mascotaId}`,
-      null,
-      {
-        params: {
-          veterinarioId: veterinarioId.toString(),
-          drogaId: drogaId.toString(),
-        },
-      }
-    ).pipe(
-      catchError(error => {
-        console.error('Error creating treatment:', error);
+    return this.http
+      .post<Tratamiento>(
+        `${this.mascotaUrl}/darTratamiento/${mascotaId}`,
+        null,
+        {
+          params: {
+            veterinarioId: veterinarioId.toString(),
+            drogaId: drogaId.toString(),
+          },
+        }
+      )
+      .pipe(
+        catchError((error) => {
+          console.error('Error creating treatment:', error);
 
-        // Default error message
-        return throwError(
-          () =>
-            new Error(
-              error.error?.message ||
-                'El veterinario está inactivo y no puede suministrar tratamientos!'
-            )
-        );
-      })
-    );
+          // Default error message
+          return throwError(
+            () =>
+              new Error(
+                error.error?.message ||
+                  'El veterinario está inactivo y no puede suministrar tratamientos!'
+              )
+          );
+        })
+      );
   }
 
+  hasTreatment(mascotaId: number): Observable<boolean> {
+    return this.http.get<boolean>(`${this.baseUrl}/hasTreatment/${mascotaId}`);
+  }
+
+
   getPetsByVeterinarioId(veterinarioId: number): Observable<Mascota[]> {
-    return this.http.get<Mascota[]>(`${this.veterinarioUrl}/findByVeterinarioId?veterinarioId=${veterinarioId}`).pipe(
-      catchError(error => {
-        console.error(`Error obteniendo mascotas tratadas por veterinario ID ${veterinarioId}:`, error);
-        throw new Error(`No se pudieron cargar las mascotas tratadas por el veterinario.`);
-      })
-    );
+    return this.http
+      .get<Mascota[]>(
+        `${this.veterinarioUrl}/findByVeterinarioId?veterinarioId=${veterinarioId}`
+      )
+      .pipe(
+        catchError((error) => {
+          console.error(
+            `Error obteniendo mascotas tratadas por veterinario ID ${veterinarioId}:`,
+            error
+          );
+          throw new Error(
+            `No se pudieron cargar las mascotas tratadas por el veterinario.`
+          );
+        })
+      );
   }
 
   hasPetReceivedTreatment(petId: number): Observable<boolean> {
     console.log(`Verificando tratamientos para mascota ID: ${petId}`);
-    return this.http.get<boolean>(`${this.mascotaUrl}/hasTratamiento/${petId}`).pipe(
-      map(hasTreatment => {
-        console.log(`Respuesta para mascota ${petId}:`, hasTreatment);
-        return hasTreatment;
-      }),
-      catchError(error => {
-        console.error(`Error verificando tratamientos para mascota ID ${petId}:`, error);
-        return new Observable<boolean>(observer => {
-          observer.next(false);
-          observer.complete();
-        });
-      })
-    );
+    return this.http
+      .get<boolean>(`${this.mascotaUrl}/hasTratamiento/${petId}`)
+      .pipe(
+        map((hasTreatment) => {
+          console.log(`Respuesta para mascota ${petId}:`, hasTreatment);
+          return hasTreatment;
+        }),
+        catchError((error) => {
+          console.error(
+            `Error verificando tratamientos para mascota ID ${petId}:`,
+            error
+          );
+          return new Observable<boolean>((observer) => {
+            observer.next(false);
+            observer.complete();
+          });
+        })
+      );
   }
 }

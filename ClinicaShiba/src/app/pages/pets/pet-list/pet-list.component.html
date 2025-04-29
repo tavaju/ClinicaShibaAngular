@@ -124,8 +124,10 @@
             </button>
 
             <button 
-              [routerLink]="['/pets/give-treatment', pet.id]"
-              title="{{hasTreatment(pet.id) ? 'Esta mascota ya ha recibido tratamiento' : 'Dar tratamiento a esta mascota'}}"
+              [routerLink]="pet.id ? ['/pets/give-treatment', pet.id] : null"
+              [disabled]="!pet.id || !canGiveTreatment(pet.id)"
+              title="{{ !pet.id ? 'ID de mascota no válido' : petsEstado.get(pet.id) === false ? 'Esta mascota está inactiva y no puede recibir tratamiento' : hasTreatment(pet.id) ? 'Esta mascota ya ha recibido tratamiento' : 'Dar tratamiento a esta mascota' }}"
+              class="action-button treatment-button"
             >
               <i class="fa fa-medkit"></i> Dar Tratamiento
             </button>

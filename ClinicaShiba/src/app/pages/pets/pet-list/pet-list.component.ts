@@ -13,6 +13,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class PetListComponent implements OnInit, OnDestroy {
   pets: Mascota[] = [];
+  petsEstado: Map<number, boolean> = new Map(); // Store estado of each Mascota
   searchQuery: string = '';
   private subscription: Subscription = new Subscription();
   petsWithTreatment: Set<number> = new Set<number>();
@@ -25,13 +26,6 @@ export class PetListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadPets();
-
-    this.subscription.add(
-      this.petService.getPets().subscribe(pets => {
-        this.pets = pets;
-        this.checkTreatments();
-      })
-    );
   }
 
   ngOnDestroy(): void {
@@ -42,33 +36,26 @@ export class PetListComponent implements OnInit, OnDestroy {
     this.petService.getPets().subscribe(pets => {
       this.pets = pets;
       this.checkTreatments();
+      this.fetchMascotaEstados(); // Fetch estado for each Mascota
     });
   }
 
-  // Método para verificar qué mascotas ya tienen tratamiento
-  checkTreatments(): void {
-    if (!this.pets.length) return;
-
-    // Creamos un array de observables para consultar cada mascota
-    const treatmentChecks = this.pets.map(pet => {
-      if (!pet.id) return of(false);
-      return this.treatmentService.hasPetReceivedTreatment(pet.id).pipe(
-        switchMap(hasTreatment => {
-          if (hasTreatment && pet.id) {
-            this.petsWithTreatment.add(pet.id);
-          }
-          return of(hasTreatment);
-        })
-      );
+  fetchMascotaEstados(): void {
+    this.pets.forEach(pet => {
+      if (pet.id) {
+        this.petService.getMascotaEstado(pet.id).subscribe(estado => {
+          this.petsEstado.set(pet.id!, estado);
+        });
+      }
     });
-
-    // Ejecutamos todas las consultas en paralelo
-    this.subscription.add(
-      forkJoin(treatmentChecks).subscribe()
-    );
   }
 
-  // Verificar si una mascota ya tiene tratamiento
+  canGiveTreatment(petId: number | undefined): boolean {
+    if (!petId) return false;
+    const isActive = this.petsEstado.get(petId);
+    return isActive !== false && !this.hasTreatment(petId);
+  }
+
   hasTreatment(petId: number | undefined): boolean {
     if (!petId) return false;
     return this.petsWithTreatment.has(petId);
@@ -100,5 +87,17 @@ export class PetListComponent implements OnInit, OnDestroy {
         }
       });
     }
+  }
+
+  checkTreatments(): void {
+    this.pets.forEach(pet => {
+      if (pet.id) {
+        this.treatmentService.hasTreatment(pet.id).subscribe((hasTreatment: boolean) => {
+          if (hasTreatment) {
+            this.petsWithTreatment.add(pet.id!); 
+          }
+        });
+      }
+    });
   }
 }
