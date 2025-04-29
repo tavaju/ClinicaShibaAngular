@@ -2,7 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Mascota } from '../../../model/mascota';
 import { PetService } from '../../../services/pet.service';
-import { Subscription } from 'rxjs';
+import { TreatmentService } from '../../../services/treatment.service';
+import { Subscription, forkJoin, of } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pet-list',
@@ -13,9 +15,11 @@ export class PetListComponent implements OnInit, OnDestroy {
   pets: Mascota[] = [];
   searchQuery: string = '';
   private subscription: Subscription = new Subscription();
+  petsWithTreatment: Set<number> = new Set<number>();
 
   constructor(
     private petService: PetService,
+    private treatmentService: TreatmentService,
     private router: Router
   ) {}
 
@@ -25,6 +29,7 @@ export class PetListComponent implements OnInit, OnDestroy {
     this.subscription.add(
       this.petService.getPets().subscribe(pets => {
         this.pets = pets;
+        this.checkTreatments();
       })
     );
   }
@@ -36,7 +41,37 @@ export class PetListComponent implements OnInit, OnDestroy {
   loadPets(): void {
     this.petService.getPets().subscribe(pets => {
       this.pets = pets;
+      this.checkTreatments();
     });
+  }
+
+  // Método para verificar qué mascotas ya tienen tratamiento
+  checkTreatments(): void {
+    if (!this.pets.length) return;
+
+    // Creamos un array de observables para consultar cada mascota
+    const treatmentChecks = this.pets.map(pet => {
+      if (!pet.id) return of(false);
+      return this.treatmentService.hasPetReceivedTreatment(pet.id).pipe(
+        switchMap(hasTreatment => {
+          if (hasTreatment && pet.id) {
+            this.petsWithTreatment.add(pet.id);
+          }
+          return of(hasTreatment);
+        })
+      );
+    });
+
+    // Ejecutamos todas las consultas en paralelo
+    this.subscription.add(
+      forkJoin(treatmentChecks).subscribe()
+    );
+  }
+
+  // Verificar si una mascota ya tiene tratamiento
+  hasTreatment(petId: number | undefined): boolean {
+    if (!petId) return false;
+    return this.petsWithTreatment.has(petId);
   }
 
   onSearch(): void {
