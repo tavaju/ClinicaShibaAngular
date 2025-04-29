@@ -22,7 +22,7 @@ export class LoginAdminComponent {
         localStorage.setItem('currentAdminId', admin.id!.toString());
         
         // Redirect to the admin dashboard
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['admin/dashboard']);
       },
       error: (error) => {
         // Show error message if login fails

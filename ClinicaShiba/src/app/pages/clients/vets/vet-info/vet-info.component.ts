@@ -70,6 +70,6 @@ export class VetInfoComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/vets']);
+    this.router.navigate(['/admin/dashboard']);
   }
 }
