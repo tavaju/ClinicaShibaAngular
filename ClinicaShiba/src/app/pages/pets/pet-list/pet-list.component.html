@@ -125,8 +125,6 @@
 
             <button 
               [routerLink]="['/pets/give-treatment', pet.id]"
-              [disabled]="hasTreatment(pet.id)"
-              [ngClass]="{'disabled-button': hasTreatment(pet.id)}"
               title="{{hasTreatment(pet.id) ? 'Esta mascota ya ha recibido tratamiento' : 'Dar tratamiento a esta mascota'}}"
             >
               <i class="fa fa-medkit"></i> Dar Tratamiento

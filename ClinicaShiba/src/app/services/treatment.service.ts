@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
 import { Droga } from '../model/droga';
 import { Tratamiento } from '../model/tratamiento';
 import { Mascota } from '../model/mascota';
@@ -25,7 +25,7 @@ export class TreatmentService {
     drogaId: number
   ): Observable<Tratamiento> {
     return this.http.post<Tratamiento>(
-      `${this.mascotaUrl}/darTratamiento/${mascotaId}`, 
+      `${this.mascotaUrl}/darTratamiento/${mascotaId}`,
       null,
       {
         params: {
@@ -33,10 +33,22 @@ export class TreatmentService {
           drogaId: drogaId.toString(),
         },
       }
+    ).pipe(
+      catchError(error => {
+        console.error('Error creating treatment:', error);
+
+        // Default error message
+        return throwError(
+          () =>
+            new Error(
+              error.error?.message ||
+                'El veterinario está inactivo y no puede suministrar tratamientos!'
+            )
+        );
+      })
     );
   }
 
-  // Get all pets treated by a specific veterinarian
   getPetsByVeterinarioId(veterinarioId: number): Observable<Mascota[]> {
     return this.http.get<Mascota[]>(`${this.veterinarioUrl}/findByVeterinarioId?veterinarioId=${veterinarioId}`).pipe(
       catchError(error => {
@@ -46,10 +58,8 @@ export class TreatmentService {
     );
   }
 
-  // Verificar si una mascota ya tiene tratamiento usando el nuevo endpoint
   hasPetReceivedTreatment(petId: number): Observable<boolean> {
     console.log(`Verificando tratamientos para mascota ID: ${petId}`);
-    // Utilizamos el nuevo endpoint específico para verificar tratamientos
     return this.http.get<boolean>(`${this.mascotaUrl}/hasTratamiento/${petId}`).pipe(
       map(hasTreatment => {
         console.log(`Respuesta para mascota ${petId}:`, hasTreatment);
@@ -57,7 +67,6 @@ export class TreatmentService {
       }),
       catchError(error => {
         console.error(`Error verificando tratamientos para mascota ID ${petId}:`, error);
-        // En caso de error, devolvemos false para evitar bloquear el botón por error
         return new Observable<boolean>(observer => {
           observer.next(false);
           observer.complete();

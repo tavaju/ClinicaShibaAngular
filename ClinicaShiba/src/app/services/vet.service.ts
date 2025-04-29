@@ -53,13 +53,13 @@ export class VetService {
     return this.getAllVets().pipe(
       map(vets => {
         const matchingVet = vets.find(
-          vet => vet.cedula === cedula && vet.contrasena === password && vet.estado === true
+          vet => vet.cedula === cedula && vet.contrasena === password
         );
-        
+
         if (!matchingVet) {
           throw new Error('Cédula o contraseña incorrectos');
         }
-        
+
         return matchingVet;
       })
     );

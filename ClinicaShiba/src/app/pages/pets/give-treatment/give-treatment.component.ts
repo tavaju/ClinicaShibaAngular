@@ -55,7 +55,7 @@ export class GiveTreatmentComponent implements OnInit {
       this.errorMessage = 'Por favor, selecciona un medicamento.';
       return;
     }
-    
+
     if (!this.veterinarioId) {
       this.errorMessage = 'No se encontró información del veterinario. Por favor, inicia sesión.';
       return;
@@ -63,11 +63,7 @@ export class GiveTreatmentComponent implements OnInit {
 
     this.loading = true;
     this.treatmentService
-      .createTreatment(
-        this.mascotaId,
-        this.veterinarioId,
-        this.selectedDrogaId
-      )
+      .createTreatment(this.mascotaId, this.veterinarioId, this.selectedDrogaId)
       .subscribe({
         next: () => {
           alert('¡Tratamiento dado exitosamente!');
@@ -75,9 +71,9 @@ export class GiveTreatmentComponent implements OnInit {
         },
         error: (error) => {
           console.error('Error applying treatment:', error);
-          this.errorMessage = `Error al aplicar el tratamiento: ${error.message}`;
+          this.errorMessage = error.message || 'Error al aplicar el tratamiento.';
           this.loading = false;
-        }
+        },
       });
   }
 }
