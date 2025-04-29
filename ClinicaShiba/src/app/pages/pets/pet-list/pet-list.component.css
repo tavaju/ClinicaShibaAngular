@@ -152,6 +152,75 @@ tr:nth-child(even) {
   background-color: #feece9;
 }
 
+/* Estilos mejorados para el botón de tratamiento con color e ícono característico */
+button[routerLink] {
+  padding: 0.6rem 1rem;
+  background-color: #3b82f6; /* Azul médico más profesional */
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+button[routerLink]::before {
+  content: "💉"; /* Ícono de jeringa característico de tratamiento médico */
+  font-size: 1rem;
+  margin-right: 0.25rem;
+}
+
+button[routerLink]:hover:not([disabled]) {
+  background-color: #2563eb; /* Azul más oscuro al hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button[routerLink]:active:not([disabled]) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo mejorado para el botón deshabilitado */
+button[disabled], .disabled-button {
+  background-color: #cbd5e1 !important; /* Gris más suave */
+  color: #64748b !important; /* Texto gris más oscuro para mejor contraste */
+  cursor: not-allowed !important;
+  opacity: 0.85;
+  transform: none !important;
+  box-shadow: none !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto visual para indicar claramente que está deshabilitado */
+button[disabled]::before, .disabled-button::before {
+  content: "❌"; /* Cambiamos el icono a X para indicar que no se puede dar tratamiento */
+  font-size: 1rem;
+  margin-right: 0.25rem;
+  opacity: 0.7;
+}
+
+/* Añadimos un borde sutil al botón deshabilitado */
+button[disabled]::after, .disabled-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+  pointer-events: none;
+}
 
 .add-button {
   padding: 0.5rem 1rem;

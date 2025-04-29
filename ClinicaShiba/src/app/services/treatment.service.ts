@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError } from 'rxjs';
+import { Observable, catchError, map } from 'rxjs';
 import { Droga } from '../model/droga';
 import { Tratamiento } from '../model/tratamiento';
 import { Mascota } from '../model/mascota';
@@ -42,6 +42,26 @@ export class TreatmentService {
       catchError(error => {
         console.error(`Error obteniendo mascotas tratadas por veterinario ID ${veterinarioId}:`, error);
         throw new Error(`No se pudieron cargar las mascotas tratadas por el veterinario.`);
+      })
+    );
+  }
+
+  // Verificar si una mascota ya tiene tratamiento usando el nuevo endpoint
+  hasPetReceivedTreatment(petId: number): Observable<boolean> {
+    console.log(`Verificando tratamientos para mascota ID: ${petId}`);
+    // Utilizamos el nuevo endpoint específico para verificar tratamientos
+    return this.http.get<boolean>(`${this.mascotaUrl}/hasTratamiento/${petId}`).pipe(
+      map(hasTreatment => {
+        console.log(`Respuesta para mascota ${petId}:`, hasTreatment);
+        return hasTreatment;
+      }),
+      catchError(error => {
+        console.error(`Error verificando tratamientos para mascota ID ${petId}:`, error);
+        // En caso de error, devolvemos false para evitar bloquear el botón por error
+        return new Observable<boolean>(observer => {
+          observer.next(false);
+          observer.complete();
+        });
       })
     );
   }
