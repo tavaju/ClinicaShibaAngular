@@ -173,6 +173,94 @@
   color: #1f2937;
 }
 
+/* Estilos para la sección de Historial Médico */
+.historial-section {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.historial-header {
+  margin-bottom: 1.5rem;
+}
+
+.historial-icon {
+  color: #8b5cf6;
+}
+
+.title-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.loading-indicator, .error-message, .empty-historial {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.loading-indicator {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.empty-historial {
+  background-color: #eff6ff;
+  color: #3b82f6;
+  font-style: italic;
+}
+
+/* Tabla del historial médico */
+.historial-table-container {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.historial-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.historial-table th {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.historial-table td {
+  padding: 0.75rem 1rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.historial-table tr:last-child td {
+  border-bottom: none;
+}
+
+.historial-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.historial-table tr:hover {
+  background-color: #f5f3ff;
+}
+
 @media (max-width: 768px) {
   .pet-detail-content {
     flex-direction: column;
@@ -202,5 +290,12 @@
   .edit-button, .back-button {
     flex: 1;
     justify-content: center;
+  }
+  
+  /* Responsividad para la tabla de historial */
+  .historial-table th,
+  .historial-table td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
   }
 }

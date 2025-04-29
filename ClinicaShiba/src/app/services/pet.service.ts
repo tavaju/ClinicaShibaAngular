@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { Mascota } from '../model/mascota';
 import { Cliente } from '../model/cliente';
+import { HistorialMedico } from '../model/historial-medico';
 
 @Injectable({
   providedIn: 'root',
@@ -114,6 +115,24 @@ export class PetService {
       map((data) => data),
       catchError((error) => {
         console.error('Error fetching drugs:', error);
+        throw error;
+      })
+    );
+  }
+
+  // Obtener el historial médico de una mascota
+  getHistorialMedico(mascotaId: number): Observable<HistorialMedico[]> {
+    return this.http.get<HistorialMedico[]>(`${this.baseUrl}/historial-medico/${mascotaId}`).pipe(
+      map((historial) => {
+        console.log('Historial médico obtenido:', historial);
+        // Convertir el string de fecha a objeto Date
+        return historial.map(item => ({
+          ...item,
+          fecha: new Date(item.fecha)
+        }));
+      }),
+      catchError((error) => {
+        console.error(`Error al obtener historial médico para la mascota ${mascotaId}:`, error);
         throw error;
       })
     );
