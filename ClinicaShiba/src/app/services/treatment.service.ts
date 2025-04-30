@@ -55,7 +55,6 @@ export class TreatmentService {
     return this.http.get<boolean>(`${this.baseUrl}/hasTreatment/${mascotaId}`);
   }
 
-
   getPetsByVeterinarioId(veterinarioId: number): Observable<Mascota[]> {
     return this.http
       .get<Mascota[]>(

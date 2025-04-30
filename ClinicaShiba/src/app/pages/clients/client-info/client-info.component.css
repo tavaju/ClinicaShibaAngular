@@ -259,6 +259,19 @@ tr:last-child td {
     margin: 0;
 }
  
+/* Estilo para el enlace de las mascotas */
+.pet-link {
+    color: #7c3aed; /* Color principal */
+    font-weight: 600; /* Negrita */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.2s ease-in-out; /* Transición suave */
+}
+
+.pet-link:hover {
+    color: #6d28d9; /* Color más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .banner-content {
