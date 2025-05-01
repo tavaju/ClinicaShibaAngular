@@ -12,11 +12,19 @@ export class LoginVeterinarianComponent {
   password: string = '';
   rememberMe: boolean = false;
   errorMessage: string | null = null;
+  recaptchaToken: string | null = null;
+  captchaValid: boolean = false;
 
   constructor(private vetService: VetService, private router: Router) {}
 
   onSubmit(event: Event) {
     event.preventDefault();
+    
+    if (!this.captchaValid) {
+      this.errorMessage = 'Por favor, espere mientras verificamos que no es un robot';
+      return;
+    }
+    
     this.vetService.authenticateVet(this.cedula, this.password).subscribe({
       next: (vet) => {
         // Store vet ID in localStorage for future reference
@@ -39,5 +47,17 @@ export class LoginVeterinarianComponent {
     ) as HTMLInputElement;
     passwordField.type =
       passwordField.type === 'password' ? 'text' : 'password';
+  }
+
+  onCaptchaResolved(token: string) {
+    this.recaptchaToken = token;
+    this.captchaValid = true;
+    this.errorMessage = null;
+  }
+
+  onCaptchaError() {
+    this.recaptchaToken = null;
+    this.captchaValid = false;
+    this.errorMessage = 'Error al verificar reCAPTCHA. Por favor, recargue la página e intente nuevamente.';
   }
 }

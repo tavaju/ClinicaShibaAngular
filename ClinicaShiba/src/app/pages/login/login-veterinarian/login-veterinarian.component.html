@@ -73,6 +73,13 @@
         <div class="back-to-home">
           <a href="/" class="home-link">Volver al inicio</a>
         </div>
+
+        <!-- Componente de captcha -->
+        <app-captcha
+          [action]="'login_vet'"
+          (captchaResolved)="onCaptchaResolved($event)"
+          (captchaError)="onCaptchaError()">
+        </app-captcha>
       </article>
   
       <article class="image-container">

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { LoginVeterinarianComponent } from './pages/login/login-veterinarian/log
 import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-dashboard.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginAdminComponent } from './pages/login/login-admin/login-admin.component';
+import { CaptchaComponent } from './pages/login/captcha/captcha.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,8 @@ import { LoginAdminComponent } from './pages/login/login-admin/login-admin.compo
     LoginVeterinarianComponent,
     VetDashboardComponent,
     DashboardComponent,
-    LoginAdminComponent
+    LoginAdminComponent,
+    CaptchaComponent
   ],
   imports: [
     BrowserModule,
@@ -78,8 +81,11 @@ import { LoginAdminComponent } from './pages/login/login-admin/login-admin.compo
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
+    RecaptchaV3Module
   ],
-  providers: [],
+  providers: [
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcqFiorAAAAAE93zbwpa7R9gZvXCGMj91ckZNf5' }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

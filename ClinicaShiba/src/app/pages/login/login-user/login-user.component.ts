@@ -12,11 +12,19 @@ export class LoginUserComponent {
   password: string = '';
   rememberMe: boolean = false;
   errorMessage: string | null = null;
+  recaptchaToken: string | null = null;
+  captchaValid: boolean = false;
 
   constructor(private clientService: ClientService, private router: Router) {}
 
   onSubmit(event: Event) {
     event.preventDefault();
+    
+    if (!this.captchaValid) {
+      this.errorMessage = 'Por favor, espere mientras verificamos que no es un robot';
+      return;
+    }
+    
     this.clientService.getClients().subscribe((clients) => {
       const matchingClient = clients.find(
         (client) =>
@@ -40,5 +48,17 @@ export class LoginUserComponent {
     ) as HTMLInputElement;
     passwordField.type =
       passwordField.type === 'password' ? 'text' : 'password';
+  }
+
+  onCaptchaResolved(token: string) {
+    this.recaptchaToken = token;
+    this.captchaValid = true;
+    this.errorMessage = null;
+  }
+
+  onCaptchaError() {
+    this.recaptchaToken = null;
+    this.captchaValid = false;
+    this.errorMessage = 'Error al verificar reCAPTCHA. Por favor, recargue la página e intente nuevamente.';
   }
 }
