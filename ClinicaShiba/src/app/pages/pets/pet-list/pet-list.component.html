@@ -101,6 +101,7 @@
             <button
               (click)="editPet(pet.id!)"
               class="action-button edit-button"
+              title="Editar mascota"
             >
               <i class="lucide-icon">
                 <svg
@@ -123,9 +124,10 @@
             <!-- Botón de desactivación -->
             <button
               (click)="deactivatePet(pet.id!)"
-              class="action-button delete-button"
+              class="action-button toggle-button"
+              title="Desactivar mascota"
             >
-              <i class="lucide-icon">
+              <i class="lucide-icon" style="color: red;">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -137,9 +139,8 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <path d="M3 6h18" />
-                  <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
-                  <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                  <path d="M12 2v10" />
+                  <path d="M6.5 5.5a9 9 0 1 0 11 0" />
                 </svg>
               </i>
             </button>

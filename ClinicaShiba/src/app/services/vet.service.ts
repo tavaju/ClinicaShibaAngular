@@ -66,11 +66,18 @@ export class VetService {
   }
 
   // Add a new veterinarian
-  addVet(vet: Veterinario, confirmPassword: string): Observable<void> {
-    const params = { confirmPassword };
+  addVet(vet: Veterinario, confirmPassword: string, administradorId: number): Observable<void> {
+    // Create proper parameters including both confirmPassword and administradorId
+    const params: any = { 
+      confirmPassword,
+      administradorId
+    };
+
+    console.log('Sending request to backend with params:', params);
+
     return this.http.post<void>(
       `${this.baseUrl}/add`,
-      { ...vet, estado: vet.estado },
+      vet,
       { params }
     );
   }
@@ -101,5 +108,10 @@ export class VetService {
   // Delete a veterinarian by ID
   deleteVet(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/delete/${id}`);
+  }
+
+  // Check if a cedula already exists
+  checkCedulaExists(cedula: string): Observable<boolean> {
+    return this.http.get<boolean>(`${this.baseUrl}/check-cedula/${cedula}`);
   }
 }
