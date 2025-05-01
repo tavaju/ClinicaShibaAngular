@@ -12,11 +12,19 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./pet-list.component.css'],
 })
 export class PetListComponent implements OnInit, OnDestroy {
-  pets: Mascota[] = [];
+  allPets: Mascota[] = []; // Store all pets
+  pets: Mascota[] = []; // Store current page pets
   petsEstado: Map<number, boolean> = new Map(); // Store estado of each Mascota
   searchQuery: string = '';
   private subscription: Subscription = new Subscription();
   petsWithTreatment: Set<number> = new Set<number>();
+  
+  // Pagination properties
+  currentPage: number = 1;
+  pageSize: number = 5;
+  totalPages: number = 0;
+  totalPets: number = 0;
+  filteredPets: Mascota[] = []; // Store filtered pets for search
 
   constructor(
     private petService: PetService,
@@ -34,10 +42,34 @@ export class PetListComponent implements OnInit, OnDestroy {
 
   loadPets(): void {
     this.petService.getPets().subscribe((pets) => {
-      this.pets = pets;
+      this.allPets = pets;
+      this.totalPets = pets.length;
+      this.totalPages = Math.ceil(this.totalPets / this.pageSize);
+      this.filteredPets = [...this.allPets]; // Initialize filteredPets with all pets
+      this.updateDisplayedPets();
       this.checkTreatments();
-      this.fetchMascotaEstados(); // Fetch estado for each Mascota
+      this.fetchMascotaEstados();
     });
+  }
+
+  updateDisplayedPets(): void {
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = Math.min(startIndex + this.pageSize, this.filteredPets.length);
+    this.pets = this.filteredPets.slice(startIndex, endIndex);
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.updateDisplayedPets();
+    }
+  }
+
+  previousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.updateDisplayedPets();
+    }
   }
 
   fetchMascotaEstados(): void {
@@ -63,10 +95,19 @@ export class PetListComponent implements OnInit, OnDestroy {
 
   onSearch(): void {
     if (this.searchQuery.trim()) {
-      this.pets = this.petService.searchPets(this.searchQuery);
+      this.filteredPets = this.allPets.filter(pet => 
+        pet.nombre?.toLowerCase().includes(this.searchQuery.toLowerCase()) || 
+        pet.raza?.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        pet.enfermedad?.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
     } else {
-      this.loadPets();
+      this.filteredPets = [...this.allPets];
     }
+    
+    this.totalPets = this.filteredPets.length;
+    this.totalPages = Math.ceil(this.totalPets / this.pageSize);
+    this.currentPage = 1; // Reset to first page on new search
+    this.updateDisplayedPets();
   }
 
   editPet(id: number): void {
@@ -90,7 +131,7 @@ export class PetListComponent implements OnInit, OnDestroy {
   }
 
   checkTreatments(): void {
-    this.pets.forEach((pet) => {
+    this.allPets.forEach((pet) => {
       if (pet.id) {
         this.treatmentService
           .hasTreatment(pet.id)

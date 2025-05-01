@@ -26,16 +26,37 @@
         <input
           type="text"
           [(ngModel)]="searchQuery"
-          (keyup)="onSearch()"
+          (keyup.enter)="onSearch()"
           placeholder="Buscar mascotas..."
           class="search-input"
         />
+        <button class="search-button" (click)="onSearch()">
+          <i class="lucide-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div class="search-results-info" *ngIf="searchQuery.trim()">
+        <span>{{ totalPets }} resultado(s) encontrado(s) para "{{ searchQuery }}"</span>
       </div>
     </div>
   </article>
 
   <article class="table-container">
-    <table>
+    <table *ngIf="pets.length > 0; else noPets">
       <thead>
         <tr>
           <th>Nombre</th>
@@ -135,11 +156,16 @@
         </tr>
       </tbody>
     </table>
+    <ng-template #noPets>
+      <div class="no-results">
+        <p>No se encontraron mascotas{{ searchQuery ? ' para "' + searchQuery + '"' : '' }}</p>
+      </div>
+    </ng-template>
   </article>
 
   <article class="table-footer">
     <div class="pagination">
-      <button class="pagination-button" disabled>
+      <button class="pagination-button" [disabled]="currentPage === 1" (click)="previousPage()">
         <i class="lucide-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,8 +182,8 @@
           </svg>
         </i>
       </button>
-      <span class="pagination-info">Página 1 de 1</span>
-      <button class="pagination-button" disabled>
+      <span class="pagination-info">Página {{ currentPage }} de {{ totalPages || 1 }}</span>
+      <button class="pagination-button" [disabled]="currentPage === totalPages || totalPages === 0" (click)="nextPage()">
         <i class="lucide-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"

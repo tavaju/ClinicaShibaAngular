@@ -1,0 +1,21 @@
+.captcha-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.captcha-badge-info {
+  font-size: 12px;
+  color: #70757a;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.captcha-badge-info a {
+  color: #70757a;
+  text-decoration: none;
+}
+
+.captcha-badge-info a:hover {
+  text-decoration: underline;
+} 

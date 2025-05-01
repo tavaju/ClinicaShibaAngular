@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" [ngClass]="{'scrolled': isScrolled}">
   <section class="nav-container">
     <article class="nav-left">
       <img src="assets/images/logo_shiba.png" alt="Logo" class="logo" />
@@ -6,33 +6,10 @@
     </article>
 
     <article class="nav-center">
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="nav-link"
-        >Inicio</a
-      >
-      <a routerLink="/specialties" routerLinkActive="active" class="nav-link"
-        >Especialidades</a
-      >
-
-      <a
-        routerLink="/blog"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="nav-link"
-      >
-        Blog
-      </a>
-      <!--<a routerLink="/vets" routerLinkActive="active" class="nav-link"
-        >Veterinarios
-        </a>
-      <a routerLink="/pets" routerLinkActive="active" class="nav-link">Mascotas</a>
-
-      <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a>-->
-
-      <a routerLink="/cta" class="nav-link">Contacto</a>
+      <a href="/" class="nav-link active">Inicio</a>
+      <a href="/specialties" class="nav-link">Especialidades</a>
+      <a href="/blog" class="nav-link">Blog</a>
+      <a href="/cta" class="nav-link">Contacto</a>
     </article>
 
     <article class="nav-right">
@@ -51,17 +28,31 @@
         />
       </div>
       <div class="profile-container" #profileRef (click)="toggleDropdown()">
-        <img
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100"
-          alt="Profile"
-          class="profile-pic"
-        />
-        <div
-          class="profile-dropdown"
-          [class.active]="isDropdownOpen"
-          [style.display]="isDropdownOpen ? 'block' : 'none'"
-        >
-          <a routerLink="/login" class="login-btn">Iniciar sesión</a>
+        <div class="user-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="profile-dropdown" [ngClass]="{'active': isDropdownOpen}">
+          <a href="/login" class="login-btn">
+            <span>Iniciar sesión</span>
+            <svg 
+              class="login-icon" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            >
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+          </a>
         </div>
       </div>
     </article>
