@@ -45,14 +45,17 @@
           <td>{{ vet.cedula }}</td>
           <td>{{ vet.numAtenciones }}</td>
           <td class="actions-cell">
-              <a [routerLink]="['/vets/edit', vet.id]" class="action-button edit-button" style="color: blue;">
+              <a [routerLink]="['/vets/edit', vet.id]" class="action-button edit-button" style="color: blue;" title="Editar veterinario">
                 <i class="lucide-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
                 </i>
               </a>
-              <button class="action-button delete-button" (click)="vet.id && deleteVet(vet.id)" style="color: red;">
+              <button class="action-button toggle-button" (click)="vet.id && deleteVet(vet.id)" style="color: red;" title="Desactivar veterinario">
                 <i class="lucide-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v10"/>
+                    <path d="M6.5 5.5a9 9 0 1 0 11 0"/>
+                  </svg>
                 </i>
               </button>
             </td>

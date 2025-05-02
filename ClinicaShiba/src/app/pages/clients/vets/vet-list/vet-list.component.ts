@@ -45,7 +45,7 @@ export class VetListComponent implements OnInit {
   }
 
   deleteVet(id: number): void {
-    if (confirm('¿Estás seguro de que quieres eliminar este veterinario?')) {
+    if (confirm('¿Seguro que quieres desactivar a este veterinario?')) {
       this.vetService.deleteVet(id).subscribe(() => {
         this.loadVets();
       });
