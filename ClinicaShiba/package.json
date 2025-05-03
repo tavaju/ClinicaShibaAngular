@@ -21,6 +21,7 @@
     "@fortawesome/angular-fontawesome": "^0.13.0",
     "@fortawesome/fontawesome-svg-core": "6.4.x",
     "@fortawesome/free-solid-svg-icons": "6.4.x",
+    "chart.js": "^4.4.9",
     "ng-recaptcha": "^12.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
