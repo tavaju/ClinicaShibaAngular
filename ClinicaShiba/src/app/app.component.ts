@@ -39,17 +39,21 @@ export class AppComponent implements AfterViewInit {
       window.pageYOffset || document.documentElement.scrollTop;
 
     // NAVBAR efecto glassmorphism
-    if (currentScroll > 10) {
-      this.navbarRef.nativeElement.classList.add('scrolled');
-    } else {
-      this.navbarRef.nativeElement.classList.remove('scrolled');
+    if (this.navbarRef && this.navbarRef.nativeElement) {
+      if (currentScroll > 10) {
+        this.navbarRef.nativeElement.classList.add('scrolled');
+      } else {
+        this.navbarRef.nativeElement.classList.remove('scrolled');
+      }
     }
 
     // BANNER: ocultar si scroll hacia abajo
-    if (currentScroll > this.lastScrollTop && currentScroll > 50) {
-      this.bannerRef.nativeElement.classList.add('hide');
-    } else if (currentScroll < this.lastScrollTop) {
-      this.bannerRef.nativeElement.classList.remove('hide');
+    if (this.bannerRef && this.bannerRef.nativeElement) {
+      if (currentScroll > this.lastScrollTop && currentScroll > 50) {
+        this.bannerRef.nativeElement.classList.add('hide');
+      } else if (currentScroll < this.lastScrollTop) {
+        this.bannerRef.nativeElement.classList.remove('hide');
+      }
     }
 
     this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;

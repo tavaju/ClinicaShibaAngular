@@ -1,0 +1,61 @@
+<!-- Collapsible Chatbot -->
+<div class="chatbot-wrapper">
+  <!-- Chat button (always visible) -->
+  <button class="chat-toggle-button" (click)="toggleChatbot()">
+    <i class="fa" [ngClass]="isCollapsed ? 'fa-comments' : 'fa-times'"></i>
+    <!-- Notification Badge -->
+    <span class="notification-badge" *ngIf="unreadMessages > 0 && isCollapsed">{{ unreadMessages }}</span>
+  </button>
+
+  <!-- Chat container (collapsible) -->
+  <div class="chat-container" [ngClass]="{'collapsed': isCollapsed}">
+    <!-- Messages area -->
+    <div class="messages-container">
+      <div *ngFor="let message of messages" 
+           [ngClass]="{'message-bot': message.sender === 'bot', 'message-user': message.sender === 'user'}"
+           class="message">
+        <div class="message-content">
+          <p>{{ message.content }}</p>
+        </div>
+        <div class="message-timestamp">
+          {{ message.timestamp | date:'shortTime' }}
+        </div>
+      </div>
+      
+      <!-- Loading indicator -->
+      <div *ngIf="isLoading" class="loading-indicator">
+        <div class="typing-indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Input area -->
+    <div class="input-container">
+      <input 
+        type="text" 
+        [(ngModel)]="newMessage" 
+        placeholder="Escribe tu mensaje aquí..." 
+        (keyup.enter)="sendMessage()"
+        [disabled]="isLoading"
+      />
+      <button 
+        (click)="sendMessage()" 
+        [disabled]="!newMessage.trim() || isLoading">
+        Enviar
+      </button>
+    </div>
+    
+    <!-- Diagnostic section - hidden in production -->
+    <div class="diagnostic-tools" *ngIf="!environment.production">
+      <button 
+        class="test-button" 
+        (click)="testApiConnection()" 
+        [disabled]="isLoading">
+        Test API
+      </button>
+    </div>
+  </div>
+</div>
