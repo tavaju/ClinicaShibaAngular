@@ -33,6 +33,12 @@
 
       <div class="form-group">
         <input
+          type="text"
+          name="asunto"
+          [(ngModel)]="asunto"
+          placeholder="Asunto"
+          required />
+        <input
           type="tel"
           name="telefono"
           [(ngModel)]="telefono"
@@ -55,6 +61,13 @@
         *ngIf="formStatus === 'success'"
         [class.success]="true">
         ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+      </div>
+      
+      <div
+        class="form-status"
+        *ngIf="formStatus === 'error'"
+        [class.error]="true">
+        Failed to send email. Please try again.
       </div>
     </form>
   </div>

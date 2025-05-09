@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "chart.js": "^4.4.9",
     "ngx-bootstrap": "^19.0.2",
     "ngx-bootstrap-icons": "^1.9.3"
