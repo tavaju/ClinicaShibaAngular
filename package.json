@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "chart.js": "^4.4.9",
     "dotenv": "^16.5.0",
     "ngx-bootstrap": "^19.0.2",
