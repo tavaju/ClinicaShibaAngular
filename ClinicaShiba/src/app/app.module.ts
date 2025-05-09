@@ -39,6 +39,7 @@ import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-da
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginAdminComponent } from './pages/login/login-admin/login-admin.component';
 import { CaptchaComponent } from './pages/login/captcha/captcha.component';
+import { ChatbotComponent } from './core/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { CaptchaComponent } from './pages/login/captcha/captcha.component';
     VetDashboardComponent,
     DashboardComponent,
     LoginAdminComponent,
-    CaptchaComponent
+    CaptchaComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,10 @@ import { VetInfoComponent } from './pages/clients/vets/vet-info/vet-info.compone
 import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-dashboard.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
+
+// Import Chatbot component
+import { ChatbotComponent } from './core/chatbot/chatbot.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'specialties', component: SpecialtiesComponent },
@@ -68,6 +72,9 @@ const routes: Routes = [
 
   // Always put the wildcard route last
   { path: '**', redirectTo: '' },
+
+  // Chatbot route
+  { path: 'chatbot', component: ChatbotComponent },
 ];
 
 @NgModule({
