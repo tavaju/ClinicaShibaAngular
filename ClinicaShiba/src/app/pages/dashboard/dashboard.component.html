@@ -50,7 +50,6 @@
       </button>
       <div class="dashboard-header">
         <div class="title-container">
-          <h1>Dashboard de Clínica Shiba</h1>
           <div class="subtitle">
             <fa-icon [icon]="faStethoscope" class="subtitle-icon"></fa-icon>
             Panel administrativo de Clínica Veterinaria
@@ -125,7 +124,7 @@
             </div>
             <div class="metric-info">
               <h3>Ventas Totales</h3>
-              <div class="metric-value">{{ dashboardData.ventasTotales | currency:'USD':'symbol':'1.2-2' }}</div>
+              <div class="metric-value">{{ dashboardData.ventasTotales | currency:'USD':'symbol':'1.0-0' }}</div>
               <div class="metric-subvalue">
                 <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
                 en el último mes
@@ -139,7 +138,7 @@
             </div>
             <div class="metric-info">
               <h3>Ganancias</h3>
-              <div class="metric-value">{{ dashboardData.gananciasTotales | currency:'USD':'symbol':'1.2-2' }}</div>
+              <div class="metric-value">{{ dashboardData.gananciasTotales | currency:'USD':'symbol':'1.0-0' }}</div>
               <div class="metric-subvalue">
                 <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
                 en el último mes

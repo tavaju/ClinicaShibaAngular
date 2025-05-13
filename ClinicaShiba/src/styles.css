@@ -52,19 +52,22 @@ html, body {
   height: 100%; 
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden; /* Only prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll */
 }
 
 body { 
   margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; /* Only prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll */
 }
 
 app-root {
   display: block;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden; /* Only prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll */
 }
