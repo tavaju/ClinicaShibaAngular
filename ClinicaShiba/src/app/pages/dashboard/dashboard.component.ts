@@ -11,6 +11,7 @@ import { DashboardData, TratamientoPorMedicamento, TopTratamiento } from '../../
 import { Subscription, interval } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import Chart from 'chart.js/auto';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-dashboard',

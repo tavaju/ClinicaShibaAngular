@@ -1,212 +1,265 @@
-<div class="dashboard-container">
-  <div class="dashboard-header">
-    <div class="title-container">
-      <h1>Dashboard de Clínica Shiba</h1>
-      <div class="subtitle">
-        <fa-icon [icon]="faStethoscope" class="subtitle-icon"></fa-icon>
-        Panel administrativo de Clínica Veterinaria
-      </div>
+<mat-drawer-container class="dashboard-container">
+  <mat-drawer #drawer mode="side" opened class="dashboard-sidenav">
+    <div class="sidenav-header">
+      <img src="assets/images/logo.png" alt="Clínica Shiba Logo" class="sidenav-logo">
+      <h2>Clínica Shiba</h2>
     </div>
-    <div class="last-update">
-      <div class="update-info">
-        <fa-icon [icon]="faClock" class="update-icon"></fa-icon>
-        <span>Última actualización: {{ loading ? 'Cargando...' : error ? 'Error al cargar' : (currentDate | date: 'dd/MM/yyyy HH:mm') }}</span>
-      </div>
-      <button (click)="loadDashboardData()" class="btn-refresh" [class.loading]="loading" aria-label="Actualizar datos">
-        <fa-icon [icon]="faRotate" [spin]="loading"></fa-icon>
-        <span>Actualizar</span>
+    
+    <mat-divider></mat-divider>
+    
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/pets" routerLinkActive="active-link">
+        <mat-icon>pets</mat-icon>
+        <span>Mascotas</span>
+      </a>
+      <a mat-list-item routerLink="/clients" routerLinkActive="active-link">
+        <mat-icon>people</mat-icon>
+        <span>Clientes</span>
+      </a>
+      <a mat-list-item routerLink="/veterinarians" routerLinkActive="active-link">
+        <mat-icon>medical_services</mat-icon>
+        <span>Veterinarios</span>
+      </a>
+      <a mat-list-item routerLink="/treatments" routerLinkActive="active-link">
+        <mat-icon>healing</mat-icon>
+        <span>Tratamientos</span>
+      </a>
+      <a mat-list-item routerLink="/settings" routerLinkActive="active-link">
+        <mat-icon>settings</mat-icon>
+        <span>Configuración</span>
+      </a>
+    </mat-nav-list>
+    
+    <div class="sidenav-footer">
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/logout">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Cerrar sesión</span>
+      </a>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <mat-toolbar class="dashboard-toolbar">
+      <button mat-icon-button (click)="drawer.toggle()" aria-label="Menu">
+        <mat-icon>menu</mat-icon>
       </button>
-    </div>
-  </div>
-
-  <!-- Spinner de carga -->
-  <div *ngIf="loading" class="loading-container">
-    <div class="loading-spinner">
-      <div class="spinner"></div>
-      <p>Cargando datos del dashboard...</p>
-    </div>
-  </div>
-
-  <!-- Mensaje de error -->
-  <div *ngIf="error && !loading" class="error-container">
-    <div class="error-message">
-      <fa-icon [icon]="faTriangleExclamation" size="3x"></fa-icon>
-      <h3>¡Ups! Algo salió mal</h3>
-      <p>Ha ocurrido un error al cargar los datos. Por favor, intenta nuevamente.</p>
-      <button (click)="loadDashboardData()" class="btn-retry">Reintentar</button>
-    </div>
-  </div>
-
-  <!-- Contenido del dashboard -->
-  <div *ngIf="!loading && !error && dashboardData" class="dashboard-content">
-    <!-- Tarjetas de métricas -->
-    <div class="metrics-row">
-      <div class="metric-card">
-        <div class="metric-icon treatment">
-          <fa-icon [icon]="faSyringe"></fa-icon>
-        </div>
-        <div class="metric-info">
-          <h3>Tratamientos</h3>
-          <div class="metric-value">{{ dashboardData.totalTratamientosUltimoMes }}</div>
-          <div class="metric-subvalue">
-            <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
-            último mes
+      <div class="dashboard-header">
+        <div class="title-container">
+          <h1>Dashboard de Clínica Shiba</h1>
+          <div class="subtitle">
+            <fa-icon [icon]="faStethoscope" class="subtitle-icon"></fa-icon>
+            Panel administrativo de Clínica Veterinaria
           </div>
         </div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-icon pets">
-          <fa-icon [icon]="faPaw"></fa-icon>
+        <div class="last-update">
+          <div class="update-info">
+            <fa-icon [icon]="faClock" class="update-icon"></fa-icon>
+            <span>Última actualización: {{ loading ? 'Cargando...' : error ? 'Error al cargar' : (currentDate | date: 'dd/MM/yyyy HH:mm') }}</span>
+          </div>
+          <button (click)="loadDashboardData()" class="btn-refresh" [class.loading]="loading" aria-label="Actualizar datos">
+            <fa-icon [icon]="faRotate" [spin]="loading"></fa-icon>
+            <span>Actualizar</span>
+          </button>
         </div>
-        <div class="metric-info">
-          <h3>Mascotas Activas</h3>
-          <div class="metric-value">{{ dashboardData.mascotasActivas }}</div>
-          <div class="metric-subvalue">
-            de {{ dashboardData.mascotasTotales }} totales
+      </div>
+    </mat-toolbar>
+
+    <div class="dashboard-content-wrapper">
+      <!-- Spinner de carga -->
+      <div *ngIf="loading" class="loading-container">
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Cargando datos del dashboard...</p>
+        </div>
+      </div>
+
+      <!-- Mensaje de error -->
+      <div *ngIf="error && !loading" class="error-container">
+        <div class="error-message">
+          <fa-icon [icon]="faTriangleExclamation" size="3x"></fa-icon>
+          <h3>¡Ups! Algo salió mal</h3>
+          <p>Ha ocurrido un error al cargar los datos. Por favor, intenta nuevamente.</p>
+          <button (click)="loadDashboardData()" class="btn-retry">Reintentar</button>
+        </div>
+      </div>
+
+      <!-- Contenido del dashboard -->
+      <div *ngIf="!loading && !error && dashboardData" class="dashboard-content">
+        <!-- Tarjetas de métricas -->
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-icon treatment">
+              <fa-icon [icon]="faSyringe"></fa-icon>
+            </div>
+            <div class="metric-info">
+              <h3>Tratamientos</h3>
+              <div class="metric-value">{{ dashboardData.totalTratamientosUltimoMes }}</div>
+              <div class="metric-subvalue">
+                <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
+                último mes
+              </div>
+            </div>
+          </div>
+          
+          <div class="metric-card">
+            <div class="metric-icon pets">
+              <fa-icon [icon]="faPaw"></fa-icon>
+            </div>
+            <div class="metric-info">
+              <h3>Mascotas Activas</h3>
+              <div class="metric-value">{{ dashboardData.mascotasActivas }}</div>
+              <div class="metric-subvalue">
+                de {{ dashboardData.mascotasTotales }} totales
+              </div>
+            </div>
+          </div>
+          
+          <div class="metric-card">
+            <div class="metric-icon sales">
+              <fa-icon [icon]="faDollarSign"></fa-icon>
+            </div>
+            <div class="metric-info">
+              <h3>Ventas Totales</h3>
+              <div class="metric-value">{{ dashboardData.ventasTotales | currency:'USD':'symbol':'1.2-2' }}</div>
+              <div class="metric-subvalue">
+                <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
+                en el último mes
+              </div>
+            </div>
+          </div>
+          
+          <div class="metric-card">
+            <div class="metric-icon profits">
+              <fa-icon [icon]="faChartLine"></fa-icon>
+            </div>
+            <div class="metric-info">
+              <h3>Ganancias</h3>
+              <div class="metric-value">{{ dashboardData.gananciasTotales | currency:'USD':'symbol':'1.2-2' }}</div>
+              <div class="metric-subvalue">
+                <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
+                en el último mes
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-icon sales">
-          <fa-icon [icon]="faDollarSign"></fa-icon>
-        </div>
-        <div class="metric-info">
-          <h3>Ventas Totales</h3>
-          <div class="metric-value">{{ dashboardData.ventasTotales | currency:'USD':'symbol':'1.2-2' }}</div>
-          <div class="metric-subvalue">
-            <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
-            en el último mes
+
+        <!-- Gráficos -->
+        <div class="charts-row">
+          <!-- Gráfico de barras: Tratamientos por medicamento -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Tratamientos por Medicamento</h3>
+              <span class="time-period">Último Mes</span>
+            </div>
+            <div class="chart-wrapper">
+              <canvas #medicamentoChart></canvas>
+            </div>
+          </div>
+          
+          <!-- Gráfico de pie: Top tratamientos -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Top 3 Tratamientos</h3>
+              <span class="time-period">Por Unidades Vendidas</span>
+            </div>
+            <div class="chart-wrapper">
+              <canvas #topTratamientosChart></canvas>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="metric-card">
-        <div class="metric-icon profits">
-          <fa-icon [icon]="faChartLine"></fa-icon>
-        </div>
-        <div class="metric-info">
-          <h3>Ganancias</h3>
-          <div class="metric-value">{{ dashboardData.gananciasTotales | currency:'USD':'symbol':'1.2-2' }}</div>
-          <div class="metric-subvalue">
-            <fa-icon [icon]="faCalendarAlt" class="subvalue-icon"></fa-icon>
-            en el último mes
+
+        <div class="charts-row">
+          <!-- Gráfico doughnut: Estado de mascotas -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Estado de Mascotas</h3>
+              <span class="chart-total">Total: {{ dashboardData.mascotasTotales }}</span>
+            </div>
+            <div class="chart-wrapper">
+              <canvas #mascotasChart></canvas>
+            </div>
+          </div>
+          
+          <!-- Gráfico doughnut: Estado de veterinarios -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Estado de Veterinarios</h3>
+              <span class="chart-total">Total: {{ dashboardData.veterinariosActivos + dashboardData.veterinariosInactivos }}</span>
+            </div>
+            <div class="chart-wrapper">
+              <canvas #veterinariosChart></canvas>
+            </div>
           </div>
         </div>
+
+        <!-- Tablas de detalle -->
+        <div class="tables-row">
+          <!-- Tabla de detalle: Tratamientos por medicamento -->
+          <div class="detail-section">
+            <div class="detail-header">
+              <h3>Detalle de Tratamientos por Medicamento</h3>
+              <span class="time-period">Último Mes</span>
+            </div>
+            <div class="table-wrapper">
+              <table class="detail-table">
+                <thead>
+                  <tr>
+                    <th>Medicamento</th>
+                    <th>Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngIf="dashboardData.tratamientosPorMedicamento.length === 0">
+                    <td colspan="2" class="text-center">No hay datos disponibles</td>
+                  </tr>
+                  <tr *ngFor="let tratamiento of dashboardData.tratamientosPorMedicamento">
+                    <td>{{ tratamiento.nombreMedicamento }}</td>
+                    <td>{{ tratamiento.cantidad }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tabla de detalle: Top tratamientos -->
+          <div class="detail-section">
+            <div class="detail-header">
+              <h3>Top 3 Tratamientos</h3>
+              <span class="time-period">Por Unidades Vendidas</span>
+            </div>
+            <div class="table-wrapper">
+              <table class="detail-table">
+                <thead>
+                  <tr>
+                    <th>Posición</th>
+                    <th>Medicamento</th>
+                    <th>Unidades Vendidas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngIf="dashboardData.topTratamientos.length === 0">
+                    <td colspan="3" class="text-center">No hay datos disponibles</td>
+                  </tr>
+                  <tr *ngFor="let tratamiento of dashboardData.topTratamientos; let i = index">
+                    <td>
+                      <span class="position-badge" [ngClass]="'position-' + (i + 1)">{{ i + 1 }}</span>
+                    </td>
+                    <td>{{ tratamiento.nombreMedicamento }}</td>
+                    <td>{{ tratamiento.unidadesVendidas }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <app-vet-list></app-vet-list>
       </div>
     </div>
-
-    <!-- Gráficos -->
-    <div class="charts-row">
-      <!-- Gráfico de barras: Tratamientos por medicamento -->
-      <div class="chart-container">
-        <div class="chart-header">
-          <h3>Tratamientos por Medicamento</h3>
-          <span class="time-period">Último Mes</span>
-        </div>
-        <div class="chart-wrapper">
-          <canvas #medicamentoChart></canvas>
-        </div>
-      </div>
-      
-      <!-- Gráfico de pie: Top tratamientos -->
-      <div class="chart-container">
-        <div class="chart-header">
-          <h3>Top 3 Tratamientos</h3>
-          <span class="time-period">Por Unidades Vendidas</span>
-        </div>
-        <div class="chart-wrapper">
-          <canvas #topTratamientosChart></canvas>
-        </div>
-      </div>
-    </div>
-
-    <div class="charts-row">
-      <!-- Gráfico doughnut: Estado de mascotas -->
-      <div class="chart-container">
-        <div class="chart-header">
-          <h3>Estado de Mascotas</h3>
-          <span class="chart-total">Total: {{ dashboardData.mascotasTotales }}</span>
-        </div>
-        <div class="chart-wrapper">
-          <canvas #mascotasChart></canvas>
-        </div>
-      </div>
-      
-      <!-- Gráfico doughnut: Estado de veterinarios -->
-      <div class="chart-container">
-        <div class="chart-header">
-          <h3>Estado de Veterinarios</h3>
-          <span class="chart-total">Total: {{ dashboardData.veterinariosActivos + dashboardData.veterinariosInactivos }}</span>
-        </div>
-        <div class="chart-wrapper">
-          <canvas #veterinariosChart></canvas>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tablas de detalle -->
-    <div class="tables-row">
-      <!-- Tabla de detalle: Tratamientos por medicamento -->
-      <div class="detail-section">
-        <div class="detail-header">
-          <h3>Detalle de Tratamientos por Medicamento</h3>
-          <span class="time-period">Último Mes</span>
-        </div>
-        <div class="table-wrapper">
-          <table class="detail-table">
-            <thead>
-              <tr>
-                <th>Medicamento</th>
-                <th>Cantidad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngIf="dashboardData.tratamientosPorMedicamento.length === 0">
-                <td colspan="2" class="text-center">No hay datos disponibles</td>
-              </tr>
-              <tr *ngFor="let tratamiento of dashboardData.tratamientosPorMedicamento">
-                <td>{{ tratamiento.nombreMedicamento }}</td>
-                <td>{{ tratamiento.cantidad }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Tabla de detalle: Top tratamientos -->
-      <div class="detail-section">
-        <div class="detail-header">
-          <h3>Top 3 Tratamientos</h3>
-          <span class="time-period">Por Unidades Vendidas</span>
-        </div>
-        <div class="table-wrapper">
-          <table class="detail-table">
-            <thead>
-              <tr>
-                <th>Posición</th>
-                <th>Medicamento</th>
-                <th>Unidades Vendidas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngIf="dashboardData.topTratamientos.length === 0">
-                <td colspan="3" class="text-center">No hay datos disponibles</td>
-              </tr>
-              <tr *ngFor="let tratamiento of dashboardData.topTratamientos; let i = index">
-                <td>
-                  <span class="position-badge" [ngClass]="'position-' + (i + 1)">{{ i + 1 }}</span>
-                </td>
-                <td>{{ tratamiento.nombreMedicamento }}</td>
-                <td>{{ tratamiento.unidadesVendidas }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<app-vet-list></app-vet-list>
+  </mat-drawer-content>
+</mat-drawer-container>
