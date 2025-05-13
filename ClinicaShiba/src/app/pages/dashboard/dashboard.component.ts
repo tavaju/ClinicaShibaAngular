@@ -12,6 +12,9 @@ import { Subscription, interval } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import Chart from 'chart.js/auto';
 import { MatSidenav } from '@angular/material/sidenav';
+import { PetListComponent } from '../../pages/pets/pet-list/pet-list.component';
+import { ClientListComponent } from '../../pages/clients/client-list/client-list.component';
+import { VetListComponent } from '../../pages/clients/vets/vet-list/vet-list.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,7 +27,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
   @ViewChild('veterinariosChart') veterinariosChartRef!: ElementRef;
   @ViewChild('mascotasChart') mascotasChartRef!: ElementRef;
 
-  // Add ViewChild for veterinarios section
+  // ViewChild for sections
+  @ViewChild('mascotas-section', { static: false }) petsSection!: ElementRef;
+  @ViewChild('clientes-section', { static: false }) clientsSection!: ElementRef;
   @ViewChild('veterinarios-section', { static: false }) vetSection!: ElementRef;
 
   // Font Awesome icons
@@ -421,13 +426,24 @@ export class DashboardComponent implements OnInit, OnDestroy {
     });
   }
 
+  scrollToPets(): void {
+    const element = document.getElementById('mascotas-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  scrollToClients(): void {
+    const element = document.getElementById('clientes-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   scrollToVets(): void {
-    const vetElement = document.getElementById('veterinarios-section');
-    if (vetElement) {
-      vetElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+    const element = document.getElementById('veterinarios-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

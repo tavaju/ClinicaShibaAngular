@@ -12,11 +12,11 @@
         <mat-icon>dashboard</mat-icon>
         <span>Dashboard</span>
       </a>
-      <a mat-list-item routerLink="/pets" routerLinkActive="active-link">
+      <a mat-list-item (click)="scrollToPets()" class="cursor-pointer">
         <mat-icon>pets</mat-icon>
         <span>Mascotas</span>
       </a>
-      <a mat-list-item routerLink="/clients" routerLinkActive="active-link">
+      <a mat-list-item (click)="scrollToClients()" class="cursor-pointer">
         <mat-icon>people</mat-icon>
         <span>Clientes</span>
       </a>
@@ -257,6 +257,8 @@
           </div>
         </div>
         
+        <app-pet-list id="mascotas-section"></app-pet-list>
+        <app-client-list id="clientes-section"></app-client-list>
         <app-vet-list id="veterinarios-section"></app-vet-list>
       </div>
     </div>
