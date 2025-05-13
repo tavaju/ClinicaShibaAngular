@@ -111,13 +111,35 @@ $header-height: 90px;
   }
   
   .sidenav-footer {
-    margin-top: auto;
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
     
-    .mat-mdc-list-item {
+    .mat-divider {
+      margin-bottom: 8px;
+    }
+
+    .logout-button {
+      padding: 0 16px;
+      height: 48px;
+      display: flex;
+      align-items: center;
       color: $danger-color;
-      
-      .mat-icon {
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba($danger-color, 0.1);
+        cursor: pointer;
+      }
+
+      mat-icon {
+        margin-right: 16px;
         color: $danger-color;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
       }
     }
   }

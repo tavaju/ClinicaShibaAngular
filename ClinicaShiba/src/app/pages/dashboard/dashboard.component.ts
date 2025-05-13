@@ -4,7 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { 
   faMedkit, faPaw, faDollarSign, faChartLine, 
   faRotate, faTriangleExclamation, faCalendarAlt,
-  faStethoscope, faSyringe, faClock
+  faStethoscope, faSyringe, faClock, faDownload
 } from '@fortawesome/free-solid-svg-icons';
 import { DashboardService } from '../../services/dashboard.service';
 import { DashboardData, TratamientoPorMedicamento, TopTratamiento } from '../../model/dashboard';
@@ -15,6 +15,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { PetListComponent } from '../../pages/pets/pet-list/pet-list.component';
 import { ClientListComponent } from '../../pages/clients/client-list/client-list.component';
 import { VetListComponent } from '../../pages/clients/vets/vet-list/vet-list.component';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 @Component({
   selector: 'app-dashboard',
@@ -44,6 +46,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   faStethoscope = faStethoscope;
   faSyringe = faSyringe;
   faClock = faClock;
+  faDownload = faDownload;
 
   dashboardData!: DashboardData;
   loading = true;
@@ -452,5 +455,114 @@ export class DashboardComponent implements OnInit, OnDestroy {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  downloadReport(): void {
+    if (!this.dashboardData) {
+      console.error('No hay datos disponibles para generar el reporte');
+      return;
+    }
+
+    const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.width;
+    const currentDate = new Date().toLocaleDateString('es-ES');
+
+    // Título y encabezado
+    doc.setFontSize(20);
+    doc.text('Reporte de Clínica Shiba', pageWidth / 2, 20, { align: 'center' });
+    doc.setFontSize(12);
+    doc.text(`Fecha del reporte: ${currentDate}`, pageWidth / 2, 30, { align: 'center' });
+
+    // Métricas principales
+    doc.setFontSize(14);
+    doc.text('Resumen General', 14, 45);
+    
+    const metricas = [
+      ['Tratamientos (último mes)', this.dashboardData.totalTratamientosUltimoMes.toString()],
+      ['Mascotas Activas', `${this.dashboardData.mascotasActivas} de ${this.dashboardData.mascotasTotales}`],
+      ['Ventas Totales', `$${this.dashboardData.ventasTotales.toLocaleString()}`],
+      ['Ganancias', `$${this.dashboardData.gananciasTotales.toLocaleString()}`]
+    ];
+
+    let yPos = 50;
+
+    autoTable(doc, {
+      startY: yPos,
+      head: [['Métrica', 'Valor']],
+      body: metricas,
+      theme: 'striped',
+      headStyles: { fillColor: [139, 92, 246] }
+    });
+
+    yPos = (doc as any).lastAutoTable.finalY + 20;
+
+    // Tratamientos por medicamento
+    doc.setFontSize(14);
+    doc.text('Tratamientos por Medicamento', 14, yPos);
+
+    const tratamientosData = this.dashboardData.tratamientosPorMedicamento.map(
+      (item: TratamientoPorMedicamento) => [item.nombreMedicamento, item.cantidad.toString()]
+    );
+
+    autoTable(doc, {
+      startY: yPos + 5,
+      head: [['Medicamento', 'Cantidad']],
+      body: tratamientosData,
+      theme: 'striped',
+      headStyles: { fillColor: [139, 92, 246] }
+    });
+
+    yPos = (doc as any).lastAutoTable.finalY + 20;
+
+    // Top tratamientos
+    doc.setFontSize(14);
+    doc.text('Top 3 Tratamientos', 14, yPos);
+
+    const topTratamientosData = this.dashboardData.topTratamientos.map(
+      (item: TopTratamiento) => [item.nombreMedicamento, item.unidadesVendidas.toString()]
+    );
+
+    autoTable(doc, {
+      startY: yPos + 5,
+      head: [['Tratamiento', 'Unidades Vendidas']],
+      body: topTratamientosData,
+      theme: 'striped',
+      headStyles: { fillColor: [139, 92, 246] }
+    });
+
+    yPos = (doc as any).lastAutoTable.finalY + 20;
+
+    // Estado de veterinarios
+    doc.setFontSize(14);
+    doc.text('Estado de Veterinarios', 14, yPos);
+
+    const veterinariosData = [
+      ['Activos', this.dashboardData.veterinariosActivos.toString()],
+      ['Inactivos', this.dashboardData.veterinariosInactivos.toString()]
+    ];
+
+    autoTable(doc, {
+      startY: yPos + 5,
+      head: [['Estado', 'Cantidad']],
+      body: veterinariosData,
+      theme: 'striped',
+      headStyles: { fillColor: [139, 92, 246] }
+    });
+
+    // Pie de página
+    const pageCount = (doc.internal as any).getNumberOfPages();
+    doc.setFontSize(10);
+    for (let i = 1; i <= pageCount; i++) {
+      doc.setPage(i);
+      doc.text(
+        `Página ${i} de ${pageCount}`,
+        pageWidth / 2,
+        doc.internal.pageSize.height - 10,
+        { align: 'center' }
+      );
+    }
+
+    // Guardar el PDF
+    doc.save(`Reporte_ClinicaShiba_${currentDate.replace(/\//g, '-')}.pdf`);
   }
 }
