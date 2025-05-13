@@ -17,11 +17,35 @@ $sidenav-width: 260px;
   font-family: 'Nunito', 'Segoe UI', Roboto, sans-serif;
   background-color: $background-color;
   color: $text-color;
-  min-height: 100vh;
   width: 100%;
-  overflow-x: hidden;
   display: flex;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Make mat-drawer-container take full width
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+// Make sure the drawer container takes full height
+:host ::ng-deep .mat-drawer-container {
+  height: 100%;
+}
+
+// Fix for mat-drawer-content
+:host ::ng-deep .mat-drawer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 // Sidenav styles
@@ -43,6 +67,9 @@ $sidenav-width: 260px;
       width: 40px;
       height: 40px;
       object-fit: contain;
+      border-radius: 50%;
+      background-color: white;
+      padding: 3px;
     }
     
     h2 {
@@ -99,9 +126,22 @@ $sidenav-width: 260px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   padding: 0 1.5rem;
   height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
   
   button {
     margin-right: 1rem;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -109,86 +149,78 @@ $sidenav-width: 260px;
 .dashboard-content-wrapper {
   padding: 1.5rem;
   width: 100%;
+  height: calc(100% - 70px); /* Subtract toolbar height */
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
-// Header styles
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 100%;
+// Header styles inside title container
+.title-container {
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: $primary-color;
+    letter-spacing: -0.5px;
+  }
   
-  .title-container {
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin: 0;
-      color: $primary-color;
-      letter-spacing: -0.5px;
-    }
+  .subtitle {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: $text-light;
+    margin-top: 0.25rem;
     
-    .subtitle {
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-      color: $text-light;
-      margin-top: 0.25rem;
-      
-      .subtitle-icon {
-        margin-right: 0.5rem;
-        color: $primary-color;
-      }
+    .subtitle-icon {
+      margin-right: 0.5rem;
+      color: $primary-color;
+    }
+  }
+}
+
+.last-update {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  .update-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: $text-light;
+    
+    .update-icon {
+      margin-right: 0.5rem;
+      color: $primary-color;
     }
   }
   
-  .last-update {
+  .btn-refresh {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition;
     
-    .update-info {
-      display: flex;
-      align-items: center;
-      font-size: 0.9rem;
-      color: $text-light;
-      
-      .update-icon {
-        margin-right: 0.5rem;
-        color: $primary-color;
-      }
+    &:hover {
+      background-color: darken($primary-color, 5%);
+      transform: translateY(-2px);
     }
     
-    .btn-refresh {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: $primary-color;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: $transition;
-      
-      &:hover {
-        background-color: darken($primary-color, 5%);
-        transform: translateY(-2px);
-      }
-      
-      &:active {
-        transform: translateY(0);
-      }
-      
-      &.loading {
-        background-color: darken($primary-color, 10%);
-        pointer-events: none;
-      }
+    &:active {
+      transform: translateY(0);
+    }
+    
+    &.loading {
+      background-color: darken($primary-color, 10%);
+      pointer-events: none;
     }
   }
 }
