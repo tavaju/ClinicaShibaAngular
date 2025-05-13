@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   @ViewChild('mascotasChart') mascotasChartRef!: ElementRef;
 
   // ViewChild for sections
+  @ViewChild('dashboardSection', { static: false }) dashboardSection!: ElementRef;
   @ViewChild('mascotas-section', { static: false }) petsSection!: ElementRef;
   @ViewChild('clientes-section', { static: false }) clientsSection!: ElementRef;
   @ViewChild('veterinarios-section', { static: false }) vetSection!: ElementRef;
@@ -424,6 +425,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
         }
       }
     });
+  }
+
+  scrollToDashboard(): void {
+    if (this.dashboardSection) {
+      this.dashboardSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   scrollToPets(): void {

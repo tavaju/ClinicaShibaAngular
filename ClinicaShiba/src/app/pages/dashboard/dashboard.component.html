@@ -8,7 +8,7 @@
     <mat-divider></mat-divider>
     
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link">
+      <a mat-list-item (click)="scrollToDashboard()" class="cursor-pointer">
         <mat-icon>dashboard</mat-icon>
         <span>Dashboard</span>
       </a>
@@ -88,7 +88,7 @@
       </div>
 
       <!-- Contenido del dashboard -->
-      <div *ngIf="!loading && !error && dashboardData" class="dashboard-content">
+      <div #dashboardSection *ngIf="!loading && !error && dashboardData" class="dashboard-content">
         <!-- Tarjetas de métricas -->
         <div class="metrics-row">
           <div class="metric-card">
