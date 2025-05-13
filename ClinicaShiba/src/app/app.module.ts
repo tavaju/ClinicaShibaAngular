@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { BlogComponent } from './pages/home/blog/blog.component';
 import { CtaComponent } from './pages/home/cta/cta.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
+import { MaterialModule } from './shared/material.module';
 
 // Pet components
 import { PetListComponent } from './pages/pets/pet-list/pet-list.component';
@@ -78,12 +80,14 @@ import { ChatbotComponent } from './core/chatbot/chatbot.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    RecaptchaV3Module
+    RecaptchaV3Module,
+    MaterialModule
   ],
   providers: [
     { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcqFiorAAAAAE93zbwpa7R9gZvXCGMj91ckZNf5' }
