@@ -24,6 +24,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
   @ViewChild('veterinariosChart') veterinariosChartRef!: ElementRef;
   @ViewChild('mascotasChart') mascotasChartRef!: ElementRef;
 
+  // Add ViewChild for veterinarios section
+  @ViewChild('veterinarios-section', { static: false }) vetSection!: ElementRef;
+
   // Font Awesome icons
   faMedkit = faMedkit;
   faPaw = faPaw;
@@ -416,5 +419,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
         }
       }
     });
+  }
+
+  scrollToVets(): void {
+    const vetElement = document.getElementById('veterinarios-section');
+    if (vetElement) {
+      vetElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   }
 }

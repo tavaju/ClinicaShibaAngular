@@ -20,7 +20,7 @@
         <mat-icon>people</mat-icon>
         <span>Clientes</span>
       </a>
-      <a mat-list-item routerLink="/veterinarians" routerLinkActive="active-link">
+      <a mat-list-item (click)="scrollToVets()" class="cursor-pointer">
         <mat-icon>medical_services</mat-icon>
         <span>Veterinarios</span>
       </a>
@@ -257,7 +257,7 @@
           </div>
         </div>
         
-        <app-vet-list></app-vet-list>
+        <app-vet-list id="veterinarios-section"></app-vet-list>
       </div>
     </div>
   </mat-drawer-content>
