@@ -17,15 +17,16 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('bannerRef') bannerRef!: ElementRef;
 
   lastScrollTop = 0;
-  isLoginRoute: boolean = false;
+  private _isLoginRoute = false;
 
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
       // Check if the current route is any of the login routes
-      this.isLoginRoute =
+      this._isLoginRoute =
         this.router.url === '/login' ||
         this.router.url === '/login/vet' ||
-        this.router.url === '/login/admin';
+        this.router.url === '/login/admin' ||
+        this.router.url.includes('/admin/dashboard');
     });
   }
 
@@ -57,5 +58,9 @@ export class AppComponent implements AfterViewInit {
     }
 
     this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }
+
+  get isLoginRoute(): boolean {
+    return this._isLoginRoute;
   }
 }

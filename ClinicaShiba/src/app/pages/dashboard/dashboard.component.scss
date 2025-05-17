@@ -10,94 +10,244 @@ $card-background: #fff;
 $border-radius: 12px;
 $box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 $transition: all 0.3s ease;
+$sidenav-width: 260px;
+$header-height: 90px;
 
 // Base styles
 .dashboard-container {
   font-family: 'Nunito', 'Segoe UI', Roboto, sans-serif;
   background-color: $background-color;
   color: $text-color;
-  padding: 1.5rem;
-  min-height: 100vh;
   width: 100%;
+  display: flex;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Make mat-drawer-container take full width
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+// Make sure the drawer container takes full height
+:host ::ng-deep .mat-drawer-container {
+  height: 100%;
+}
+
+// Fix for mat-drawer-content
+:host ::ng-deep .mat-drawer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow-x: hidden;
 }
 
-// Header styles
-.dashboard-header {
+// Sidenav styles
+.dashboard-sidenav {
+  width: $sidenav-width;
+  background-color: $card-background;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  height: 100%;
   
-  .title-container {
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin: 0;
-      color: $primary-color;
-      letter-spacing: -0.5px;
+  .sidenav-header {
+    padding: 0.75rem;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-sizing: border-box;
+    
+    .sidenav-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 50%;
+      background-color: white;
+      padding: 3px;
     }
     
-    .subtitle {
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-      color: $text-light;
-      margin-top: 0.25rem;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+      color: #000;
+    }
+  }
+  
+  .mat-mdc-nav-list {
+    padding-top: 0.5rem;
+    
+    .mat-mdc-list-item {
+      margin: 0.25rem 0.75rem;
+      border-radius: 8px;
       
-      .subtitle-icon {
-        margin-right: 0.5rem;
-        color: $primary-color;
+      .mat-icon {
+        margin-right: 0.75rem;
+        color: $text-light;
+      }
+      
+      &:hover {
+        background-color: rgba($primary-color, 0.05);
+      }
+      
+      &.active-link {
+        background-color: rgba($primary-color, 0.1);
+        
+        .mat-icon, span {
+          color: $primary-color;
+          font-weight: 500;
+        }
       }
     }
   }
   
-  .last-update {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  .sidenav-footer {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
     
-    .update-info {
+    .mat-divider {
+      margin-bottom: 8px;
+    }
+
+    .logout-button {
+      padding: 0 16px;
+      height: 48px;
       display: flex;
       align-items: center;
-      font-size: 0.9rem;
-      color: $text-light;
-      
-      .update-icon {
-        margin-right: 0.5rem;
-        color: $primary-color;
+      color: $danger-color;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba($danger-color, 0.1);
+        cursor: pointer;
+      }
+
+      mat-icon {
+        margin-right: 16px;
+        color: $danger-color;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
       }
     }
+  }
+}
+
+// Toolbar styles
+.dashboard-toolbar {
+  background-color: $card-background;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 0 1.5rem;
+  height: $header-height;
+  min-height: $header-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  button {
+    margin-right: 1rem;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 1rem 0;
+  }
+}
+
+// Content wrapper
+.dashboard-content-wrapper {
+  padding: 1.5rem;
+  width: 100%;
+  height: calc(100% - #{$header-height}); /* Subtract toolbar height */
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+// Header styles inside title container
+.title-container {
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: $primary-color;
+    letter-spacing: -0.5px;
+  }
+  
+  .subtitle {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: $text-light;
+    margin-top: 0.25rem;
     
-    .btn-refresh {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: $primary-color;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: $transition;
-      
-      &:hover {
-        background-color: darken($primary-color, 5%);
-        transform: translateY(-2px);
-      }
-      
-      &:active {
-        transform: translateY(0);
-      }
-      
-      &.loading {
-        background-color: darken($primary-color, 10%);
-        pointer-events: none;
-      }
+    .subtitle-icon {
+      margin-right: 0.5rem;
+      color: $primary-color;
+    }
+  }
+}
+
+.last-update {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  .update-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: $text-light;
+    
+    .update-icon {
+      margin-right: 0.5rem;
+      color: $primary-color;
+    }
+  }
+  
+  .btn-refresh {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition;
+    
+    &:hover {
+      background-color: darken($primary-color, 5%);
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+    
+    &.loading {
+      background-color: darken($primary-color, 10%);
+      pointer-events: none;
     }
   }
 }
@@ -202,8 +352,17 @@ $transition: all 0.3s ease;
 // Metrics row
 .metrics-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 0.75fr 0.75fr 1fr 1fr;
   gap: 1.5rem;
+  width: 100%;
+  
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
   
   .metric-card {
     background-color: $card-background;
@@ -214,6 +373,7 @@ $transition: all 0.3s ease;
     align-items: center;
     gap: 1.25rem;
     transition: $transition;
+    min-width: 0; // Important for text overflow
     
     &:hover {
       transform: translateY(-5px);
@@ -253,19 +413,27 @@ $transition: all 0.3s ease;
     
     .metric-info {
       flex: 1;
+      min-width: 0; // Important for text overflow
+      overflow: hidden; // Prevent content from spilling out
       
       h3 {
         font-size: 0.9rem;
         font-weight: 600;
         color: $text-light;
         margin: 0 0 0.5rem 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       
       .metric-value {
-        font-size: 1.8rem;
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
         font-weight: 700;
         color: $text-color;
         margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       
       .metric-subvalue {
@@ -273,11 +441,13 @@ $transition: all 0.3s ease;
         color: $text-light;
         display: flex;
         align-items: center;
-        gap: 0.3rem;
-        margin-top: 0.25rem;
+        gap: 0.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         
         .subvalue-icon {
-          color: $primary-color;
+          flex-shrink: 0;
         }
       }
     }
@@ -454,4 +624,8 @@ $transition: all 0.3s ease;
   .charts-row, .tables-row {
     grid-template-columns: 1fr;
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

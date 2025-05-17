@@ -47,3 +47,27 @@ h3 {
   opacity: 1;
   transform: translateY(0);
 }
+
+html, body { 
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Only prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll */
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  position: relative;
+  overflow-x: hidden; /* Only prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll */
+}
+
+app-root {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Only prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll */
+}
