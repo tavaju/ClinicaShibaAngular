@@ -1,4 +1,5 @@
 /* src/styles.css */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 @font-face {
   font-family: "shiba-font";

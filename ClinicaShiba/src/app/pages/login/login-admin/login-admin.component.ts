@@ -25,10 +25,9 @@ export class LoginAdminComponent {
     }
     
     this.adminService.authenticateAdmin(this.cedula, this.password).subscribe({
-      next: (admin) => {
-        // Store admin ID in localStorage for future reference
-        localStorage.setItem('currentAdminId', admin.id!.toString());
-        
+      next: (token: string) => {
+        // Store JWT token in localStorage for future reference
+        localStorage.setItem('jwtToken', token);
         // Redirect to the admin dashboard
         this.router.navigate(['admin/dashboard']);
       },

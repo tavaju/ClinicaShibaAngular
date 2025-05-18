@@ -38,13 +38,15 @@ export class AdminService {
   }
 
   // Authenticate administrator with cedula and password
-  authenticateAdmin(cedula: string, password: string): Observable<Administrador> {
-    return this.http.post<Administrador>(`${this.baseUrl}/login`, null, {
+  // Ahora espera un objeto { token: string }
+  authenticateAdmin(cedula: string, password: string): Observable<string> {
+    return this.http.post<{ token: string }>(`${this.baseUrl}/login`, null, {
       params: {
         cedula,
         contrasena: password
       }
     }).pipe(
+      map(response => response.token),
       catchError(error => {
         console.error('Error de autenticación de administrador:', error);
         throw new Error('Cédula o contraseña incorrectos');
