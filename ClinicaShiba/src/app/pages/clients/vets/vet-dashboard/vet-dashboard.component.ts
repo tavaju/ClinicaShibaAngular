@@ -23,30 +23,13 @@ export class VetDashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Recupera el veterinario desde localStorage
-    const vetStr = localStorage.getItem('currentVet');
-    if (vetStr) {
-      const vetObj = JSON.parse(vetStr);
-      const cedula = vetObj.cedula;
-      if (cedula) {
-        this.loadVeterinarioInfoByCedula(cedula);
-      } else {
-        this.error = true;
-        this.loading = false;
-        console.error('No veterinarian cedula found in localStorage');
-      }
-    } else {
-      this.error = true;
-      this.loading = false;
-      console.error('No veterinarian found in localStorage');
-    }
-  }
-
-  loadVeterinarioInfoByCedula(cedula: string): void {
-    this.vetService.getVetByCedula(cedula).subscribe({
+    this.vetService.vetHome().subscribe({
       next: (vet) => {
         this.currentVeterinario = vet;
-        this.loadTreatedPets(vet.id!);
+        if (vet && vet.id) {
+          this.loadTreatedPets(vet.id);
+        }
+        this.loading = false;
       },
       error: (err) => {
         console.error('Error loading veterinarian info:', err);

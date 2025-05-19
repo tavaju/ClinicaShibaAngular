@@ -31,6 +31,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 // Import Chatbot component
 import { ChatbotComponent } from './core/chatbot/chatbot.component';
+import { AuthGuard } from './helpers/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -56,12 +57,18 @@ const routes: Routes = [
   { path: 'vets/edit/:id', component: VetFormComponent },
   { path: 'vets/info', component: VetInfoComponent },
   { path: 'vets/info/:id', component: VetInfoComponent },
-  { path: 'vets/dashboard', component: VetDashboardComponent },
+  {
+    path: 'vets/dashboard',
+    component: VetDashboardComponent,
+    canActivate: [AuthGuard],
+  },
 
-  // Dashboard route
-  { path: 'admin/dashboard', component: DashboardComponent },
+  {
+    path: 'admin/dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
+  },
 
-  // CTA route within Home
   { path: 'cta', component: CtaComponent },
 
   // Login routes
@@ -70,12 +77,14 @@ const routes: Routes = [
   { path: 'login/admin', component: LoginAdminComponent },
 
   // Cliente home route
-  { path: 'cliente/home', component: ClientInfoComponent }, // Usa tu dashboard existente aquí
+  {
+    path: 'cliente/home',
+    component: ClientInfoComponent,
+    canActivate: [AuthGuard],
+  },
 
-  // Chatbot route
   { path: 'chatbot', component: ChatbotComponent },
 
-  // Always put the wildcard route last
   { path: '**', redirectTo: '' },
 ];
 

@@ -83,4 +83,11 @@ export class AdminService {
   deleteAdmin(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/delete/${id}`);
   }
+
+  // Get administrator details for admin home
+  adminHome(): Observable<Administrador> {
+    return this.http.get<Administrador>(
+      'http://localhost:8090/administrador/details'
+    );
+  }
 }

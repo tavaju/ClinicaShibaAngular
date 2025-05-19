@@ -125,4 +125,9 @@ export class VetService {
   checkCedulaExists(cedula: string): Observable<boolean> {
     return this.http.get<boolean>(`${this.baseUrl}/check-cedula/${cedula}`);
   }
+
+  // Fetch veterinarian home details
+  vetHome(): Observable<Veterinario> {
+    return this.http.get<Veterinario>('http://localhost:8090/veterinario/details');
+  }
 }

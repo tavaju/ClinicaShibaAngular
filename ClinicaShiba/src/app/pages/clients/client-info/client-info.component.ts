@@ -20,7 +20,6 @@ export class ClientInfoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Ya no dependas del email en la URL
     this.clientService.clienteHome().subscribe({
       next: (client) => {
         this.client = client;
@@ -52,19 +51,17 @@ export class ClientInfoComponent implements OnInit {
   loadClientAndPets(email: string): void {
     this.clientService.getClientByEmail(email).subscribe({
       next: (client) => {
-        console.log('Cliente obtenido:', client); // Debug log
         this.client = client;
         if (client && client.id) {
           this.petService.getPetsByClientId(client.id).subscribe({
             next: (pets) => {
-              console.log('Mascotas obtenidas:', pets); // Debug log
               this.pets = pets;
             },
             error: (err) => {
               console.error(
                 `Error buscando mascotas para el cliente ${client.id}:`,
                 err
-              ); // Detailed error log
+              ); 
               this.pets = [];
             },
           });
@@ -76,7 +73,6 @@ export class ClientInfoComponent implements OnInit {
         }
       },
       error: (err) => {
-        console.error('Error al obtener cliente:', err); // Error log
         this.client = null;
         this.pets = [];
       },

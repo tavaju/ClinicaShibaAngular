@@ -26,22 +26,21 @@ export class LoginAdminComponent {
 
     this.adminService.loginAdmin(this.cedula, this.password).subscribe({
       next: (token) => {
-        localStorage.setItem('adminToken', token);
+        localStorage.setItem('token', token); // Usa la misma clave que el interceptor
 
-        // Ahora pide los datos del admin por cédula
-        this.adminService.getAdminByCedula(this.cedula).subscribe({
+        // Ahora pide los datos del administrador autenticado
+        this.adminService.adminHome().subscribe({
           next: (admin) => {
             localStorage.setItem('currentAdmin', JSON.stringify(admin));
-            this.router.navigate(['admin/dashboard']);
+            this.router.navigate(['/admin/dashboard']);
           },
-          error: (error) => {
+          error: () => {
             this.errorMessage = 'No se pudo obtener información del administrador';
           }
         });
       },
-      error: (error) => {
+      error: () => {
         this.errorMessage = 'Cédula o contraseña incorrectos';
-        console.error('Error de autenticación:', error);
       }
     });
   }
