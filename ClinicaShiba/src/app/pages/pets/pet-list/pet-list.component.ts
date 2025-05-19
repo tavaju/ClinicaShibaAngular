@@ -47,7 +47,8 @@ export class PetListComponent implements OnInit, OnDestroy {
       this.totalPages = Math.ceil(this.totalPets / this.pageSize);
       this.filteredPets = [...this.allPets]; // Initialize filteredPets with all pets
       this.updateDisplayedPets();
-      this.checkTreatments();
+      //BORRADO PORQUE POR AHORA NO SE NECESITA Y SE LLAMA TODO EL TIEMPO. REVISAR SI SE NECESITA MAS ADELANTA
+      //this.checkTreatments();
       this.fetchMascotaEstados();
     });
   }

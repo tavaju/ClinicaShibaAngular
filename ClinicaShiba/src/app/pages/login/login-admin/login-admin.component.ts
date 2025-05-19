@@ -18,22 +18,28 @@ export class LoginAdminComponent {
 
   onSubmit(event: Event) {
     event.preventDefault();
-    
+
     if (!this.captchaValid) {
       this.errorMessage = 'Por favor, espere mientras verificamos que no es un robot';
       return;
     }
-    
-    this.adminService.authenticateAdmin(this.cedula, this.password).subscribe({
-      next: (admin) => {
-        // Store admin ID in localStorage for future reference
-        localStorage.setItem('currentAdminId', admin.id!.toString());
-        
-        // Redirect to the admin dashboard
-        this.router.navigate(['admin/dashboard']);
+
+    this.adminService.loginAdmin(this.cedula, this.password).subscribe({
+      next: (token) => {
+        localStorage.setItem('adminToken', token);
+
+        // Ahora pide los datos del admin por cédula
+        this.adminService.getAdminByCedula(this.cedula).subscribe({
+          next: (admin) => {
+            localStorage.setItem('currentAdmin', JSON.stringify(admin));
+            this.router.navigate(['admin/dashboard']);
+          },
+          error: (error) => {
+            this.errorMessage = 'No se pudo obtener información del administrador';
+          }
+        });
       },
       error: (error) => {
-        // Show error message if login fails
         this.errorMessage = 'Cédula o contraseña incorrectos';
         console.error('Error de autenticación:', error);
       }
