@@ -29,7 +29,6 @@ import { VetInfoComponent } from './pages/clients/vets/vet-info/vet-info.compone
 import { VetDashboardComponent } from './pages/clients/vets/vet-dashboard/vet-dashboard.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
-
 // Import Chatbot component
 import { ChatbotComponent } from './core/chatbot/chatbot.component';
 
@@ -70,11 +69,14 @@ const routes: Routes = [
   { path: 'login/vet', component: LoginVeterinarianComponent },
   { path: 'login/admin', component: LoginAdminComponent },
 
-  // Always put the wildcard route last
-  { path: '**', redirectTo: '' },
+  // Cliente home route
+  { path: 'cliente/home', component: ClientInfoComponent }, // Usa tu dashboard existente aquí
 
   // Chatbot route
   { path: 'chatbot', component: ChatbotComponent },
+
+  // Always put the wildcard route last
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

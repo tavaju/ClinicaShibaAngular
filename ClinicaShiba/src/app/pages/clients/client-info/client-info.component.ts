@@ -20,15 +20,33 @@ export class ClientInfoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const email = this.route.snapshot.queryParamMap.get('email');
-    if (email) {
-      console.log('Correo recibido:', email); // Debug log
-      this.loadClientAndPets(email);
-    } else {
-      console.error(
-        'Correo no recibido. Verifique que el parámetro "email" se está enviando correctamente.'
-      );
-    }
+    // Ya no dependas del email en la URL
+    this.clientService.clienteHome().subscribe({
+      next: (client) => {
+        this.client = client;
+        if (client && client.id) {
+          this.petService.getPetsByClientId(client.id).subscribe({
+            next: (pets) => {
+              this.pets = pets;
+            },
+            error: (err) => {
+              console.error(
+                `Error buscando mascotas para el cliente ${client.id}:`,
+                err
+              );
+              this.pets = [];
+            },
+          });
+        } else {
+          this.pets = [];
+        }
+      },
+      error: (err) => {
+        console.error('Error al obtener cliente autenticado:', err);
+        this.client = null;
+        this.pets = [];
+      },
+    });
   }
 
   loadClientAndPets(email: string): void {
