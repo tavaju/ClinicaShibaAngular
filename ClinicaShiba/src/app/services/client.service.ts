@@ -88,20 +88,20 @@ export class ClientService {
         client.nombre?.toLowerCase().includes(query.toLowerCase()) ||
         client.cedula?.toLowerCase().includes(query.toLowerCase())
     );
-  }
-
-  // Login client (nuevo método)
+  }  // Login client (nuevo método)
   loginClient(email: string, password: string): Observable<string> {
-    return this.http.post('http://localhost:8090/login', null, {
-      params: { email, password },
-      responseType: 'text',
-    });
+    return this.http.post('http://localhost:8090/auth/login', 
+      { email, password },  // Enviar credenciales en el cuerpo de la solicitud
+      { responseType: 'text' }
+    );
   }
-
   login(user: User): Observable<string> {
-    return this.http.post('http://localhost:8090/login', user, {
-      responseType: 'text',
-    });
+    // Ya estamos enviando user directamente en el cuerpo de la solicitud
+    // con el formato correcto {correo, password}
+    return this.http.post('http://localhost:8090/auth/login', 
+      { email: user.correo, password: user.password },  // Ajustar nombres de propiedades a lo que espera el backend
+      { responseType: 'text' }
+    );
   }
 
   getClientByEmail(email: string): Observable<Cliente> {

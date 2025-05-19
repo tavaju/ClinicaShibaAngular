@@ -64,16 +64,12 @@ export class VetService {
       })
     );
   }
-
   // Login veterinario: recibe solo el token
   loginVet(cedula: string, password: string): Observable<string> {
-    return this.http.post('http://localhost:8090/veterinario/login', null, {
-      params: {
-        cedula,
-        contrasena: password
-      },
-      responseType: 'text'
-    });
+    return this.http.post('http://localhost:8090/veterinario/login', 
+      { cedula, contrasena: password },  // Enviar credenciales en el cuerpo de la solicitud
+      { responseType: 'text' }
+    );
   }
 
   // Add a new veterinarian

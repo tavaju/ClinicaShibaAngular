@@ -43,16 +43,12 @@ export class AdminService {
         })
       );
   }
-
   // Login que recibe token y datos del admin
   loginAdmin(cedula: string, password: string): Observable<string> {
-    return this.http.post(`${this.baseUrl}/login`, null, {
-      params: {
-        cedula,
-        contrasena: password,
-      },
-      responseType: 'text',
-    });
+    return this.http.post(`${this.baseUrl}/login`, 
+      { cedula, contrasena: password },  // Enviar credenciales en el cuerpo de la solicitud
+      { responseType: 'text' }
+    );
   }
 
   // Add a new administrator
