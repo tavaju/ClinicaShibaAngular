@@ -49,18 +49,16 @@ export class VetService {
   }
 
   // Authenticate a veterinarian with cédula and password
-  authenticateVet(cedula: string, password: string): Observable<Veterinario> {
-    return this.getAllVets().pipe(
-      map(vets => {
-        const matchingVet = vets.find(
-          vet => vet.cedula === cedula && vet.contrasena === password
-        );
-
-        if (!matchingVet) {
-          throw new Error('Cédula o contraseña incorrectos');
-        }
-
-        return matchingVet;
+  authenticateVet(cedula: string, password: string): Observable<{ token: string }> {
+    return this.http.post<{ token: string }>(`${this.baseUrl}/login`, null, {
+      params: {
+        cedula: cedula,
+        contrasena: password
+      }
+    }).pipe(
+      catchError(error => {
+        console.error('Error de autenticación de veterinario:', error);
+        throw new Error('Cédula o contraseña incorrectos');
       })
     );
   }

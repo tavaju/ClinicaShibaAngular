@@ -97,6 +97,20 @@ export class ClientService {
     });
   }
 
+  // Authenticate client with email and password
+  authenticateClient(email: string, password: string): Observable<{ token: string }> {
+    return this.http.post<{ token: string }>(`${this.baseUrl}/login`, null, {
+      params: {
+        correo: email,
+        contrasena: password
+      }
+    }).pipe(
+      catchError(error => {
+        console.error('Error de autenticación de cliente:', error);
+        throw new Error('Correo o contraseña incorrectos');
+      })
+    );
+  }
 
   getClientByEmail(email: string): Observable<Cliente> {
     return this.http.get<Cliente>(`${this.baseUrl}/findByEmail?email=${email}`).pipe(
