@@ -65,6 +65,17 @@ export class VetService {
     );
   }
 
+  // Login veterinario: recibe solo el token
+  loginVet(cedula: string, password: string): Observable<string> {
+    return this.http.post('http://localhost:8090/veterinario/login', null, {
+      params: {
+        cedula,
+        contrasena: password
+      },
+      responseType: 'text'
+    });
+  }
+
   // Add a new veterinarian
   addVet(vet: Veterinario, confirmPassword: string, administradorId: number): Observable<void> {
     // Create proper parameters including both confirmPassword and administradorId
@@ -113,5 +124,10 @@ export class VetService {
   // Check if a cedula already exists
   checkCedulaExists(cedula: string): Observable<boolean> {
     return this.http.get<boolean>(`${this.baseUrl}/check-cedula/${cedula}`);
+  }
+
+  // Fetch veterinarian home details
+  vetHome(): Observable<Veterinario> {
+    return this.http.get<Veterinario>('http://localhost:8090/veterinario/details');
   }
 }

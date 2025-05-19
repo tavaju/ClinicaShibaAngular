@@ -23,23 +23,13 @@ export class VetDashboardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Get veterinarian ID from localStorage (will be set during login)
-    const vetId = localStorage.getItem('currentVetId');
-    
-    if (vetId) {
-      this.loadVeterinarioInfo(Number(vetId));
-    } else {
-      this.error = true;
-      this.loading = false;
-      console.error('No veterinarian ID found in localStorage');
-    }
-  }
-
-  loadVeterinarioInfo(id: number): void {
-    this.vetService.getVetById(id).subscribe({
+    this.vetService.vetHome().subscribe({
       next: (vet) => {
         this.currentVeterinario = vet;
-        this.loadTreatedPets(id);
+        if (vet && vet.id) {
+          this.loadTreatedPets(vet.id);
+        }
+        this.loading = false;
       },
       error: (err) => {
         console.error('Error loading veterinarian info:', err);

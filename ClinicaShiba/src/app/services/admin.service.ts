@@ -23,33 +23,36 @@ export class AdminService {
 
   // Get administrator by cedula
   getAdminByCedula(cedula: string): Observable<Administrador> {
-    return this.http.get<Administrador>(`${this.baseUrl}/searchByCedula?cedula=${cedula}`).pipe(
-      map(admin => {
-        if (!admin) {
+    return this.http
+      .get<Administrador>(`${this.baseUrl}/find/cedula/${cedula}`)
+      .pipe(
+        map((admin) => {
+          if (!admin) {
+            throw new Error(
+              `No se encontró administrador con cédula: ${cedula}`
+            );
+          }
+          return admin;
+        }),
+        catchError((error) => {
+          console.error(
+            `Error buscando administrador con cédula ${cedula}:`,
+            error
+          );
           throw new Error(`No se encontró administrador con cédula: ${cedula}`);
-        }
-        return admin;
-      }),
-      catchError(error => {
-        console.error(`Error buscando administrador con cédula ${cedula}:`, error);
-        throw new Error(`No se encontró administrador con cédula: ${cedula}`);
-      })
-    );
+        })
+      );
   }
 
-  // Authenticate administrator with cedula and password
-  authenticateAdmin(cedula: string, password: string): Observable<Administrador> {
-    return this.http.post<Administrador>(`${this.baseUrl}/login`, null, {
+  // Login que recibe token y datos del admin
+  loginAdmin(cedula: string, password: string): Observable<string> {
+    return this.http.post(`${this.baseUrl}/login`, null, {
       params: {
         cedula,
-        contrasena: password
-      }
-    }).pipe(
-      catchError(error => {
-        console.error('Error de autenticación de administrador:', error);
-        throw new Error('Cédula o contraseña incorrectos');
-      })
-    );
+        contrasena: password,
+      },
+      responseType: 'text',
+    });
   }
 
   // Add a new administrator
@@ -69,13 +72,22 @@ export class AdminService {
     const params: any = {
       changePassword,
       newPassword,
-      confirmPassword
+      confirmPassword,
     };
-    return this.http.put<void>(`${this.baseUrl}/update/${id}`, admin, { params });
+    return this.http.put<void>(`${this.baseUrl}/update/${id}`, admin, {
+      params,
+    });
   }
 
   // Delete an administrator by ID
   deleteAdmin(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/delete/${id}`);
+  }
+
+  // Get administrator details for admin home
+  adminHome(): Observable<Administrador> {
+    return this.http.get<Administrador>(
+      'http://localhost:8090/administrador/details'
+    );
   }
 }

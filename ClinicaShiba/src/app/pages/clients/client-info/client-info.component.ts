@@ -20,33 +20,48 @@ export class ClientInfoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const email = this.route.snapshot.queryParamMap.get('email');
-    if (email) {
-      console.log('Correo recibido:', email); // Debug log
-      this.loadClientAndPets(email);
-    } else {
-      console.error(
-        'Correo no recibido. Verifique que el parámetro "email" se está enviando correctamente.'
-      );
-    }
-  }
-
-  loadClientAndPets(email: string): void {
-    this.clientService.getClientByEmail(email).subscribe({
+    this.clientService.clienteHome().subscribe({
       next: (client) => {
-        console.log('Cliente obtenido:', client); // Debug log
         this.client = client;
         if (client && client.id) {
           this.petService.getPetsByClientId(client.id).subscribe({
             next: (pets) => {
-              console.log('Mascotas obtenidas:', pets); // Debug log
               this.pets = pets;
             },
             error: (err) => {
               console.error(
                 `Error buscando mascotas para el cliente ${client.id}:`,
                 err
-              ); // Detailed error log
+              );
+              this.pets = [];
+            },
+          });
+        } else {
+          this.pets = [];
+        }
+      },
+      error: (err) => {
+        console.error('Error al obtener cliente autenticado:', err);
+        this.client = null;
+        this.pets = [];
+      },
+    });
+  }
+
+  loadClientAndPets(email: string): void {
+    this.clientService.getClientByEmail(email).subscribe({
+      next: (client) => {
+        this.client = client;
+        if (client && client.id) {
+          this.petService.getPetsByClientId(client.id).subscribe({
+            next: (pets) => {
+              this.pets = pets;
+            },
+            error: (err) => {
+              console.error(
+                `Error buscando mascotas para el cliente ${client.id}:`,
+                err
+              ); 
               this.pets = [];
             },
           });
@@ -58,7 +73,6 @@ export class ClientInfoComponent implements OnInit {
         }
       },
       error: (err) => {
-        console.error('Error al obtener cliente:', err); // Error log
         this.client = null;
         this.pets = [];
       },

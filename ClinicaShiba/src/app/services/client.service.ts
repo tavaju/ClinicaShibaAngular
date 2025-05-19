@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, map, Observable, catchError } from 'rxjs';
 import { Cliente } from '../model/cliente';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root',
@@ -90,28 +91,45 @@ export class ClientService {
   }
 
   // Login client (nuevo método)
-  loginClient(email: string, password: string): Observable<Cliente> {
-    return this.http.post<Cliente>(`${this.baseUrl}/login`, {
-      email,
-      password,
+  loginClient(email: string, password: string): Observable<string> {
+    return this.http.post('http://localhost:8090/login', null, {
+      params: { email, password },
+      responseType: 'text',
     });
   }
 
-
-  getClientByEmail(email: string): Observable<Cliente> {
-    return this.http.get<Cliente>(`${this.baseUrl}/findByEmail?email=${email}`).pipe(
-      map(client => {
-        console.log('Respuesta del servidor para getClientByEmail:', client); // Debug log
-        if (!client) {
-          throw new Error(`No se encontró cliente con correo: ${email}`);
-        }
-        return new Cliente(client);
-      }),
-      catchError(error => {
-        console.error(`Error buscando cliente con correo ${email}:`, error); // Error log
-        throw new Error(`No se encontró cliente con correo: ${email}`);
-      })
-    );
+  login(user: User): Observable<string> {
+    return this.http.post('http://localhost:8090/login', user, {
+      responseType: 'text',
+    });
   }
 
+  getClientByEmail(email: string): Observable<Cliente> {
+    return this.http
+      .get<Cliente>(`${this.baseUrl}/findByEmail?email=${email}`)
+      .pipe(
+        map((client) => {
+          console.log('Respuesta del servidor para getClientByEmail:', client); // Debug log
+          if (!client) {
+            throw new Error(`No se encontró cliente con correo: ${email}`);
+          }
+          return new Cliente(client);
+        }),
+        catchError((error) => {
+          console.error(`Error buscando cliente con correo ${email}:`, error); // Error log
+          throw new Error(`No se encontró cliente con correo: ${email}`);
+        })
+      );
+  }
+
+  getAuthenticatedClient(): Observable<Cliente> {
+    const token = localStorage.getItem('clientToken');
+    return this.http.get<Cliente>('http://localhost:8090/cliente/details', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+  }
+
+  clienteHome(): Observable<Cliente> {
+    return this.http.get<Cliente>('http://localhost:8090/cliente/details');
+  }
 }
