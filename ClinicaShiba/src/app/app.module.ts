@@ -21,6 +21,9 @@ import { FooterComponent } from './core/footer/footer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 import { MaterialModule } from './shared/material.module';
 
+// Import DataView directly to ensure it's available
+import { DataViewModule } from 'primeng/dataview';
+
 // Pet components
 import { PetListComponent } from './pages/pets/pet-list/pet-list.component';
 import { PetFormComponent } from './pages/pets/pet-form/pet-form.component';
@@ -83,8 +86,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     CaptchaComponent,
     ChatbotComponent,
     ShopComponent,
-  ],
-  imports: [
+  ],  imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -95,6 +97,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     RecaptchaV3Module,
     MaterialModule,
     PrimeNgModule,
+    DataViewModule, // Add DataViewModule directly to imports
   ],
   providers: [
     {
