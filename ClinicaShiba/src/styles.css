@@ -71,3 +71,189 @@ app-root {
   overflow-x: hidden; /* Only prevent horizontal scroll */
   overflow-y: auto; /* Allow vertical scroll */
 }
+
+/* PrimeNG Flex Utilities */
+.flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.flex-1 {
+  flex: 1 !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 0.75rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 0.75rem !important;
+}
+
+.p-4 {
+  padding: 1rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 0.75rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mr-3 {
+  margin-right: 0.75rem !important;
+}
+
+.my-4 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.py-5 {
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+}
+
+.text-2xl {
+  font-size: 1.5rem !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.font-semibold {
+  font-weight: 600 !important;
+}
+
+.surface-card {
+  background-color: #ffffff !important;
+}
+
+.surface-border {
+  border-color: #dee2e6 !important;
+}
+
+.border-1 {
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+.border-round {
+  border-radius: 6px !important;
+}
+
+.shadow-2 {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.w-9 {
+  width: 9rem !important;
+}
+
+/* Responsive utilities */
+@media screen and (min-width: 576px) {
+  .sm\:col-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row !important;
+  }
+  
+  .md\:justify-content-between {
+    justify-content: space-between !important;
+  }
+  
+  .md\:text-left {
+    text-align: left !important;
+  }
+  
+  .md\:w-auto {
+    width: auto !important;
+  }
+  
+  .md\:w-10rem {
+    width: 10rem !important;
+  }
+  
+  .md\:w-25rem {
+    width: 25rem !important;
+  }
+  
+  .md\:mb-0 {
+    margin-bottom: 0 !important;
+  }
+  
+  .md\:my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .lg\:col-4 {
+    flex: 0 0 33.3333% !important;
+    max-width: 33.3333% !important;
+  }
+}

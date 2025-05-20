@@ -42,6 +42,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginAdminComponent } from './pages/login/login-admin/login-admin.component';
 import { CaptchaComponent } from './pages/login/captcha/captcha.component';
 import { ChatbotComponent } from './core/chatbot/chatbot.component';
+import { ShopComponent } from './pages/shop/shop.component';
+
+// Modules and helpers
+import { PrimeNgModule } from './shared/primeng/primeng.module';
 import { AuthInterceptor } from './helpers/auth.interceptor';
 
 @NgModule({
@@ -78,6 +82,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     LoginAdminComponent,
     CaptchaComponent,
     ChatbotComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +94,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     FontAwesomeModule,
     RecaptchaV3Module,
     MaterialModule,
+    PrimeNgModule,
   ],
   providers: [
     {

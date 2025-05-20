@@ -26,6 +26,8 @@
     "jspdf": "^3.0.1",
     "jspdf-autotable": "^5.0.2",
     "ng-recaptcha": "^12.0.2",
+    "primeicons": "^6.0.1",
+    "primeng": "^16.9.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

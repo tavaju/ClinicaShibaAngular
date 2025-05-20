@@ -1,0 +1,424 @@
+/* Base Container */
+.shop-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  font-family: "shiba-font", sans-serif;
+}
+
+.shop-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 2.5rem;
+  font-family: "shiba-font", sans-serif;
+}
+
+/* Layout styles for sidebar and content */
+.shop-content {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Sidebar styles */
+.shop-sidebar {
+  flex: 0 0 320px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  height: fit-content;
+  position: sticky;
+  top: 1rem;
+}
+
+.sidebar-section {
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Main content area */
+.shop-main {
+  flex: 1;
+}
+
+.card {
+  background: #ffffff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter field styles */
+.filter-field {
+  margin-bottom: 1.5rem;
+}
+
+.filter-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Loading and error containers */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.loading-container p {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.error-container p-message {
+  margin-bottom: 1rem;
+}
+
+/* Navbar-style search container styles */
+.search-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #f9fafb;
+  width: 100%;
+  font-size: 0.9rem;
+  height: 2.75rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+}
+
+.clear-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.clear-icon:hover {
+  opacity: 1;
+}
+
+/* Clear filters button */
+:host ::ng-deep .clear-filters-btn {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+}
+
+:host ::ng-deep .clear-filters-btn .p-button-icon {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+:host ::ng-deep .clear-filters-btn:hover {
+  background-color: rgba(139, 92, 246, 0.04);
+}
+
+/* Filter container styles */
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+:host ::ng-deep .filter-dropdown {
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .filter-dropdown .p-dropdown-label {
+  padding: 0.75rem 0.75rem;
+}
+
+:host ::ng-deep .p-dropdown-panel .p-dropdown-items {
+  padding: 0.5rem 0;
+}
+
+:host ::ng-deep .p-dropdown-panel .p-dropdown-item {
+  padding: 0.75rem 1rem;
+}
+
+/* Custom style for inventory status tag */
+:host ::ng-deep .p-tag {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+/* PrimeNG button styles - using banner color */
+:host ::ng-deep .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning) {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+:host ::ng-deep .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning):hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+}
+
+:host ::ng-deep .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning) {
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+:host ::ng-deep .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning):hover {
+  background: rgba(139, 92, 246, 0.04);
+  border-color: #8b5cf6;
+}
+
+/* Custom style for "Añadir al carrito" button in list view */
+:host ::ng-deep .list-view-cart-button {
+  padding: 0.6rem 1rem !important;
+  margin-top: 0.4rem;
+  width: 90%;
+}
+
+/* DataView Grid Layout Fix */
+:host ::ng-deep .p-dataview .p-dataview-content {
+  background: #ffffff;
+  padding: 0.75rem;
+}
+
+:host ::ng-deep .p-dataview .p-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+:host ::ng-deep .grid-item {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+:host ::ng-deep .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+:host ::ng-deep .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+:host ::ng-deep .p-dataview .p-dataview-header {
+  background: #f8f9fa;
+  border-radius: 6px 6px 0 0;
+  padding: 0.75rem;
+}
+
+:host ::ng-deep .p-dataview .p-paginator {
+  padding: 0.75rem;
+}
+
+:host ::ng-deep .p-dropdown {
+  width: 100%;
+  font-weight: normal;
+}
+
+:host ::ng-deep .p-dropdown-items-wrapper {
+  max-height: 200px;
+}
+
+/* Product list item styling */
+:host ::ng-deep .product-list-item {
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem;
+  width: 100%;
+  border-bottom: 1px solid #dee2e6;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+:host ::ng-deep .product-list-item:last-child {
+  border-bottom: 0;
+}
+
+:host ::ng-deep .product-list-image {
+  margin-right: 1.5rem;
+  width: 150px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+:host ::ng-deep .product-list-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+:host ::ng-deep .product-list-detail {
+  flex: 1 1 0;
+  padding-right: 1rem;
+}
+
+:host ::ng-deep .product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+:host ::ng-deep .product-description {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+:host ::ng-deep .product-category {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+:host ::ng-deep .product-category-icon {
+  margin-right: 0.5rem;
+}
+
+:host ::ng-deep .product-list-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  width: 180px;
+  flex-shrink: 0;
+}
+
+:host ::ng-deep .product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Empty state styling */
+.p-d-flex {
+  display: flex;
+}
+
+.p-jc-center {
+  justify-content: center;
+}
+
+.p-mt-3 {
+  margin-top: 1rem;
+}
+
+.p-mr-2 {
+  margin-right: 0.5rem;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 992px) {
+  .shop-content {
+    flex-direction: column;
+  }
+
+  .shop-sidebar {
+    flex: none;
+    width: 100%;
+    position: static;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :host ::ng-deep .product-list-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  :host ::ng-deep .product-list-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 200px;
+  }
+
+  :host ::ng-deep .product-list-detail {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  :host ::ng-deep .product-list-action {
+    align-items: center;
+    width: 100%;
+  }
+
+  :host ::ng-deep .product-category {
+    justify-content: center;
+  }
+  
+  :host ::ng-deep .p-button.p-button-icon-only {
+    width: 3rem;
+  }
+
+  .shop-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .shop-title {
+    font-size: 1.8rem;
+  }
+  
+  .sidebar-title {
+    font-size: 1.1rem;
+  }
+}
