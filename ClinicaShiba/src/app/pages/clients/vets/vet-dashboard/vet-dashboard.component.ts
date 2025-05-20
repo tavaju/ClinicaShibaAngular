@@ -4,6 +4,7 @@ import { Veterinario } from '../../../../model/veterinario';
 import { Mascota } from '../../../../model/mascota';
 import { VetService } from '../../../../services/vet.service';
 import { TreatmentService } from '../../../../services/treatment.service';
+import { AuthService } from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-vet-dashboard',
@@ -15,10 +16,10 @@ export class VetDashboardComponent implements OnInit {
   treatedPets: Mascota[] = [];
   loading = true;
   error = false;
-
   constructor(
     private vetService: VetService,
     private treatmentService: TreatmentService,
+    private authService: AuthService,
     private router: Router
   ) {}
 
@@ -51,9 +52,26 @@ export class VetDashboardComponent implements OnInit {
       }
     });
   }
-  
-  // Add a public method to navigate to the login page
+    // Add a public method to navigate to the login page
   navigateToLogin(): void {
     this.router.navigate(['/login/vet']);
+  }
+  
+  /**
+   * Logs the user out and redirects to the home page
+   */
+  logout(): void {
+    console.log('Veterinario: Logout process initiated');
+    this.authService.logout().subscribe({
+      next: () => {
+        console.log('Veterinario: Logout successful');
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        console.error('Veterinario: Error during logout:', err);
+        // Even if there's an error, navigate to home
+        this.router.navigate(['/']);
+      }
+    });
   }
 }

@@ -64,9 +64,14 @@ const routes: Routes = [
     component: VetDashboardComponent,
     canActivate: [AuthGuard],
   },
-
   {
     path: 'admin/dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard],
   },

@@ -7,6 +7,7 @@ import {
   faStethoscope, faSyringe, faClock, faDownload
 } from '@fortawesome/free-solid-svg-icons';
 import { DashboardService } from '../../services/dashboard.service';
+import { AuthService } from '../../services/auth.service';
 import { DashboardData, TratamientoPorMedicamento, TopTratamiento } from '../../model/dashboard';
 import { Subscription, interval } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -58,11 +59,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
   topTratamientosChart!: Chart;
   veterinariosChart!: Chart;
   mascotasChart!: Chart;
-
   // For auto refresh
   private refreshSubscription!: Subscription;
   
-  constructor(private dashboardService: DashboardService) { }
+  constructor(
+    private dashboardService: DashboardService,
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
     this.loadDashboardData();
@@ -560,9 +563,23 @@ export class DashboardComponent implements OnInit, OnDestroy {
         doc.internal.pageSize.height - 10,
         { align: 'center' }
       );
-    }
-
-    // Guardar el PDF
+    }    // Guardar el PDF
     doc.save(`Reporte_ClinicaShiba_${currentDate.replace(/\//g, '-')}.pdf`);
+  }
+
+  /**
+   * Logs out the user and redirects to the landing page
+   */
+  logout(): void {
+    this.authService.logout().subscribe({
+      next: () => {
+        // Navigate to home page after successful logout
+        this.authService.navigateToHome();
+      },
+      error: () => {
+        // Even on error, we should redirect to home since we've cleared the token
+        this.authService.navigateToHome();
+      }
+    });
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, map, Observable, catchError } from 'rxjs';
+import { BehaviorSubject, map, Observable, catchError, tap } from 'rxjs';
 import { Cliente } from '../model/cliente';
 import { User } from '../model/user';
 
@@ -88,20 +88,25 @@ export class ClientService {
         client.nombre?.toLowerCase().includes(query.toLowerCase()) ||
         client.cedula?.toLowerCase().includes(query.toLowerCase())
     );
-  }
-
-  // Login client (nuevo método)
+  }  // Login client (nuevo método)
   loginClient(email: string, password: string): Observable<string> {
-    return this.http.post('http://localhost:8090/login', null, {
-      params: { email, password },
-      responseType: 'text',
-    });
-  }
-
-  login(user: User): Observable<string> {
-    return this.http.post('http://localhost:8090/login', user, {
-      responseType: 'text',
-    });
+    return this.http.post('http://localhost:8090/auth/login', 
+      { email, password },  // Enviar credenciales en el cuerpo de la solicitud
+      { responseType: 'text' }
+    );
+  }  login(user: User): Observable<string> {
+    // Ya estamos enviando user directamente en el cuerpo de la solicitud
+    // con el formato correcto {correo, password}
+    return this.http.post('http://localhost:8090/auth/login', 
+      { email: user.correo, password: user.password },  // Ajustar nombres de propiedades a lo que espera el backend
+      { responseType: 'text' }
+    ).pipe(
+      tap(token => {
+        // Store the token and username in localStorage
+        localStorage.setItem('token', token);
+        localStorage.setItem('username', user.correo);
+      })
+    );
   }
 
   getClientByEmail(email: string): Observable<Cliente> {
