@@ -146,6 +146,21 @@
   opacity: 1;
 }
 
+/* Clear filters button */
+:host ::ng-deep .clear-filters-btn {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+}
+
+:host ::ng-deep .clear-filters-btn .p-button-icon {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+:host ::ng-deep .clear-filters-btn:hover {
+  background-color: rgba(139, 92, 246, 0.04);
+}
+
 /* Filter container styles */
 .filters-container {
   display: flex;
@@ -174,6 +189,27 @@
 :host ::ng-deep .p-tag {
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
+}
+
+/* PrimeNG button styles - using banner color */
+:host ::ng-deep .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning) {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+:host ::ng-deep .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning):hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+}
+
+:host ::ng-deep .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning) {
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+:host ::ng-deep .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning):hover {
+  background: rgba(139, 92, 246, 0.04);
+  border-color: #8b5cf6;
 }
 
 /* Custom style for "Añadir al carrito" button in list view */
