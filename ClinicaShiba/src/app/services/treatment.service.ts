@@ -52,7 +52,7 @@ export class TreatmentService {
   }
 
   hasTreatment(mascotaId: number): Observable<boolean> {
-    return this.http.get<boolean>(`${this.baseUrl}/hasTreatment/${mascotaId}`);
+    return this.http.get<boolean>(`http://localhost:8090/mascota/hasTratamiento/${mascotaId}`);
   }
 
   getPetsByVeterinarioId(veterinarioId: number): Observable<Mascota[]> {

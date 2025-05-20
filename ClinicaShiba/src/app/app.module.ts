@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,8 +44,9 @@ import { CaptchaComponent } from './pages/login/captcha/captcha.component';
 import { ChatbotComponent } from './core/chatbot/chatbot.component';
 import { ShopComponent } from './pages/shop/shop.component';
 
-// Import PrimeNG module
+// Modules and helpers
 import { PrimeNgModule } from './shared/primeng/primeng.module';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,7 @@ import { PrimeNgModule } from './shared/primeng/primeng.module';
     LoginAdminComponent,
     CaptchaComponent,
     ChatbotComponent,
-    ShopComponent
+    ShopComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,10 +94,14 @@ import { PrimeNgModule } from './shared/primeng/primeng.module';
     FontAwesomeModule,
     RecaptchaV3Module,
     MaterialModule,
-    PrimeNgModule
+    PrimeNgModule,
   ],
   providers: [
-    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcqFiorAAAAAE93zbwpa7R9gZvXCGMj91ckZNf5' }
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: '6LcqFiorAAAAAE93zbwpa7R9gZvXCGMj91ckZNf5',
+    },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ClientService } from '../../../services/client.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/model/user';
 
 @Component({
   selector: 'app-login-user',
@@ -8,6 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-user.component.css'],
 })
 export class LoginUserComponent {
+  formUser: User = {
+    correo: '',
+    password: '',
+  };
   email: string = '';
   password: string = '';
   rememberMe: boolean = false;
@@ -19,26 +24,32 @@ export class LoginUserComponent {
 
   onSubmit(event: Event) {
     event.preventDefault();
-    
+
     if (!this.captchaValid) {
-      this.errorMessage = 'Por favor, espere mientras verificamos que no es un robot';
+      this.errorMessage =
+        'Por favor, espere mientras verificamos que no es un robot';
       return;
     }
-    
-    this.clientService.getClients().subscribe((clients) => {
-      const matchingClient = clients.find(
-        (client) =>
-          client.correo === this.email && client.contrasena === this.password
-      );
-      if (matchingClient) {
-        // Si el login es exitoso, redirigir a /clients/info con el email como parámetro
-        this.router.navigate(['/clients/info'], {
-          queryParams: { email: this.email },
+
+    this.clientService.loginClient(this.email, this.password).subscribe({
+      next: (token) => {
+        localStorage.setItem('token', token);
+
+        // Ahora pide los datos del cliente autenticado
+        this.clientService.getAuthenticatedClient().subscribe({
+          next: (client) => {
+            localStorage.setItem('currentClient', JSON.stringify(client));
+            // Navega igual que antes
+            this.router.navigate(['/cliente/home']);
+          },
+          error: () => {
+            this.errorMessage = 'No se pudo obtener información del cliente';
+          },
         });
-      } else {
-        // Mostrar el mensaje de error si el login falla
+      },
+      error: () => {
         this.errorMessage = 'Correo o contraseña incorrectos';
-      }
+      },
     });
   }
 
@@ -59,6 +70,7 @@ export class LoginUserComponent {
   onCaptchaError() {
     this.recaptchaToken = null;
     this.captchaValid = false;
-    this.errorMessage = 'Error al verificar reCAPTCHA. Por favor, recargue la página e intente nuevamente.';
+    this.errorMessage =
+      'Error al verificar reCAPTCHA. Por favor, recargue la página e intente nuevamente.';
   }
 }

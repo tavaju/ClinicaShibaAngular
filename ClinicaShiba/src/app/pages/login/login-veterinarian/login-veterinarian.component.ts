@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-veterinarian',
   templateUrl: './login-veterinarian.component.html',
-  styleUrls: ['./login-veterinarian.component.css']
+  styleUrls: ['./login-veterinarian.component.css'],
 })
 export class LoginVeterinarianComponent {
   cedula: string = '';
@@ -19,25 +19,32 @@ export class LoginVeterinarianComponent {
 
   onSubmit(event: Event) {
     event.preventDefault();
-    
+
     if (!this.captchaValid) {
-      this.errorMessage = 'Por favor, espere mientras verificamos que no es un robot';
+      this.errorMessage =
+        'Por favor, espere mientras verificamos que no es un robot';
       return;
     }
-    
-    this.vetService.authenticateVet(this.cedula, this.password).subscribe({
-      next: (vet) => {
-        // Store vet ID in localStorage for future reference
-        localStorage.setItem('currentVetId', vet.id!.toString());
-        
-        // Redirect to the vet dashboard
-        this.router.navigate(['/vets/dashboard']);
+
+    this.vetService.loginVet(this.cedula, this.password).subscribe({
+      next: (token) => {
+        localStorage.setItem('token', token); // Usa la misma clave que el interceptor
+
+        // Ahora pide los datos del veterinario autenticado
+        this.vetService.vetHome().subscribe({
+          next: (vet) => {
+            localStorage.setItem('currentVet', JSON.stringify(vet));
+            this.router.navigate(['/vets/dashboard']);
+          },
+          error: () => {
+            this.errorMessage =
+              'No se pudo obtener información del veterinario';
+          },
+        });
       },
-      error: (error) => {
-        // Show error message if login fails
+      error: () => {
         this.errorMessage = 'Cédula o contraseña incorrectos';
-        console.error('Error de autenticación:', error);
-      }
+      },
     });
   }
 
@@ -58,6 +65,7 @@ export class LoginVeterinarianComponent {
   onCaptchaError() {
     this.recaptchaToken = null;
     this.captchaValid = false;
-    this.errorMessage = 'Error al verificar reCAPTCHA. Por favor, recargue la página e intente nuevamente.';
+    this.errorMessage =
+      'Error al verificar reCAPTCHA. Por favor, recargue la página e intente nuevamente.';
   }
 }
