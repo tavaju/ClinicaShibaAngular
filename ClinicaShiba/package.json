@@ -25,6 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "6.4.x",
     "jspdf": "^3.0.1",
     "jspdf-autotable": "^5.0.2",
+    "jwt-decode": "^4.0.0",
     "ng-recaptcha": "^12.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
