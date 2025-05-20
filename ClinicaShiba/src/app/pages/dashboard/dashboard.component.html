@@ -29,10 +29,9 @@
         <span>Descargar reporte</span>
       </a>
     </mat-nav-list>
-    
-    <div class="sidenav-footer">
+      <div class="sidenav-footer">
       <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/logout" class="logout-button cursor-pointer">
+      <a mat-list-item (click)="logout()" class="logout-button cursor-pointer">
         <mat-icon>exit_to_app</mat-icon>
         <span>Cerrar sesión</span>
       </a>
