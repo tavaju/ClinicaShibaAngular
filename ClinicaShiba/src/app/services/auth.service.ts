@@ -152,4 +152,11 @@ export class AuthService {
       }
     });
   }
+
+  login(identifier: string, password: string, isEmail: boolean): Observable<string> {
+    const body = isEmail
+      ? { email: identifier, password }
+      : { cedula: identifier, password };
+    return this.http.post<string>(`${this.baseUrl}/login`, body);
+  }
 }

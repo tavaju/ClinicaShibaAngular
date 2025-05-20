@@ -66,8 +66,8 @@ export class VetService {
   }
   // Login veterinario: recibe solo el token
   loginVet(cedula: string, password: string): Observable<string> {
-    return this.http.post('http://localhost:8090/veterinario/login', 
-      { cedula, contrasena: password },  // Enviar credenciales en el cuerpo de la solicitud
+    return this.http.post('http://localhost:8090/auth/login', 
+      { cedula, password },  // Usar 'password' en vez de 'contrasena'
       { responseType: 'text' }
     );
   }
