@@ -42,6 +42,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginAdminComponent } from './pages/login/login-admin/login-admin.component';
 import { CaptchaComponent } from './pages/login/captcha/captcha.component';
 import { ChatbotComponent } from './core/chatbot/chatbot.component';
+import { ShopComponent } from './pages/shop/shop.component';
+
+// Import PrimeNG module
+import { PrimeNgModule } from './shared/primeng/primeng.module';
 
 @NgModule({
   declarations: [
@@ -76,7 +80,8 @@ import { ChatbotComponent } from './core/chatbot/chatbot.component';
     DashboardComponent,
     LoginAdminComponent,
     CaptchaComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
@@ -87,7 +92,8 @@ import { ChatbotComponent } from './core/chatbot/chatbot.component';
     HttpClientModule,
     FontAwesomeModule,
     RecaptchaV3Module,
-    MaterialModule
+    MaterialModule,
+    PrimeNgModule
   ],
   providers: [
     { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcqFiorAAAAAE93zbwpa7R9gZvXCGMj91ckZNf5' }
