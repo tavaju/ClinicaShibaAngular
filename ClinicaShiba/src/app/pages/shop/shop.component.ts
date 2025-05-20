@@ -26,6 +26,7 @@ export class ShopComponent implements OnInit {
   selectedCategory: string | null = null;
   statusOptions: SelectItem[] = [];
   selectedStatus: string | null = null;
+  selectedSort: string | null = null;
 
   constructor(
     private productService: ProductService,
@@ -103,6 +104,7 @@ export class ShopComponent implements OnInit {
 
   onSortChange(event: any) {
     const value = event.value;
+    this.selectedSort = value;
     
     if (value.indexOf('!') === 0) {
       this.sortOrder = -1;
