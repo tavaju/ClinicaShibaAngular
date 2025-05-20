@@ -103,6 +103,19 @@
   padding: 0.75rem 1rem;
 }
 
+/* Custom style for inventory status tag */
+:host ::ng-deep .p-tag {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+/* Custom style for "Añadir al carrito" button in list view */
+:host ::ng-deep .list-view-cart-button {
+  padding: 0.6rem 1rem !important;
+  margin-top: 0.4rem;
+  width: 85%;
+}
+
 /* DataView Grid Layout Fix */
 :host ::ng-deep .p-dataview .p-dataview-content {
   background: #ffffff;

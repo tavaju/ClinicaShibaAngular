@@ -139,6 +139,15 @@ export class ShopComponent implements OnInit {
     }
   }
 
+  formatPrice(price: number): string {
+    // Format number with dot as thousands separator without decimal places
+    return price.toLocaleString('es-ES', { 
+      useGrouping: true,
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0
+    }).replace(/\./g, '.');
+  }
+
   onSearch(event: Event): void {
     const query = (event.target as HTMLInputElement).value.toLowerCase();
     this.searchQuery = query;

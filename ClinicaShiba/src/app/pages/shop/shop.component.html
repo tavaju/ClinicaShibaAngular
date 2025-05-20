@@ -103,9 +103,9 @@
               </div>
             </div>
             <div class="product-list-action">
-              <span class="product-price">${{product.price.toFixed(2)}}</span>
+              <span class="product-price">${{formatPrice(product.price)}}</span>
               <p-tag [value]="getInventoryStatus(product.inventoryStatus)" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
-              <button pButton icon="pi pi-shopping-cart" label="Añadir al carrito" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></button>
+              <button pButton icon="pi pi-shopping-cart" label="Añadir al carrito" class="list-view-cart-button" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></button>
             </div>
           </div>
         </ng-template>
@@ -126,7 +126,7 @@
                 <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
               </div>
               <div class="flex align-items-center justify-content-between">
-                <span class="text-2xl font-semibold">${{ product.price.toFixed(2) }}</span>
+                <span class="text-2xl font-semibold">${{ formatPrice(product.price) }}</span>
                 <button pButton icon="pi pi-shopping-cart" 
                         [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></button>
               </div>
