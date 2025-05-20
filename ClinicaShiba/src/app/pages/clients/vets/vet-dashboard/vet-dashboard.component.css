@@ -5,6 +5,39 @@
   padding: 1rem;
 }
 
+/* Estilos para el botón de logout */
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #dc2626;  /* Red-600 */
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.logout-button:hover {
+  background-color: #b91c1c;  /* Red-700 */
+}
+
+.logout-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.375rem;
+}
+
 .dashboard-content {
   display: flex;
   flex-direction: column;
