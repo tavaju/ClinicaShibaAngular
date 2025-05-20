@@ -1,4 +1,11 @@
-<div class="container">
+<div class="container">  <!-- Botón de logout -->
+  <div class="logout-container">
+    <button (click)="logout()" class="logout-button">
+      <i data-lucide="log-out" aria-hidden="true"></i>
+      <span>Cerrar sesión</span>
+    </button>
+  </div>
+
   <div class="client-section">
     <div class="section-header">
       <div class="title-section">
@@ -85,11 +92,5 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
+    </div>  </div>
 </div>
- 
-<script>
-  // Inicializar los íconos de Lucide
-  lucide.createIcons();
-</script>
