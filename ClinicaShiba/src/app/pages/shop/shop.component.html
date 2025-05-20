@@ -20,27 +20,28 @@
     <div class="shop-sidebar">
       <div class="sidebar-section">
         <h3 class="sidebar-title">Búsqueda</h3>
-        <!-- Search section -->
+        <!-- Search section - navbar style -->
         <div class="search-container">
-          <div class="p-inputgroup">
-            <span class="p-inputgroup-addon">
-              <i class="pi pi-search"></i>
-            </span>
-            <input 
-              type="text" 
-              pInputText 
-              placeholder="Buscar productos..." 
-              [(ngModel)]="searchQuery" 
-              (input)="onSearch($event)"
-            />
-            <button 
-              *ngIf="searchQuery" 
-              pButton 
-              icon="pi pi-times" 
-              class="p-button-danger" 
-              (click)="clearSearch()">
-            </button>
-          </div>
+          <input 
+            type="text" 
+            placeholder="Buscar productos..." 
+            class="search-input" 
+            [(ngModel)]="searchQuery" 
+            (input)="onSearch($event)"
+          />
+          <img
+            *ngIf="!searchQuery"
+            src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search.svg"
+            alt="Search"
+            class="search-icon"
+          />
+          <img
+            *ngIf="searchQuery"
+            src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/x.svg"
+            alt="Clear"
+            class="clear-icon"
+            (click)="clearSearch()"
+          />
         </div>
       </div>
 
@@ -49,10 +50,10 @@
         <!-- Filter options -->
         <div class="filters-container">
           <div class="p-field filter-field">
-            <label for="price">Precio</label>
+            <label for="price">Ordenar por</label>
             <p-dropdown [options]="sortOptions" 
                       id="price"
-                      placeholder="Ordenar por precio" 
+                      placeholder="Seleccionar orden" 
                       (onChange)="onSortChange($event)" 
                       [(ngModel)]="selectedSort"
                       styleClass="filter-dropdown w-full"></p-dropdown>
@@ -77,7 +78,7 @@
                       [showClear]="true"
                       styleClass="filter-dropdown w-full"></p-dropdown>
           </div>
-          <button *ngIf="selectedCategory || selectedStatus" 
+          <button *ngIf="selectedCategory || selectedStatus || selectedSort" 
                   pButton 
                   label="Limpiar filtros" 
                   icon="pi pi-filter-slash" 
@@ -153,11 +154,11 @@
           
           <ng-template pTemplate="empty">
             <div class="p-4 text-center">
-              <div *ngIf="searchQuery || selectedCategory || selectedStatus; else noProducts">
+              <div *ngIf="searchQuery || selectedCategory || selectedStatus || selectedSort; else noProducts">
                 <p>No se encontraron productos con los criterios de búsqueda actuales.</p>
                 <div class="p-d-flex p-jc-center p-mt-3">
                   <button *ngIf="searchQuery" pButton label="Limpiar búsqueda" (click)="clearSearch()" class="p-button-outlined p-mr-2"></button>
-                  <button *ngIf="selectedCategory || selectedStatus" pButton label="Limpiar filtros" (click)="clearFilters()" class="p-button-outlined"></button>
+                  <button *ngIf="selectedCategory || selectedStatus || selectedSort" pButton label="Limpiar filtros" (click)="clearFilters()" class="p-button-outlined"></button>
                 </div>
               </div>
               <ng-template #noProducts>

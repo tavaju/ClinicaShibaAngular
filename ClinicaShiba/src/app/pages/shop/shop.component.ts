@@ -46,7 +46,12 @@ export class ShopComponent implements OnInit {
     // Determine which API endpoint to call based on filters
     let productsObservable;
     
-    if (this.selectedCategory) {
+    // Use combined filters if available
+    if (this.selectedCategory && this.selectedStatus) {
+      // Ideally we would have an API endpoint for combined filters
+      // For now, we'll get products by category and then filter by status locally
+      productsObservable = this.productService.getProductsByCategory(this.selectedCategory);
+    } else if (this.selectedCategory) {
       productsObservable = this.productService.getProductsByCategory(this.selectedCategory);
     } else if (this.selectedStatus) {
       productsObservable = this.productService.getProductsByStatus(this.selectedStatus);
@@ -60,7 +65,12 @@ export class ShopComponent implements OnInit {
       )
       .subscribe({
         next: (data) => {
-          this.products = data;
+          // If we're filtering by category and status, do the status filtering locally
+          if (this.selectedCategory && this.selectedStatus) {
+            this.products = data.filter(product => product.inventoryStatus === this.selectedStatus);
+          } else {
+            this.products = data;
+          }
           this.applySearchFilter();
         },
         error: (err) => {
@@ -179,19 +189,22 @@ export class ShopComponent implements OnInit {
   
   onCategoryChange(event: any): void {
     this.selectedCategory = event.value;
-    this.selectedStatus = null; // Reset status when selecting category
+    // No longer reset other filters
     this.loadProducts();
   }
   
   onStatusChange(event: any): void {
     this.selectedStatus = event.value;
-    this.selectedCategory = null; // Reset category when selecting status
+    // No longer reset other filters
     this.loadProducts();
   }
   
   clearFilters(): void {
     this.selectedCategory = null;
     this.selectedStatus = null;
+    this.selectedSort = null;
+    this.sortField = '';
+    this.sortOrder = 0;
     this.loadProducts();
   }
 }

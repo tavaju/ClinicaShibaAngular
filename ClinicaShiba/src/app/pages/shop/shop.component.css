@@ -102,39 +102,48 @@
   margin-bottom: 1rem;
 }
 
-/* Search container styles */
+/* Navbar-style search container styles */
 .search-container {
+  position: relative;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-:host ::ng-deep .search-container .p-inputgroup {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-:host ::ng-deep .search-container .p-inputtext {
+.search-input {
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #f9fafb;
+  width: 100%;
+  font-size: 0.9rem;
   height: 2.75rem;
-  font-size: 1rem;
-  padding-left: 15px;
 }
 
-:host ::ng-deep .search-container .p-inputgroup-addon {
-  background-color: #f8f9fa;
-  border-color: #e9ecef;
-  color: #6c757d;
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
 }
 
-:host ::ng-deep .search-container .p-button.p-button-danger {
-  background-color: transparent;
-  color: #6c757d;
-  border: none;
+.clear-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
 }
 
-:host ::ng-deep .search-container .p-button.p-button-danger:hover {
-  background-color: #f8d7da;
-  color: #dc3545;
+.clear-icon:hover {
+  opacity: 1;
 }
 
 /* Filter container styles */
