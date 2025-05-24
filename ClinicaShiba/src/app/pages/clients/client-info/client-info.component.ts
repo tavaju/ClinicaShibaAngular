@@ -1,4 +1,10 @@
-import { Component, OnInit, AfterViewInit, Renderer2, Inject } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  Renderer2,
+  Inject,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClientService } from '../../../services/client.service';
 import { PetService } from '../../../services/pet.service';
@@ -68,7 +74,7 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
               console.error(
                 `Error buscando mascotas para el cliente ${client.id}:`,
                 err
-              ); 
+              );
               this.pets = [];
             },
           });
@@ -77,7 +83,8 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
             'El cliente no tiene un ID válido para buscar mascotas.'
           );
           this.pets = [];
-        }      },
+        }
+      },
       error: (err) => {
         this.client = null;
         this.pets = [];
@@ -98,7 +105,7 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
         console.error('Error during logout:', err);
         // Even if there's an error, navigate to home
         this.router.navigate(['/']);
-      }
+      },
     });
   }
   /**
@@ -116,7 +123,7 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
       }
     });
   }
-  
+
   /**
    * Dynamically load the Lucide script if not already available
    */
@@ -125,7 +132,7 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
     if (this.document.getElementById('lucide-script')) {
       return;
     }
-    
+
     // Create script element
     const script = this.renderer.createElement('script');
     script.id = 'lucide-script';
@@ -136,7 +143,7 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
         lucide.createIcons();
       }
     };
-    
+
     // Append to head
     this.renderer.appendChild(this.document.head, script);
   }

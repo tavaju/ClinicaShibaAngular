@@ -9,7 +9,7 @@ import { AuthService } from '../../../../services/auth.service';
 @Component({
   selector: 'app-vet-dashboard',
   templateUrl: './vet-dashboard.component.html',
-  styleUrls: ['./vet-dashboard.component.css']
+  styleUrls: ['./vet-dashboard.component.css'],
 })
 export class VetDashboardComponent implements OnInit {
   currentVeterinario: Veterinario | null = null;
@@ -36,7 +36,7 @@ export class VetDashboardComponent implements OnInit {
         console.error('Error loading veterinarian info:', err);
         this.error = true;
         this.loading = false;
-      }
+      },
     });
   }
 
@@ -49,14 +49,14 @@ export class VetDashboardComponent implements OnInit {
       error: (err) => {
         console.error('Error loading treated pets:', err);
         this.loading = false;
-      }
+      },
     });
   }
-    // Add a public method to navigate to the login page
+  // Add a public method to navigate to the login page
   navigateToLogin(): void {
     this.router.navigate(['/login/vet']);
   }
-  
+
   /**
    * Logs the user out and redirects to the home page
    */
@@ -71,7 +71,7 @@ export class VetDashboardComponent implements OnInit {
         console.error('Veterinario: Error during logout:', err);
         // Even if there's an error, navigate to home
         this.router.navigate(['/']);
-      }
+      },
     });
   }
 }

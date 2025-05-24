@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
   constructor(private authService: AuthService, private router: Router) {}
@@ -16,7 +16,7 @@ export class FooterComponent {
    */
   navigateToDashboard(event: Event): void {
     event.preventDefault(); // Prevent default anchor behavior
-    
+
     if (this.authService.isAuthenticated()) {
       this.authService.navigateToDashboard();
     } else {
