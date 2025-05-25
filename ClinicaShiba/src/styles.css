@@ -1,5 +1,7 @@
 /* src/styles.css */
 
+@import url('~leaflet/dist/leaflet.css');
+
 @font-face {
   font-family: "shiba-font";
   src: url("/assets/fonts/fonnts.com-New_Order_Semibold.otf") format("opentype");
