@@ -1,0 +1,29 @@
+<section class="checkout-container">
+  <header class="checkout-header">
+    <h1>Resumen de tu compra</h1>
+  </header>
+  <div class="checkout-content" *ngIf="cart$ | async as cart">
+    <div *ngIf="cart.items.length === 0" class="empty-cart">
+      <p>No hay productos en tu carrito.</p>
+    </div>
+    <div *ngFor="let item of cart.items" class="checkout-item">
+      <img [src]="item.product.image" [alt]="item.product.name" class="checkout-item-image" />
+      <div class="checkout-item-info">
+        <div class="checkout-item-name">{{ item.product.name }}</div>
+        <div class="checkout-item-qty">
+          <button class="qty-btn" (click)="decreaseQty(item)" [disabled]="item.quantity <= 1">−</button>
+          <span class="qty-value">{{ item.quantity }}</span>
+          <button class="qty-btn" (click)="increaseQty(item)">+</button>
+          <button class="remove-btn" (click)="removeItem(item)" title="Eliminar">🗑️</button>
+        </div>
+        <div class="checkout-item-price">
+          ${{ item.product.price * item.quantity | number : "1.0-0" }}
+        </div>
+      </div>
+    </div>
+    <div class="checkout-total" *ngIf="cart.items.length > 0">
+      <span>Total:</span>
+      <span class="checkout-total-amount">${{ cart.total | number : "1.0-0" }}</span>
+    </div>
+  </div>
+</section>

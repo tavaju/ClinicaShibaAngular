@@ -39,7 +39,7 @@
         >${{ cart.total | number : "1.0-0" }}</span
       >
     </div>
-    <button class="checkout-btn" *ngIf="cart.items.length > 0">
+    <button class="checkout-btn" *ngIf="cart.items.length > 0" (click)="goToCheckout()">
       Finalizar compra
     </button>
   </section>

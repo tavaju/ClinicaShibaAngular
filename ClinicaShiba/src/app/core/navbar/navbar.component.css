@@ -112,10 +112,30 @@
   color: #9ca3af;
 }
 
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.18s, box-shadow 0.18s;
+  padding: 0.35rem;
+}
+
+.cart-icon:hover {
+  background: rgba(139, 92, 246, 0.09);
+  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.2), 0 2px 4px -1px rgba(139, 92, 246, 0.1);
+}
+
 .cart-icon img {
   width: 1.5rem;
   height: 1.5rem;
-  color: #6b7280;
+  color: #8b5cf6;
+  transition: filter 0.18s;
+}
+
+.cart-icon:hover img {
+  filter: brightness(0.85);
 }
 
 .profile-container {

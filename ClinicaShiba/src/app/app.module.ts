@@ -48,6 +48,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 
 // Modules and helpers
 import { PrimeNgModule } from './shared/primeng/primeng.module';
+import { CheckoutComponent } from './pages/checkout/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { PrimeNgModule } from './shared/primeng/primeng.module';
     CaptchaComponent,
     ChatbotComponent,
     ShopComponent,
-    CartDrawerComponent, // Add this line
+    CartDrawerComponent,
+    CheckoutComponent, // Add this line
   ],
   imports: [
     BrowserModule,

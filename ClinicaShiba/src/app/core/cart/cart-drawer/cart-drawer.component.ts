@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cart } from '../../../model/cart.model';
 import { CartService } from '../../../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-drawer',
@@ -12,7 +13,7 @@ export class CartDrawerComponent {
   @Output() close = new EventEmitter<void>();
   cart$: Observable<Cart> = this.cartService.getCart();
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   getProductTotal(price: number, quantity: number): number {
     return price * quantity;
@@ -34,5 +35,10 @@ export class CartDrawerComponent {
 
   removeItem(item: any): void {
     this.cartService.removeFromCart(item.product.id);
+  }
+
+  goToCheckout(): void {
+    this.close.emit();
+    this.router.navigate(['/checkout']);
   }
 }
