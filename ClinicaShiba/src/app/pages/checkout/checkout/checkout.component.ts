@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Cart } from '../../../model/cart.model';
 import { CartService } from '../../../services/cart.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -11,8 +12,16 @@ import { CartService } from '../../../services/cart.service';
 })
 export class CheckoutComponent {
   cart$: Observable<Cart> = this.cartService.getCart();
+  selectedPayment: 'tarjeta' | 'efectivo' = 'tarjeta';
+  paymentForm: FormGroup;
 
-  constructor(private router: Router, private cartService: CartService) {}
+  constructor(
+    private router: Router,
+    private cartService: CartService,
+    private fb: FormBuilder
+  ) {
+    this.paymentForm = this.createCardForm();
+  }
 
   goToCheckout(): void {
     this.router.navigate(['/checkout']);
@@ -30,5 +39,37 @@ export class CheckoutComponent {
 
   removeItem(item: any): void {
     this.cartService.removeFromCart(item.product.id);
+  }
+
+  selectPayment(method: 'tarjeta' | 'efectivo') {
+    this.selectedPayment = method;
+    this.paymentForm =
+      method === 'tarjeta' ? this.createCardForm() : this.createCashForm();
+  }
+
+  createCardForm(): FormGroup {
+    return this.fb.group({
+      name: ['', Validators.required],
+      number: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      expiry: [
+        '',
+        [Validators.required, Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)],
+      ],
+      cvv: ['', [Validators.required, Validators.pattern(/^\d{3,4}$/)]],
+    });
+  }
+
+  createCashForm(): FormGroup {
+    return this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+    });
+  }
+
+  onSubmit() {
+    if (this.paymentForm.invalid) {
+      this.paymentForm.markAllAsTouched();
+      return;
+    }
+    this.router.navigate(['/pickup']);
   }
 }

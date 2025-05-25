@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,6 +50,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 // Modules and helpers
 import { PrimeNgModule } from './shared/primeng/primeng.module';
 import { CheckoutComponent } from './pages/checkout/checkout/checkout.component';
+import { PickupSelectionComponent } from './pages/pickup-selection/pickup-selection/pickup-selection.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +88,8 @@ import { CheckoutComponent } from './pages/checkout/checkout/checkout.component'
     ChatbotComponent,
     ShopComponent,
     CartDrawerComponent,
-    CheckoutComponent, // Add this line
+    CheckoutComponent,
+    PickupSelectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -99,6 +102,7 @@ import { CheckoutComponent } from './pages/checkout/checkout/checkout.component'
     RecaptchaV3Module,
     MaterialModule,
     PrimeNgModule,
+    LeafletModule,
   ],
   providers: [
     {
@@ -108,5 +112,6 @@ import { CheckoutComponent } from './pages/checkout/checkout/checkout.component'
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

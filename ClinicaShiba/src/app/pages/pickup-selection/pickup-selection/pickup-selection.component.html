@@ -1,0 +1,34 @@
+<section class="pickup-portal">
+  <div class="pickup-map">
+    <p>¿Se ve este texto?</p>
+    <leaflet
+      [options]="options"
+      style="height: 400px; width: 100%; display: block;"
+    
+    ></leaflet>
+  </div>
+  <div class="pickup-panel">
+    <h2>Punto de recogida</h2>
+    <div *ngIf="selectedPoint; else selectPrompt">
+      <div class="pickup-address">{{ selectedPoint.address }}</div>
+      <label>
+        Fecha de recogida
+        <input type="date" [(ngModel)]="selectedDate" />
+      </label>
+      <label>
+        Hora de recogida
+        <input type="time" [(ngModel)]="selectedTime" />
+      </label>
+      <button
+        class="confirm-btn"
+        [disabled]="!selectedDate || !selectedTime"
+        (click)="confirmPickup()"
+      >
+        Confirmar recogida
+      </button>
+    </div>
+    <ng-template #selectPrompt>
+      <div class="pickup-prompt">Selecciona un punto en el mapa</div>
+    </ng-template>
+  </div>
+</section>
