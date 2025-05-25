@@ -60,23 +60,29 @@
             </div>
             <div class="p-field filter-field">
               <label for="category">Categoría</label>
-              <p-dropdown [options]="categories" 
-                        id="category"
-                        placeholder="Filtrar por categoría" 
-                        (onChange)="onCategoryChange($event)" 
-                        [(ngModel)]="selectedCategory"
-                        [showClear]="true"
-                        styleClass="filter-dropdown w-full"></p-dropdown>
+              <!-- Categoría -->
+              <p-dropdown
+                [options]="categories"
+                id="category"
+                placeholder="Filtrar por categoría"
+                [(ngModel)]="selectedCategory"
+                (ngModelChange)="onCategoryChange($event)"
+                [showClear]="true"
+                styleClass="filter-dropdown w-full">
+              </p-dropdown>
             </div>
             <div class="p-field filter-field">
               <label for="status">Disponibilidad</label>
-              <p-dropdown [options]="statusOptions" 
-                        id="status"
-                        placeholder="Filtrar por disponibilidad" 
-                        (onChange)="onStatusChange($event)" 
-                        [(ngModel)]="selectedStatus"
-                        [showClear]="true"
-                        styleClass="filter-dropdown w-full"></p-dropdown>
+              <!-- Disponibilidad -->
+              <p-dropdown
+                [options]="statusOptions"
+                id="status"
+                placeholder="Filtrar por disponibilidad"
+                [(ngModel)]="selectedStatus"
+                (ngModelChange)="onStatusChange($event)"
+                [showClear]="true"
+                styleClass="filter-dropdown w-full">
+              </p-dropdown>
             </div>
             <button *ngIf="selectedCategory || selectedStatus || selectedSort" 
                     pButton 

@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/services/product.service';
 import { SelectItem } from 'primeng/api';
 import { FilterService } from 'primeng/api';
 import { finalize } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css'],
 })
-export class ShopComponent implements OnInit {
+export class ShopComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   sortOptions: SelectItem[] = [];
@@ -28,6 +29,8 @@ export class ShopComponent implements OnInit {
   selectedStatus: string | null = null;
   selectedSort: string | null = null;
 
+  private productsSubscription?: Subscription;
+
   constructor(
     private productService: ProductService,
     private filterService: FilterService
@@ -43,13 +46,14 @@ export class ShopComponent implements OnInit {
     this.loading = true;
     this.error = null;
 
-    // Determine which API endpoint to call based on filters
+    if (this.productsSubscription) {
+      this.productsSubscription.unsubscribe();
+    }
+
     let productsObservable;
 
-    // Use combined filters if available
     if (this.selectedCategory && this.selectedStatus) {
-      // Ideally we would have an API endpoint for combined filters
-      // For now, we'll get products by category and then filter by status locally
+      // Si ambos filtros están activos, pide por categoría y filtra por status en frontend
       productsObservable = this.productService.getProductsByCategory(
         this.selectedCategory
       );
@@ -65,24 +69,27 @@ export class ShopComponent implements OnInit {
       productsObservable = this.productService.getProducts();
     }
 
-    productsObservable.pipe(finalize(() => (this.loading = false))).subscribe({
-      next: (data) => {
-        // If we're filtering by category and status, do the status filtering locally
-        if (this.selectedCategory && this.selectedStatus) {
-          this.products = data.filter(
-            (product) => product.inventoryStatus === this.selectedStatus
-          );
-        } else {
-          this.products = data;
-        }
-        this.applySearchFilter();
-      },
-      error: (err) => {
-        this.error =
-          'Error al cargar productos. Por favor, intente nuevamente más tarde.';
-        console.error('Error fetching products:', err);
-      },
-    });
+    this.productsSubscription = productsObservable
+      .pipe(finalize(() => (this.loading = false)))
+      .subscribe({
+        next: (data) => {
+          // Si ambos filtros están activos, filtra por status en frontend
+          if (this.selectedCategory && this.selectedStatus) {
+            this.products = data.filter(
+              (product) => product.inventoryStatus === this.selectedStatus
+            );
+          } else {
+            this.products = data;
+          }
+          // Siempre actualiza los productos filtrados
+          this.applySearchFilter();
+        },
+        error: (err) => {
+          this.error =
+            'Error al cargar productos. Por favor, intente nuevamente más tarde.';
+          console.error('Error fetching products:', err);
+        },
+      });
   }
 
   setupSortOptions() {
@@ -194,15 +201,13 @@ export class ShopComponent implements OnInit {
     this.applySearchFilter();
   }
 
-  onCategoryChange(event: any): void {
-    this.selectedCategory = event.value;
-    // No longer reset other filters
+  onCategoryChange(category: string | null): void {
+    this.selectedCategory = category;
     this.loadProducts();
   }
 
-  onStatusChange(event: any): void {
-    this.selectedStatus = event.value;
-    // No longer reset other filters
+  onStatusChange(status: string | null): void {
+    this.selectedStatus = status;
     this.loadProducts();
   }
 
@@ -213,5 +218,11 @@ export class ShopComponent implements OnInit {
     this.sortField = '';
     this.sortOrder = 0;
     this.loadProducts();
+  }
+
+  ngOnDestroy() {
+    if (this.productsSubscription) {
+      this.productsSubscription.unsubscribe();
+    }
   }
 }
