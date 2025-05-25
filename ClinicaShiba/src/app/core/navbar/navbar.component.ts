@@ -8,7 +8,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 export class NavbarComponent {
   isDropdownOpen = false;
   isScrolled = false;
-  showCartDrawer = false; // <-- Add this property
+  showCartDrawer = false;
 
   @ViewChild('profileRef') profileRef!: ElementRef;
 
@@ -17,12 +17,10 @@ export class NavbarComponent {
   }
 
   openCartDrawer(): void {
-    // <-- Add this method
     this.showCartDrawer = true;
   }
 
   closeCartDrawer(): void {
-    // <-- Add this method
     this.showCartDrawer = false;
   }
 

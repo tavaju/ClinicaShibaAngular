@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Cart } from '../../../model/cart.model';
 import { CartService } from '../../../services/cart.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { CartService } from '../../../services/cart.service';
 })
 export class CartDrawerComponent {
   @Output() close = new EventEmitter<void>();
-  cart$ = this.cartService.getCart();
+  cart$: Observable<Cart> = this.cartService.getCart();
 
   constructor(private cartService: CartService) {}
 
@@ -18,5 +20,19 @@ export class CartDrawerComponent {
 
   onClose(): void {
     this.close.emit();
+  }
+
+  increaseQty(item: any): void {
+    this.cartService.updateQuantity(item.product.id, item.quantity + 1);
+  }
+
+  decreaseQty(item: any): void {
+    if (item.quantity > 1) {
+      this.cartService.updateQuantity(item.product.id, item.quantity - 1);
+    }
+  }
+
+  removeItem(item: any): void {
+    this.cartService.removeFromCart(item.product.id);
   }
 }
