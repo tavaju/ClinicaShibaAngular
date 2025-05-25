@@ -8,11 +8,22 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 export class NavbarComponent {
   isDropdownOpen = false;
   isScrolled = false;
+  showCartDrawer = false; // <-- Add this property
 
   @ViewChild('profileRef') profileRef!: ElementRef;
 
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  openCartDrawer(): void {
+    // <-- Add this method
+    this.showCartDrawer = true;
+  }
+
+  closeCartDrawer(): void {
+    // <-- Add this method
+    this.showCartDrawer = false;
   }
 
   @HostListener('document:click', ['$event.target'])
@@ -24,6 +35,6 @@ export class NavbarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    this.isScrolled = window.scrollY > 50; 
+    this.isScrolled = window.scrollY > 50;
   }
 }

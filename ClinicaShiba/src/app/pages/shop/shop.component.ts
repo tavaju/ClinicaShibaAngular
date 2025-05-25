@@ -1,24 +1,25 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Product } from 'src/app/model/product.model';
-import { ProductService } from 'src/app/services/product.service';
-import { SelectItem } from 'primeng/api';
-import { FilterService } from 'primeng/api';
-import { finalize } from 'rxjs/operators';
-import { Subscription } from 'rxjs';
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Product } from "src/app/model/product.model";
+import { ProductService } from "src/app/services/product.service";
+import { SelectItem } from "primeng/api";
+import { FilterService } from "primeng/api";
+import { finalize } from "rxjs/operators";
+import { Subscription } from "rxjs";
+import { CartService } from "src/app/services/cart.service";
 
 @Component({
-  selector: 'app-shop',
-  templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.css'],
+  selector: "app-shop",
+  templateUrl: "./shop.component.html",
+  styleUrls: ["./shop.component.css"],
 })
 export class ShopComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   sortOptions: SelectItem[] = [];
   sortOrder: number = 0;
-  sortField: string = '';
-  layout: 'list' | 'grid' = 'grid';
-  searchQuery: string = '';
+  sortField: string = "";
+  layout: "list" | "grid" = "grid";
+  searchQuery: string = "";
   loading: boolean = true;
   error: string | null = null;
 
@@ -29,11 +30,14 @@ export class ShopComponent implements OnInit, OnDestroy {
   selectedStatus: string | null = null;
   selectedSort: string | null = null;
 
+  selectedQuantities: { [productId: string]: number } = {};
+
   private productsSubscription?: Subscription;
 
   constructor(
     private productService: ProductService,
-    private filterService: FilterService
+    private filterService: FilterService,
+    private cartService: CartService // <-- Añadir
   ) {}
 
   ngOnInit() {
@@ -86,41 +90,41 @@ export class ShopComponent implements OnInit, OnDestroy {
         },
         error: (err) => {
           this.error =
-            'Error al cargar productos. Por favor, intente nuevamente más tarde.';
-          console.error('Error fetching products:', err);
+            "Error al cargar productos. Por favor, intente nuevamente más tarde.";
+          console.error("Error fetching products:", err);
         },
       });
   }
 
   setupSortOptions() {
     this.sortOptions = [
-      { label: 'Precio de mayor a menor', value: '!price' },
-      { label: 'Precio de menor a mayor', value: 'price' },
-      { label: 'Nombre A-Z', value: 'name' },
-      { label: 'Nombre Z-A', value: '!name' },
-      { label: 'Valoración', value: '!rating' },
+      { label: "Precio de mayor a menor", value: "!price" },
+      { label: "Precio de menor a mayor", value: "price" },
+      { label: "Nombre A-Z", value: "name" },
+      { label: "Nombre Z-A", value: "!name" },
+      { label: "Valoración", value: "!rating" },
     ];
   }
 
   setupFilterOptions() {
     // Setup category options
     this.categories = [
-      { label: 'Todas las categorías', value: null },
-      { label: 'Alimentos', value: 'Alimentos' },
-      { label: 'Accesorios', value: 'Accesorios' },
-      { label: 'Salud', value: 'Salud' },
-      { label: 'Higiene', value: 'Higiene' },
-      { label: 'Juguetes', value: 'Juguetes' },
-      { label: 'Servicios', value: 'Servicios' },
-      { label: 'Equipamiento', value: 'Equipamiento' },
+      { label: "Todas las categorías", value: null },
+      { label: "Alimentos", value: "Alimentos" },
+      { label: "Accesorios", value: "Accesorios" },
+      { label: "Salud", value: "Salud" },
+      { label: "Higiene", value: "Higiene" },
+      { label: "Juguetes", value: "Juguetes" },
+      { label: "Servicios", value: "Servicios" },
+      { label: "Equipamiento", value: "Equipamiento" },
     ];
 
     // Setup inventory status options
     this.statusOptions = [
-      { label: 'Todos los productos', value: null },
-      { label: 'En stock', value: 'INSTOCK' },
-      { label: 'Poco stock', value: 'LOWSTOCK' },
-      { label: 'Agotado', value: 'OUTOFSTOCK' },
+      { label: "Todos los productos", value: null },
+      { label: "En stock", value: "INSTOCK" },
+      { label: "Poco stock", value: "LOWSTOCK" },
+      { label: "Agotado", value: "OUTOFSTOCK" },
     ];
   }
 
@@ -128,7 +132,7 @@ export class ShopComponent implements OnInit, OnDestroy {
     const value = event.value;
     this.selectedSort = value;
 
-    if (value.indexOf('!') === 0) {
+    if (value.indexOf("!") === 0) {
       this.sortOrder = -1;
       this.sortField = value.substring(1);
     } else {
@@ -139,25 +143,25 @@ export class ShopComponent implements OnInit, OnDestroy {
 
   getSeverity(status: string): string {
     switch (status) {
-      case 'INSTOCK':
-        return 'success';
-      case 'LOWSTOCK':
-        return 'warning';
-      case 'OUTOFSTOCK':
-        return 'danger';
+      case "INSTOCK":
+        return "success";
+      case "LOWSTOCK":
+        return "warning";
+      case "OUTOFSTOCK":
+        return "danger";
       default:
-        return 'info';
+        return "info";
     }
   }
 
   getInventoryStatus(status: string): string {
     switch (status) {
-      case 'INSTOCK':
-        return 'En stock';
-      case 'LOWSTOCK':
-        return 'Poco stock';
-      case 'OUTOFSTOCK':
-        return 'Agotado';
+      case "INSTOCK":
+        return "En stock";
+      case "LOWSTOCK":
+        return "Poco stock";
+      case "OUTOFSTOCK":
+        return "Agotado";
       default:
         return status;
     }
@@ -166,12 +170,12 @@ export class ShopComponent implements OnInit, OnDestroy {
   formatPrice(price: number): string {
     // Format number with dot as thousands separator without decimal places
     return price
-      .toLocaleString('es-ES', {
+      .toLocaleString("es-ES", {
         useGrouping: true,
         maximumFractionDigits: 0,
         minimumFractionDigits: 0,
       })
-      .replace(/\./g, '.');
+      .replace(/\./g, ".");
   }
 
   onSearch(event: Event): void {
@@ -197,7 +201,7 @@ export class ShopComponent implements OnInit, OnDestroy {
   }
 
   clearSearch(): void {
-    this.searchQuery = '';
+    this.searchQuery = "";
     this.applySearchFilter();
   }
 
@@ -215,7 +219,7 @@ export class ShopComponent implements OnInit, OnDestroy {
     this.selectedCategory = null;
     this.selectedStatus = null;
     this.selectedSort = null;
-    this.sortField = '';
+    this.sortField = "";
     this.sortOrder = 0;
     this.loadProducts();
   }
@@ -223,6 +227,14 @@ export class ShopComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.productsSubscription) {
       this.productsSubscription.unsubscribe();
+    }
+  }
+
+  addToCart(product: Product): void {
+    const quantity = this.selectedQuantities[product.id] || 1;
+    if (product.inventoryStatus !== "OUTOFSTOCK") {
+      this.cartService.addToCart(product.id, quantity);
+      this.selectedQuantities[product.id] = 1; // reset after add
     }
   }
 }

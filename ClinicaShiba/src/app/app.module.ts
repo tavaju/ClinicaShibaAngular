@@ -18,6 +18,7 @@ import { TestimonialsComponent } from './pages/home/testimonials/testimonials.co
 import { BlogComponent } from './pages/home/blog/blog.component';
 import { CtaComponent } from './pages/home/cta/cta.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { CartDrawerComponent } from './core/cart/cart-drawer/cart-drawer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 import { MaterialModule } from './shared/material.module';
 
@@ -83,6 +84,7 @@ import { PrimeNgModule } from './shared/primeng/primeng.module';
     CaptchaComponent,
     ChatbotComponent,
     ShopComponent,
+    CartDrawerComponent, // Add this line
   ],
   imports: [
     BrowserModule,

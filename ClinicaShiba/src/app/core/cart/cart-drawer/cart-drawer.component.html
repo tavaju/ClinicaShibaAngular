@@ -1,0 +1,34 @@
+<div class="cart-drawer-backdrop" (click)="onClose()"></div>
+<aside class="cart-drawer">
+  <header class="cart-drawer-header">
+    <span>Tu carrito</span>
+    <button class="close-btn" (click)="onClose()">×</button>
+  </header>
+  <section class="cart-drawer-content" *ngIf="cart$ | async as cart">
+    <div *ngIf="cart.items.length === 0" class="empty-cart">
+      <p>Tu carrito está vacío.</p>
+    </div>
+    <div *ngFor="let item of cart.items" class="cart-item">
+      <img
+        [src]="item.product.image"
+        [alt]="item.product.name"
+        class="cart-item-image" />
+      <div class="cart-item-info">
+        <div class="cart-item-name">{{ item.product.name }}</div>
+        <div class="cart-item-qty">Cantidad: {{ item.quantity }}</div>
+        <div class="cart-item-price">
+          ${{ item.product.price * item.quantity | number : "1.0-0" }}
+        </div>
+      </div>
+    </div>
+    <div class="cart-total" *ngIf="cart.items.length > 0">
+      <span>Total:</span>
+      <span class="cart-total-amount"
+        >${{ cart.total | number : "1.0-0" }}</span
+      >
+    </div>
+    <button class="checkout-btn" *ngIf="cart.items.length > 0">
+      Finalizar compra
+    </button>
+  </section>
+</aside>
