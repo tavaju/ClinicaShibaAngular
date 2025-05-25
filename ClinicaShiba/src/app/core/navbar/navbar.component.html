@@ -1,16 +1,16 @@
-<nav class="navbar" [ngClass]="{'scrolled': isScrolled}">  <section class="nav-container">
+<nav class="navbar" [ngClass]="{'scrolled': isScrolled}">
+  <section class="nav-container">
     <article class="nav-left">
-      <a href="/" routerLink="/">
-        <img src="assets/images/logo_shiba.png" alt="Logo" class="logo" />
-      </a>
+      <img src="assets/images/logo_shiba.png" alt="Logo" class="logo" />
       <span class="brand-name">Clínica<br />Shiba</span>
     </article>
 
     <article class="nav-center">
-      <a href="/" class="nav-link active">Inicio</a>
-      <a href="/specialties" class="nav-link">Especialidades</a>
-      <a href="/blog" class="nav-link">Blog</a>
-      <a href="/cta" class="nav-link">Contacto</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Inicio</a>
+      <a routerLink="/specialties" routerLinkActive="active" class="nav-link">Especialidades</a>
+      <a routerLink="/shop" routerLinkActive="active" class="nav-link">Tienda</a>
+      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Blog</a>
+      <a routerLink="/cta" routerLinkActive="active" class="nav-link">Contacto</a>
     </article>
 
     <article class="nav-right">
@@ -36,7 +36,7 @@
           </svg>
         </div>
         <div class="profile-dropdown" [ngClass]="{'active': isDropdownOpen}">
-          <a href="/login" class="login-btn">
+          <a routerLink="/login" class="login-btn">
             <span>Iniciar sesión</span>
             <svg 
               class="login-icon" 

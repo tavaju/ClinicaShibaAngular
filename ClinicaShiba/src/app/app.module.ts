@@ -43,6 +43,10 @@ import { LoginAdminComponent } from './pages/login/login-admin/login-admin.compo
 import { CaptchaComponent } from './pages/login/captcha/captcha.component';
 import { ChatbotComponent } from './core/chatbot/chatbot.component';
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { ShopComponent } from './pages/shop/shop.component';
+
+// Modules and helpers
+import { PrimeNgModule } from './shared/primeng/primeng.module';
 
 @NgModule({
   declarations: [
@@ -78,6 +82,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     LoginAdminComponent,
     CaptchaComponent,
     ChatbotComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +94,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     FontAwesomeModule,
     RecaptchaV3Module,
     MaterialModule,
+    PrimeNgModule,
   ],
   providers: [
     {
