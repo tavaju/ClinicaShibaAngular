@@ -22,6 +22,7 @@
     "@angular/router": "^16.2.0",
     "@asymmetrik/ngx-leaflet": "^16.0.1",
     "@fortawesome/angular-fontawesome": "^0.13.0",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/fontawesome-svg-core": "6.4.x",
     "@fortawesome/free-solid-svg-icons": "6.4.x",
     "jspdf": "^3.0.1",

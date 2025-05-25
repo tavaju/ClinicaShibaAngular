@@ -113,7 +113,8 @@
   color: #9ca3af;
 }
 
-.cart-icon {
+.cart-icon,
+.dashboard-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,20 +124,23 @@
   padding: 0.35rem;
 }
 
-.cart-icon:hover {
-  background: rgba(139, 92, 246, 0.09);
-  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.2),
-    0 2px 4px -1px rgba(139, 92, 246, 0.1);
+.cart-icon:hover,
+.dashboard-icon:hover {
+  background: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.1);
 }
 
-.cart-icon img {
+.cart-icon img,
+.dashboard-icon svg {
   width: 1.8rem;
   height: 1.8rem;
-  color: #8b5cf6;
+  color: #000000;
   transition: filter 0.18s;
 }
 
-.cart-icon:hover img {
+.cart-icon:hover img,
+.dashboard-icon:hover svg {
   filter: brightness(0.85);
 }
 

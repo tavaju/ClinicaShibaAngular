@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PetService } from '../../../services/pet.service';
+import { AuthService } from '../../../services/auth.service';
 import { Mascota } from '../../../model/mascota';
 import { Cliente } from '../../../model/cliente';
 import { HistorialMedico } from '../../../model/historial-medico';
@@ -18,13 +19,21 @@ export class PetDetailComponent implements OnInit {
   historialLoading: boolean = false;
   historialError: string | null = null;
 
+  userRole: string | null = null;
+
   constructor(
     private petService: PetService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
+    // Obtener el rol del usuario
+    this.authService.getUserRole().subscribe((role) => {
+      this.userRole = role;
+    });
+
     // Obtener el id de la URL
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -97,7 +106,26 @@ export class PetDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/vets/dashboard']);
+    this.authService.getUserRole().subscribe((role) => {
+      if (!role) {
+        this.router.navigate(['/']);
+        return;
+      }
+
+      switch (role.toUpperCase()) {
+        case 'ADMIN':
+          this.router.navigate(['/admin/dashboard']);
+          break;
+        case 'VET':
+          this.router.navigate(['/vets/dashboard']);
+          break;
+        case 'CLIENT':
+          this.router.navigate(['/cliente/home']);
+          break;
+        default:
+          this.router.navigate(['/']);
+      }
+    });
   }
 
   // Método para formatear fechas
@@ -109,5 +137,9 @@ export class PetDetailComponent implements OnInit {
       hour: '2-digit',
       minute: '2-digit',
     });
+  }
+
+  canEdit(): boolean {
+    return this.userRole === 'ADMIN' || this.userRole === 'VET';
   }
 }
