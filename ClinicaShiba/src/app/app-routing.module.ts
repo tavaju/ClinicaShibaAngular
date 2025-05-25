@@ -35,6 +35,7 @@ import { CheckoutComponent } from './pages/checkout/checkout/checkout.component'
 import { ChatbotComponent } from './core/chatbot/chatbot.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { PickupSelectionComponent } from './pages/pickup-selection/pickup-selection/pickup-selection.component';
+import { PickupSummaryComponent } from './pages/pickup-selection/pickup-summary/pickup-summary.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -95,6 +96,7 @@ const routes: Routes = [
   { path: 'chatbot', component: ChatbotComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'pickup', component: PickupSelectionComponent },
+  { path: 'resumen', component: PickupSummaryComponent },
 
   { path: '**', redirectTo: '' },
 ];

@@ -1,0 +1,51 @@
+<section class="pickup-summary-portal">
+  <div class="pickup-summary-card">
+    <h2>¡Recogida confirmada!</h2>
+    <div *ngIf="pickup && cart; else errorBlock">
+      <div class="pickup-summary-detail">
+        <div>
+          <span class="label">Dirección:</span>
+          <span>{{ pickup.point.address }}</span>
+        </div>
+        <div>
+          <span class="label">Fecha:</span>
+          <span>{{ pickup.date | date }}</span>
+        </div>
+        <div>
+          <span class="label">Hora:</span>
+          <span>{{ pickup.time }}</span>
+        </div>
+        <div>
+          <span class="label">Forma de pago:</span>
+          <span>{{
+            payment === "tarjeta" ? "Tarjeta de crédito" : "Efectivo en tienda"
+          }}</span>
+        </div>
+      </div>
+      <div class="pickup-summary-products">
+        <h3>Productos comprados</h3>
+        <div *ngFor="let item of cart.items" class="pickup-summary-product">
+          <img [src]="item.product.image" [alt]="item.product.name" />
+          <div class="product-info">
+            <div class="product-name">{{ item.product.name }}</div>
+            <div class="product-qty">Cantidad: {{ item.quantity }}</div>
+            <div class="product-price">
+              ${{ item.product.price * item.quantity | number : "1.0-0" }}
+            </div>
+          </div>
+        </div>
+        <div class="pickup-summary-total">
+          <span>Total:</span>
+          <span>${{ cart.total | number : "1.0-0" }}</span>
+        </div>
+      </div>
+      <button class="home-btn" (click)="goHome()">Volver al inicio</button>
+    </div>
+    <ng-template #errorBlock>
+      <div class="pickup-summary-error">
+        No se encontró información de la recogida.
+      </div>
+      <button class="home-btn" (click)="goHome()">Volver al inicio</button>
+    </ng-template>
+  </div>
+</section>

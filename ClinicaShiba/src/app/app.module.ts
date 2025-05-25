@@ -51,6 +51,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { PrimeNgModule } from './shared/primeng/primeng.module';
 import { CheckoutComponent } from './pages/checkout/checkout/checkout.component';
 import { PickupSelectionComponent } from './pages/pickup-selection/pickup-selection/pickup-selection.component';
+import { PickupSummaryComponent } from './pages/pickup-selection/pickup-summary/pickup-summary.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { PickupSelectionComponent } from './pages/pickup-selection/pickup-select
     CartDrawerComponent,
     CheckoutComponent,
     PickupSelectionComponent,
+    PickupSummaryComponent,
   ],
   imports: [
     BrowserModule,

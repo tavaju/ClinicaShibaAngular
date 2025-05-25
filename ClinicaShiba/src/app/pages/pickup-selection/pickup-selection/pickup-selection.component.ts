@@ -59,6 +59,7 @@ export class PickupSelectionComponent implements AfterViewInit {
 
   confirmPickup() {
     if (!this.selectedPoint || !this.selectedDate || !this.selectedTime) return;
+    const nav = history.state;
     this.router.navigate(['/resumen'], {
       state: {
         pickup: {
@@ -66,6 +67,8 @@ export class PickupSelectionComponent implements AfterViewInit {
           date: this.selectedDate,
           time: this.selectedTime,
         },
+        cart: nav.cart,
+        payment: nav.payment,
       },
     });
   }

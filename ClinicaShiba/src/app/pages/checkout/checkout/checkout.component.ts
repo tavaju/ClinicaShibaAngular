@@ -70,6 +70,15 @@ export class CheckoutComponent {
       this.paymentForm.markAllAsTouched();
       return;
     }
-    this.router.navigate(['/pickup']);
+    this.cart$
+      .subscribe((cart) => {
+        this.router.navigate(['/pickup'], {
+          state: {
+            cart,
+            payment: this.selectedPayment,
+          },
+        });
+      })
+      .unsubscribe();
   }
 }
