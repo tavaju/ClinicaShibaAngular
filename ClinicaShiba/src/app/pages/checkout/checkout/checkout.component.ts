@@ -50,7 +50,7 @@ export class CheckoutComponent {
   createCardForm(): FormGroup {
     return this.fb.group({
       name: ['', Validators.required],
-      number: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      number: ['', [Validators.required, Validators.pattern(/^\d{16}$/)]],
       expiry: [
         '',
         [Validators.required, Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)],

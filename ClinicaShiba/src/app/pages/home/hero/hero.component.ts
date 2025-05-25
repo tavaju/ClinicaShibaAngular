@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { ChatbotToggleService } from '../../../core/chatbot/chatbot-toggle.service';
 
 @Component({
   selector: 'app-hero',
@@ -9,7 +10,10 @@ import { Router } from '@angular/router';
 export class HeroComponent implements AfterViewInit {
   @ViewChild('heroContent') heroContent!: ElementRef;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private chatbotToggle: ChatbotToggleService
+  ) {}
 
   ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
@@ -30,5 +34,9 @@ export class HeroComponent implements AfterViewInit {
     if (id && id.trim() !== '') {
       this.router.navigate(['/pets', id]);
     }
+  }
+
+  abrirChatbot() {
+    this.chatbotToggle.openChatbot();
   }
 }
