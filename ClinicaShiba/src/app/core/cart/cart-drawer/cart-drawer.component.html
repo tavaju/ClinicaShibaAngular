@@ -17,11 +17,9 @@
       <div class="cart-item-info">
         <div class="cart-item-name">{{ item.product.name }}</div>
         <div class="cart-item-qty">
-          <button (click)="decreaseQty(item)" [disabled]="item.quantity <= 1">
-            -
-          </button>
-          <span>{{ item.quantity }}</span>
-          <button (click)="increaseQty(item)">+</button>
+          <button class="qty-btn" (click)="decreaseQty(item)" [disabled]="item.quantity <= 1">−</button>
+          <span class="qty-value">{{ item.quantity }}</span>
+          <button class="qty-btn" (click)="increaseQty(item)">+</button>
           <button
             (click)="removeItem(item)"
             class="remove-btn"

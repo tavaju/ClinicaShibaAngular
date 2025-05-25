@@ -36,9 +36,10 @@
   align-items: center;
   padding: 1.2rem 1.5rem 1rem 1.5rem;
   border-bottom: 1px solid #e5e7eb;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: bold;
   background: #fff;
+  font-family: "shiba-font";
 }
 
 .close-btn {
@@ -109,13 +110,13 @@
 }
 
 .cart-total-amount {
-  color: #1e88e5;
+  color: #6b32c2;
 }
 
 .checkout-btn {
   width: 100%;
   padding: 0.9rem;
-  background: #1e88e5;
+  background: #8b5cf6;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -127,7 +128,7 @@
 }
 
 .checkout-btn:hover {
-  background: #1565c0;
+  background: #6b32c2;
 }
 
 .empty-cart {
@@ -135,4 +136,66 @@
   color: #6b7280;
   margin-top: 2rem;
   font-size: 1.1rem;
+}
+
+/* Botones de cantidad en el carrito */
+.qty-btn {
+  width: 1.4rem;
+  height: 1.4rem;
+  border: none;
+  border-radius: 50%;
+  background: #f3f0ff;
+  color: #8b5cf6;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0.18rem; /* antes 0.4rem, ahora más pequeño */
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(139, 92, 246, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background: #8b5cf6;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+}
+
+.qty-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.qty-value {
+  min-width: 1.7rem; /* un poco más compacto */
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #22223b;
+  margin: 0 0.08rem;
+}
+
+/* Botón eliminar estilizado */
+.remove-btn {
+  background: none;
+  border: none;
+  color: #e11d48;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.3rem 0.4rem;
+  transition: background 0.18s, color 0.18s;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background: #ffe4e6;
+  color: #b91c1c;
 }
