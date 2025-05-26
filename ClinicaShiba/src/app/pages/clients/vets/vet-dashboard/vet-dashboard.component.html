@@ -79,9 +79,69 @@
             </div>
           </div>
         </div>
+      </div>    </article>
+
+    <!-- Appointments Section -->
+    <article class="appointments-section" *ngIf="appointments.length > 0">
+      <div class="section-header">
+        <h2>Citas Programadas</h2>
+      </div>
+      
+      <div class="appointments-container">
+        <div class="appointment-card" *ngFor="let appointment of appointments">
+          <div class="appointment-header">
+            <div class="appointment-info">
+              <h3>{{appointment.mascotaNombre}}</h3>
+              <p class="client-name">Cliente: {{appointment.clienteNombre}}</p>
+            </div>
+            <div class="appointment-toggle">
+              <label class="toggle-container">
+                <input 
+                  type="radio" 
+                  [checked]="appointment.estado"
+                  (change)="toggleAppointmentStatus(appointment.id, appointment.estado)"
+                  name="appointment_{{appointment.id}}">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="appointment-details">
+            <div class="detail-item">
+              <i class="lucide-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </i>
+              <span>{{formatDate(appointment.fecha)}}</span>
+            </div>
+            
+            <div class="detail-item">
+              <i class="lucide-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </i>
+              <span>{{appointment.hora}}</span>
+            </div>
+            
+            <div class="detail-item">
+              <i class="lucide-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </i>
+              <span>{{appointment.clienteEmail}}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </article>
-
 
 
     <!-- Treated Pets Section -->
