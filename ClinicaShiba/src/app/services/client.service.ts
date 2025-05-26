@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, map, Observable, catchError, tap } from 'rxjs';
 import { Cliente } from '../model/cliente';
 import { User } from '../model/user';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ClientService {
-  private baseUrl = 'http://localhost:8090/cliente';
+  private baseUrl = `${environment.apiUrl}/cliente`;
   private clientsSubject = new BehaviorSubject<Cliente[]>([]);
 
   constructor(private http: HttpClient) {}
@@ -88,16 +89,20 @@ export class ClientService {
         client.nombre?.toLowerCase().includes(query.toLowerCase()) ||
         client.cedula?.toLowerCase().includes(query.toLowerCase())
     );
-  }  // Login client (nuevo método)
+  }
+
+  // Login client (nuevo método)
   loginClient(email: string, password: string): Observable<string> {
-    return this.http.post('http://localhost:8090/auth/login', 
+    return this.http.post(`${environment.apiUrl}/auth/login`, 
       { email, password },  // Enviar credenciales en el cuerpo de la solicitud
       { responseType: 'text' }
     );
-  }  login(user: User): Observable<string> {
+  }
+
+  login(user: User): Observable<string> {
     // Ya estamos enviando user directamente en el cuerpo de la solicitud
     // con el formato correcto {correo, password}
-    return this.http.post('http://localhost:8090/auth/login', 
+    return this.http.post(`${environment.apiUrl}/auth/login`, 
       { email: user.correo, password: user.password },  // Ajustar nombres de propiedades a lo que espera el backend
       { responseType: 'text' }
     ).pipe(
@@ -129,12 +134,12 @@ export class ClientService {
 
   getAuthenticatedClient(): Observable<Cliente> {
     const token = localStorage.getItem('clientToken');
-    return this.http.get<Cliente>('http://localhost:8090/cliente/details', {
+    return this.http.get<Cliente>(`${environment.apiUrl}/cliente/details`, {
       headers: { Authorization: `Bearer ${token}` },
     });
   }
 
   clienteHome(): Observable<Cliente> {
-    return this.http.get<Cliente>('http://localhost:8090/cliente/details');
+    return this.http.get<Cliente>(`${environment.apiUrl}/cliente/details`);
   }
 }

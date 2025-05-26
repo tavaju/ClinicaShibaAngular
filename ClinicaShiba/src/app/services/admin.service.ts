@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, catchError } from 'rxjs';
 import { Administrador } from '../model/administrador';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AdminService {
-  private baseUrl = 'http://localhost:8090/administrador';
+  private baseUrl = `${environment.apiUrl}/administrador`;
 
   constructor(private http: HttpClient) {}
 
@@ -83,7 +84,7 @@ export class AdminService {
   // Get administrator details for admin home
   adminHome(): Observable<Administrador> {
     return this.http.get<Administrador>(
-      'http://localhost:8090/administrador/details'
+      `${environment.apiUrl}/administrador/details`
     );
   }
 }

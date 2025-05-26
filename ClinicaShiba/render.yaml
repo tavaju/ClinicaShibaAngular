@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: clinica-shiba-frontend
+    env: static
+    buildCommand: npm install && npm run build:prod
+    staticPublishPath: ./dist/clinica-shiba
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 18.19.0
+      - key: NPM_VERSION
+        value: 9.9.0 

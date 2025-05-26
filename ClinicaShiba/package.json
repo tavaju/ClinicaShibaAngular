@@ -1,12 +1,18 @@
 {
   "name": "clinica-shiba",
   "version": "0.0.0",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:prod": "npx serve dist/clinica-shiba -s"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +36,7 @@
     "primeicons": "^6.0.1",
     "primeng": "^16.9.1",
     "rxjs": "~7.8.0",
+    "serve": "^14.2.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },

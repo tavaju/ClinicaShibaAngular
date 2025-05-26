@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map } from 'rxjs';
 import { Veterinario } from '../model/veterinario';
 import { Mascota } from '../model/mascota';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class VetService {
-  private baseUrl = 'http://localhost:8090/veterinario';
+  private baseUrl = `${environment.apiUrl}/veterinario`;
 
   constructor(private http: HttpClient) {}
 
@@ -66,7 +67,7 @@ export class VetService {
   }
   // Login veterinario: recibe solo el token
   loginVet(cedula: string, password: string): Observable<string> {
-    return this.http.post('http://localhost:8090/veterinario/login', 
+    return this.http.post(`${this.baseUrl}/login`, 
       { cedula, contrasena: password },  // Enviar credenciales en el cuerpo de la solicitud
       { responseType: 'text' }
     );
@@ -124,6 +125,6 @@ export class VetService {
 
   // Fetch veterinarian home details
   vetHome(): Observable<Veterinario> {
-    return this.http.get<Veterinario>('http://localhost:8090/veterinario/details');
+    return this.http.get<Veterinario>(`${environment.apiUrl}/veterinario/details`);
   }
 }

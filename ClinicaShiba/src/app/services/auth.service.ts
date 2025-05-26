@@ -4,12 +4,13 @@ import { Observable, throwError, of } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8090/auth';  // Define role to dashboard URL mapping
+  private baseUrl = `${environment.apiUrl}/auth`;  // Define role to dashboard URL mapping
   private roleDashboardMap: { [key: string]: string } = {
     'ADMIN': '/admin/dashboard',
     'VET': '/vets/dashboard',

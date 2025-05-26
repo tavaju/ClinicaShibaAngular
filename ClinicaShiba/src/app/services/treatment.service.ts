@@ -4,14 +4,15 @@ import { Observable, catchError, map, throwError } from 'rxjs';
 import { Droga } from '../model/droga';
 import { Tratamiento } from '../model/tratamiento';
 import { Mascota } from '../model/mascota';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TreatmentService {
-  private baseUrl = 'http://localhost:8090/droga';
-  private mascotaUrl = 'http://localhost:8090/mascota';
-  private veterinarioUrl = 'http://localhost:8090/veterinario';
+  private baseUrl = `${environment.apiUrl}/droga`;
+  private mascotaUrl = `${environment.apiUrl}/mascota`;
+  private veterinarioUrl = `${environment.apiUrl}/veterinario`;
 
   constructor(private http: HttpClient) {}
 
@@ -52,7 +53,7 @@ export class TreatmentService {
   }
 
   hasTreatment(mascotaId: number): Observable<boolean> {
-    return this.http.get<boolean>(`http://localhost:8090/mascota/hasTratamiento/${mascotaId}`);
+    return this.http.get<boolean>(`${this.mascotaUrl}/hasTratamiento/${mascotaId}`);
   }
 
   getPetsByVeterinarioId(veterinarioId: number): Observable<Mascota[]> {

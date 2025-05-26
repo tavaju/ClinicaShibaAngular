@@ -4,13 +4,14 @@ import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { Mascota } from '../model/mascota';
 import { Cliente } from '../model/cliente';
 import { HistorialMedico } from '../model/historial-medico';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PetService {
-  private baseUrl = 'http://localhost:8090/mascota';
-  private clienteUrl = 'http://localhost:8090/cliente';
+  private baseUrl = `${environment.apiUrl}/mascota`;
+  private clienteUrl = `${environment.apiUrl}/cliente`;
   private petsSubject = new BehaviorSubject<Mascota[]>([]);
 
   constructor(private http: HttpClient) {}
