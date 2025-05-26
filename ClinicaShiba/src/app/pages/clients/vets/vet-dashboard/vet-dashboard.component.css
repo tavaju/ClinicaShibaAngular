@@ -360,7 +360,7 @@ th {
   cursor: pointer;
 }
 
-.appointment-toggle input[type="radio"] {
+.appointment-toggle input[type="checkbox"] {
   opacity: 0;
   position: absolute;
   width: 0;
@@ -389,11 +389,11 @@ th {
   transition: transform 0.3s ease;
 }
 
-.appointment-toggle input[type="radio"]:checked + .toggle-slider {
+.appointment-toggle input[type="checkbox"]:checked + .toggle-slider {
   background-color: #22c55e;
 }
 
-.appointment-toggle input[type="radio"]:checked + .toggle-slider::before {
+.appointment-toggle input[type="checkbox"]:checked + .toggle-slider::before {
   transform: translateX(20px);
 }
 

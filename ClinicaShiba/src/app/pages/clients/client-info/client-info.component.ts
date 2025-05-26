@@ -290,28 +290,14 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
    * Save appointment
    */
   saveAppointment(): void {
-    console.log('saveAppointment method called');
-    
     this.validateForm();
-    console.log('Form validation result:', this.appointmentForm);
-    console.log('Selected values:', {
-      petId: this.selectedPetId,
-      vetId: this.selectedVetId,
-      date: this.selectedDate,
-      time: this.selectedTime
-    });
     
     if (!this.appointmentForm.isValid) {
-      console.log('Form is not valid, returning');
       return;
     }
 
     const selectedPet = this.pets.find(pet => pet.id == this.selectedPetId); // Use == for loose comparison
     const selectedVet = this.veterinarians.find(vet => vet.id == this.selectedVetId); // Use == for loose comparison
-
-    console.log('Selected pet:', selectedPet);
-    console.log('Selected vet:', selectedVet);
-    console.log('Client:', this.client);
 
     if (!selectedPet || !selectedVet || !this.client) {
       console.error('Missing required data for appointment');
@@ -330,11 +316,8 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
       estado: true
     });
 
-    console.log('Creating appointment:', appointment);
-
     try {
       this.appointmentService.saveAppointment(appointment);
-      console.log('Appointment saved successfully');
       alert('Cita programada exitosamente');
       this.closeAppointmentModal();
     } catch (error) {

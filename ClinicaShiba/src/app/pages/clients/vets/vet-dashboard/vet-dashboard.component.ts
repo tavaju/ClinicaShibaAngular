@@ -85,15 +85,30 @@ export class VetDashboardComponent implements OnInit {
       }
     });
   }
-
   /**
-   * Toggle appointment status
+   * Toggle appointment status with confirmation
    */
   toggleAppointmentStatus(appointmentId: string, currentStatus: boolean): void {
-    this.appointmentService.updateAppointmentStatus(appointmentId, !currentStatus);
-    // Reload appointments to reflect changes
-    if (this.currentVeterinario && this.currentVeterinario.id) {
-      this.loadAppointments(this.currentVeterinario.id);
+    // If currently enabled and trying to disable, show confirmation
+    if (currentStatus) {
+      const confirmDisable = confirm('¿Estás seguro que quieres deshabilitar esta cita?');
+      
+      if (confirmDisable) {
+        // User confirmed - disable the appointment (remove from list)
+        this.appointmentService.updateAppointmentStatus(appointmentId, false);
+        // Reload appointments to reflect changes
+        if (this.currentVeterinario && this.currentVeterinario.id) {
+          this.loadAppointments(this.currentVeterinario.id);
+        }
+      }
+      // If user cancels, do nothing (appointment stays enabled)
+    } else {
+      // If currently disabled and trying to enable, just enable it
+      this.appointmentService.updateAppointmentStatus(appointmentId, true);
+      // Reload appointments to reflect changes
+      if (this.currentVeterinario && this.currentVeterinario.id) {
+        this.loadAppointments(this.currentVeterinario.id);
+      }
     }
   }
 

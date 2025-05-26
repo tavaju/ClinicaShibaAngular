@@ -95,17 +95,15 @@
               <div class="appointment-info">
                 <h3>{{appointment.mascotaNombre}}</h3>
                 <p class="client-name">Cliente: {{appointment.clienteNombre}}</p>
-              </div>
-              <div class="appointment-toggle">
-                <label class="toggle-container">
-                  <input 
-                    type="radio" 
-                    [checked]="appointment.estado"
-                    (change)="toggleAppointmentStatus(appointment.id, appointment.estado)"
-                    name="appointment_{{appointment.id}}">
-                  <span class="toggle-slider"></span>
-                </label>
-              </div>
+              </div>            <div class="appointment-toggle">
+              <label class="toggle-container">
+                <input 
+                  type="checkbox" 
+                  [checked]="appointment.estado"
+                  (change)="toggleAppointmentStatus(appointment.id, appointment.estado)">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
             </div>
             
             <div class="appointment-details">

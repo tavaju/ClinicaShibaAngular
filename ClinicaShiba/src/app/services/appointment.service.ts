@@ -73,18 +73,13 @@ export class AppointmentService {
         appointment.clienteEmail === clienteEmail && 
         appointment.estado
       );
-  }
-  /**
+  }  /**
    * Save new appointment
    */
   saveAppointment(appointment: Cita): void {
-    console.log('AppointmentService.saveAppointment called with:', appointment);
     const appointments = this.getAllAppointments();
-    console.log('Current appointments:', appointments);
     appointments.push(appointment);
-    console.log('Updated appointments:', appointments);
     this.saveToStorage(appointments);
-    console.log('Appointment saved to storage');
   }
 
   /**
