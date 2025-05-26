@@ -13,6 +13,7 @@ export class LoginAdminComponent {
   errorMessage: string | null = null;
   recaptchaToken: string | null = null;
   captchaValid: boolean = false;
+  mostrarPassword: boolean = false;
 
   constructor(private adminService: AdminService, private router: Router) {}
 
@@ -46,11 +47,7 @@ export class LoginAdminComponent {
   }
 
   togglePassword() {
-    const passwordField = document.getElementById(
-      'password'
-    ) as HTMLInputElement;
-    passwordField.type =
-      passwordField.type === 'password' ? 'text' : 'password';
+    this.mostrarPassword = !this.mostrarPassword;
   }
 
   onCaptchaResolved(token: string) {

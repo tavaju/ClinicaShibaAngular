@@ -142,7 +142,7 @@
 
       <div *ngIf="!isEditMode" class="form-group">
         <label for="contrasena">Contraseña</label>
-        <div class="input-container">
+        <div class="input-container password-input-container">
           <i class="lucide-icon input-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -161,10 +161,44 @@
           </i>
           <input
             formControlName="contrasena"
-            type="password"
+            [type]="mostrarPassword ? 'text' : 'password'"
             id="contrasena"
             placeholder="Ingresa la contraseña"
           />
+          <span
+            (click)="togglePassword()"
+            class="toggle-password"
+            style="cursor: pointer; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);"
+          >
+            <ng-container *ngIf="mostrarPassword; else oculto">
+              <!-- OJO ABIERTO -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 0 24 24"
+                width="20"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 13c-3.03 0-5.5-2.47-5.5-5.5S8.97 6.5 12 6.5s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5zm0-9a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"
+                />
+              </svg>
+            </ng-container>
+            <ng-template #oculto>
+              <!-- OJO CERRADO -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 0 24 24"
+                width="20"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 6.5c-1.05 0-2.06.27-2.94.74l1.57 1.57A3.5 3.5 0 0115.2 12c0 .53-.12 1.03-.32 1.48l1.55 1.55A5.5 5.5 0 0017.5 12c0-3.03-2.47-5.5-5.5-5.5zM4.27 3L3 4.27l4.25 4.25A7.45 7.45 0 003 12c1.73 4.39 6 7.5 11 7.5 1.64 0 3.2-.36 4.6-1l1.63 1.63 1.27-1.27L4.27 3zm7.73 15c-3.03 0-5.5-2.47-5.5-5.5 0-1.07.31-2.07.85-2.92l1.54 1.54a3.5 3.5 0 004.5 4.5l1.54 1.54c-.85.54-1.85.84-2.93.84z"
+                />
+              </svg>
+            </ng-template>
+          </span>
         </div>
       </div>
 

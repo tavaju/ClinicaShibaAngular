@@ -13,6 +13,7 @@ export class ClientFormComponent implements OnInit {
   clientForm: FormGroup;
   isEditMode = false;
   clientId?: number;
+  mostrarPassword: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -53,6 +54,10 @@ export class ClientFormComponent implements OnInit {
         },
       });
     }
+  }
+
+  togglePassword() {
+    this.mostrarPassword = !this.mostrarPassword;
   }
 
   onSubmit(): void {

@@ -1,81 +1,77 @@
 <div class="login-background">
-    <div class="brand-name">Clínica Shiba</div>
-    <div class="login-container">
-      <article class="form-container">
-        <div class="logo-container">
-          <img
-            src="/assets/logos/shiba_sinfondo.png"
-            alt="Shiba Logo"
-            class="shiba-logo" />
-          <h2>Ingreso al portal</h2>
-          <!-- Mostrar el mensaje de error para contraseña incorrecta o usuario no encontrado -->
-          <div
-            *ngIf="errorMessage && errorMessage.trim() !== ''"
-            class="error-message"
-            style="color: #ff3860; text-align: center; margin: 10px 0; padding: 10px; border-radius: 4px; background-color: #feecf0; font-size: 14px;">
-            <span>{{ errorMessage }}</span>
-          </div>
+  <div class="brand-name">Clínica Shiba</div>
+  <div class="login-container">
+    <article class="form-container">
+      <div class="logo-container">
+        <img src="/assets/logos/shiba_sinfondo.png" alt="Shiba Logo" class="shiba-logo" />
+        <h2>Ingreso al portal</h2>
+        <!-- Mostrar el mensaje de error para contraseña incorrecta o usuario no encontrado -->
+        <div *ngIf="errorMessage && errorMessage.trim() !== ''" class="error-message"
+          style="color: #ff3860; text-align: center; margin: 10px 0; padding: 10px; border-radius: 4px; background-color: #feecf0; font-size: 14px;">
+          <span>{{ errorMessage }}</span>
         </div>
-        <!-- Formulario de inicio de sesión -->
-        <form (ngSubmit)="onSubmit($event)">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              [(ngModel)]="email"
-              name="email"
-              placeholder="juseanto@gmail.com"
-              required />
-          </div>
-  
-          <!-- Campo para la contraseña -->
-          <div class="form-group password-group">
-            <label for="password">Contraseña</label>
-            <div class="password-input-container">
-              <input
-                type="password"
-                id="password"
-                [(ngModel)]="password"
-                name="password"
-                placeholder="Ingrese su contraseña"
-                required />
-              <i class="far fa-eye-slash toggle-password" (click)="togglePassword()"></i>
-            </div>
-          </div>
-  
-          <button type="submit">Ingresar</button>
-        </form>
-        
-        <!-- Opciones de ingreso para veterinarios y administradores -->
-        <div class="login-options">
-          <h3>¿Eres empleado de la clínica?</h3>
-          <div class="option-buttons">
-            <a routerLink="/login/vet" class="option-button vet-button">
-              <i class="fas fa-user-md"></i> Ingresar como Veterinario
-            </a>
-            <a routerLink="/login/admin" class="option-button admin-button">
-              <i class="fas fa-user-shield"></i> Ingresar como Administrador
-            </a>
-          </div>
-        </div>
-  
-        <div class="back-to-home">
-          <a href="/" class="home-link">Volver al inicio</a>
+      </div>
+      <!-- Formulario de inicio de sesión -->
+      <form (ngSubmit)="onSubmit($event)">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="juseanto@gmail.com" required />
         </div>
 
-        <!-- Componente de captcha -->
-        <app-captcha
-          [action]="'login_user'"
-          (captchaResolved)="onCaptchaResolved($event)"
-          (captchaError)="onCaptchaError()">
-        </app-captcha>
-      </article>
-  
-      <article class="image-container">
-        <img
-          src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Perro con chaqueta" />
-      </article>
-    </div>
+        <!-- Campo para la contraseña -->
+        <div class="form-group password-group">
+          <label for="password">Contraseña</label>
+          <div class="password-input-container">
+            <input [type]="mostrarPassword ? 'text' : 'password'" id="password" [(ngModel)]="password" name="password"
+              placeholder="Ingrese su contraseña" required />
+            <span class="toggle-password" (click)="togglePassword()" style="cursor: pointer;">
+              <ng-container *ngIf="mostrarPassword; else oculto">
+                <!-- OJO ABIERTO -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="currentColor">
+                  <path
+                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 13c-3.03 0-5.5-2.47-5.5-5.5S8.97 6.5 12 6.5s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5zm0-9a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" />
+                </svg>
+              </ng-container>
+              <ng-template #oculto>
+                <!-- OJO CERRADO -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="currentColor">
+                  <path d="M12 6.5c-1.05 0-2.06.27-2.94.74l1.57 1.57A3.5 3.5 0 0115.2 12c0 .53-.12 1.03-.32 1.48l1.55 1.55A5.5 5.5 0 0017.5 12c0-3.03-2.47-5.5-5.5-5.5zM4.27 3L3 4.27l4.25 4.25A7.45 7.45 0 003 12c1.73 4.39 6 7.5 11 7.5 1.64 0 3.2-.36 4.6-1l1.63 1.63 1.27-1.27L4.27 3zm7.73 15c-3.03 0-5.5-2.47-5.5-5.5 0-1.07.31-2.07.85-2.92l1.54 1.54a3.5 3.5 0 004.5 4.5l1.54 1.54c-.85.54-1.85.84-2.93.84z" />
+                </svg>
+              </ng-template>
+            </span>
+          </div>
+        </div>
+
+        <button type="submit">Ingresar</button>
+      </form>
+
+      <!-- Opciones de ingreso para veterinarios y administradores -->
+      <div class="login-options">
+        <h3>¿Eres empleado de la clínica?</h3>
+        <div class="option-buttons">
+          <a routerLink="/login/vet" class="option-button vet-button">
+            🩺 Ingresar como Veterinario
+          </a>
+          <a routerLink="/login/admin" class="option-button admin-button">
+            🛡️ Ingresar como Administrador
+          </a>
+        </div>
+      </div>
+
+      <div class="back-to-home">
+        <a href="/" class="home-link">Volver al inicio</a>
+      </div>
+
+      <!-- Componente de captcha -->
+      <app-captcha [action]="'login_user'" (captchaResolved)="onCaptchaResolved($event)"
+        (captchaError)="onCaptchaError()">
+      </app-captcha>
+    </article>
+
+    <article class="image-container">
+      <img
+        src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Perro con chaqueta" />
+    </article>
   </div>
+</div>
