@@ -14,6 +14,7 @@ export class LoginVeterinarianComponent {
   errorMessage: string | null = null;
   recaptchaToken: string | null = null;
   captchaValid: boolean = false;
+  mostrarPassword: boolean = false;
 
   constructor(private vetService: VetService, private router: Router) {}
 
@@ -49,11 +50,7 @@ export class LoginVeterinarianComponent {
   }
 
   togglePassword() {
-    const passwordField = document.getElementById(
-      'password'
-    ) as HTMLInputElement;
-    passwordField.type =
-      passwordField.type === 'password' ? 'text' : 'password';
+    this.mostrarPassword = !this.mostrarPassword;
   }
 
   onCaptchaResolved(token: string) {
