@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Mascota } from '../../../model/mascota';
 import { PetService } from '../../../services/pet.service';
 import { TreatmentService } from '../../../services/treatment.service';
+import { AuthService } from '../../../services/auth.service';
 import { Subscription, forkJoin, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
@@ -18,7 +19,8 @@ export class PetListComponent implements OnInit, OnDestroy {
   searchQuery: string = '';
   private subscription: Subscription = new Subscription();
   petsWithTreatment: Set<number> = new Set<number>();
-  
+  userRole: string | null = null;
+
   // Pagination properties
   currentPage: number = 1;
   pageSize: number = 5;
@@ -29,10 +31,14 @@ export class PetListComponent implements OnInit, OnDestroy {
   constructor(
     private petService: PetService,
     private treatmentService: TreatmentService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
+    this.authService.getUserRole().subscribe(role => {
+      this.userRole = role;
+    });
     this.loadPets();
   }
 
@@ -143,5 +149,9 @@ export class PetListComponent implements OnInit, OnDestroy {
           });
       }
     });
+  }
+
+  isVet(): boolean {
+    return this.userRole === 'VET';
   }
 }

@@ -1,7 +1,9 @@
 <nav class="navbar" [ngClass]="{ scrolled: isScrolled }">
   <section class="nav-container">
     <article class="nav-left">
-      <img src="assets/images/logo_shiba.png" alt="Logo" class="logo" />
+      <a routerLink="/" class="logo-link">
+        <img src="assets/images/logo_shiba.png" alt="Logo" class="logo" />
+      </a>
       <span class="brand-name">Clínica<br />Shiba</span>
     </article>
 
@@ -23,9 +25,25 @@
       <a routerLink="/cta" routerLinkActive="active" class="nav-link"
         >Contacto</a
       >
-    </article>
-
-    <article class="nav-right">
+    </article>    <article class="nav-right">
+      <div class="dashboard-icon" (click)="navigateToDashboard()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="7" height="9" x="3" y="3" rx="1"/>
+          <rect width="7" height="5" x="14" y="3" rx="1"/>
+          <rect width="7" height="9" x="14" y="12" rx="1"/>
+          <rect width="7" height="5" x="3" y="16" rx="1"/>
+        </svg>
+      </div>
 
       <div class="cart-icon" (click)="openCartDrawer()">
         <img
