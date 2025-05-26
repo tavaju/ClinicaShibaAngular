@@ -422,6 +422,60 @@ th {
   height: 16px;
 }
 
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-content.has-appointments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .main-content.has-appointments {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Appointments section adjustments for side-by-side layout */
+.main-content.has-appointments .appointments-section {
+  height: fit-content;
+}
+
+.main-content.has-appointments .appointments-container {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.main-content.has-appointments .appointment-card {
+  margin-bottom: 1rem;
+}
+
+/* Scrollbar styling for appointments container */
+.appointments-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.appointments-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.appointments-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.appointments-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
 /* Responsive for appointments */
 @media (max-width: 768px) {
   .appointment-header {
