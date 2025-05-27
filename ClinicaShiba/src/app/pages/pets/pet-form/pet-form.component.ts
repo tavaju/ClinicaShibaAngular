@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PetService } from '../../../services/pet.service';
 import { ClientService } from '../../../services/client.service';
+import { AuthService } from '../../../services/auth.service';
 import { Mascota } from '../../../model/mascota';
 import { finalize, catchError, of } from 'rxjs';
 
@@ -15,13 +16,13 @@ export class PetFormComponent implements OnInit {
   petForm: FormGroup;
   isEditMode = false;
   petId?: number;
-
   constructor(
     private fb: FormBuilder,
     private petService: PetService,
     private clientService: ClientService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthService
   ) {
     this.petForm = this.fb.group({
       nombre: ['', Validators.required],
@@ -105,11 +106,11 @@ export class PetFormComponent implements OnInit {
             id: this.petId,
           },
           cedulaCliente
-        )
-        .subscribe({
+        )        .subscribe({
           next: (updatedPet) => {
             console.log('Mascota actualizada:', updatedPet);
-            this.router.navigate(['/vets/dashboard']);
+            // Redirigir al usuario al dashboard correspondiente según su rol
+            this.authService.navigateToDashboard();
           },
           error: (err) => {
             console.error('Error al actualizar la mascota', err);
@@ -117,13 +118,13 @@ export class PetFormComponent implements OnInit {
               'Error al actualizar la mascota: ' + this.getErrorMessage(err)
             );
           },
-        });
-    } else {
+        });    } else {
       // Llamada para agregar una nueva mascota
       this.petService.addPet(petData, cedulaCliente).subscribe({
         next: (newPet) => {
           console.log('Mascota agregada exitosamente:', newPet);
-          this.router.navigate(['/vets/dashboard']);
+          // Redirigir al usuario al dashboard correspondiente según su rol
+          this.authService.navigateToDashboard();
         },
         error: (err) => {
           console.error('Error al agregar la mascota', err);
