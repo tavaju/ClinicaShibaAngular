@@ -8,7 +8,8 @@
       styleClass="w-4rem h-4rem"
       strokeWidth="5"
       fill="var(--surface-ground)"
-      animationDuration=".5s"></p-progressSpinner>
+      animationDuration=".5s"
+    ></p-progressSpinner>
     <p>Cargando productos...</p>
   </div>
 
@@ -20,7 +21,8 @@
       label="Reintentar"
       icon="pi pi-refresh"
       (click)="loadProducts()"
-      class="p-button-outlined mt-3"></button>
+      class="p-button-outlined mt-3"
+    ></button>
   </div>
 
   <!-- Shop Content with Sidebar -->
@@ -36,18 +38,21 @@
             placeholder="Buscar productos..."
             class="search-input"
             [(ngModel)]="searchQuery"
-            (input)="onSearch($event)" />
+            (input)="onSearch($event)"
+          />
           <img
             *ngIf="!searchQuery"
             src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search.svg"
             alt="Search"
-            class="search-icon" />
+            class="search-icon"
+          />
           <img
             *ngIf="searchQuery"
             src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/x.svg"
             alt="Clear"
             class="clear-icon"
-            (click)="clearSearch()" />
+            (click)="clearSearch()"
+          />
         </div>
       </div>
 
@@ -63,7 +68,8 @@
               placeholder="Seleccionar orden"
               (onChange)="onSortChange($event)"
               [(ngModel)]="selectedSort"
-              styleClass="filter-dropdown w-full"></p-dropdown>
+              styleClass="filter-dropdown w-full"
+            ></p-dropdown>
           </div>
           <div class="p-field filter-field">
             <label for="category">Categoría</label>
@@ -75,7 +81,8 @@
               [(ngModel)]="selectedCategory"
               (ngModelChange)="onCategoryChange($event)"
               [showClear]="true"
-              styleClass="filter-dropdown w-full">
+              styleClass="filter-dropdown w-full"
+            >
             </p-dropdown>
           </div>
           <div class="p-field filter-field">
@@ -88,7 +95,8 @@
               [(ngModel)]="selectedStatus"
               (ngModelChange)="onStatusChange($event)"
               [showClear]="true"
-              styleClass="filter-dropdown w-full">
+              styleClass="filter-dropdown w-full"
+            >
             </p-dropdown>
           </div>
           <button
@@ -98,7 +106,8 @@
             icon="pi pi-filter-slash"
             iconPos="left"
             class="p-button-outlined w-full mt-3 clear-filters-btn"
-            (click)="clearFilters()"></button>
+            (click)="clearFilters()"
+          ></button>
         </div>
       </div>
     </div>
@@ -113,19 +122,22 @@
           [paginator]="true"
           [rows]="9"
           [sortField]="sortField"
-          [sortOrder]="sortOrder">
+          [sortOrder]="sortOrder"
+        >
           <ng-template pTemplate="header">
             <div class="flex justify-content-end">
               <p-button
                 icon="pi pi-th-large"
                 (onClick)="layout = 'grid'"
                 styleClass="ml-2"
-                [outlined]="layout !== 'grid'"></p-button>
+                [outlined]="layout !== 'grid'"
+              ></p-button>
               <p-button
                 icon="pi pi-bars"
                 (onClick)="layout = 'list'"
                 styleClass="ml-2"
-                [outlined]="layout !== 'list'"></p-button>
+                [outlined]="layout !== 'list'"
+              ></p-button>
             </div>
           </ng-template>
 
@@ -140,7 +152,8 @@
                 <p-rating
                   [ngModel]="product.rating"
                   [readonly]="true"
-                  [cancel]="false"></p-rating>
+                  [cancel]="false"
+                ></p-rating>
                 <div class="product-category">
                   <i class="pi pi-tag product-category-icon"></i>
                   <span>{{ product.category }}</span>
@@ -154,20 +167,22 @@
                   [(ngModel)]="selectedQuantities[product.id]"
                   class="cart-qty-input"
                   style="width: 3.5rem; margin-right: 0.5rem"
-                  [value]="selectedQuantities[product.id] || 1" />
+                />
                 <span class="product-price"
                   >${{ formatPrice(product.price) }}</span
                 >
                 <p-tag
                   [value]="getInventoryStatus(product.inventoryStatus)"
-                  [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                  [severity]="getSeverity(product.inventoryStatus)"
+                ></p-tag>
                 <button
                   pButton
                   icon="pi pi-shopping-cart"
                   label="Añadir al carrito"
                   class="list-view-cart-button"
                   [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"
-                  (click)="addToCart(product)"></button>
+                  (click)="addToCart(product)"
+                ></button>
               </div>
             </div>
           </ng-template>
@@ -175,27 +190,32 @@
           <ng-template let-product pTemplate="gridItem">
             <div class="col-12 sm:col-6 lg:col-4 xl:col-3 p-2 grid-item">
               <div
-                class="p-4 border-1 surface-border surface-card border-round h-full product-card">
+                class="p-4 border-1 surface-border surface-card border-round h-full product-card"
+              >
                 <div
-                  class="flex flex-wrap align-items-center justify-content-between gap-2">
+                  class="flex flex-wrap align-items-center justify-content-between gap-2"
+                >
                   <div class="flex align-items-center gap-2">
                     <i class="pi pi-tag"></i>
                     <span class="font-semibold">{{ product.category }}</span>
                   </div>
                   <p-tag
                     [value]="getInventoryStatus(product.inventoryStatus)"
-                    [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                    [severity]="getSeverity(product.inventoryStatus)"
+                  ></p-tag>
                 </div>
                 <div class="flex flex-column align-items-center gap-3 py-5">
                   <img
                     class="product-image shadow-2 border-round"
                     [src]="product.image"
-                    [alt]="product.name" />
+                    [alt]="product.name"
+                  />
                   <div class="text-2xl font-bold">{{ product.name }}</div>
                   <p-rating
                     [ngModel]="product.rating"
                     [readonly]="true"
-                    [cancel]="false"></p-rating>
+                    [cancel]="false"
+                  ></p-rating>
                 </div>
                 <div class="flex align-items-center justify-content-between">
                   <span class="text-2xl font-semibold"
@@ -205,7 +225,8 @@
                     pButton
                     icon="pi pi-shopping-cart"
                     [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"
-                    (click)="addToCart(product)"></button>
+                    (click)="addToCart(product)"
+                  ></button>
                 </div>
               </div>
             </div>
@@ -220,7 +241,8 @@
                     selectedStatus ||
                     selectedSort;
                   else noProducts
-                ">
+                "
+              >
                 <p>
                   No se encontraron productos con los criterios de búsqueda
                   actuales.
@@ -231,13 +253,15 @@
                     pButton
                     label="Limpiar búsqueda"
                     (click)="clearSearch()"
-                    class="p-button-outlined p-mr-2"></button>
+                    class="p-button-outlined p-mr-2"
+                  ></button>
                   <button
                     *ngIf="selectedCategory || selectedStatus || selectedSort"
                     pButton
                     label="Limpiar filtros"
                     (click)="clearFilters()"
-                    class="p-button-outlined"></button>
+                    class="p-button-outlined"
+                  ></button>
                 </div>
               </div>
               <ng-template #noProducts>
