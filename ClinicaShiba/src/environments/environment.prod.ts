@@ -8,4 +8,4 @@ export const environment = {
   gemini: {
     apiKey: 'AIzaSyC6E_JUIgusZz_AYXEBnFmlxP0zXC2ikE0' // Add your Gemini API key here for production
   }
-}; 
+}; //Sample text
