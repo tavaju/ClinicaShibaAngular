@@ -19,7 +19,7 @@ export class VetDashboardComponent implements OnInit {
   appointments: Cita[] = [];
   loading = true;
   error = false;
-  
+
   constructor(
     private vetService: VetService,
     private treatmentService: TreatmentService,
@@ -30,11 +30,12 @@ export class VetDashboardComponent implements OnInit {
   ngOnInit(): void {
     // Remove expired appointments on component load
     this.appointmentService.removeExpiredAppointments();
-    
+
     this.vetService.vetHome().subscribe({
       next: (vet) => {
         this.currentVeterinario = vet;
         if (vet && vet.id) {
+          localStorage.setItem('currentVetId', vet.id.toString()); 
           this.loadTreatedPets(vet.id);
           this.loadAppointments(vet.id);
         }
@@ -63,7 +64,7 @@ export class VetDashboardComponent implements OnInit {
   loadAppointments(vetId: number): void {
     this.appointments = this.appointmentService.getAppointmentsByVet(vetId);
   }
-    // Add a public method to navigate to the login page
+  // Add a public method to navigate to the login page
   navigateToLogin(): void {
     this.router.navigate(['/login/vet']);
   }
@@ -82,7 +83,7 @@ export class VetDashboardComponent implements OnInit {
         console.error('Veterinario: Error during logout:', err);
         // Even if there's an error, navigate to home
         this.router.navigate(['/']);
-      }
+      },
     });
   }
   /**
@@ -91,8 +92,10 @@ export class VetDashboardComponent implements OnInit {
   toggleAppointmentStatus(appointmentId: string, currentStatus: boolean): void {
     // If currently enabled and trying to disable, show confirmation
     if (currentStatus) {
-      const confirmDisable = confirm('¿Estás seguro que quieres deshabilitar esta cita?');
-      
+      const confirmDisable = confirm(
+        '¿Estás seguro que quieres deshabilitar esta cita?'
+      );
+
       if (confirmDisable) {
         // User confirmed - disable the appointment (remove from list)
         this.appointmentService.updateAppointmentStatus(appointmentId, false);
@@ -119,7 +122,7 @@ export class VetDashboardComponent implements OnInit {
     return new Date(date).toLocaleDateString('es-ES', {
       day: '2-digit',
       month: '2-digit',
-      year: 'numeric'
+      year: 'numeric',
     });
   }
 }
