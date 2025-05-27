@@ -1,4 +1,10 @@
 {
+  "name": "clinica-shiba-root",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd ClinicaShiba && npm install && npm run build:prod",
+    "start": "cd ClinicaShiba && npm start"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "chart.js": "^4.4.9",

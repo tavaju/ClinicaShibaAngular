@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "clinica-shiba",
+  "buildCommand": "npm run build:prod",
+  "outputDirectory": "dist/clinica-shiba",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+} 
