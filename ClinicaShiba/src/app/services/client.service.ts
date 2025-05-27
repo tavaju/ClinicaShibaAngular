@@ -47,11 +47,17 @@ export class ClientService {
 
   // Add new client
   addClient(client: Cliente, confirmPassword: string): Observable<any> {
+    // Solo los campos requeridos por el modelo Cliente
     return this.http.post<void>(
-      `${this.baseUrl}/add?confirmPassword=${confirmPassword}`,
+      `${this.baseUrl}/add?confirmPassword=${encodeURIComponent(
+        confirmPassword
+      )}`,
       {
-        ...client,
-        confirmPassword,
+        cedula: client.cedula,
+        nombre: client.nombre,
+        correo: client.correo,
+        celular: client.celular,
+        contrasena: client.contrasena, // Asegúrate que este campo tenga valor
       }
     );
   }
@@ -88,25 +94,30 @@ export class ClientService {
         client.nombre?.toLowerCase().includes(query.toLowerCase()) ||
         client.cedula?.toLowerCase().includes(query.toLowerCase())
     );
-  }  // Login client (nuevo método)
+  } // Login client (nuevo método)
   loginClient(email: string, password: string): Observable<string> {
-    return this.http.post('http://localhost:8090/auth/login', 
-      { email, password },  // Enviar credenciales en el cuerpo de la solicitud
+    return this.http.post(
+      'http://localhost:8090/auth/login',
+      { email, password }, // Enviar credenciales en el cuerpo de la solicitud
       { responseType: 'text' }
     );
-  }  login(user: User): Observable<string> {
+  }
+  login(user: User): Observable<string> {
     // Ya estamos enviando user directamente en el cuerpo de la solicitud
     // con el formato correcto {correo, password}
-    return this.http.post('http://localhost:8090/auth/login', 
-      { email: user.correo, password: user.password },  // Ajustar nombres de propiedades a lo que espera el backend
-      { responseType: 'text' }
-    ).pipe(
-      tap(token => {
-        // Store the token and username in localStorage
-        localStorage.setItem('token', token);
-        localStorage.setItem('username', user.correo);
-      })
-    );
+    return this.http
+      .post(
+        'http://localhost:8090/auth/login',
+        { email: user.correo, password: user.password }, // Ajustar nombres de propiedades a lo que espera el backend
+        { responseType: 'text' }
+      )
+      .pipe(
+        tap((token) => {
+          // Store the token and username in localStorage
+          localStorage.setItem('token', token);
+          localStorage.setItem('username', user.correo);
+        })
+      );
   }
 
   getClientByEmail(email: string): Observable<Cliente> {
