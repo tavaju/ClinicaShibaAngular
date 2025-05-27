@@ -41,8 +41,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Environment files with sensitive data
-/src/environments/environment.ts
-/src/environments/environment.prod.ts
-# But keep the example template
-!/src/environments/environment.example.ts
+
