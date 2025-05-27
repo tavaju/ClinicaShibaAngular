@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/services/product.service';
 import { SelectItem } from 'primeng/api';
@@ -6,6 +6,7 @@ import { FilterService } from 'primeng/api';
 import { finalize } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 import { CartService } from 'src/app/services/cart.service';
+import { DataView } from 'primeng/dataview';
 
 @Component({
   selector: 'app-shop',
@@ -13,8 +14,10 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit {
-  products: Product[] = [];
-  filteredProducts: Product[] = [];
+  @ViewChild('dv') dataView!: DataView;
+  
+  allProducts: Product[] = []; // Almacena todos los productos sin filtrar
+  filteredProducts: Product[] = []; // Productos después de aplicar filtros
   sortOptions: SelectItem[] = [];
   sortOrder: number = 0;
   sortField: string = '';
@@ -41,58 +44,77 @@ export class ShopComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loadProducts();
+    this.loadAllProducts();
     this.setupSortOptions();
     this.setupFilterOptions();
   }
 
-  loadProducts() {
+  loadAllProducts() {
     this.loading = true;
     this.error = null;
 
-    // Determine which API endpoint to call based on filters
-    let productsObservable;
+    this.productService
+      .getProducts()
+      .pipe(finalize(() => (this.loading = false)))
+      .subscribe({
+        next: (data) => {
+          this.allProducts = data;
+          // Inicializar cantidades
+          this.allProducts.forEach((product) => {
+            if (!this.selectedQuantities[product.id]) {
+              this.selectedQuantities[product.id] = 1;
+            }
+          });
+          this.applyFilters();
+        },
+        error: (err) => {
+          this.error =
+            'Error al cargar productos. Por favor, intente nuevamente más tarde.';
+          console.error('Error fetching products:', err);
+        },
+      });
+  }  // Método mejorado para aplicar todos los filtros de una vez
+  applyFilters(): void {
+    let result = [...this.allProducts];
 
-    // Use combined filters if available
-    if (this.selectedCategory && this.selectedStatus) {
-      productsObservable = this.productService.getProductsByCategory(
-        this.selectedCategory
+    // Aplicar filtro de categoría si está seleccionado
+    if (this.selectedCategory && this.selectedCategory !== null) {
+      result = result.filter(
+        (product) => product.category === this.selectedCategory
       );
-    } else if (this.selectedCategory) {
-      productsObservable = this.productService.getProductsByCategory(
-        this.selectedCategory
-      );
-    } else if (this.selectedStatus) {
-      productsObservable = this.productService.getProductsByStatus(
-        this.selectedStatus
-      );
-    } else {
-      productsObservable = this.productService.getProducts();
     }
 
-    productsObservable.pipe(finalize(() => (this.loading = false))).subscribe({
-      next: (data) => {
-        // If we're filtering by category and status, do the status filtering locally
-        if (this.selectedCategory && this.selectedStatus) {
-          this.products = data.filter(
-            (product) => product.inventoryStatus === this.selectedStatus
-          );
-        } else {
-          this.products = data;
-        }
-        // Inicializar cantidades
-        this.products.forEach((product) => {
-          if (!this.selectedQuantities[product.id]) {
-            this.selectedQuantities[product.id] = 1;
-          }
-        });
-        this.applySearchFilter();
-      },
-      error: (err) => {
-        this.error =
-          'Error al cargar productos. Por favor, intente nuevamente más tarde.';
-        console.error('Error fetching products:', err);
-      },
+    // Aplicar filtro de disponibilidad si está seleccionado
+    if (this.selectedStatus && this.selectedStatus !== null) {
+      result = result.filter(
+        (product) => product.inventoryStatus === this.selectedStatus
+      );
+    }
+
+    // Aplicar filtro de búsqueda si hay texto
+    const query = this.searchQuery.trim().toLowerCase();
+    if (query) {
+      result = result.filter(
+        (product) =>
+          product.name.toLowerCase().includes(query) ||
+          product.description.toLowerCase().includes(query) ||
+          product.category.toLowerCase().includes(query)
+      );
+    }
+
+    this.filteredProducts = result;
+    
+    // Resetear la paginación al primer página cuando se aplican filtros
+    if (this.dataView) {
+      this.dataView.first = 0;
+    }
+    
+    console.log('Filtros aplicados:', {
+      categoria: this.selectedCategory,
+      estado: this.selectedStatus,
+      busqueda: this.searchQuery,
+      productos_filtrados: result.length,
+      productos_totales: this.allProducts.length
     });
   }
 
@@ -174,44 +196,24 @@ export class ShopComponent implements OnInit {
       })
       .replace(/\./g, '.');
   }
-
   onSearch(event: Event): void {
-    const query = (event.target as HTMLInputElement).value.toLowerCase();
+    const query = (event.target as HTMLInputElement).value.trim();
     this.searchQuery = query;
-    this.applySearchFilter();
-  }
-
-  applySearchFilter(): void {
-    const query = this.searchQuery.toLowerCase();
-
-    if (!query) {
-      this.filteredProducts = [...this.products];
-    } else {
-      this.filteredProducts = this.products.filter((product) => {
-        return (
-          product.name.toLowerCase().includes(query) ||
-          product.description.toLowerCase().includes(query) ||
-          product.category.toLowerCase().includes(query)
-        );
-      });
-    }
+    this.applyFilters();
   }
 
   clearSearch(): void {
     this.searchQuery = '';
-    this.applySearchFilter();
+    this.applyFilters();
+  }
+  onCategoryChange(category: string | null): void {
+    this.selectedCategory = category;
+    this.applyFilters();
   }
 
-  onCategoryChange(event: any): void {
-    this.selectedCategory = event.value;
-    // No longer reset other filters
-    this.loadProducts();
-  }
-
-  onStatusChange(event: any): void {
-    this.selectedStatus = event.value;
-    // No longer reset other filters
-    this.loadProducts();
+  onStatusChange(status: string | null): void {
+    this.selectedStatus = status;
+    this.applyFilters();
   }
 
   clearFilters(): void {
@@ -220,7 +222,7 @@ export class ShopComponent implements OnInit {
     this.selectedSort = null;
     this.sortField = '';
     this.sortOrder = 0;
-    this.loadProducts();
+    this.applyFilters();
   }
 
   ngOnDestroy() {
@@ -228,10 +230,24 @@ export class ShopComponent implements OnInit {
       this.productsSubscription.unsubscribe();
     }
   }
-
   addToCart(product: Product): void {
     const quantity = this.selectedQuantities[product.id] || 1;
     this.cartService.addToCart(product, quantity);
     this.selectedQuantities[product.id] = 1;
+  }
+
+  getFilteredProductsCount(): string {
+    const filtered = this.filteredProducts.length;
+    const total = this.allProducts.length;
+    
+    if (filtered === total) {
+      return `${total} productos`;
+    } else {
+      return `${filtered} de ${total} productos`;
+    }
+  }
+
+  hasActiveFilters(): boolean {
+    return !!(this.selectedCategory || this.selectedStatus || this.searchQuery.trim());
   }
 }
