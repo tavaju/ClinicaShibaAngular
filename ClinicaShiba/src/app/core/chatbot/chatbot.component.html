@@ -49,13 +49,6 @@
     </div>
     
     <!-- Diagnostic section - hidden in production -->
-    <div class="diagnostic-tools" *ngIf="!environment.production">
-      <button 
-        class="test-button" 
-        (click)="testApiConnection()" 
-        [disabled]="isLoading">
-        Test API
-      </button>
-    </div>
+    
   </div>
 </div>
