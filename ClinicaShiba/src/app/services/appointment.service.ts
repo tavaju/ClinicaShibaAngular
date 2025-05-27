@@ -77,6 +77,16 @@ export class AppointmentService {
    * Save new appointment
    */
   saveAppointment(appointment: Cita): void {
+    // Validar que no exista ya una cita para ese veterinario en la misma fecha y hora
+    const exists = this.getAllAppointments().some(a =>
+      a.veterinarioId === appointment.veterinarioId &&
+      a.estado &&
+      new Date(a.fecha).toDateString() === new Date(appointment.fecha).toDateString() &&
+      a.hora === appointment.hora
+    );
+    if (exists) {
+      throw new Error('Ya existe una cita para este veterinario en esa fecha y hora.');
+    }
     const appointments = this.getAllAppointments();
     appointments.push(appointment);
     this.saveToStorage(appointments);

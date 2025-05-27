@@ -320,9 +320,12 @@ export class ClientInfoComponent implements OnInit, AfterViewInit {
       this.appointmentService.saveAppointment(appointment);
       alert('Cita programada exitosamente');
       this.closeAppointmentModal();
-    } catch (error) {
-      console.error('Error saving appointment:', error);
-      alert('Error al programar la cita. Intente nuevamente.');
+    } catch (error: any) {
+      if (error.message && error.message.includes('Ya existe una cita')) {
+        alert('Ya existe una cita para este veterinario en esa fecha y hora. Por favor, elige otro horario.');
+      } else {
+        alert('Error al programar la cita. Intente nuevamente.');
+      }
     }
   }
 
