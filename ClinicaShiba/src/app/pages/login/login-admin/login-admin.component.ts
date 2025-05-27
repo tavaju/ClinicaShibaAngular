@@ -33,6 +33,9 @@ export class LoginAdminComponent {
         this.adminService.adminHome().subscribe({
           next: (admin) => {
             localStorage.setItem('currentAdmin', JSON.stringify(admin));
+            if (admin.id !== undefined && admin.id !== null) {
+              localStorage.setItem('currentAdminId', admin.id.toString()); // Guarda el ID como string
+            }
             this.router.navigate(['/admin/dashboard']);
           },
           error: () => {
