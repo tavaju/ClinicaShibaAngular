@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClientService } from '../../../services/client.service';
+import { AuthService } from '../../../services/auth.service';
 import { Cliente } from '../../../model/cliente';
 
 @Component({
@@ -13,12 +14,13 @@ export class ClientFormComponent implements OnInit {
   clientForm: FormGroup;
   isEditMode = false;
   clientId?: number;
-
+  mostrarPassword: boolean = false;
   constructor(
     private fb: FormBuilder,
     private clientService: ClientService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthService
   ) {
     // Definir los campos como opcionales
     this.clientForm = this.fb.group({
@@ -55,6 +57,10 @@ export class ClientFormComponent implements OnInit {
     }
   }
 
+  togglePassword() {
+    this.mostrarPassword = !this.mostrarPassword;
+  }
+
   onSubmit(): void {
     if (this.clientForm.valid) {
       const formData = this.clientForm.value;
@@ -77,9 +83,11 @@ export class ClientFormComponent implements OnInit {
             formData.changePassword,
             formData.newPassword,
             formData.confirmNewPassword
-          )
-          .subscribe({
-            next: () => this.router.navigate(['/vets/dashboard']),
+          )          .subscribe({
+            next: () => {
+              // Redirigir al usuario al dashboard correspondiente según su rol
+              this.authService.navigateToDashboard();
+            },
             error: (err) => {
               console.error('Error al actualizar el cliente:', err);
               alert('Error al actualizar el cliente.');
@@ -96,9 +104,11 @@ export class ClientFormComponent implements OnInit {
         });
 
         this.clientService
-          .addClient(newClient, formData.confirmPassword)
-          .subscribe({
-            next: () => this.router.navigate(['/vets/dashboard']),
+          .addClient(newClient, formData.confirmPassword)          .subscribe({
+            next: () => {
+              // Redirigir al usuario al dashboard correspondiente según su rol
+              this.authService.navigateToDashboard();
+            },
             error: (err) => {
               console.error('Error al crear el cliente:', err);
               alert('Error al crear el cliente.');

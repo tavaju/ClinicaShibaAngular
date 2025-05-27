@@ -3,7 +3,8 @@
     <img
       src="https://images.unsplash.com/photo-1597662942561-776cff97660d?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="Hero Image"
-      class="hero-img" />
+      class="hero-img"
+    />
   </figure>
 
   <div class="hero-content scroll-reveal" appScrollReveal #heroContent>
@@ -26,32 +27,32 @@
       <article class="service-item scroll-reveal" appScrollReveal>
         <figure>
           <img
-            src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=150"
-            alt="Service 1"
-            class="service-img" />
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=150"
+            alt="Tienda"
+            class="service-img"
+          />
           <figcaption class="service-text">
-            <h3>Consulta la lista completa de nuestros pacientes</h3>
-            <a routerLink="/pets" class="hero-read-more">Ver más</a>
+            <h3>Explora nuestra tienda para consentir a tu mascota</h3>
+            <a routerLink="/shop" class="hero-read-more">Ir a la tienda</a>
           </figcaption>
         </figure>
       </article>
       <article class="service-item scroll-reveal" appScrollReveal>
         <figure>
           <img
-            src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=150"
-            alt="Service 2"
-            class="service-img" />
+            src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=150"
+            alt="Chatbot"
+            class="service-img"
+          />
           <figcaption class="service-text">
-            <h3>Encuentra la información de tu mascota aquí</h3>
-            <form (ngSubmit)="buscarMascota(mascotaId.value)">
-              <input
-                type="text"
-                #mascotaId
-                placeholder="ID de la mascota"
-                class="pet-id-input"
-                required />
-              <button type="submit" class="hero-read-more">Ver más</button>
-            </form>
+            <h3>¿Tienes dudas sobre nuestros servicios? ¡Habla con nuestro asistente virtual!</h3>
+            <a
+              href="javascript:void(0);"
+              class="hero-read-more"
+              role="button"
+              (click)="abrirChatbot()"
+              >Abrir Chatbot</a
+            >
           </figcaption>
         </figure>
       </article>

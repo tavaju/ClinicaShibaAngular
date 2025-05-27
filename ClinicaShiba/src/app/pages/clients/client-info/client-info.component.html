@@ -1,5 +1,10 @@
-<div class="container">  <!-- Botón de logout -->
-  <div class="logout-container">
+<div class="container">
+  <!-- Buttons Container -->
+  <div class="header-buttons">
+    <button (click)="openAppointmentModal()" class="appointment-button">
+      <i data-lucide="calendar-plus" aria-hidden="true"></i>
+      <span>Pedir Cita</span>
+    </button>
     <button (click)="logout()" class="logout-button">
       <i data-lucide="log-out" aria-hidden="true"></i>
       <span>Cerrar sesión</span>
@@ -91,6 +96,118 @@
             </td>
           </tr>
         </tbody>
-      </table>
-    </div>  </div>
+      </table>    </div>  </div>
+</div>
+
+<!-- Appointment Modal -->
+<div class="modal-overlay" *ngIf="showAppointmentModal" (click)="closeAppointmentModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>Programar Cita</h2>
+      <button class="close-button" (click)="closeAppointmentModal()">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    
+    <form class="appointment-form">
+      <!-- Pet Selection -->
+      <div class="form-group">
+        <label for="petSelect">Seleccionar Mascota</label>
+        <select 
+          id="petSelect" 
+          [(ngModel)]="selectedPetId" 
+          name="selectedPetId"
+          (change)="validateForm()"
+          [class.error]="appointmentForm.errors.pet">
+          <option value="">Seleccione una mascota</option>
+          <option 
+            *ngFor="let pet of pets" 
+            [value]="pet.id"
+            [disabled]="!pet.estado">
+            {{pet.nombre}} - {{pet.raza}}
+          </option>
+        </select>
+        <span class="error-message" *ngIf="appointmentForm.errors.pet">
+          {{appointmentForm.errors.pet}}
+        </span>
+      </div>      <!-- Veterinarian Selection -->
+      <div class="form-group">
+        <label for="vetSelect">Seleccionar Veterinario</label>
+        <select 
+          id="vetSelect" 
+          [(ngModel)]="selectedVetId" 
+          name="selectedVetId"
+          (change)="onVetChange()"
+          [class.error]="appointmentForm.errors.vet">
+          <option value="">Seleccione un veterinario</option>
+          <option 
+            *ngFor="let vet of veterinarians" 
+            [value]="vet.id">
+            {{vet.nombre}} - {{vet.especialidad}}
+          </option>
+        </select>
+        <span class="error-message" *ngIf="appointmentForm.errors.vet">
+          {{appointmentForm.errors.vet}}
+        </span>
+      </div>
+
+      <!-- Date Selection -->
+      <div class="form-group">
+        <label for="dateInput">Fecha</label>
+        <input 
+          type="date" 
+          id="dateInput"
+          [(ngModel)]="selectedDate"
+          name="selectedDate"
+          [min]="getMinDate()"
+          (change)="onDateChange()"
+          [class.error]="appointmentForm.errors.date">
+        <span class="error-message" *ngIf="appointmentForm.errors.date">
+          {{appointmentForm.errors.date}}
+        </span>
+      </div>
+
+      <!-- Time Selection -->
+      <div class="form-group">
+        <label for="timeSelect">Hora</label>
+        <select 
+          id="timeSelect" 
+          [(ngModel)]="selectedTime" 
+          name="selectedTime"
+          (change)="validateForm()"
+          [class.error]="appointmentForm.errors.time"
+          [disabled]="availableTimeSlots.length === 0">
+          <option value="">Seleccione una hora</option>
+          <option 
+            *ngFor="let time of availableTimeSlots" 
+            [value]="time">
+            {{time}}
+          </option>
+        </select>
+        <span class="error-message" *ngIf="appointmentForm.errors.time">
+          {{appointmentForm.errors.time}}
+        </span>
+        <span class="info-message" *ngIf="selectedVetId && selectedDate && availableTimeSlots.length === 0">
+          No hay horarios disponibles para esta fecha
+        </span>
+      </div>
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button 
+          type="button" 
+          class="cancel-button" 
+          (click)="closeAppointmentModal()">
+          Cancelar
+        </button>
+        <button 
+          type="button" 
+          class="save-button" 
+          (click)="saveAppointment()"
+          [disabled]="!appointmentForm.isValid">
+          Programar Cita
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

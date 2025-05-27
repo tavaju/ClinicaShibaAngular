@@ -19,11 +19,11 @@
 .nav-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .nav-left {
@@ -88,6 +88,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin-right: 2rem;
 }
 
 .search-container {
@@ -112,10 +113,35 @@
   color: #9ca3af;
 }
 
-.cart-icon img {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #6b7280;
+.cart-icon,
+.dashboard-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.18s, box-shadow 0.18s;
+  padding: 0.35rem;
+}
+
+.cart-icon:hover,
+.dashboard-icon:hover {
+  background: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cart-icon img,
+.dashboard-icon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #000000;
+  transition: filter 0.18s;
+}
+
+.cart-icon:hover img,
+.dashboard-icon:hover svg {
+  filter: brightness(0.85);
 }
 
 .profile-container {
@@ -146,7 +172,8 @@
   right: 0;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   width: 180px;
   opacity: 0;
   transform: translateY(-10px) scale(0.95);
@@ -177,26 +204,33 @@
   font-size: 15px;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.2), 0 2px 4px -1px rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.2),
+    0 2px 4px -1px rgba(139, 92, 246, 0.1);
   position: relative;
   overflow: hidden;
 }
 
 .login-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transition: left 0.7s ease;
 }
 
 .login-btn:hover {
   background: linear-gradient(135deg, #fc7a43 0%, #f97316 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(252, 122, 67, 0.3), 0 4px 6px -2px rgba(252, 122, 67, 0.15);
+  box-shadow: 0 10px 15px -3px rgba(252, 122, 67, 0.3),
+    0 4px 6px -2px rgba(252, 122, 67, 0.15);
 }
 
 .login-btn:hover::before {

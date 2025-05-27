@@ -1,5 +1,7 @@
 /* src/styles.css */
 
+@import url('~leaflet/dist/leaflet.css');
+
 @font-face {
   font-family: "shiba-font";
   src: url("/assets/fonts/fonnts.com-New_Order_Semibold.otf") format("opentype");
@@ -20,7 +22,6 @@ h3 {
   font-family: "shiba-font", sans-serif;
 }
 
-
 .nav-link {
   text-decoration: none;
   color: #6b7280; /* Color normal */
@@ -34,8 +35,6 @@ h3 {
   border-bottom: 2px solid #8b5cf6;
 }
 
-
-
 /* Animaciones globales */
 .hidden {
   opacity: 0;
@@ -48,17 +47,18 @@ h3 {
   transform: translateY(0);
 }
 
-html, body { 
-  height: 100%; 
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Only prevent horizontal scroll */
   overflow-y: auto; /* Allow vertical scroll */
 }
 
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   position: relative;
   overflow-x: hidden; /* Only prevent horizontal scroll */
   overflow-y: auto; /* Allow vertical scroll */
@@ -208,6 +208,13 @@ app-root {
   width: 9rem !important;
 }
 
+.leaflet-container {
+  height: 400px !important;
+  width: 100% !important;
+  border-radius: 12px;
+  z-index: 1;
+}
+
 /* Responsive utilities */
 @media screen and (min-width: 576px) {
   .sm\:col-6 {
@@ -220,31 +227,31 @@ app-root {
   .md\:flex-row {
     flex-direction: row !important;
   }
-  
+
   .md\:justify-content-between {
     justify-content: space-between !important;
   }
-  
+
   .md\:text-left {
     text-align: left !important;
   }
-  
+
   .md\:w-auto {
     width: auto !important;
   }
-  
+
   .md\:w-10rem {
     width: 10rem !important;
   }
-  
+
   .md\:w-25rem {
     width: 25rem !important;
   }
-  
+
   .md\:mb-0 {
     margin-bottom: 0 !important;
   }
-  
+
   .md\:my-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;

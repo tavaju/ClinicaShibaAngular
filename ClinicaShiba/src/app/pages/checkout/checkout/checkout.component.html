@@ -1,0 +1,175 @@
+<section class="checkout-portal">
+  <!-- Izquierda: Productos -->
+  <div class="checkout-left">
+    <header class="checkout-header">
+      <h1>Resumen de tu compra</h1>
+    </header>
+    <div class="checkout-content" *ngIf="cart$ | async as cart">
+      <div *ngIf="cart.items.length === 0" class="empty-cart">
+        <p>No hay productos en tu carrito.</p>
+      </div>
+      <div *ngFor="let item of cart.items" class="checkout-item">
+        <img
+          [src]="item.product.image"
+          [alt]="item.product.name"
+          class="checkout-item-image"
+        />
+        <div class="checkout-item-info">
+          <div class="checkout-item-name">{{ item.product.name }}</div>
+          <div class="checkout-item-qty">
+            <button
+              class="qty-btn"
+              (click)="decreaseQty(item)"
+              [disabled]="item.quantity <= 1"
+            >
+              −
+            </button>
+            <span class="qty-value">{{ item.quantity }}</span>
+            <button class="qty-btn" (click)="increaseQty(item)">+</button>
+            <button
+              class="remove-btn"
+              (click)="removeItem(item)"
+              title="Eliminar"
+            >
+              🗑️
+            </button>
+          </div>
+          <div class="checkout-item-price">
+            ${{ item.product.price * item.quantity | number : "1.0-0" }}
+          </div>
+        </div>
+      </div>
+      <div class="checkout-total" *ngIf="cart.items.length > 0">
+        <span>Total:</span>
+        <span class="checkout-total-amount"
+          >${{ cart.total | number : "1.0-0" }}</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- Derecha: Portal de pago -->
+  <div class="checkout-right">
+    <form
+      [formGroup]="paymentForm"
+      (ngSubmit)="onSubmit()"
+      class="payment-form"
+    >
+      <div class="payment-tabs">
+        <button
+          type="button"
+          [class.active]="selectedPayment === 'tarjeta'"
+          (click)="selectPayment('tarjeta')"
+        >
+          <span class="tab-icon">💳</span> Tarjeta de crédito
+        </button>
+        <button
+          type="button"
+          [class.active]="selectedPayment === 'efectivo'"
+          (click)="selectPayment('efectivo')"
+        >
+          <span class="tab-icon">🏦</span> Efectivo en tienda
+        </button>
+      </div>
+
+      <div class="payment-fields">
+        <ng-container *ngIf="selectedPayment === 'tarjeta'">
+          <label>
+            Nombre en la tarjeta
+            <input
+              formControlName="name"
+              type="text"
+              placeholder="Nombre completo"
+              [class.invalid]="
+                paymentForm.get('name')?.invalid &&
+                paymentForm.get('name')?.touched
+              "
+            />
+          </label>
+          <label>
+            Número de tarjeta
+            <input
+              formControlName="number"
+              type="text"
+              maxlength="16"
+              placeholder="1234 5678 9012 3456"
+              [class.invalid]="
+                paymentForm.get('number')?.invalid &&
+                paymentForm.get('number')?.touched
+              "
+            />
+          </label>
+          <div class="row">
+            <label>
+              Expiración
+              <input
+                formControlName="expiry"
+                type="text"
+                maxlength="5"
+                placeholder="MM/AA"
+                [class.invalid]="
+                  paymentForm.get('expiry')?.invalid &&
+                  paymentForm.get('expiry')?.touched
+                "
+              />
+            </label>
+            <label>
+              CVV
+              <input
+                formControlName="cvv"
+                type="password"
+                maxlength="4"
+                placeholder="123"
+                [class.invalid]="
+                  paymentForm.get('cvv')?.invalid &&
+                  paymentForm.get('cvv')?.touched
+                "
+              />
+            </label>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="selectedPayment === 'efectivo'">
+          <label>
+            Correo electrónico
+            <input
+              formControlName="email"
+              type="email"
+              placeholder="tucorreo@ejemplo.com"
+              [class.invalid]="
+                paymentForm.get('email')?.invalid &&
+                paymentForm.get('email')?.touched
+              "
+            />
+          </label>
+        </ng-container>
+      </div>
+
+      <div class="payment-summary" *ngIf="cart$ | async as cart">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>${{ cart.total | number : "1.0-0" }}</span>
+        </div>
+        <div class="summary-row">
+          <span>Envío</span>
+          <span>$0</span>
+        </div>
+        <div class="summary-row">
+          <span>Impuestos</span>
+          <span>$0</span>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span>${{ cart.total | number : "1.0-0" }}</span>
+        </div>
+      </div>
+
+      <button
+        class="continue-btn"
+        type="submit"
+        [disabled]="paymentForm.invalid"
+      >
+        Continuar
+      </button>
+    </form>
+  </div>
+</section>

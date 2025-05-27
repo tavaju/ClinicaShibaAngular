@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { TestimonialsComponent } from './pages/home/testimonials/testimonials.co
 import { BlogComponent } from './pages/home/blog/blog.component';
 import { CtaComponent } from './pages/home/cta/cta.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { CartDrawerComponent } from './core/cart/cart-drawer/cart-drawer.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 import { MaterialModule } from './shared/material.module';
 
@@ -47,6 +49,9 @@ import { ShopComponent } from './pages/shop/shop.component';
 // Modules and helpers
 import { PrimeNgModule } from './shared/primeng/primeng.module';
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { CheckoutComponent } from './pages/checkout/checkout/checkout.component';
+import { PickupSelectionComponent } from './pages/pickup-selection/pickup-selection/pickup-selection.component';
+import { PickupSummaryComponent } from './pages/pickup-selection/pickup-summary/pickup-summary.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +88,10 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     CaptchaComponent,
     ChatbotComponent,
     ShopComponent,
+    CartDrawerComponent,
+    CheckoutComponent,
+    PickupSelectionComponent,
+    PickupSummaryComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,6 +104,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     RecaptchaV3Module,
     MaterialModule,
     PrimeNgModule,
+    LeafletModule,
   ],
   providers: [
     {
@@ -104,5 +114,6 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

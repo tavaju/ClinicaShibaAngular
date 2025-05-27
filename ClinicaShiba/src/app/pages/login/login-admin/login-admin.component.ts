@@ -13,6 +13,7 @@ export class LoginAdminComponent {
   errorMessage: string | null = null;
   recaptchaToken: string | null = null;
   captchaValid: boolean = false;
+  mostrarPassword: boolean = false;
 
   constructor(private adminService: AdminService, private router: Router) {}
 
@@ -32,6 +33,9 @@ export class LoginAdminComponent {
         this.adminService.adminHome().subscribe({
           next: (admin) => {
             localStorage.setItem('currentAdmin', JSON.stringify(admin));
+            if (admin.id !== undefined && admin.id !== null) {
+              localStorage.setItem('currentAdminId', admin.id.toString()); // Guarda el ID como string
+            }
             this.router.navigate(['/admin/dashboard']);
           },
           error: () => {
@@ -46,11 +50,7 @@ export class LoginAdminComponent {
   }
 
   togglePassword() {
-    const passwordField = document.getElementById(
-      'password'
-    ) as HTMLInputElement;
-    passwordField.type =
-      passwordField.type === 'password' ? 'text' : 'password';
+    this.mostrarPassword = !this.mostrarPassword;
   }
 
   onCaptchaResolved(token: string) {

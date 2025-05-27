@@ -4,6 +4,8 @@ import { ProductService } from 'src/app/services/product.service';
 import { SelectItem } from 'primeng/api';
 import { FilterService } from 'primeng/api';
 import { finalize } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-shop',
@@ -28,9 +30,14 @@ export class ShopComponent implements OnInit {
   selectedStatus: string | null = null;
   selectedSort: string | null = null;
 
+  selectedQuantities: { [productId: string]: number } = {};
+
+  private productsSubscription?: Subscription;
+
   constructor(
     private productService: ProductService,
-    private filterService: FilterService
+    private filterService: FilterService,
+    private cartService: CartService 
   ) {}
 
   ngOnInit() {
@@ -48,9 +55,9 @@ export class ShopComponent implements OnInit {
     
     // Use combined filters if available
     if (this.selectedCategory && this.selectedStatus) {
-      // Ideally we would have an API endpoint for combined filters
-      // For now, we'll get products by category and then filter by status locally
-      productsObservable = this.productService.getProductsByCategory(this.selectedCategory);
+      productsObservable = this.productService.getProductsByCategory(
+        this.selectedCategory
+      );
     } else if (this.selectedCategory) {
       productsObservable = this.productService.getProductsByCategory(this.selectedCategory);
     } else if (this.selectedStatus) {
@@ -91,7 +98,6 @@ export class ShopComponent implements OnInit {
   }
   
   setupFilterOptions() {
-    // Setup category options
     this.categories = [
       { label: 'Todas las categorías', value: null },
       { label: 'Alimentos', value: 'Alimentos' },
@@ -102,8 +108,7 @@ export class ShopComponent implements OnInit {
       { label: 'Servicios', value: 'Servicios' },
       { label: 'Equipamiento', value: 'Equipamiento' }
     ];
-    
-    // Setup inventory status options
+
     this.statusOptions = [
       { label: 'Todos los productos', value: null },
       { label: 'En stock', value: 'INSTOCK' },
@@ -152,12 +157,13 @@ export class ShopComponent implements OnInit {
   }
 
   formatPrice(price: number): string {
-    // Format number with dot as thousands separator without decimal places
-    return price.toLocaleString('es-ES', { 
-      useGrouping: true,
-      maximumFractionDigits: 0,
-      minimumFractionDigits: 0
-    }).replace(/\./g, '.');
+    return price
+      .toLocaleString('es-ES', {
+        useGrouping: true,
+        maximumFractionDigits: 0,
+        minimumFractionDigits: 0,
+      })
+      .replace(/\./g, '.');
   }
 
   onSearch(event: Event): void {
@@ -206,5 +212,17 @@ export class ShopComponent implements OnInit {
     this.sortField = '';
     this.sortOrder = 0;
     this.loadProducts();
+  }
+
+  ngOnDestroy() {
+    if (this.productsSubscription) {
+      this.productsSubscription.unsubscribe();
+    }
+  }
+
+  addToCart(product: Product): void {
+    const quantity = this.selectedQuantities[product.id] || 1;
+    this.cartService.addToCart(product.id, quantity);
+    this.selectedQuantities[product.id] = 1;
   }
 }

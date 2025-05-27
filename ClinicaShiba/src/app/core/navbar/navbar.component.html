@@ -1,62 +1,99 @@
-<nav class="navbar" [ngClass]="{'scrolled': isScrolled}">  <section class="nav-container">
-  <article class="nav-left">
-    <a href="/" routerLink="/">
-      <img src="assets/images/logo_shiba.png" alt="Logo" class="logo" />
-    </a>
-    <span class="brand-name">Clínica<br />Shiba</span>
-  </article>
+<nav class="navbar" [ngClass]="{ scrolled: isScrolled }">
+  <section class="nav-container">
+    <article class="nav-left">
+      <a routerLink="/" class="logo-link">
+        <img src="assets/images/logo_shiba.png" alt="Logo" class="logo" />
+      </a>
+      <span class="brand-name">Clínica<br />Shiba</span>
+    </article>
 
-  <article class="nav-center">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Inicio</a>
-    <a routerLink="/specialties" routerLinkActive="active" class="nav-link">Especialidades</a>
-    <a routerLink="/shop" routerLinkActive="active" class="nav-link">Tienda</a>
-    <a routerLink="/blog" routerLinkActive="active" class="nav-link">Blog</a>
-    <a routerLink="/cta" routerLinkActive="active" class="nav-link">Contacto</a>
-  </article>
-
-  <article class="nav-right">
-    <div class="search-container">
-      <input type="text" placeholder="Busca..." class="search-input" />
-      <img
-        src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search.svg"
-        alt="Search"
-        class="search-icon"
-      />
-    </div>
-    <div class="cart-icon">
-      <img
-        src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shopping-cart.svg"
-        alt="Cart"
-      />
-    </div>
-    <div class="profile-container" #profileRef (click)="toggleDropdown()">
-      <div class="user-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
+    <article class="nav-center">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link"
+        >Inicio</a
+      >
+      <a routerLink="/specialties" routerLinkActive="active" class="nav-link"
+        >Especialidades</a
+      >
+      <a routerLink="/shop" routerLinkActive="active" class="nav-link"
+        >Tienda</a
+      >
+      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Blog</a>
+      <a routerLink="/cta" routerLinkActive="active" class="nav-link"
+        >Contacto</a
+      >
+    </article>    <article class="nav-right">
+      <div class="dashboard-icon" (click)="navigateToDashboard()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="7" height="9" x="3" y="3" rx="1"/>
+          <rect width="7" height="5" x="14" y="3" rx="1"/>
+          <rect width="7" height="9" x="14" y="12" rx="1"/>
+          <rect width="7" height="5" x="3" y="16" rx="1"/>
         </svg>
       </div>
-      <div class="profile-dropdown" [ngClass]="{'active': isDropdownOpen}">
-        <a routerLink="/login" class="login-btn">
-          <span>Iniciar sesión</span>
-          <svg 
-            class="login-icon" 
-            width="20" 
-            height="20" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            stroke-width="2" 
-            stroke-linecap="round" 
+
+      <div class="cart-icon" (click)="openCartDrawer()">
+        <img
+          src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shopping-cart.svg"
+          alt="Cart"
+        />
+      </div>
+      <div class="profile-container" #profileRef (click)="toggleDropdown()">
+        <div class="user-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-            <polyline points="10 17 15 12 10 7"></polyline>
-            <line x1="15" y1="12" x2="3" y2="12"></line>
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
           </svg>
-        </a>
+        </div>
+        <div class="profile-dropdown" [ngClass]="{ active: isDropdownOpen }">
+          <a routerLink="/login" class="login-btn">
+            <span>Iniciar sesión</span>
+            <svg
+              class="login-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+          </a>
+        </div>
       </div>
-    </div>
-  </article>
-</section>
+    </article>
+  </section>
 </nav>
+
+<app-cart-drawer
+  *ngIf="showCartDrawer"
+  (close)="closeCartDrawer()"
+></app-cart-drawer>
