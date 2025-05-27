@@ -7,25 +7,81 @@
       <span class="brand-name">Clínica<br />Shiba</span>
     </article>
 
-    <article class="nav-center">
+    <article class="nav-center" [ngClass]="{ 'mobile-open': isMobileMenuOpen }">
       <a
         routerLink="/"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         class="nav-link"
+        (click)="closeMobileMenu()"
         >Inicio</a
       >
-      <a routerLink="/specialties" routerLinkActive="active" class="nav-link"
+      <a
+        routerLink="/specialties"
+        routerLinkActive="active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
         >Especialidades</a
       >
-      <a routerLink="/shop" routerLinkActive="active" class="nav-link"
+      <a
+        routerLink="/shop"
+        routerLinkActive="active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
         >Tienda</a
       >
-      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Blog</a>
-      <a routerLink="/cta" routerLinkActive="active" class="nav-link"
+      <a
+        routerLink="/blog"
+        routerLinkActive="active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
+        >Blog</a
+      >
+      <a
+        routerLink="/cta"
+        routerLinkActive="active"
+        class="nav-link"
+        (click)="closeMobileMenu()"
         >Contacto</a
       >
-    </article>    <article class="nav-right">
+    </article>
+
+    <article class="nav-right">
+      <button
+        class="mobile-menu-btn"
+        (click)="toggleMobileMenu()"
+        aria-label="Abrir menú"
+      >
+        <svg
+          *ngIf="!isMobileMenuOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+        <svg
+          *ngIf="isMobileMenuOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
       <div class="dashboard-icon" (click)="navigateToDashboard()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -38,10 +94,10 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <rect width="7" height="9" x="3" y="3" rx="1"/>
-          <rect width="7" height="5" x="14" y="3" rx="1"/>
-          <rect width="7" height="9" x="14" y="12" rx="1"/>
-          <rect width="7" height="5" x="3" y="16" rx="1"/>
+          <rect width="7" height="9" x="3" y="3" rx="1" />
+          <rect width="7" height="5" x="14" y="3" rx="1" />
+          <rect width="7" height="9" x="14" y="12" rx="1" />
+          <rect width="7" height="5" x="3" y="16" rx="1" />
         </svg>
       </div>
 

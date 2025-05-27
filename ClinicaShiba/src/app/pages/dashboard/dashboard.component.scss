@@ -15,7 +15,7 @@ $header-height: 90px;
 
 // Base styles
 .dashboard-container {
-  font-family: 'Nunito', 'Segoe UI', Roboto, sans-serif;
+  font-family: "Nunito", "Segoe UI", Roboto, sans-serif;
   background-color: $background-color;
   color: $text-color;
   width: 100%;
@@ -57,7 +57,7 @@ $header-height: 90px;
   display: flex;
   flex-direction: column;
   height: 100%;
-  
+
   .sidenav-header {
     padding: 0.75rem;
     height: $header-height;
@@ -65,7 +65,7 @@ $header-height: 90px;
     align-items: center;
     gap: 0.75rem;
     box-sizing: border-box;
-    
+
     .sidenav-logo {
       width: 80px;
       height: 80px;
@@ -74,7 +74,7 @@ $header-height: 90px;
       background-color: white;
       padding: 3px;
     }
-    
+
     h2 {
       font-size: 1.5rem;
       font-weight: 600;
@@ -82,39 +82,40 @@ $header-height: 90px;
       color: #000;
     }
   }
-  
+
   .mat-mdc-nav-list {
     padding-top: 0.5rem;
-    
+
     .mat-mdc-list-item {
       margin: 0.25rem 0.75rem;
       border-radius: 8px;
-      
+
       .mat-icon {
         margin-right: 0.75rem;
         color: $text-light;
       }
-      
+
       &:hover {
         background-color: rgba($primary-color, 0.05);
       }
-      
+
       &.active-link {
         background-color: rgba($primary-color, 0.1);
-        
-        .mat-icon, span {
+
+        .mat-icon,
+        span {
           color: $primary-color;
           font-weight: 500;
         }
       }
     }
   }
-  
+
   .sidenav-footer {
     position: absolute;
     bottom: 16px;
     width: 100%;
-    
+
     .mat-divider {
       margin-bottom: 8px;
     }
@@ -155,11 +156,11 @@ $header-height: 90px;
   width: 100%;
   display: flex;
   align-items: center;
-  
+
   button {
     margin-right: 1rem;
   }
-  
+
   .dashboard-header {
     display: flex;
     justify-content: space-between;
@@ -190,14 +191,14 @@ $header-height: 90px;
     color: $primary-color;
     letter-spacing: -0.5px;
   }
-  
+
   .subtitle {
     display: flex;
     align-items: center;
     font-size: 1rem;
     color: $text-light;
     margin-top: 0.25rem;
-    
+
     .subtitle-icon {
       margin-right: 0.5rem;
       color: $primary-color;
@@ -209,19 +210,19 @@ $header-height: 90px;
   display: flex;
   align-items: center;
   gap: 1rem;
-  
+
   .update-info {
     display: flex;
     align-items: center;
     font-size: 0.9rem;
     color: $text-light;
-    
+
     .update-icon {
       margin-right: 0.5rem;
       color: $primary-color;
     }
   }
-  
+
   .btn-refresh {
     display: flex;
     align-items: center;
@@ -235,16 +236,16 @@ $header-height: 90px;
     font-weight: 600;
     cursor: pointer;
     transition: $transition;
-    
+
     &:hover {
       background-color: darken($primary-color, 5%);
       transform: translateY(-2px);
     }
-    
+
     &:active {
       transform: translateY(0);
     }
-    
+
     &.loading {
       background-color: darken($primary-color, 10%);
       pointer-events: none;
@@ -259,13 +260,13 @@ $header-height: 90px;
   align-items: center;
   min-height: 300px;
   width: 100%;
-  
+
   .loading-spinner {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    
+
     .spinner {
       width: 50px;
       height: 50px;
@@ -274,7 +275,7 @@ $header-height: 90px;
       border-top-color: $primary-color;
       animation: spin 1s linear infinite;
     }
-    
+
     p {
       color: $text-light;
       font-size: 1rem;
@@ -283,8 +284,12 @@ $header-height: 90px;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 // Error styles
@@ -294,7 +299,7 @@ $header-height: 90px;
   align-items: center;
   min-height: 300px;
   width: 100%;
-  
+
   .error-message {
     display: flex;
     flex-direction: column;
@@ -302,22 +307,22 @@ $header-height: 90px;
     gap: 1rem;
     text-align: center;
     max-width: 400px;
-    
+
     fa-icon {
       color: $danger-color;
     }
-    
+
     h3 {
       font-size: 1.5rem;
       margin: 0;
       color: $text-color;
     }
-    
+
     p {
       color: $text-light;
       margin: 0;
     }
-    
+
     .btn-retry {
       background-color: $primary-color;
       color: white;
@@ -329,12 +334,12 @@ $header-height: 90px;
       cursor: pointer;
       transition: $transition;
       margin-top: 0.5rem;
-      
+
       &:hover {
         background-color: darken($primary-color, 5%);
         transform: translateY(-2px);
       }
-      
+
       &:active {
         transform: translateY(0);
       }
@@ -355,15 +360,15 @@ $header-height: 90px;
   grid-template-columns: 0.75fr 0.75fr 1fr 1fr;
   gap: 1.5rem;
   width: 100%;
-  
+
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-  
+
   .metric-card {
     background-color: $card-background;
     border-radius: $border-radius;
@@ -374,12 +379,12 @@ $header-height: 90px;
     gap: 1.25rem;
     transition: $transition;
     min-width: 0; // Important for text overflow
-    
+
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
-    
+
     .metric-icon {
       display: flex;
       justify-content: center;
@@ -389,33 +394,33 @@ $header-height: 90px;
       border-radius: 50%;
       font-size: 1.5rem;
       flex-shrink: 0;
-      
+
       &.treatment {
         background-color: rgba($primary-color, 0.15);
         color: $primary-color;
       }
-      
+
       &.pets {
         background-color: rgba($secondary-color, 0.15);
         color: $secondary-color;
       }
-      
+
       &.sales {
         background-color: rgba($accent-color, 0.15);
         color: $accent-color;
       }
-      
+
       &.profits {
         background-color: rgba($primary-color, 0.15);
         color: $primary-color;
       }
     }
-    
+
     .metric-info {
       flex: 1;
       min-width: 0; // Important for text overflow
       overflow: hidden; // Prevent content from spilling out
-      
+
       h3 {
         font-size: 0.9rem;
         font-weight: 600;
@@ -425,7 +430,7 @@ $header-height: 90px;
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      
+
       .metric-value {
         font-size: clamp(1.2rem, 4vw, 1.8rem);
         font-weight: 700;
@@ -435,7 +440,7 @@ $header-height: 90px;
         overflow: hidden;
         text-overflow: ellipsis;
       }
-      
+
       .metric-subvalue {
         font-size: 0.8rem;
         color: $text-light;
@@ -445,7 +450,7 @@ $header-height: 90px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        
+
         .subvalue-icon {
           flex-shrink: 0;
         }
@@ -459,36 +464,41 @@ $header-height: 90px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 1.5rem;
-  
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
   }
-  
+
   .chart-container {
     background-color: $card-background;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
     padding: 1.5rem;
     transition: $transition;
-    
+
     &:hover {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
-    
+
     .chart-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 1rem;
-      
+
       h3 {
         font-size: 1.1rem;
         font-weight: 600;
         color: $text-color;
         margin: 0;
       }
-      
-      .time-period, .chart-total {
+
+      .time-period,
+      .chart-total {
         font-size: 0.8rem;
         color: $text-light;
         background-color: rgba($primary-color, 0.1);
@@ -496,10 +506,14 @@ $header-height: 90px;
         border-radius: 20px;
       }
     }
-    
+
     .chart-wrapper {
       height: 300px;
       position: relative;
+
+      @media (max-width: 992px) {
+        height: 220px;
+      }
     }
   }
 }
@@ -509,30 +523,34 @@ $header-height: 90px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 1.5rem;
-  
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
   }
-  
+
   .detail-section {
     background-color: $card-background;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
     padding: 1.5rem;
-    
+
     .detail-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 1rem;
-      
+
       h3 {
         font-size: 1.1rem;
         font-weight: 600;
         color: $text-color;
         margin: 0;
       }
-      
+
       .time-period {
         font-size: 0.8rem;
         color: $text-light;
@@ -541,34 +559,35 @@ $header-height: 90px;
         border-radius: 20px;
       }
     }
-    
+
     .table-wrapper {
       overflow-x: auto;
-      
+
       .detail-table {
         width: 100%;
         border-collapse: collapse;
-        
-        th, td {
+
+        th,
+        td {
           padding: 0.75rem 1rem;
           text-align: left;
           border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         th {
           font-weight: 600;
           color: $text-color;
           background-color: rgba($primary-color, 0.05);
         }
-        
+
         tr:last-child td {
           border-bottom: none;
         }
-        
+
         tr:hover td {
           background-color: rgba($primary-color, 0.03);
         }
-        
+
         .position-badge {
           display: inline-flex;
           align-items: center;
@@ -578,23 +597,23 @@ $header-height: 90px;
           border-radius: 50%;
           font-weight: 600;
           font-size: 0.9rem;
-          
+
           &.position-1 {
             background-color: rgba($primary-color, 0.2);
             color: $primary-color;
           }
-          
+
           &.position-2 {
             background-color: rgba($secondary-color, 0.2);
             color: darken($secondary-color, 15%);
           }
-          
+
           &.position-3 {
             background-color: rgba($accent-color, 0.2);
             color: $accent-color;
           }
         }
-        
+
         .text-center {
           text-align: center;
           color: $text-light;
@@ -606,23 +625,102 @@ $header-height: 90px;
 }
 
 // Responsive adjustments
+@media (max-width: 1200px) {
+  .charts-row,
+  .tables-row {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-sidenav {
+    width: 70px;
+    min-width: 70px;
+    .sidenav-header h2 {
+      display: none;
+    }
+    .sidenav-logo {
+      width: 48px;
+      height: 48px;
+    }
+    .sidenav-footer {
+      .logout-button span {
+        display: none;
+      }
+    }
+  }
+  .charts-row,
+  .tables-row {
+    grid-template-columns: 1fr;
+  }
+  .chart-wrapper {
+    height: 220px;
+  }
+}
+
 @media (max-width: 768px) {
   .dashboard-header {
     flex-direction: column;
     align-items: flex-start;
-    
-    .last-update {
-      width: 100%;
-      justify-content: space-between;
-    }
+    gap: 0.5rem;
   }
-  
+  .last-update {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
   .metrics-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  
-  .charts-row, .tables-row {
-    grid-template-columns: 1fr;
+  .metric-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    .metric-icon {
+      margin: 0 0 1rem 0;
+    }
+  }
+  .chart-container,
+  .detail-section {
+    padding: 1rem;
+  }
+  .charts-row,
+  .tables-row {
+    gap: 1rem;
+  }
+  .dashboard-content-wrapper {
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 0.5rem;
+  }
+  .charts-row,
+  .tables-row,
+  .metrics-row {
+    gap: 0.5rem;
+  }
+  .chart-wrapper {
+    height: 120px;
+  }
+  .detail-table th,
+  .detail-table td {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .metric-value {
+    font-size: 1.1rem;
+  }
+  .metric-info h3 {
+    font-size: 0.85rem;
+  }
+  .metric-subvalue {
+    font-size: 0.8rem;
   }
 }
 

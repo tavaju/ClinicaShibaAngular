@@ -240,3 +240,92 @@
 .login-icon {
   margin-left: 8px;
 }
+
+/* --- Responsive styles for mobile --- */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .nav-left {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    width: 3.5rem;
+    height: 2.5rem;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+  }
+
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    padding: 1.5rem 1rem 2rem 1rem;
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.12);
+    z-index: 999;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .nav-center.mobile-open {
+    display: flex;
+  }
+
+  .nav-right {
+    margin-right: 0;
+    gap: 1rem;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn svg {
+    width: 2rem;
+    height: 2rem;
+    color: #8b5cf6;
+  }
+
+  /* Ajustar dropdown de perfil en móviles */
+  .profile-dropdown {
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px) scale(0.95);
+    min-width: 180px;
+    width: 90vw;
+    max-width: 320px;
+  }
+}
+
+/* Ocultar botón hamburguesa en desktop */
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+}

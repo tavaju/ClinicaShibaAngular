@@ -127,3 +127,93 @@
   border-radius: 9999px;
   font-size: 0.875rem;
 }
+
+@media (max-width: 900px) {
+  .blog {
+    padding: 2.5rem 0;
+  }
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+  }
+  .blog-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .blog-header p {
+    font-size: 1rem;
+  }
+  .blog-grid {
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+  .blog-card {
+    flex: 1 0 45%;
+    min-width: 260px;
+    max-width: 100%;
+  }
+  .blog-card img {
+    height: 9rem;
+  }
+  .blog-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog {
+    padding: 1.2rem 0;
+  }
+  .blog-header {
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .blog-header h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+  .blog-header p {
+    font-size: 0.97rem;
+  }
+  .blog-grid {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .blog-card {
+    flex: 1 0 100%;
+    min-width: 0;
+    margin: 0;
+    border-radius: 0.7rem;
+  }
+  .blog-card img {
+    height: 6rem;
+  }
+  .blog-content {
+    padding: 0.7rem;
+  }
+  .blog-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .blog-content p {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+  .read-more-button {
+    font-size: 0.95rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+  .tags {
+    gap: 0.3rem;
+  }
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.15rem 0.5rem;
+  }
+}

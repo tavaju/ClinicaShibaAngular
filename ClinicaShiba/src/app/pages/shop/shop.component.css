@@ -74,7 +74,8 @@
 }
 
 /* Loading and error containers */
-.loading-container, .error-container {
+.loading-container,
+.error-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,22 +193,38 @@
 }
 
 /* PrimeNG button styles - using banner color */
-:host ::ng-deep .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning) {
+:host
+  ::ng-deep
+  .p-button:not(.p-button-outlined):not(.p-button-text):not(
+    .p-button-danger
+  ):not(.p-button-success):not(.p-button-info):not(.p-button-warning) {
   background: #8b5cf6;
   border-color: #8b5cf6;
 }
 
-:host ::ng-deep .p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning):hover {
+:host
+  ::ng-deep
+  .p-button:not(.p-button-outlined):not(.p-button-text):not(
+    .p-button-danger
+  ):not(.p-button-success):not(.p-button-info):not(.p-button-warning):hover {
   background: #7c3aed;
   border-color: #7c3aed;
 }
 
-:host ::ng-deep .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning) {
+:host
+  ::ng-deep
+  .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(
+    .p-button-success
+  ):not(.p-button-info):not(.p-button-warning) {
   color: #8b5cf6;
   border-color: #8b5cf6;
 }
 
-:host ::ng-deep .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(.p-button-success):not(.p-button-info):not(.p-button-warning):hover {
+:host
+  ::ng-deep
+  .p-button.p-button-outlined:not(.clear-filters-btn):not(.p-button-danger):not(
+    .p-button-success
+  ):not(.p-button-info):not(.p-button-warning):hover {
   background: rgba(139, 92, 246, 0.04);
   border-color: #8b5cf6;
 }
@@ -378,16 +395,40 @@
 }
 
 @media screen and (max-width: 768px) {
+  .shop-title {
+    font-size: 2rem;
+  }
+
+  .shop-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .shop-sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .shop-main {
+    width: 100%;
+  }
+
   :host ::ng-deep .product-list-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1rem 0.5rem;
   }
 
   :host ::ng-deep .product-list-image {
     margin-right: 0;
     margin-bottom: 1rem;
-    width: 200px;
+    width: 160px;
+  }
+
+  :host ::ng-deep .product-list-image img {
+    height: 120px;
   }
 
   :host ::ng-deep .product-list-detail {
@@ -403,22 +444,48 @@
   :host ::ng-deep .product-category {
     justify-content: center;
   }
-  
-  :host ::ng-deep .p-button.p-button-icon-only {
-    width: 3rem;
-  }
-
-  .shop-title {
-    font-size: 2rem;
-  }
 }
 
 @media screen and (max-width: 576px) {
   .shop-title {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
-  
+
+  .shop-sidebar {
+    padding: 0.7rem 0.2rem;
+  }
+
   .sidebar-title {
+    font-size: 1rem;
+  }
+
+  .shop-main {
+    padding: 0;
+  }
+
+  :host ::ng-deep .product-list-item {
+    padding: 0.7rem 0.2rem;
+  }
+
+  :host ::ng-deep .product-list-image {
+    width: 100px;
+    margin-bottom: 0.7rem;
+  }
+
+  :host ::ng-deep .product-list-image img {
+    height: 70px;
+  }
+
+  :host ::ng-deep .product-name {
     font-size: 1.1rem;
+  }
+
+  :host ::ng-deep .product-description {
+    font-size: 0.95rem;
+  }
+
+  :host ::ng-deep .product-list-action {
+    gap: 0.3rem;
   }
 }

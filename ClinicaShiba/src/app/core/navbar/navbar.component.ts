@@ -1,4 +1,11 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
@@ -7,17 +14,15 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   isDropdownOpen = false;
   isScrolled = false;
   showCartDrawer = false;
+  isMobileMenuOpen = false;
 
   @ViewChild('profileRef') profileRef!: ElementRef;
 
-  constructor(
-    private router: Router,
-    private authService: AuthService
-  ) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
@@ -29,6 +34,14 @@ export class NavbarComponent {
 
   closeCartDrawer(): void {
     this.showCartDrawer = false;
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
   }
 
   @HostListener('document:click', ['$event.target'])
@@ -49,5 +62,13 @@ export class NavbarComponent {
     } else {
       this.router.navigate(['/login']);
     }
+  }
+
+  ngOnInit(): void {
+    // Any initialization logic can go here
+  }
+
+  ngOnDestroy(): void {
+    // Cleanup logic can go here
   }
 }

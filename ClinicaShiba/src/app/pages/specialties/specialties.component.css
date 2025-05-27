@@ -258,3 +258,136 @@
     display: none;
   }
 }
+
+@media (max-width: 900px) {
+  .specialties-hero {
+    height: 350px;
+    padding: 0 1rem;
+  }
+  .floating-card {
+    width: 100%;
+    height: 220px;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .floating-card-content {
+    padding: 1.2rem;
+  }
+  .floating-card-content h1 {
+    font-size: 2rem;
+  }
+  .floating-card-content p {
+    font-size: 1rem;
+  }
+  .specialties-section {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .specialties-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .subtitle-container {
+    margin-bottom: 1.5rem;
+  }
+  .subtitle-detail {
+    width: 40px;
+  }
+  .especialidades-card img {
+    height: 140px;
+  }
+  .card-content {
+    padding: 1rem;
+  }
+  .card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .card-content p {
+    font-size: 0.97rem;
+    margin-bottom: 1rem;
+  }
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .consultation-card {
+    padding: 1rem;
+  }
+  .consultation-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .specialties-hero {
+    height: 180px;
+    padding: 0 0.5rem;
+  }
+  .floating-card {
+    width: 100%;
+    height: 110px;
+    min-width: 0;
+    max-width: 100%;
+    border-radius: 0.7rem;
+  }
+  .floating-card-content {
+    padding: 0.7rem;
+  }
+  .floating-card-content h1 {
+    font-size: 1.1rem;
+  }
+  .floating-card-content p {
+    font-size: 0.85rem;
+  }
+  .specialties-section {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+  .specialties-section h2 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .subtitle-container {
+    margin-bottom: 0.7rem;
+  }
+  .subtitle-detail {
+    width: 24px;
+  }
+  .specialties-grid {
+    gap: 1rem;
+  }
+  .especialidades-card {
+    border-radius: 0.7rem;
+  }
+  .especialidades-card img {
+    height: 80px;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+  }
+  .card-content {
+    padding: 0.5rem;
+  }
+  .card-content h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+  .card-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+  }
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .consultation-card {
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+  }
+  .consultation-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 0.7rem;
+  }
+}

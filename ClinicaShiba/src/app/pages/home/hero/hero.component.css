@@ -169,3 +169,89 @@
   border-color: #8b5cf6;
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
 }
+
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    min-height: unset;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .floating-card {
+    position: static;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1.2rem;
+  }
+  .service-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .service-img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+  .hero-content {
+    padding: 1.2rem 0.5rem;
+    display: block;
+  }
+  .hero-text {
+    max-width: 100%;
+    text-align: left;
+  }
+  .hero-text h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .hero-text p {
+    font-size: 0.98rem;
+    margin-bottom: 1.2rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+  .floating-card {
+    position: static;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+  .service-item {
+    flex-direction: column;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .service-img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .service-text h3 {
+    font-size: 0.98rem;
+  }
+  .hero-read-more {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.5rem;
+    width: 100%;
+  }
+}
