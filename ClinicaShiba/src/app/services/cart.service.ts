@@ -1,78 +1,78 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { Cart } from '../model/cart.model';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { Cart, CartItem } from 'src/app/model/cart.model';
+import { Product } from 'src/app/model/product.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  private apiUrl = 'http://localhost:8090/api/cart';
-  private cartSubject = new BehaviorSubject<Cart>({ items: [], total: 0 });
+  private cartKey = 'cart';
+  private cartSubject: BehaviorSubject<Cart>;
 
-  constructor(private http: HttpClient) {
-    this.loadCart();
-  }
-
-  private loadCart() {
-    this.http
-      .get<Cart>(this.apiUrl, { withCredentials: true })
-      .pipe(catchError((err) => throwError(() => err)))
-      .subscribe((cart) => this.cartSubject.next(this.calculateTotal(cart)));
-  }
-
-  addToCart(productId: string, quantity: number = 1): void {
-    this.http
-      .post<Cart>(
-        `${this.apiUrl}/add`,
-        { productId, quantity },
-        { withCredentials: true }
-      )
-      .pipe(catchError((err) => throwError(() => err)))
-      .subscribe((cart) => this.cartSubject.next(this.calculateTotal(cart)));
-  }
-
-  removeFromCart(productId: string): void {
-    this.http
-      .post<Cart>(
-        `${this.apiUrl}/remove`,
-        { productId },
-        { withCredentials: true }
-      )
-      .pipe(catchError((err) => throwError(() => err)))
-      .subscribe((cart) => this.cartSubject.next(this.calculateTotal(cart)));
-  }
-
-  updateQuantity(productId: string, quantity: number): void {
-    this.http
-      .post<Cart>(
-        `${this.apiUrl}/update`,
-        { productId, quantity },
-        { withCredentials: true }
-      )
-      .pipe(catchError((err) => throwError(() => err)))
-      .subscribe((cart) => this.cartSubject.next(this.calculateTotal(cart)));
-  }
-
-  clearCart(): void {
-    this.http
-      .post<Cart>(`${this.apiUrl}/clear`, {}, { withCredentials: true })
-      .pipe(catchError((err) => throwError(() => err)))
-      .subscribe((cart) => this.cartSubject.next(this.calculateTotal(cart)));
+  constructor() {
+    const storedCart = localStorage.getItem(this.cartKey);
+    this.cartSubject = new BehaviorSubject<Cart>(
+      storedCart ? JSON.parse(storedCart) : { items: [], total: 0 }
+    );
   }
 
   getCart(): Observable<Cart> {
     return this.cartSubject.asObservable();
   }
 
-  private calculateTotal(cart: Cart): Cart {
-    if (cart && cart.items) {
-      cart.total = cart.items.reduce(
-        (sum, item) => sum + item.product.price * item.quantity,
-        0
-      );
+  private saveCart(cart: Cart): void {
+    localStorage.setItem(this.cartKey, JSON.stringify(cart));
+    this.cartSubject.next(cart);
+  }
+
+  addToCart(product: Product | string, quantity: number = 1): void {
+    const cart = this.cartSubject.value;
+    const productId = typeof product === 'string' ? product : product.id;
+    const existingItem = cart.items.find(
+      (item) => item.product.id === productId
+    );
+
+    if (existingItem) {
+      existingItem.quantity += quantity;
+    } else {
+      // Si solo tienes el id, deberías buscar el producto completo antes de agregarlo
+      if (typeof product === 'string') {
+        // No se puede agregar solo con id, requiere el objeto Product
+        return;
+      }
+      cart.items.push({ product, quantity });
     }
-    return cart;
+    cart.total = this.calculateTotal(cart);
+    this.saveCart(cart);
+  }
+
+  removeFromCart(productId: string): void {
+    const cart = this.cartSubject.value;
+    cart.items = cart.items.filter((item) => item.product.id !== productId);
+    cart.total = this.calculateTotal(cart);
+    this.saveCart(cart);
+  }
+
+  updateQuantity(productId: string, quantity: number): void {
+    const cart = this.cartSubject.value;
+    const item = cart.items.find((i) => i.product.id === productId);
+    if (item) {
+      item.quantity = quantity;
+    }
+    cart.total = this.calculateTotal(cart);
+    this.saveCart(cart);
+  }
+
+  clearCart(): void {
+    const cart: Cart = { items: [], total: 0 };
+    this.saveCart(cart);
+  }
+
+  private calculateTotal(cart: Cart): number {
+    return cart.items.reduce(
+      (sum, item) => sum + item.product.price * item.quantity,
+      0
+    );
   }
 }

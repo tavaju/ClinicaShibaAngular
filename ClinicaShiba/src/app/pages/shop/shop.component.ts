@@ -80,6 +80,7 @@ export class ShopComponent implements OnInit {
         } else {
           this.products = data;
         }
+        // Inicializar cantidades
         this.products.forEach((product) => {
           if (!this.selectedQuantities[product.id]) {
             this.selectedQuantities[product.id] = 1;
@@ -230,7 +231,7 @@ export class ShopComponent implements OnInit {
 
   addToCart(product: Product): void {
     const quantity = this.selectedQuantities[product.id] || 1;
-    this.cartService.addToCart(product.id, quantity);
+    this.cartService.addToCart(product, quantity);
     this.selectedQuantities[product.id] = 1;
   }
 }
