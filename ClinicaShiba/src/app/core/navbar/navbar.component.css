@@ -241,6 +241,27 @@
   margin-left: 8px;
 }
 
+.portal-btn {
+  background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px -2px rgba(139, 92, 246, 0.13);
+  margin-right: 0.5rem;
+}
+
+.portal-btn:hover {
+  background: linear-gradient(90deg, #fc7a43 0%, #f97316 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 16px -3px rgba(252, 122, 67, 0.18);
+}
+
 /* --- Responsive styles for mobile --- */
 @media (max-width: 768px) {
   .nav-container {
